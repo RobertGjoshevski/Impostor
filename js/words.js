@@ -1,19 +1,42 @@
-export const wordsLibrary = [
-    { word: "Space Station", hint: "A high-tech location orbiting the Earth." },
-    { word: "Submarine", hint: "A vessel that travels deep underwater." },
-    { word: "Casino", hint: "A place where people go to gamble." },
-    { word: "Hospital", hint: "A place you go when you are sick or injured." },
-    { word: "Circus", hint: "An entertainment event with clowns and acrobats." },
-    { word: "Pirate Ship", hint: "A wooden vessel with sails used by outlaws." },
-    { word: "Movie Studio", hint: "A place where films are made." },
-    { word: "Police Station", hint: "A place where law enforcement works." },
-    { word: "Bank", hint: "A secure building where money is kept." },
-    { word: "School", hint: "An institution designed for the teaching of students." },
-    { word: "Restaurant", hint: "A place where you pay to sit and eat meals." },
-    { word: "Library", hint: "A building containing collections of books or media." }
-];
+import { store } from './store.js';
+
+let wordsDatabase = {};
+
+export async function loadLanguageData(langCode) {
+    try {
+        const response = await fetch(`data/${langCode}.json`);
+        if (!response.ok) throw new Error("Network response was not ok");
+        wordsDatabase = await response.json();
+        
+        const themes = Object.keys(wordsDatabase);
+        // By default, select all themes if loading for the very first time,
+        // or just keep previously selected themes if they still exist.
+        // For simplicity, let's select all available themes when language changes:
+        store.setState({ 
+            language: langCode,
+            availableThemes: themes,
+            selectedThemes: themes
+        });
+    } catch (e) {
+        console.error("Failed to load dictionary data:", e);
+    }
+}
 
 export function getRandomWord() {
-    const randomIndex = Math.floor(Math.random() * wordsLibrary.length);
-    return wordsLibrary[randomIndex];
+    const selectedThemes = store.state.selectedThemes;
+    let pool = [];
+    
+    selectedThemes.forEach(theme => {
+        if(wordsDatabase[theme]) {
+            pool = pool.concat(wordsDatabase[theme]);
+        }
+    });
+
+    if (pool.length === 0) {
+        // Fallback
+        return { word: "Missing Config", hint: "Check Themes" };
+    }
+
+    const randomIndex = Math.floor(Math.random() * pool.length);
+    return pool[randomIndex];
 }

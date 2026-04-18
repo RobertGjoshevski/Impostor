@@ -1,0 +1,16 @@
+{
+  "Locations": [
+    { "word": "Space Station", "hint": "Orbit" },
+    { "word": "Submarine", "hint": "Vessel" },
+    { "word": "Casino", "hint": "Betting" },
+    { "word": "Hospital", "hint": "Clinic" },
+    { "word": "Library", "hint": "Books" }
+  ],
+  "Occupations": [
+    { "word": "Doctor", "hint": "Healer" },
+    { "word": "Astronaut", "hint": "Pilot" },
+    { "word": "Chef", "hint": "Cook" },
+    { "word": "Plumber", "hint": "Pipes" },
+    { "word": "Detective", "hint": "Sleuth" }
+  ]
+}

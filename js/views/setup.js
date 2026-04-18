@@ -1,13 +1,21 @@
 import { store } from '../store.js';
-import { getRandomWord } from '../words.js';
+import { getRandomWord, loadLanguageData } from '../words.js';
 
 export const SetupView = {
     render: (state) => `
         <header class="bg-[#0c0c1f]/80 backdrop-blur-xl docked full-width top-0 z-50 shadow-[0_0_40px_rgba(208,149,255,0.08)] flex justify-between items-center w-full px-6 py-4 absolute">
-            <h1 class="font-headline font-bold tracking-tighter text-2xl font-black tracking-widest text-[#d095ff] uppercase mx-auto">IMPOSTOR</h1>
+            <h1 class="font-headline font-bold tracking-tighter text-2xl font-black tracking-widest text-[#d095ff] uppercase">IMPOSTOR</h1>
+            <select id="languageSelect" class="bg-surface-container border border-outline-variant/30 text-on-surface-variant text-xs rounded-md px-2 py-1 outline-none focus:ring-1 focus:ring-primary shadow-inner text-ellipsis cursor-pointer">
+                <option value="en" ${state.language==='en'?'selected':''}>English</option>
+                <option value="de" ${state.language==='de'?'selected':''}>Deutsch</option>
+                <option value="id" ${state.language==='id'?'selected':''}>Bahasa Indonesia</option>
+                <option value="mk" ${state.language==='mk'?'selected':''}>Македонски</option>
+                <option value="es" ${state.language==='es'?'selected':''}>Español</option>
+                <option value="it" ${state.language==='it'?'selected':''}>Italiano</option>
+            </select>
         </header>
+
         <main class="flex-1 flex flex-col px-6 pt-24 pb-12 max-w-md mx-auto w-full gap-8 animate-fade-in">
-            <!-- Setup Header -->
             <div class="space-y-2">
                 <h2 class="font-headline text-3xl font-bold text-on-surface tracking-tight">Configure Game</h2>
                 <p class="font-body text-on-surface-variant text-sm">Add players and set the parameters for the next session.</p>
@@ -26,7 +34,6 @@ export const SetupView = {
                         <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
                     </button>
                 </div>
-                <!-- Player List -->
                 <ul id="playerList" class="flex flex-col gap-2 mt-2 max-h-48 overflow-y-auto">
                     ${SetupView.renderPlayerList(state.players)}
                 </ul>
@@ -35,11 +42,21 @@ export const SetupView = {
             <!-- Game Settings -->
             <section class="bg-surface-container-high rounded-xl p-5 shadow-[0_0_32px_rgba(208,149,255,0.04)] flex flex-col gap-6">
                 <h3 class="font-headline text-lg font-semibold text-primary">Game Settings</h3>
-                <!-- Impostor Count Stepper -->
+                
+                <!-- Theme Editor -->
+                <div class="flex items-center justify-between bg-surface-container-low rounded-lg p-4 cursor-pointer hover:bg-surface-container-highest transition-colors active:scale-95" id="openThemesBtn">
+                    <div class="flex flex-col">
+                        <span class="font-body text-base font-semibold text-on-surface">Categories</span>
+                        <span id="themesCountSpan" class="font-body text-xs text-on-surface-variant">${state.selectedThemes.length} / ${state.availableThemes.length} Selected</span>
+                    </div>
+                    <span class="material-symbols-outlined text-on-surface text-[20px]">chevron_right</span>
+                </div>
+
+                <!-- Impostor Stepper -->
                 <div class="flex items-center justify-between bg-surface-container-low rounded-lg p-4">
                     <div class="flex flex-col">
                         <span class="font-body text-base font-semibold text-on-surface">Impostors</span>
-                        <span class="font-body text-xs text-on-surface-variant">Recommended: Math.max(1, Math.floor(players/4))</span>
+                        <span class="font-body text-xs text-on-surface-variant">Recommended: 1</span>
                     </div>
                     <div class="flex items-center gap-4 bg-surface rounded-full px-2 py-1">
                         <button id="decImpostorsBtn" class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center hover:bg-surface-bright active:scale-90 transition-all">
@@ -114,7 +131,7 @@ export const SetupView = {
         const addPlayer = () => {
             if (input.value) {
                 store.addPlayer(input.value);
-                input.value = ''; // clear upon adding
+                input.value = ''; 
             }
         };
 
@@ -133,12 +150,24 @@ export const SetupView = {
             store.setImpostorCount(store.state.impostorCount + 1);
         });
 
+        document.getElementById('openThemesBtn').addEventListener('click', () => {
+            store.setState({ screen: 'themes' });
+        });
+
+        const langSelect = document.getElementById('languageSelect');
+        if(langSelect) {
+            langSelect.addEventListener('change', (e) => {
+                const lang = e.target.value;
+                loadLanguageData(lang);
+            });
+        }
+
         SetupView.bindStartButton();
     },
 
     update: (state) => {
-        // Targeted update without full re-render
         document.getElementById('playerCountSpan').innerText = `${state.players.length} Players`;
+        document.getElementById('themesCountSpan').innerText = `${state.selectedThemes.length} / ${state.availableThemes.length} Selected`;
         document.getElementById('impostorCountSpan').innerText = state.impostorCount;
         
         document.getElementById('playerList').innerHTML = SetupView.renderPlayerList(state.players);

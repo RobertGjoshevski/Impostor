@@ -9,6 +9,9 @@ export const store = {
         scores: {}, // Persistent across rounds
         votes: {}, // Current round votes
         detectives: [], // Innocents who guessed right
+        language: 'en',
+        availableThemes: [],
+        selectedThemes: [],
     },
     
     listeners: [],

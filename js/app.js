@@ -4,13 +4,16 @@ import { TransitionView } from './views/transition.js';
 import { RevealView } from './views/reveal.js';
 import { RoundView } from './views/round.js';
 import { ResultsView } from './views/results.js';
+import { ThemesView } from './views/themes.js';
+import { loadLanguageData } from './words.js';
 
 const views = {
     'setup': SetupView,
     'transition': TransitionView,
     'reveal': RevealView,
     'round': RoundView,
-    'results': ResultsView
+    'results': ResultsView,
+    'themes': ThemesView
 };
 
 const appContainer = document.getElementById('app');
@@ -34,3 +37,6 @@ function render(state) {
 
 store.subscribe(render);
 render(store.state);
+
+// Load initial language pack (Default 'en')
+loadLanguageData(store.state.language);

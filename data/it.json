@@ -1,0 +1,16 @@
+{
+  "Luoghi": [
+    { "word": "Stazione Spaziale", "hint": "Orbita" },
+    { "word": "Sottomarino", "hint": "Vascello" },
+    { "word": "Casinò", "hint": "Scommesse" },
+    { "word": "Ospedale", "hint": "Clinica" },
+    { "word": "Biblioteca", "hint": "Libri" }
+  ],
+  "Professioni": [
+    { "word": "Dottore", "hint": "Guaritore" },
+    { "word": "Astronauta", "hint": "Pilota" },
+    { "word": "Cuoco", "hint": "Cucina" },
+    { "word": "Idraulico", "hint": "Tubi" },
+    { "word": "Detective", "hint": "Investigatore" }
+  ]
+}

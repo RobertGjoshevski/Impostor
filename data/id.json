@@ -1,0 +1,16 @@
+{
+  "Lokasi": [
+    { "word": "Stasiun Luar Angkasa", "hint": "Orbit" },
+    { "word": "Kapal Selam", "hint": "Kapal" },
+    { "word": "Kasino", "hint": "Judi" },
+    { "word": "Rumah Sakit", "hint": "Klinik" },
+    { "word": "Perpustakaan", "hint": "Buku" }
+  ],
+  "Pekerjaan": [
+    { "word": "Dokter", "hint": "Penyembuh" },
+    { "word": "Astronot", "hint": "Pilot" },
+    { "word": "Koki", "hint": "Masak" },
+    { "word": "Tukang Ledeng", "hint": "Pipa" },
+    { "word": "Detektif", "hint": "Penyelidik" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "Orte": [
+    { "word": "Raumstation", "hint": "Orbit" },
+    { "word": "U-Boot", "hint": "Schiff" },
+    { "word": "Kasino", "hint": "Wetten" },
+    { "word": "Krankenhaus", "hint": "Klinik" },
+    { "word": "Bibliothek", "hint": "Bücher" }
+  ],
+  "Berufe": [
+    { "word": "Arzt", "hint": "Heiler" },
+    { "word": "Astronaut", "hint": "Pilot" },
+    { "word": "Koch", "hint": "Küche" },
+    { "word": "Klempner", "hint": "Rohre" },
+    { "word": "Detektiv", "hint": "Spürhund" }
+  ]
+}
