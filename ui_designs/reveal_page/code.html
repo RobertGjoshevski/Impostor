@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Impostor - Reveal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#0c0c1f",
+                      "inverse-primary": "#8534c4",
+                      "error": "#ff6e84",
+                      "on-secondary": "#0b5800",
+                      "surface-container-high": "#1d1d36",
+                      "on-secondary-fixed-variant": "#0d6200",
+                      "surface-container-lowest": "#000000",
+                      "surface-variant": "#23233f",
+                      "on-surface-variant": "#aaa8c2",
+                      "on-tertiary-fixed-variant": "#760037",
+                      "primary-container": "#c782ff",
+                      "error-dim": "#d73357",
+                      "on-error": "#490013",
+                      "on-secondary-fixed": "#064200",
+                      "surface-container": "#17172e",
+                      "secondary-container": "#106e00",
+                      "primary-dim": "#c57eff",
+                      "surface-container-highest": "#23233f",
+                      "on-primary-container": "#38005e",
+                      "secondary-fixed-dim": "#2be800",
+                      "surface-container-low": "#111126",
+                      "background": "#0c0c1f",
+                      "primary-fixed": "#c782ff",
+                      "inverse-on-surface": "#545369",
+                      "outline": "#74738b",
+                      "surface-tint": "#d095ff",
+                      "on-tertiary-container": "#000000",
+                      "on-primary": "#490078",
+                      "tertiary-fixed-dim": "#ff75a0",
+                      "primary-fixed-dim": "#bd6efe",
+                      "outline-variant": "#46465c",
+                      "tertiary-fixed": "#ff8eae",
+                      "on-background": "#e5e3fe",
+                      "on-error-container": "#ffb2b9",
+                      "secondary": "#2ff801",
+                      "secondary-dim": "#2be800",
+                      "surface-dim": "#0c0c1f",
+                      "surface-bright": "#292947",
+                      "on-tertiary-fixed": "#380017",
+                      "tertiary": "#ff6b9b",
+                      "secondary-fixed": "#2ff801",
+                      "tertiary-dim": "#e30071",
+                      "on-surface": "#e5e3fe",
+                      "error-container": "#a70138",
+                      "primary": "#d095ff",
+                      "on-primary-fixed": "#000000",
+                      "on-primary-fixed-variant": "#450073",
+                      "on-secondary-container": "#e7ffd9",
+                      "on-tertiary": "#47001f",
+                      "inverse-surface": "#fcf8ff",
+                      "tertiary-container": "#ff067f"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body": [
+                              "Manrope"
+                      ],
+                      "label": [
+                              "Manrope"
+                      ]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col items-center justify-center relative overflow-hidden selection:bg-tertiary/30 selection:text-tertiary-fixed">
+<!-- Ambient Background Glows (The Digital Séance) -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-tertiary/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+<!-- Main Content Canvas (Navigation Shell Suppressed due to Transactional Page Intent) -->
+<main class="z-10 w-full max-w-md px-6 flex flex-col items-center gap-12">
+<!-- Player Context -->
+<header class="flex flex-col items-center gap-4 text-center">
+<div class="relative group">
+<div class="absolute inset-0 bg-tertiary rounded-full blur-md opacity-30 group-hover:opacity-50 transition-opacity"></div>
+<img class="relative w-20 h-20 rounded-full object-cover ring-2 ring-tertiary/50 border-4 border-surface shadow-[0_0_30px_rgba(255,107,155,0.15)]" data-alt="close-up portrait of a cyberpunk character wearing a dark hood with vibrant neon pink rim lighting against a pitch black background, cinematic and mysterious mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3h5F8xMvq7G2GVckD7cI5I2Kr24Slks_K9ogV4vl40HFAJLhKneSMpiCMKcZyx6BQc-WqakhOVgakfM2pyi9kVInvfp56HmgRxb-Pdo_LpPibV8jLWUXT7OCvGnX2mAwjwSjwWEhlAYXfrtTFfIKGBih2_FZcu84IyRLy3R4g9BrNLXuFNgL3_8yUP_JIsDV5c_ue8fXoHdO5HeBsHIAhVtlpYK3_Iu1yDjtLJGl9st_bLVZ09MG3uhXoFRBSa4tTrexMDoCbpOw"/>
+</div>
+<div>
+<h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface">Player 3</h2>
+<p class="text-on-surface-variant text-sm tracking-widest uppercase mt-1">Identity Revealed</p>
+</div>
+</header>
+<!-- The Reveal Card (Glassmorphism & Tonal Nesting) -->
+<section class="w-full bg-surface-bright/40 backdrop-blur-2xl rounded-[32px] p-8 flex flex-col items-center text-center relative border border-outline-variant/20 shadow-[0_0_64px_rgba(255,107,155,0.08)]">
+<!-- Decorative Accent -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-1 bg-gradient-to-r from-transparent via-tertiary to-transparent rounded-b-full opacity-50"></div>
+<p class="text-on-surface-variant font-bold tracking-[0.2em] text-xs uppercase mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary" style="font-variation-settings: 'FILL' 1;">warning</span>
+                You Are The
+            </p>
+<h1 class="font-headline text-5xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-tertiary to-tertiary-dim tracking-tighter mb-8 drop-shadow-[0_0_20px_rgba(255,107,155,0.2)]">
+                IMPOSTOR
+            </h1>
+<!-- Hint Sub-card (Nesting) -->
+<div class="w-full bg-surface-container-highest/60 rounded-2xl p-5 border border-outline-variant/10 shadow-inner">
+<p class="text-xs text-on-surface-variant uppercase tracking-wider mb-2">Category Hint</p>
+<p class="font-headline text-xl font-bold text-inverse-surface tracking-tight">A High-Tech Location</p>
+</div>
+</section>
+<!-- Action Area -->
+<div class="w-full flex flex-col items-center gap-4 mt-4">
+<!-- Done Button (Appears after hold-to-peek) -->
+<button class="w-full rounded-full bg-gradient-to-br from-tertiary to-tertiary-container text-on-tertiary-container font-headline font-bold text-lg py-5 shadow-[0_0_40px_rgba(255,107,155,0.15)] hover:shadow-[0_0_50px_rgba(255,107,155,0.25)] active:scale-[0.98] transition-all duration-200 flex justify-center items-center gap-3 border border-tertiary/20">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+                DONE PEEKING
+            </button>
+<p class="text-on-surface-variant text-sm text-center flex items-center gap-1.5 opacity-80">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+                Pass device to the next player
+            </p>
+</div>
+</main>
+</body></html>

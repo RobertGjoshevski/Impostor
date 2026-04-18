@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Impostor - Setup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#0c0c1f",
+                        "inverse-primary": "#8534c4",
+                        "error": "#ff6e84",
+                        "on-secondary": "#0b5800",
+                        "surface-container-high": "#1d1d36",
+                        "on-secondary-fixed-variant": "#0d6200",
+                        "surface-container-lowest": "#000000",
+                        "surface-variant": "#23233f",
+                        "on-surface-variant": "#aaa8c2",
+                        "on-tertiary-fixed-variant": "#760037",
+                        "primary-container": "#c782ff",
+                        "error-dim": "#d73357",
+                        "on-error": "#490013",
+                        "on-secondary-fixed": "#064200",
+                        "surface-container": "#17172e",
+                        "secondary-container": "#106e00",
+                        "primary-dim": "#c57eff",
+                        "surface-container-highest": "#23233f",
+                        "on-primary-container": "#38005e",
+                        "secondary-fixed-dim": "#2be800",
+                        "surface-container-low": "#111126",
+                        "background": "#0c0c1f",
+                        "primary-fixed": "#c782ff",
+                        "inverse-on-surface": "#545369",
+                        "outline": "#74738b",
+                        "surface-tint": "#d095ff",
+                        "on-tertiary-container": "#000000",
+                        "on-primary": "#490078",
+                        "tertiary-fixed-dim": "#ff75a0",
+                        "primary-fixed-dim": "#bd6efe",
+                        "outline-variant": "#46465c",
+                        "tertiary-fixed": "#ff8eae",
+                        "on-background": "#e5e3fe",
+                        "on-error-container": "#ffb2b9",
+                        "secondary": "#2ff801",
+                        "secondary-dim": "#2be800",
+                        "surface-dim": "#0c0c1f",
+                        "surface-bright": "#292947",
+                        "on-tertiary-fixed": "#380017",
+                        "tertiary": "#ff6b9b",
+                        "secondary-fixed": "#2ff801",
+                        "tertiary-dim": "#e30071",
+                        "on-surface": "#e5e3fe",
+                        "error-container": "#a70138",
+                        "primary": "#d095ff",
+                        "on-primary-fixed": "#000000",
+                        "on-primary-fixed-variant": "#450073",
+                        "on-secondary-container": "#e7ffd9",
+                        "on-tertiary": "#47001f",
+                        "inverse-surface": "#fcf8ff",
+                        "tertiary-container": "#ff067f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-[#0c0c1f]/80 backdrop-blur-xl docked full-width top-0 z-50 shadow-[0_0_40px_rgba(208,149,255,0.08)] flex justify-between items-center w-full px-6 py-4">
+<button aria-label="Menu" class="text-[#d095ff] hover:text-[#d095ff] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+<h1 class="font-headline font-bold tracking-tighter text-2xl font-black tracking-widest text-[#d095ff] uppercase">IMPOSTOR</h1>
+<button aria-label="Profile" class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden hover:text-[#d095ff] transition-colors active:scale-95 duration-200">
+<img alt="Player Profile" class="w-full h-full object-cover" data-alt="close up portrait of a young woman with neon pink and purple lighting in a cyberpunk setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNau7-rSIzj90wtGsrSDsvt17_dkOB7Fa9NTQRlLm5S6ovbtAs4IuoREwG_bfsBaZr4gu2WSkgTaJSdrIbC8YQZo33qaFPPMgkyCmWznMX4dFxbk0JsMeS2QdWtEs2yTFaecHiDGUT-qsIH_P-V6JmVC_VKyehAbvXq_oHoOiTSXgTIyB-CfGTOcdzFFoU3L8oFBs--uzb2V5CCAjDKoheQabWfyeyzemg5FWw0vDMW7vG4yi5810Six_uNQE8ug2-0NpyqNAPKjQ"/>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col px-6 pt-6 pb-32 max-w-md mx-auto w-full gap-8">
+<!-- Setup Header -->
+<div class="space-y-2">
+<h2 class="font-headline text-3xl font-bold text-on-surface tracking-tight">Configure Game</h2>
+<p class="font-body text-on-surface-variant text-sm">Add players and set the parameters for the next session.</p>
+</div>
+<!-- Add Player Section -->
+<section class="bg-surface-container-high rounded-xl p-5 shadow-[0_0_32px_rgba(208,149,255,0.04)] flex flex-col gap-4 relative overflow-hidden">
+<!-- Ambient Glow Accent -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline text-lg font-semibold text-primary">Crew Roster</h3>
+<span class="bg-surface-container-low text-on-surface-variant text-xs font-bold px-3 py-1 rounded-full">6/10 Players</span>
+</div>
+<div class="flex gap-3">
+<input class="flex-1 bg-surface-container-low border-none rounded-lg text-on-surface placeholder:text-on-surface-variant/50 focus:ring-1 focus:ring-primary px-4 py-3 font-body text-sm transition-shadow" placeholder="Enter player name..." type="text"/>
+<button class="bg-surface-container-highest text-primary rounded-lg px-4 flex items-center justify-center hover:bg-surface-bright transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</div>
+<!-- Player List -->
+<ul class="flex flex-col gap-2 mt-2">
+<!-- Player Item -->
+<li class="flex items-center justify-between bg-surface-container-low rounded-lg p-3 group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-primary font-bold text-xs uppercase border border-outline-variant/20">
+                            A
+                        </div>
+<span class="font-body text-sm font-medium text-on-surface">Alpha</span>
+</div>
+<button aria-label="Remove Alpha" class="text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity hover:text-error active:scale-90">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</li>
+<!-- Player Item -->
+<li class="flex items-center justify-between bg-surface-container-low rounded-lg p-3 group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-primary font-bold text-xs uppercase border border-outline-variant/20">
+                            B
+                        </div>
+<span class="font-body text-sm font-medium text-on-surface">Bravo</span>
+</div>
+<button aria-label="Remove Bravo" class="text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity hover:text-error active:scale-90">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</li>
+<!-- Player Item -->
+<li class="flex items-center justify-between bg-surface-container-low rounded-lg p-3 group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-primary font-bold text-xs uppercase border border-outline-variant/20">
+                            C
+                        </div>
+<span class="font-body text-sm font-medium text-on-surface">Charlie</span>
+</div>
+<button aria-label="Remove Charlie" class="text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity hover:text-error active:scale-90">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</li>
+<!-- Player Item -->
+<li class="flex items-center justify-between bg-surface-container-low rounded-lg p-3 group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-primary font-bold text-xs uppercase border border-outline-variant/20">
+                            D
+                        </div>
+<span class="font-body text-sm font-medium text-on-surface">Delta</span>
+</div>
+<button aria-label="Remove Delta" class="text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity hover:text-error active:scale-90">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</li>
+<!-- Player Item -->
+<li class="flex items-center justify-between bg-surface-container-low rounded-lg p-3 group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-primary font-bold text-xs uppercase border border-outline-variant/20">
+                            E
+                        </div>
+<span class="font-body text-sm font-medium text-on-surface">Echo</span>
+</div>
+<button aria-label="Remove Echo" class="text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity hover:text-error active:scale-90">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</li>
+<!-- Player Item -->
+<li class="flex items-center justify-between bg-surface-container-low rounded-lg p-3 group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-primary font-bold text-xs uppercase border border-outline-variant/20">
+                            F
+                        </div>
+<span class="font-body text-sm font-medium text-on-surface">Foxtrot</span>
+</div>
+<button aria-label="Remove Foxtrot" class="text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity hover:text-error active:scale-90">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</li>
+</ul>
+</section>
+<!-- Game Settings -->
+<section class="bg-surface-container-high rounded-xl p-5 shadow-[0_0_32px_rgba(208,149,255,0.04)] flex flex-col gap-6">
+<h3 class="font-headline text-lg font-semibold text-primary">Game Settings</h3>
+<!-- Impostor Count Stepper -->
+<div class="flex items-center justify-between bg-surface-container-low rounded-lg p-4">
+<div class="flex flex-col">
+<span class="font-body text-base font-semibold text-on-surface">Impostors</span>
+<span class="font-body text-xs text-on-surface-variant">Recommended: 2</span>
+</div>
+<div class="flex items-center gap-4 bg-surface rounded-full px-2 py-1">
+<button aria-label="Decrease Impostors" class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center hover:bg-surface-bright active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<span class="font-headline text-xl font-bold text-tertiary w-4 text-center">2</span>
+<button aria-label="Increase Impostors" class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center hover:bg-surface-bright active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<!-- Role Visibility Toggle -->
+<div class="flex items-center justify-between bg-surface-container-low rounded-lg p-4">
+<div class="flex flex-col">
+<span class="font-body text-base font-semibold text-on-surface">Reveal Roles on Death</span>
+<span class="font-body text-xs text-on-surface-variant">Increases certainty</span>
+</div>
+<!-- Custom Toggle Switch -->
+<button aria-checked="true" class="w-12 h-6 bg-primary-container rounded-full relative transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface" role="switch">
+<span class="absolute left-1 top-1 w-4 h-4 bg-primary rounded-full transform translate-x-6 transition-transform shadow-sm"></span>
+</button>
+</div>
+</section>
+<!-- Start Game CTA -->
+<div class="mt-4 pb-8">
+<button class="w-full rounded-full py-4 px-8 font-headline font-bold text-lg text-on-primary-container bg-gradient-to-br from-primary to-primary-container shadow-[0_0_40px_rgba(208,149,255,0.15)] hover:shadow-[0_0_60px_rgba(208,149,255,0.25)] hover:from-primary-dim hover:to-primary-fixed transition-all active:scale-95 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                START SESSION
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-[#0c0c1f]/90 backdrop-blur-2xl fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 rounded-t-[32px] shadow-[0_-10px_50px_rgba(208,149,255,0.1)]">
+<!-- Lobby (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#23233f] text-[#d095ff] rounded-full px-5 py-2 hover:opacity-100 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">groups</span>
+<span class="font-['Manrope'] font-semibold text-[10px] uppercase tracking-widest mt-1">Lobby</span>
+</a>
+<!-- Roles (Inactive) -->
+<a class="flex flex-col items-center justify-center text-[#46465c] opacity-60 hover:text-[#d095ff] hover:opacity-100 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">theater_comedy</span>
+<span class="font-['Manrope'] font-semibold text-[10px] uppercase tracking-widest mt-1 hidden md:block">Roles</span>
+</a>
+<!-- Status (Inactive) -->
+<a class="flex flex-col items-center justify-center text-[#46465c] opacity-60 hover:text-[#d095ff] hover:opacity-100 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="font-['Manrope'] font-semibold text-[10px] uppercase tracking-widest mt-1 hidden md:block">Status</span>
+</a>
+<!-- Log (Inactive) -->
+<a class="flex flex-col items-center justify-center text-[#46465c] opacity-60 hover:text-[#d095ff] hover:opacity-100 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">history_edu</span>
+<span class="font-['Manrope'] font-semibold text-[10px] uppercase tracking-widest mt-1 hidden md:block">Log</span>
+</a>
+</nav>
+</body></html>

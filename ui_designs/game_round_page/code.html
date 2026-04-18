@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Impostor - Game Round</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#0c0c1f",
+                        "inverse-primary": "#8534c4",
+                        "error": "#ff6e84",
+                        "on-secondary": "#0b5800",
+                        "surface-container-high": "#1d1d36",
+                        "on-secondary-fixed-variant": "#0d6200",
+                        "surface-container-lowest": "#000000",
+                        "surface-variant": "#23233f",
+                        "on-surface-variant": "#aaa8c2",
+                        "on-tertiary-fixed-variant": "#760037",
+                        "primary-container": "#c782ff",
+                        "error-dim": "#d73357",
+                        "on-error": "#490013",
+                        "on-secondary-fixed": "#064200",
+                        "surface-container": "#17172e",
+                        "secondary-container": "#106e00",
+                        "primary-dim": "#c57eff",
+                        "surface-container-highest": "#23233f",
+                        "on-primary-container": "#38005e",
+                        "secondary-fixed-dim": "#2be800",
+                        "surface-container-low": "#111126",
+                        "background": "#0c0c1f",
+                        "primary-fixed": "#c782ff",
+                        "inverse-on-surface": "#545369",
+                        "outline": "#74738b",
+                        "surface-tint": "#d095ff",
+                        "on-tertiary-container": "#000000",
+                        "on-primary": "#490078",
+                        "tertiary-fixed-dim": "#ff75a0",
+                        "primary-fixed-dim": "#bd6efe",
+                        "outline-variant": "#46465c",
+                        "tertiary-fixed": "#ff8eae",
+                        "on-background": "#e5e3fe",
+                        "on-error-container": "#ffb2b9",
+                        "secondary": "#2ff801",
+                        "secondary-dim": "#2be800",
+                        "surface-dim": "#0c0c1f",
+                        "surface-bright": "#292947",
+                        "on-tertiary-fixed": "#380017",
+                        "tertiary": "#ff6b9b",
+                        "secondary-fixed": "#2ff801",
+                        "tertiary-dim": "#e30071",
+                        "on-surface": "#e5e3fe",
+                        "error-container": "#a70138",
+                        "primary": "#d095ff",
+                        "on-primary-fixed": "#000000",
+                        "on-primary-fixed-variant": "#450073",
+                        "on-secondary-container": "#e7ffd9",
+                        "on-tertiary": "#47001f",
+                        "inverse-surface": "#fcf8ff",
+                        "tertiary-container": "#ff067f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Ambient Glow Utilities */
+        .ambient-glow-primary {
+            box-shadow: 0 0 40px rgba(208, 149, 255, 0.08);
+        }
+        .ambient-glow-button {
+            box-shadow: 0 0 32px rgba(208, 149, 255, 0.15);
+        }
+        .ambient-glow-error {
+            box-shadow: 0 0 32px rgba(255, 110, 132, 0.15);
+        }
+        .glass-panel {
+            background-color: rgba(41, 41, 71, 0.5); /* surface-bright with opacity */
+            backdrop-filter: blur(20px);
+        }
+        .gradient-primary {
+            background: linear-gradient(135deg, #d095ff 0%, #c782ff 100%);
+        }
+        .gradient-error {
+            background: linear-gradient(135deg, #ff6e84 0%, #d73357 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col relative overflow-x-hidden selection:bg-primary/30">
+<!-- Top App Bar (From Shared JSON) -->
+<header class="docked full-width top-0 z-50 bg-[#0c0c1f]/80 backdrop-blur-xl bg-[#111126] shadow-[0_0_40px_rgba(208,149,255,0.08)] flex justify-between items-center w-full px-6 py-4 fixed">
+<button class="text-[#d095ff] hover:text-[#d095ff] transition-colors active:scale-95 duration-200 focus:outline-none">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tighter text-2xl font-black tracking-widest text-[#d095ff] uppercase">IMPOSTOR</h1>
+<button class="w-8 h-8 rounded-full overflow-hidden focus:outline-none ring-2 ring-primary/30">
+<img alt="Player Avatar" class="w-full h-full object-cover" data-alt="close-up portrait of a generic video game avatar silhouette with neon purple glow against dark space background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6u4FMaLmBC2VSh5tUolQXlJZBy4ZlIbgnqsctWYqKlW4zjXBbqeuJITxE6Er1TC4NNmhCGx2TGDQebigVHWuma1NmbUChjwmCKW2Tg9QdMlBdehSFypGBE9UvmUW_N_tNW6emh4YABfDGtOgvOE5GJnK1IbqPVsnaYmQ2FVvcOWNJMTS0fdhFS98ZW_wS2Ga0ESwb90sGc09L4vc9Yo0XYTCZyexUlN3GpGOKDWGnhBqcnfy8GAK6YMkiWkmveTHSbATHYQJ9-bI"/>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-32 px-6 flex flex-col gap-8 max-w-3xl mx-auto w-full relative z-10">
+<!-- Timer Header Section -->
+<section class="flex flex-col items-center justify-center pt-4">
+<p class="font-label text-on-surface-variant text-sm tracking-widest uppercase mb-2">Round 3 - Discussion</p>
+<div class="relative w-48 h-48 flex items-center justify-center">
+<!-- Abstract Timer Visual -->
+<svg class="absolute inset-0 w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<circle cx="50" cy="50" fill="none" r="45" stroke="#111126" stroke-width="2"></circle>
+<circle class="drop-shadow-[0_0_10px_rgba(255,107,155,0.5)] transition-all duration-1000" cx="50" cy="50" fill="none" r="45" stroke="#ff6b9b" stroke-dasharray="283" stroke-dashoffset="60" stroke-width="4"></circle>
+</svg>
+<div class="text-center">
+<h2 class="font-headline text-5xl font-extrabold text-tertiary drop-shadow-[0_0_15px_rgba(255,107,155,0.3)]">01:45</h2>
+</div>
+</div>
+</section>
+<!-- Current Speaker Card -->
+<section class="w-full">
+<div class="bg-surface-container-highest rounded-xl p-6 ambient-glow-primary relative overflow-hidden">
+<!-- Decorative accent -->
+<div class="absolute top-0 left-0 w-1 h-full gradient-primary"></div>
+<p class="font-label text-primary text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">mic</span>
+                    Current Speaker
+                </p>
+<div class="flex items-center gap-6">
+<div class="relative w-20 h-20 rounded-full flex-shrink-0">
+<img alt="Speaker Avatar" class="w-full h-full object-cover rounded-full ring-4 ring-primary ring-offset-2 ring-offset-surface-container-highest" data-alt="portrait of a man in futuristic cyberpunk lighting, neon purple and blue tones, cinematic shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4dApi96SMf7iGN9lioaxREHJEJ-CjZka5t9YpusMPv3-akgynDECsW53Sc2h4evoMq4KuTw8KWdMjX7HkkDP1TNPnSHod9OQaVFgcV_1t5hnDOM2W5_bPpIXztpTCuB8OxJIO-WpXR_VAlWpsh4CcMQENVcvRDfV5300jSXtFpbs0iBFRuLszCYtk7fdbsyAcZRon-O6OPh1fGVT0ODcerdTKz4uq2bVzqZX4iSvow639ZwYO0kER-vXA31IJM3hnCHrpLspZl7k"/>
+<!-- Active speaking indicator ripple -->
+<div class="absolute inset-0 rounded-full border-2 border-primary opacity-50 animate-ping"></div>
+</div>
+<div class="flex-col">
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-1">Cipher_09</h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-lowest text-on-surface-variant font-label text-xs py-1 px-3 rounded-full shadow-sm">Trusted by 2</span>
+<span class="bg-surface-variant text-on-surface font-label text-xs py-1 px-3 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">timer</span> 30s remaining
+                            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Player Roster Grid -->
+<section class="w-full">
+<h4 class="font-headline text-lg font-bold text-on-surface mb-4">Player Status</h4>
+<div class="bg-surface-container-low rounded-xl p-4 shadow-sm">
+<div class="flex flex-col gap-4">
+<!-- Player Item: Has Spoken -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container hover:bg-surface-container-highest transition-colors">
+<div class="flex items-center gap-4">
+<div class="relative w-10 h-10 rounded-full flex-shrink-0">
+<img alt="Player 1" class="w-full h-full object-cover rounded-full ring-2 ring-secondary opacity-70" data-alt="portrait of a woman looking sideways, mysterious low light, cool cyan neon rim light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdXmHAFQrt0cG-c2drA7tAe72jlSQ3YI06T9ZFR24lam-iFJnWDDHZ3Z_94Ckdk7KKeuQj2Uv9eG5pn16_E-gLU6KskKd7d3ZV5CVzWgBjQv6PIMQcpr7r-7Ht9HZ4--Y-236KkJ1qpkX85f8V2exvczktDE2zHN-HPKcPgydv0Ty0O4I7ySsb2KfoIIHptEvwrZeLsHi6UQjU-rNKaxno-HvA1WDYWDUsW4q283Uw2SY9URZKercagpBiqBGDKCPVngnMRObWNUI"/>
+</div>
+<div>
+<p class="font-bold text-sm text-on-surface opacity-80">NeonGhost</p>
+<p class="text-xs text-on-surface-variant font-label">Spoke (0:45)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary opacity-80" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Player Item: Current Speaker (Highlighted) -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-highest border-l-2 border-primary">
+<div class="flex items-center gap-4">
+<div class="relative w-10 h-10 rounded-full flex-shrink-0">
+<img alt="Current Speaker" class="w-full h-full object-cover rounded-full ring-2 ring-primary" data-alt="portrait of a man in futuristic cyberpunk lighting, neon purple and blue tones, cinematic shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtxIV3szZuIyZn_T4zyWJnSUSDXKJj4T-fSLNHHRTr93vAbOzDuKc5KrmQFxjYYW-ECZaRJZOzn7Qtq35vWMRscMxifOvBQe8wGoMXrtTkfo_K3xRR_hTnWOLoNn7pwXTcrw_iKIGH5Y3udF_xQLR9l7krBm_yYQJHAuJd_5ljpPtUwTqA8iM8dDyFaogrGFZbsrjuoxNbBVBRsKTPBGIq9pB5oU3aIRzau_RcDmvI0teZ3ZeTP5CLU6Mt-Y4oK8xkMnH6B17i0gc"/>
+</div>
+<div>
+<p class="font-bold text-sm text-primary">Cipher_09</p>
+<p class="text-xs text-primary-dim font-label flex items-center gap-1">Speaking...</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary animate-pulse" style="font-variation-settings: 'FILL' 1;">graphic_eq</span>
+</div>
+<!-- Player Item: Waiting -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container hover:bg-surface-container-highest transition-colors">
+<div class="flex items-center gap-4">
+<div class="relative w-10 h-10 rounded-full flex-shrink-0">
+<img alt="Player 3" class="w-full h-full object-cover rounded-full ring-2 ring-surface-variant" data-alt="portrait of a man wearing glasses, serious expression, deep shadow on one side of face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ8eULg1WhGlE7XUUVUwCoyu7MbeoQ4rdVI_9Iu83jcuvT8U_xmcD_CTfhxtfwGX61OS4AihuVQk_fjdHPN-B4k87tvVQF7ysor3yMcgkyvF0G3fk_9H_TDBu0QB9mMbJFpndDTBs-ZqB5SBpLa805d_ByRcOiqBBWsy_kCajNyGwaIwc4JkyP6JK-mSa1D50XvfD8-49S6SlKJ8nfWC81ee4qIBuyCV69WNdeovUfhowaNQFI22hYIS_yQzuLGsg57cCHAam8kXM"/>
+</div>
+<div>
+<p class="font-bold text-sm text-on-surface">VoidWalker</p>
+<p class="text-xs text-on-surface-variant font-label">Waiting</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 0;">schedule</span>
+</div>
+<!-- Player Item: Deceased / Inactive -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest opacity-50">
+<div class="flex items-center gap-4">
+<div class="relative w-10 h-10 rounded-full flex-shrink-0 filter grayscale">
+<img alt="Player 4" class="w-full h-full object-cover rounded-full ring-2 ring-inverse-on-surface" data-alt="portrait of a person, blurred and desaturated, ghostly appearance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNH3B9Prw-toO11xfCETwVa5iVWIBMMGaZw_Lx5meqytcpDdDea4LSak-er4Jqs-9fuCzq6keGrdhN8ym8Czu7TPDvLXwh6fgPInbw2f9zzKiXqxSgX7xYynPdbO2WIpsMHUA81SfIJHtJD0s4tq1-8E_YhqCUqEtc6CwIQBpjbMunBQ37Y9qKxz46Xv4yzoMEkfnfTLqzjYHqgzRe-M12f_6pRr8SJZ-GSKMwPg2gvTfX4XoQIJEm6AheoPHl1Jj94amKJHwPtq0"/>
+</div>
+<div>
+<p class="font-bold text-sm text-inverse-on-surface line-through">SyntaxError</p>
+<p class="text-xs text-inverse-on-surface font-label">Eliminated</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-inverse-on-surface" style="font-variation-settings: 'FILL' 1;">skull</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Primary Action Area -->
+<section class="mt-4 flex justify-center">
+<button class="w-full md:w-auto gradient-error text-on-error font-headline font-bold text-lg py-4 px-12 rounded-full ambient-glow-error hover:opacity-90 active:scale-95 transition-all duration-200 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">stop_circle</span>
+                END ROUND EARLY
+            </button>
+</section>
+</main>
+<!-- Bottom Nav Bar (From Shared JSON) -->
+<nav class="fixed bottom-0 w-full rounded-t-[32px] bg-[#0c0c1f]/90 backdrop-blur-2xl bg-[#111126] shadow-[0_-10px_50px_rgba(208,149,255,0.1)] md:hidden">
+<div class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3">
+<a class="flex flex-col items-center justify-center text-[#46465c] opacity-60 hover:opacity-100 transition-all active:scale-90 transition-transform duration-150 group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0;">groups</span>
+<span class="font-['Manrope'] font-semibold text-[10px] uppercase tracking-widest text-[#d095ff]">Lobby</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#46465c] opacity-60 hover:opacity-100 transition-all active:scale-90 transition-transform duration-150 group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0;">theater_comedy</span>
+<span class="font-['Manrope'] font-semibold text-[10px] uppercase tracking-widest text-[#d095ff]">Roles</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#23233f] text-[#d095ff] rounded-full px-5 py-2 hover:opacity-100 transition-all active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined mb-1 text-primary drop-shadow-[0_0_8px_rgba(208,149,255,0.5)]" style="font-variation-settings: 'FILL' 1;">query_stats</span>
+<span class="font-['Manrope'] font-semibold text-[10px] uppercase tracking-widest text-[#d095ff]">Status</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#46465c] opacity-60 hover:opacity-100 transition-all active:scale-90 transition-transform duration-150 group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0;">history_edu</span>
+<span class="font-['Manrope'] font-semibold text-[10px] uppercase tracking-widest text-[#d095ff]">Log</span>
+</a>
+</div>
+</nav>
+<!-- Desktop Nav Placeholder (Hidden on mobile, replaces BottomNav on desktop if needed, matching 'Status' active state) -->
+<div class="hidden md:flex fixed top-4 right-20 z-50 items-center gap-6">
+<!-- Simplified for demonstration, actual implementation would weave into TopAppBar -->
+<span class="text-on-surface-variant hover:text-primary text-sm font-label font-semibold tracking-widest uppercase cursor-pointer">Lobby</span>
+<span class="text-on-surface-variant hover:text-primary text-sm font-label font-semibold tracking-widest uppercase cursor-pointer">Roles</span>
+<span class="text-primary text-sm font-label font-bold tracking-widest uppercase cursor-pointer border-b-2 border-primary pb-1">Status</span>
+<span class="text-on-surface-variant hover:text-primary text-sm font-label font-semibold tracking-widest uppercase cursor-pointer">Log</span>
+</div>
+</body></html>

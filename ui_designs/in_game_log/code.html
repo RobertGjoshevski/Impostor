@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GAME LOG - Midnight Protocol</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#e5e3fe",
+                    "primary-fixed": "#c782ff",
+                    "surface-container-low": "#111126",
+                    "secondary-fixed": "#2ff801",
+                    "background": "#0c0c1f",
+                    "surface-tint": "#d095ff",
+                    "inverse-on-surface": "#545369",
+                    "inverse-primary": "#8534c4",
+                    "surface-container-high": "#1d1d36",
+                    "error": "#ff6e84",
+                    "secondary-container": "#106e00",
+                    "on-primary-container": "#38005e",
+                    "primary-fixed-dim": "#bd6efe",
+                    "on-error": "#490013",
+                    "on-secondary": "#0b5800",
+                    "primary-container": "#c782ff",
+                    "primary": "#d095ff",
+                    "surface-container-highest": "#23233f",
+                    "on-surface-variant": "#aaa8c2",
+                    "on-tertiary-fixed": "#380017",
+                    "surface-variant": "#23233f",
+                    "secondary": "#2ff801",
+                    "secondary-fixed-dim": "#2be800",
+                    "error-container": "#a70138",
+                    "outline": "#74738b",
+                    "primary-dim": "#c57eff",
+                    "on-surface": "#e5e3fe",
+                    "on-primary": "#490078",
+                    "error-dim": "#d73357",
+                    "tertiary": "#ff6b9b",
+                    "surface-container": "#17172e",
+                    "surface-dim": "#0c0c1f",
+                    "secondary-dim": "#2be800",
+                    "surface-bright": "#292947",
+                    "tertiary-dim": "#e30071",
+                    "on-tertiary-container": "#000000",
+                    "on-tertiary-fixed-variant": "#760037",
+                    "surface-container-lowest": "#000000",
+                    "tertiary-fixed": "#ff8eae",
+                    "tertiary-container": "#ff067f",
+                    "on-secondary-fixed": "#064200",
+                    "on-secondary-fixed-variant": "#0d6200",
+                    "outline-variant": "#46465c",
+                    "on-tertiary": "#47001f",
+                    "inverse-surface": "#fcf8ff",
+                    "on-primary-fixed-variant": "#450073",
+                    "on-error-container": "#ffb2b9",
+                    "surface": "#0c0c1f",
+                    "tertiary-fixed-dim": "#ff75a0",
+                    "on-secondary-container": "#e7ffd9",
+                    "on-primary-fixed": "#000000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body": [
+                            "Manrope"
+                    ],
+                    "label": [
+                            "Manrope"
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            font-family: theme('fontFamily.body');
+        }
+        .glass-panel {
+            background: rgba(29, 29, 54, 0.4); /* surface-container-high with opacity */
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, theme('colors.primary'), theme('colors.primary-container'));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .neon-glow {
+            box-shadow: 0 0 32px rgba(208, 149, 255, 0.08); /* Ambient shadow */
+        }
+        .danger-glow {
+             box-shadow: 0 0 32px rgba(255, 110, 132, 0.15);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen pb-24 pt-20 flex flex-col relative overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0c0c1f]/80 backdrop-blur-xl shadow-[0_0_32px_rgba(208,149,255,0.08)] bg-gradient-to-b from-[#111126] to-transparent flex items-center justify-between px-6 h-16 w-full">
+<button class="text-[#d095ff] hover:bg-[#23233f] transition-colors active:scale-95 duration-200 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tighter uppercase text-[#d095ff] text-xl tracking-widest text-center flex-1">GAME LOG</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-4 lg:px-8 max-w-4xl mx-auto w-full flex flex-col gap-8 relative z-10">
+<!-- Header Summary -->
+<section class="glass-panel p-6 rounded-xl neon-glow relative overflow-hidden flex flex-col gap-2">
+<div class="absolute -right-10 -top-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+<h2 class="font-headline font-bold text-2xl tracking-tight text-on-surface">Transmission <span class="gradient-text">Complete</span></h2>
+<p class="font-body text-on-surface-variant text-sm">Review the timeline of events from the latest cycle.</p>
+</section>
+<!-- Timeline / Log -->
+<div class="flex flex-col gap-6 relative">
+<!-- Connecting Line Background (Ghost Border style) -->
+<div class="absolute left-6 top-4 bottom-4 w-px bg-outline-variant/20 z-0 hidden md:block"></div>
+<!-- Round 2 Start Marker -->
+<div class="flex flex-col md:flex-row gap-4 md:items-center relative z-10 mt-4">
+<div class="hidden md:flex w-12 h-12 rounded-full bg-surface-container-high items-center justify-center neon-glow">
+<span class="material-symbols-outlined text-primary text-xl">cycle</span>
+</div>
+<div class="flex-1 bg-surface-container-low rounded-xl p-4 ml-0 md:ml-4 flex items-center justify-between">
+<span class="font-headline font-bold text-primary tracking-wide">ROUND 2 COMMENCED</span>
+<span class="font-label text-on-surface-variant text-xs">T-MINUS 12:00</span>
+</div>
+</div>
+<!-- Event Item: Vote Cast -->
+<div class="flex flex-col md:flex-row gap-4 relative z-10 pl-0 md:pl-16">
+<div class="bg-surface-container-high rounded-xl p-4 flex-1 flex flex-col gap-3 shadow-[0_4px_24px_rgba(0,0,0,0.2)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">how_to_vote</span>
+<span class="font-label text-on-surface-variant text-xs uppercase tracking-widest">Vote Logged</span>
+<span class="ml-auto font-label text-on-surface-variant text-[10px]">11:45</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-lowest p-3 rounded-lg">
+<!-- Voter -->
+<div class="flex items-center gap-2">
+<img alt="Portrait of player" class="w-8 h-8 rounded-full border border-secondary" data-alt="Cyberpunk style portrait of a female character with neon purple lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfmXe5XCWVsFXUcdc0xY7ET-5iMURmGvvDC0fT2XHjueOdd8dnbFLAbM-f5jd1gQbWjPXKlqMk3uO2wOEZAO7C-LtUScAE1wq9BEMMxPTdnERQjrWvnYpiWU1wFvEeB16zGqOv7tlywFAykQOtmMYk38XsVQD4Ka-iXcnEloM6gC84LZI-7mGruwIDmXsOTAqsDrFCMmXTu0dWtQCS9S2Si6__4J33y7Snh2WU3FZlQ9MAZyvJ7yFQTGSyutamFPqZFJelgO6JMFM"/>
+<span class="font-body text-on-surface font-semibold text-sm">Cipher</span>
+</div>
+<span class="material-symbols-outlined text-outline text-sm mx-1">arrow_forward</span>
+<!-- Target -->
+<div class="flex items-center gap-2">
+<img alt="Portrait of player" class="w-8 h-8 rounded-full border border-error" data-alt="Dark, moody portrait of a male character with red neon rim light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD31apDZalilsBps8igi7MIb1TFzi_nF46SsicdkMckRBi568s-YyVHkoluaH9Y5f1NA_fHiNU4RlHit4iH7F6QvwQ-lsAT8hCpwSDcKTfGnCPumB-QpMb6SEYYayHSl7Q12eTVbrnG6fgeAK1h15_Nh5y97mwPtSShLGz1Ku6RLImRD_5sBB0Jsbaj5SKQ4mrY7hFgOkwlUd9KEnbBVAZvujteLzIsx1AF5N0WVJ33OnrMyiLQQoXdz45SCsQyX_RYUgNiETynD2Q"/>
+<span class="font-body text-on-surface font-semibold text-sm">Nexus</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Event Item: Skip Vote -->
+<div class="flex flex-col md:flex-row gap-4 relative z-10 pl-0 md:pl-16">
+<div class="bg-surface-container-high rounded-xl p-4 flex-1 flex flex-col gap-3 shadow-[0_4px_24px_rgba(0,0,0,0.2)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">block</span>
+<span class="font-label text-on-surface-variant text-xs uppercase tracking-widest">Vote Skipped</span>
+<span class="ml-auto font-label text-on-surface-variant text-[10px]">11:42</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-lowest p-3 rounded-lg">
+<!-- Voter -->
+<div class="flex items-center gap-2">
+<img alt="Portrait of player" class="w-8 h-8 rounded-full border border-outline" data-alt="Gritty portrait of a male character with cybernetic implants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhpuh_aTWqmsL6zua5A9b44ePS7AegVLTK0HgLR6edgqiskN5V1e_wzxnuYAqih5yzEW7tNxoINwkairlQHwaqFbVYOBkj9pMUdan3dWnuD_LilW_mGW_Py5bvFbVkRYnwbnZ3Z4y5EZGVRF7RF1NFrIc2xPs9K22Ip_RgNrwW7jkyywbdvb9Ly0ueS7hIiLmfFH6XQ5c6F-aT6sGofb-FNHnT0oCZBl-J2cIVwzQofbCcEFsABmpeEJNmYDlcYx1uG-7ohjMAVwU"/>
+<span class="font-body text-on-surface font-semibold text-sm">Rogue_9</span>
+</div>
+<span class="font-body text-outline-variant text-sm italic ml-2">Abstained from voting</span>
+</div>
+</div>
+</div>
+<!-- Elimination Marker -->
+<div class="flex flex-col md:flex-row gap-4 md:items-center relative z-10 mt-2 mb-2">
+<div class="hidden md:flex w-12 h-12 rounded-full bg-tertiary-container items-center justify-center danger-glow">
+<span class="material-symbols-outlined text-tertiary text-xl">skull</span>
+</div>
+<div class="flex-1 bg-surface-container-highest border border-tertiary/20 rounded-xl p-4 ml-0 md:ml-4 flex items-center justify-between shadow-[0_8px_32px_rgba(255,6,127,0.1)]">
+<div class="flex flex-col gap-1">
+<span class="font-headline font-bold text-tertiary tracking-wide uppercase">NeonGhost Eliminated</span>
+<span class="font-label text-on-surface-variant text-xs">Role verified: <span class="text-secondary font-bold">Crewmate</span></span>
+</div>
+<span class="font-label text-tertiary-dim text-xs">11:30</span>
+</div>
+</div>
+<!-- Round 1 End Marker -->
+<div class="flex flex-col md:flex-row gap-4 md:items-center relative z-10">
+<div class="hidden md:flex w-12 h-12 rounded-full bg-surface-container-high items-center justify-center">
+<span class="material-symbols-outlined text-outline-variant text-xl">hourglass_bottom</span>
+</div>
+<div class="flex-1 bg-surface-container-low rounded-xl p-4 ml-0 md:ml-4 flex items-center justify-between opacity-70">
+<span class="font-headline font-bold text-on-surface-variant tracking-wide">ROUND 1 CONCLUDED</span>
+<span class="font-label text-on-surface-variant text-xs">T-MINUS 11:00</span>
+</div>
+</div>
+<!-- Discussion Start -->
+<div class="flex flex-col md:flex-row gap-4 relative z-10 pl-0 md:pl-16">
+<div class="bg-surface-container-high rounded-xl p-4 flex-1 flex flex-col gap-3 shadow-[0_4px_24px_rgba(0,0,0,0.2)] opacity-70">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">forum</span>
+<span class="font-label text-on-surface-variant text-xs uppercase tracking-widest">Discussion Initiated</span>
+<span class="ml-auto font-label text-on-surface-variant text-[10px]">10:05</span>
+</div>
+<p class="font-body text-sm text-on-surface">Emergency meeting convened by <span class="text-primary font-bold">Cipher</span>.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center pt-4 pb-8 px-4 bg-[#0c0c1f]/90 backdrop-blur-2xl rounded-t-[32px] border-t border-[#46465c]/20 shadow-[0_-8px_64px_rgba(208,149,255,0.08)] md:hidden">
+<button class="flex flex-col items-center gap-1 text-[#46465c] hover:text-[#d095ff]/80 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">grid_view</span>
+<span class="font-['Manrope'] font-semibold text-[10px] tracking-widest uppercase">DASHBOARD</span>
+</button>
+<!-- Active Tab: LOGS -->
+<button class="flex flex-col items-center gap-1 text-[#d095ff] after:content-[''] after:w-1 after:h-1 after:bg-[#2ff801] after:rounded-full after:mt-1 hover:text-[#d095ff]/80 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="font-['Manrope'] font-semibold text-[10px] tracking-widest uppercase text-[#d095ff]">LOGS</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#46465c] hover:text-[#d095ff]/80 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">psychology</span>
+<span class="font-['Manrope'] font-semibold text-[10px] tracking-widest uppercase">INTEL</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#46465c] hover:text-[#d095ff]/80 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">sensors</span>
+<span class="font-['Manrope'] font-semibold text-[10px] tracking-widest uppercase">TRANSMLT</span>
+</button>
+</nav>
+</body></html>
