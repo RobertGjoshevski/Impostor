@@ -1,1 +1,4 @@
 .DS_Store
+data/en_temp.json
+en_temp.json
+update_all_locales.py
