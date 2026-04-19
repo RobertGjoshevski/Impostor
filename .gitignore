@@ -1,3 +1,4 @@
+node_modules/
 .DS_Store
 data/en_temp.json
 en_temp.json
