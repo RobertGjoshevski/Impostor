@@ -72,9 +72,12 @@ export const SetupView = {
             </section>
 
             <!-- Start Game CTA -->
-            <div id="startSection" class="mt-4 pb-8">
+            <div id="startSection" class="mt-4 pb-4">
                 ${SetupView.renderStartButton(state, state.players.length)}
             </div>
+            <p class="text-center pb-8">
+                <a href="privacy-policy.html" class="text-on-surface-variant text-xs underline underline-offset-2 hover:text-primary transition-colors">${t(state.language, 'privacyPolicy')}</a>
+            </p>
         </main>
     `,
 

@@ -56,6 +56,7 @@ const en = {
     done: 'Done',
     loadingThemes: 'Loading themes...',
     minOneTheme: 'You must have at least one theme selected.',
+    privacyPolicy: 'Privacy policy',
 };
 
 const de = {
@@ -111,6 +112,7 @@ const de = {
     done: 'Fertig',
     loadingThemes: 'Themen werden geladen...',
     minOneTheme: 'Mindestens ein Thema muss gewählt sein.',
+    privacyPolicy: 'Datenschutzerklärung',
 };
 
 const id = {
@@ -166,6 +168,7 @@ const id = {
     done: 'Selesai',
     loadingThemes: 'Memuat tema...',
     minOneTheme: 'Pilih minimal satu tema.',
+    privacyPolicy: 'Kebijakan privasi',
 };
 
 const mk = {
@@ -221,6 +224,7 @@ const mk = {
     done: 'Готово',
     loadingThemes: 'Се вчитуваат теми...',
     minOneTheme: 'Мора да е избрана барем една тема.',
+    privacyPolicy: 'Политика за приватност',
 };
 
 const es = {
@@ -276,6 +280,7 @@ const es = {
     done: 'Hecho',
     loadingThemes: 'Cargando temas...',
     minOneTheme: 'Debe haber al menos un tema seleccionado.',
+    privacyPolicy: 'Política de privacidad',
 };
 
 const it = {
@@ -331,6 +336,7 @@ const it = {
     done: 'Fatto',
     loadingThemes: 'Caricamento temi...',
     minOneTheme: 'Devi avere almeno un tema selezionato.',
+    privacyPolicy: 'Informativa sulla privacy',
 };
 
 const tables = { en, de, id, mk, es, it };
