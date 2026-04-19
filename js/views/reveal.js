@@ -86,7 +86,12 @@ export const RevealView = {
         };
 
         const hideReveal = (e) => {
-            e.preventDefault();
+            // Touches that end on the Done button bubble to window; preventDefault() on that
+            // touchend cancels the synthetic click on many mobile browsers, so "Done" never fires.
+            const path = typeof e.composedPath === 'function' ? e.composedPath() : [];
+            if (path.length ? path.includes(doneBtn) : doneBtn.contains(e.target)) {
+                return;
+            }
             hiddenState.classList.remove('hidden');
             revealedState.classList.add('hidden');
             revealedState.classList.remove('flex');
