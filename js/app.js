@@ -18,21 +18,29 @@ const views = {
 
 const appContainer = document.getElementById('app');
 let currentScreen = null;
+let lastLanguage = store.state.language;
 
 function render(state) {
     const view = views[state.screen];
     if (!view) return;
 
-    if (currentScreen !== state.screen) {
+    const navigated = currentScreen !== state.screen;
+    const languageChanged = lastLanguage !== state.language;
+
+    if (navigated) {
+        currentScreen = state.screen;
         appContainer.innerHTML = view.render(state);
         setTimeout(() => view.mounted(state), 0);
-        currentScreen = state.screen;
+    } else if (languageChanged) {
+        appContainer.innerHTML = view.render(state);
+        setTimeout(() => view.mounted(state), 0);
     } else if (view.update) {
         view.update(state);
     } else {
         appContainer.innerHTML = view.render(state);
         setTimeout(() => view.mounted(state), 0);
     }
+    lastLanguage = state.language;
 }
 
 store.subscribe(render);

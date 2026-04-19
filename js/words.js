@@ -2,13 +2,17 @@ import { store } from './store.js';
 
 let wordsDatabase = {};
 
+function isReservedThemeKey(key) {
+    return typeof key === 'string' && key.startsWith('__');
+}
+
 export async function loadLanguageData(langCode) {
     try {
         const response = await fetch(`data/${langCode}.json`);
         if (!response.ok) throw new Error("Network response was not ok");
         wordsDatabase = await response.json();
         
-        const themes = Object.keys(wordsDatabase);
+        const themes = Object.keys(wordsDatabase).filter((k) => !isReservedThemeKey(k));
         // By default, select all themes if loading for the very first time,
         // or just keep previously selected themes if they still exist.
         // For simplicity, let's select all available themes when language changes:
@@ -27,7 +31,8 @@ export function getRandomWord() {
     let pool = [];
     
     selectedThemes.forEach(theme => {
-        if(wordsDatabase[theme]) {
+        if (isReservedThemeKey(theme)) return;
+        if (wordsDatabase[theme]) {
             pool = pool.concat(wordsDatabase[theme]);
         }
     });

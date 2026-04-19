@@ -1,2484 +1,2459 @@
 {
-  "Локации": [
-    {
-      "word": "Вселенска станица",
-      "hint": "Орбита"
+  "__translations": {
+    "categories": {
+      "Locations": "Локации",
+      "Occupations": "Занимања",
+      "Animals": "Животни",
+      "Vehicles": "Возила",
+      "Food & Drinks": "Храна и пијалоци",
+      "Countries": "Земји",
+      "Famous People": "Познати личности",
+      "Movies": "Филмови",
+      "Superheroes": "Суперхерои",
+      "Sports": "Спорт",
+      "Musical Instruments": "Музички Инструменти",
+      "Historical Events": "Историски настани",
+      "Fictional Characters": "Измислени ликови",
+      "Video Games": "Видео игри",
+      "Landmarks": "Знаменитости",
+      "Fears & Phobias": "Стравови и фобии",
+      "Mythological Creatures": "Митолошки суштества",
+      "Household Items": "Предмети за домаќинство",
+      "Nature": "Природа",
+      "Clothing": "Облека",
+      "Hobbies": "Хобија",
+      "Colors": "Бои",
+      "Science": "Наука",
+      "Emotions": "Емоции",
+      "School Subjects": "Училишни предмети",
+      "Toys": "Играчки",
+      "Weapons": "Оружје",
+      "Technology": "Технологија",
+      "Holidays": "Празници",
+      "Insects": "Инсекти",
+      "Fairy Tales": "Бајки"
     },
-    {
-      "word": "Подморница",
-      "hint": "Сад"
-    },
-    {
-      "word": "Казино",
-      "hint": "Обложување"
-    },
-    {
-      "word": "Болница",
-      "hint": "Клиника"
-    },
-    {
-      "word": "Библиотека",
-      "hint": "Книги"
+    "items": {
+      "Locations\tSpace Station\tOrbit": {
+        "word": "Вселенска станица",
+        "hint": "Орбита"
+      },
+      "Locations\tSubmarine\tVessel": {
+        "word": "Подморница",
+        "hint": "Сад"
+      },
+      "Locations\tCasino\tBetting": {
+        "word": "Казино",
+        "hint": "Обложување"
+      },
+      "Locations\tHospital\tClinic": {
+        "word": "Болница",
+        "hint": "Клиника"
+      },
+      "Locations\tLibrary\tBooks": {
+        "word": "Библиотека",
+        "hint": "Книги"
+      },
+      "Occupations\tDoctor\tMedical": {
+        "word": "Доктор",
+        "hint": "Медицина"
+      },
+      "Occupations\tTeacher\tSchool": {
+        "word": "Наставник",
+        "hint": "Училиште"
+      },
+      "Occupations\tPolice Officer\tLaw": {
+        "word": "Полицаец",
+        "hint": "Закон"
+      },
+      "Occupations\tChef\tKitchen": {
+        "word": "Готвач",
+        "hint": "Кујна"
+      },
+      "Occupations\tFirefighter\tRescue": {
+        "word": "Пожарникар",
+        "hint": "Спасување"
+      },
+      "Occupations\tPilot\tFlying": {
+        "word": "Пилот",
+        "hint": "Летање"
+      },
+      "Occupations\tArtist\tCreative": {
+        "word": "Уметник",
+        "hint": "Креативен"
+      },
+      "Occupations\tEngineer\tDesign": {
+        "word": "Инженер",
+        "hint": "Дизајн"
+      },
+      "Occupations\tFarmer\tAgriculture": {
+        "word": "Земјоделец",
+        "hint": "Земјоделство"
+      },
+      "Occupations\tScientist\tResearch": {
+        "word": "Научник",
+        "hint": "Истражување"
+      },
+      "Occupations\tActor\tStage": {
+        "word": "Актер",
+        "hint": "Сцена"
+      },
+      "Occupations\tMusician\tInstruments": {
+        "word": "Музичар",
+        "hint": "Инструменти"
+      },
+      "Occupations\tLawyer\tCourt": {
+        "word": "Адвокат",
+        "hint": "Суд"
+      },
+      "Occupations\tJudge\tGavel": {
+        "word": "Судија",
+        "hint": "Чекан"
+      },
+      "Occupations\tPlumber\tPipes": {
+        "word": "Водоводџија",
+        "hint": "Цевки"
+      },
+      "Occupations\tElectrician\tWires": {
+        "word": "Електричар",
+        "hint": "Жици"
+      },
+      "Occupations\tCarpenter\tWood": {
+        "word": "Дрводелец",
+        "hint": "Дрво"
+      },
+      "Occupations\tMechanic\tFixes": {
+        "word": "Механичар",
+        "hint": "Поправки"
+      },
+      "Occupations\tProgrammer\tCode": {
+        "word": "Програмер",
+        "hint": "Код"
+      },
+      "Occupations\tAstronaut\tSpace": {
+        "word": "Астронаут",
+        "hint": "Вселена"
+      },
+      "Animals\tLion\tRoar": {
+        "word": "Лав",
+        "hint": "Рикање"
+      },
+      "Animals\tElephant\tTrunk": {
+        "word": "Слон",
+        "hint": "Сурла"
+      },
+      "Animals\tGiraffe\tNeck": {
+        "word": "Жирафа",
+        "hint": "Врат"
+      },
+      "Animals\tTiger\tStripes": {
+        "word": "Тигар",
+        "hint": "Шари"
+      },
+      "Animals\tPenguin\tIce": {
+        "word": "Пингвин",
+        "hint": "Мраз"
+      },
+      "Animals\tKangaroo\tPouch": {
+        "word": "Кенгур",
+        "hint": "Торба"
+      },
+      "Animals\tDolphin\tOcean": {
+        "word": "Делфин",
+        "hint": "Океан"
+      },
+      "Animals\tWhale\tHuge": {
+        "word": "Кит",
+        "hint": "Огромен"
+      },
+      "Animals\tShark\tTeeth": {
+        "word": "Ајкула",
+        "hint": "Заби"
+      },
+      "Animals\tEagle\tWings": {
+        "word": "Орел",
+        "hint": "Крила"
+      },
+      "Animals\tWolf\tHowl": {
+        "word": "Волк",
+        "hint": "Завивање"
+      },
+      "Animals\tBear\tHoney": {
+        "word": "Мечка",
+        "hint": "Мед"
+      },
+      "Animals\tMonkey\tTrees": {
+        "word": "Мајмун",
+        "hint": "Дрвја"
+      },
+      "Animals\tSnake\tSlither": {
+        "word": "Змија",
+        "hint": "Лизгање"
+      },
+      "Animals\tCrocodile\tSwamp": {
+        "word": "Крокодил",
+        "hint": "Мочуриште"
+      },
+      "Animals\tHippopotamus\tRiver": {
+        "word": "Нилски коњ",
+        "hint": "Река"
+      },
+      "Animals\tRhinoceros\tHorn": {
+        "word": "Носорог",
+        "hint": "Рог"
+      },
+      "Animals\tZebra\tStripes": {
+        "word": "Зебра",
+        "hint": "Шари"
+      },
+      "Animals\tCheetah\tFast": {
+        "word": "Гепард",
+        "hint": "Брз"
+      },
+      "Animals\tPanda\tBamboo": {
+        "word": "Панда",
+        "hint": "Бамбус"
+      },
+      "Vehicles\tCar\tRoad": {
+        "word": "Автомобил",
+        "hint": "Пат"
+      },
+      "Vehicles\tBicycle\tPedals": {
+        "word": "Велосипед",
+        "hint": "Педали"
+      },
+      "Vehicles\tMotorcycle\tTwo wheels": {
+        "word": "Мотоцикл",
+        "hint": "Две тркала"
+      },
+      "Vehicles\tBus\tPublic": {
+        "word": "Автобус",
+        "hint": "Јавно"
+      },
+      "Vehicles\tTrain\tTracks": {
+        "word": "Воз",
+        "hint": "Шини"
+      },
+      "Vehicles\tAirplane\tSky": {
+        "word": "Авион",
+        "hint": "Небо"
+      },
+      "Vehicles\tHelicopter\tChopper": {
+        "word": "Хеликоптер",
+        "hint": "Чопер"
+      },
+      "Vehicles\tBoat\tWater": {
+        "word": "Чамeц",
+        "hint": "Вода"
+      },
+      "Vehicles\tShip\tOcean": {
+        "word": "Брод",
+        "hint": "Океан"
+      },
+      "Vehicles\tSpaceship\tStars": {
+        "word": "Вселенски брод",
+        "hint": "Ѕвезди"
+      },
+      "Vehicles\tSubmarine\tUnderwater": {
+        "word": "Подморница",
+        "hint": "Подводно"
+      },
+      "Vehicles\tTruck\tCargo": {
+        "word": "Камион",
+        "hint": "Товар"
+      },
+      "Vehicles\tTractor\tFarm": {
+        "word": "Трактор",
+        "hint": "Фарма"
+      },
+      "Vehicles\tScooter\tSmall": {
+        "word": "Скутер",
+        "hint": "Мал"
+      },
+      "Vehicles\tSkateboard\tTricks": {
+        "word": "Скејтборд",
+        "hint": "Трикови"
+      },
+      "Vehicles\tRollerblades\tWheels": {
+        "word": "Рол шуи",
+        "hint": "Тркала"
+      },
+      "Vehicles\tHot Air Balloon\tBasket": {
+        "word": "Балон на топол воздух",
+        "hint": "Кошница"
+      },
+      "Vehicles\tBlimp\tFloating": {
+        "word": "Цепелин",
+        "hint": "Лебди"
+      },
+      "Vehicles\tHovercraft\tAir cushion": {
+        "word": "Ховеркрафт",
+        "hint": "Воздушно перниче"
+      },
+      "Vehicles\tSnowmobile\tWinter": {
+        "word": "Моторна санка",
+        "hint": "Зима"
+      },
+      "Food & Drinks\tPizza\tSlices": {
+        "word": "Пица",
+        "hint": "Парчиња"
+      },
+      "Food & Drinks\tBurger\tBuns": {
+        "word": "Плескавица",
+        "hint": "Пункле"
+      },
+      "Food & Drinks\tSushi\tRaw fish": {
+        "word": "Суши",
+        "hint": "Сирова риба"
+      },
+      "Food & Drinks\tPasta\tNoodles": {
+        "word": "Тестенини",
+        "hint": "Фиде"
+      },
+      "Food & Drinks\tSalad\tGreens": {
+        "word": "Салата",
+        "hint": "Зеленило"
+      },
+      "Food & Drinks\tTaco\tShell": {
+        "word": "Тако",
+        "hint": "Лушпа"
+      },
+      "Food & Drinks\tSteak\tBeef": {
+        "word": "Стек",
+        "hint": "Говедско месо"
+      },
+      "Food & Drinks\tIce Cream\tCold dessert": {
+        "word": "Сладолед",
+        "hint": "Ладен десерт"
+      },
+      "Food & Drinks\tCake\tBirthday": {
+        "word": "Торта",
+        "hint": "Роденден"
+      },
+      "Food & Drinks\tChocolate\tSweet cocoa": {
+        "word": "Чоколадо",
+        "hint": "Слатко какао"
+      },
+      "Food & Drinks\tCoffee\tMorning drink": {
+        "word": "Кафе",
+        "hint": "Утрински пијалок"
+      },
+      "Food & Drinks\tTea\tLeaves": {
+        "word": "Чај",
+        "hint": "Лисја"
+      },
+      "Food & Drinks\tSoda\tBubbly": {
+        "word": "Сода",
+        "hint": "Газиран"
+      },
+      "Food & Drinks\tJuice\tFruit extract": {
+        "word": "Сок",
+        "hint": "Овошен екстракт"
+      },
+      "Food & Drinks\tWater\tH2O": {
+        "word": "Вода",
+        "hint": "H2O"
+      },
+      "Food & Drinks\tWine\tGrapes": {
+        "word": "Вино",
+        "hint": "Грозје"
+      },
+      "Food & Drinks\tBeer\tBrew": {
+        "word": "Пиво",
+        "hint": "Пијалак"
+      },
+      "Food & Drinks\tMilk\tDairy": {
+        "word": "Млеко",
+        "hint": "Млечни производи"
+      },
+      "Food & Drinks\tCheese\tMice love it": {
+        "word": "Сирење",
+        "hint": "Глувците го сакаат"
+      },
+      "Food & Drinks\tBread\tBaker": {
+        "word": "Леб",
+        "hint": "Пекар"
+      },
+      "Countries\tUSA\tStars and Stripes": {
+        "word": "САД",
+        "hint": "Ѕвезди и ленти"
+      },
+      "Countries\tCanada\tMaple Leaf": {
+        "word": "Канада",
+        "hint": "Јаворов лист"
+      },
+      "Countries\tBrazil\tSamba": {
+        "word": "Бразил",
+        "hint": "Самба"
+      },
+      "Countries\tUK\tTea & Monarchy": {
+        "word": "Велика Британија",
+        "hint": "Чај и монархија"
+      },
+      "Countries\tFrance\tEiffel": {
+        "word": "Франција",
+        "hint": "Ајфел"
+      },
+      "Countries\tGermany\tOktoberfest": {
+        "word": "Германија",
+        "hint": "Октоберфест"
+      },
+      "Countries\tItaly\tBoot shape": {
+        "word": "Италија",
+        "hint": "Облик на чизма"
+      },
+      "Countries\tSpain\tFlamenco": {
+        "word": "Шпанија",
+        "hint": "Фламенко"
+      },
+      "Countries\tRussia\tLargest area": {
+        "word": "Русија",
+        "hint": "Најголема површина"
+      },
+      "Countries\tChina\tGreat Wall": {
+        "word": "Кина",
+        "hint": "Големиот ѕид"
+      },
+      "Countries\tJapan\tRising Sun": {
+        "word": "Јапонија",
+        "hint": "Изгрејсонце"
+      },
+      "Countries\tIndia\tTaj Mahal": {
+        "word": "Индија",
+        "hint": "Таџ Махал"
+      },
+      "Countries\tAustralia\tKangaroos": {
+        "word": "Австралија",
+        "hint": "Кенгури"
+      },
+      "Countries\tEgypt\tPyramids": {
+        "word": "Египет",
+        "hint": "Пирамиди"
+      },
+      "Countries\tSouth Africa\tSafari": {
+        "word": "Јужна Африка",
+        "hint": "Сафари"
+      },
+      "Countries\tMexico\tSombrero": {
+        "word": "Мексико",
+        "hint": "Сомбреро"
+      },
+      "Countries\tArgentina\tTango": {
+        "word": "Аргентина",
+        "hint": "Танго"
+      },
+      "Countries\tSweden\tIkea": {
+        "word": "Шведска",
+        "hint": "Икеа"
+      },
+      "Countries\tNorway\tFjords": {
+        "word": "Норвешка",
+        "hint": "Фјордови"
+      },
+      "Countries\tSwitzerland\tAlps": {
+        "word": "Швајцарија",
+        "hint": "Алпи"
+      },
+      "Famous People\tAlbert Einstein\tE=mc2": {
+        "word": "Алберт Ајнштајн",
+        "hint": "Е=mc2"
+      },
+      "Famous People\tIsaac Newton\tApple gravity": {
+        "word": "Исак Њутн",
+        "hint": "Јаболко гравитација"
+      },
+      "Famous People\tLeonardo da Vinci\tMona Lisa": {
+        "word": "Леонардо да Винчи",
+        "hint": "Мона Лиза"
+      },
+      "Famous People\tVincent van Gogh\tStarry Night": {
+        "word": "Винсент ван Гог",
+        "hint": "Ѕвездена ноќ"
+      },
+      "Famous People\tWilliam Shakespeare\tPlaywright": {
+        "word": "Вилијам Шекспир",
+        "hint": "Драматург"
+      },
+      "Famous People\tMozart\tClassical composer": {
+        "word": "Моцарт",
+        "hint": "Класичен композитор"
+      },
+      "Famous People\tBeethoven\tDeaf composer": {
+        "word": "Бетовен",
+        "hint": "Глув композитор"
+      },
+      "Famous People\tElvis Presley\tKing of Rock": {
+        "word": "Елвис Присли",
+        "hint": "Крал на рокенролот"
+      },
+      "Famous People\tMichael Jackson\tKing of Pop": {
+        "word": "Мајкл Џексон",
+        "hint": "Крал на попот"
+      },
+      "Famous People\tMarilyn Monroe\tHollywood icon": {
+        "word": "Мерилин Монро",
+        "hint": "Холивудска икона"
+      },
+      "Famous People\tCharlie Chaplin\tSilent comedy": {
+        "word": "Чарли Чаплин",
+        "hint": "Нема комедија"
+      },
+      "Famous People\tWalt Disney\tMickey's creator": {
+        "word": "Волт Дизни",
+        "hint": "Креаторот на Мики"
+      },
+      "Famous People\tSteve Jobs\tApple founder": {
+        "word": "Стив Џобс",
+        "hint": "Основач на Епл"
+      },
+      "Famous People\tBill Gates\tMicrosoft founder": {
+        "word": "Бил Гејтс",
+        "hint": "Основач на Мајкрософт"
+      },
+      "Famous People\tElon Musk\tTesla": {
+        "word": "Илон Маск",
+        "hint": "Тесла"
+      },
+      "Famous People\tNelson Mandela\tSouth Africa leader": {
+        "word": "Нелсон Мандела",
+        "hint": "Водач на Јужна Африка"
+      },
+      "Famous People\tMartin Luther King Jr.\tI have a dream": {
+        "word": "Мартин Лутер Кинг Џуниор",
+        "hint": "Имам сон"
+      },
+      "Famous People\tGandhi\tPeaceful protest": {
+        "word": "Ганди",
+        "hint": "Мирен протест"
+      },
+      "Famous People\tAbraham Lincoln\tTop hat": {
+        "word": "Абрахам Линколн",
+        "hint": "Цилиндер"
+      },
+      "Famous People\tGeorge Washington\tFirst US President": {
+        "word": "Џорџ Вашингтон",
+        "hint": "Прв претседател на САД"
+      },
+      "Movies\tStar Wars\tJedi": {
+        "word": "Војна на ѕвездите",
+        "hint": "Џедај"
+      },
+      "Movies\tJurassic Park\tDinosaurs": {
+        "word": "Паркот Јура",
+        "hint": "Диносауруси"
+      },
+      "Movies\tThe Matrix\tRed pill": {
+        "word": "Матрицата",
+        "hint": "Црвена пилула"
+      },
+      "Movies\tTitanic\tSinking ship": {
+        "word": "Титаник",
+        "hint": "Тонински брод"
+      },
+      "Movies\tAvatar\tBlue aliens": {
+        "word": "Аватар",
+        "hint": "Сини вонземјани"
+      },
+      "Movies\tThe Godfather\tMafia": {
+        "word": "Кум",
+        "hint": "Мафија"
+      },
+      "Movies\tHarry Potter\tWizards": {
+        "word": "Хари Потер",
+        "hint": "Волшебници"
+      },
+      "Movies\tLord of the Rings\tOne ring": {
+        "word": "Господар на прстените",
+        "hint": "Еден прстен"
+      },
+      "Movies\tAvengers\tMarvel heroes": {
+        "word": "Одмаздници",
+        "hint": "Марвелови херои"
+      },
+      "Movies\tSpider-Man\tWeb-slinger": {
+        "word": "Човекот пајак",
+        "hint": "Мрежен шутер"
+      },
+      "Movies\tBatman\tDark Knight": {
+        "word": "Бетмен",
+        "hint": "Темен витез"
+      },
+      "Movies\tSuperman\tMan of Steel": {
+        "word": "Супермен",
+        "hint": "Човек од челик"
+      },
+      "Movies\tToy Story\tLiving toys": {
+        "word": "Приказна за играчки",
+        "hint": "Живи играчки"
+      },
+      "Movies\tThe Lion King\tHakuna Matata": {
+        "word": "Кралот лав",
+        "hint": "Хакуна Матата"
+      },
+      "Movies\tFrozen\tLet it go": {
+        "word": "Замрзната",
+        "hint": "Пушти ја"
+      },
+      "Movies\tHome Alone\tLeft behind child": {
+        "word": "Сам дома",
+        "hint": "Напущено дете"
+      },
+      "Movies\tJaws\tGiant shark": {
+        "word": "Вилици",
+        "hint": "Џиновска ајкула"
+      },
+      "Movies\tE.T.\tPhone home": {
+        "word": "Е.Т.",
+        "hint": "Јави се дома"
+      },
+      "Movies\tIndiana Jones\tArchaeologist whip": {
+        "word": "Индијана Џонс",
+        "hint": "Археолог со камшик"
+      },
+      "Movies\tBack to the Future\tDeLorean time": {
+        "word": "Враќање во иднината",
+        "hint": "ДеЛореан време"
+      },
+      "Superheroes\tSuperman\tKrypton": {
+        "word": "Супермен",
+        "hint": "Криптон"
+      },
+      "Superheroes\tBatman\tGotham": {
+        "word": "Бетмен",
+        "hint": "Готам"
+      },
+      "Superheroes\tSpider-Man\tWebs": {
+        "word": "Спајдермен",
+        "hint": "Мрежи"
+      },
+      "Superheroes\tIron Man\tTony Stark": {
+        "word": "Ајронмен",
+        "hint": "Тони Старк"
+      },
+      "Superheroes\tCaptain America\tVibranium shield": {
+        "word": "Капетан Америка",
+        "hint": "Вибраниумски штит"
+      },
+      "Superheroes\tThor\tHammer": {
+        "word": "Тор",
+        "hint": "Чекан"
+      },
+      "Superheroes\tHulk\tGreen angry": {
+        "word": "Халк",
+        "hint": "Зелен лут"
+      },
+      "Superheroes\tBlack Widow\tSpy Avenger": {
+        "word": "Црна Вдовица",
+        "hint": "Шпионски Одмаздник"
+      },
+      "Superheroes\tWolverine\tAdamantium claws": {
+        "word": "Волверин",
+        "hint": "Адамантиумски канџи"
+      },
+      "Superheroes\tFlash\tFastest man": {
+        "word": "Флеш",
+        "hint": "Најбрзиот човек"
+      },
+      "Superheroes\tWonder Woman\tLasso of Truth": {
+        "word": "Вондер Вомен",
+        "hint": "Ласо на Вистината"
+      },
+      "Superheroes\tAquaman\tAtlantis": {
+        "word": "Аквамен",
+        "hint": "Атлантида"
+      },
+      "Superheroes\tGreen Lantern\tPower ring": {
+        "word": "Зелен Фенер",
+        "hint": "Прстен на моќ"
+      },
+      "Superheroes\tDeadpool\tMerc with a mouth": {
+        "word": "Дедпул",
+        "hint": "Платеник со уста"
+      },
+      "Superheroes\tBlack Panther\tWakanda": {
+        "word": "Црн Пантер",
+        "hint": "Ваканда"
+      },
+      "Superheroes\tDoctor Strange\tSorcerer Supreme": {
+        "word": "Доктор Стрејнџ",
+        "hint": "Врховен Волшебник"
+      },
+      "Superheroes\tAnt-Man\tShrinking": {
+        "word": "Антмен",
+        "hint": "Смалување"
+      },
+      "Superheroes\tDaredevil\tBlind hero": {
+        "word": "Дердевил",
+        "hint": "Слеп херој"
+      },
+      "Superheroes\tPunisher\tVigilante": {
+        "word": "Панишер",
+        "hint": "Вигиланте"
+      },
+      "Superheroes\tGhost Rider\tFlaming skull": {
+        "word": "Гоуст Рајдер",
+        "hint": "Запален череп"
+      },
+      "Sports\tSoccer\tPenalty kick": {
+        "word": "Фудбал",
+        "hint": "Пенал"
+      },
+      "Sports\tBasketball\tHoop": {
+        "word": "Кошарка",
+        "hint": "Кош"
+      },
+      "Sports\tBaseball\tHome run": {
+        "word": "Бејзбол",
+        "hint": "Домашен резултат"
+      },
+      "Sports\tTennis\tRacket": {
+        "word": "Тенис",
+        "hint": "Рекет"
+      },
+      "Sports\tGolf\tHole in one": {
+        "word": "Голф",
+        "hint": "Дупка од прва"
+      },
+      "Sports\tVolleyball\tNet and spike": {
+        "word": "Одбојка",
+        "hint": "Мрежа и забивање"
+      },
+      "Sports\tSwimming\tPool lanes": {
+        "word": "Пливање",
+        "hint": "Патеки во базен"
+      },
+      "Sports\tAthletics\tTrack & field": {
+        "word": "Атлетика",
+        "hint": "Атлетска патека"
+      },
+      "Sports\tGymnastics\tBalance beam": {
+        "word": "Гимнастика",
+        "hint": "Греда"
+      },
+      "Sports\tBoxing\tGloves and ring": {
+        "word": "Бокс",
+        "hint": "Ракавици и ринг"
+      },
+      "Sports\tWrestling\tPin to win": {
+        "word": "Борење",
+        "hint": "Победа со закачување"
+      },
+      "Sports\tMartial Arts\tBlack belt": {
+        "word": "Боречки вештини",
+        "hint": "Црн појас"
+      },
+      "Sports\tCycling\tBicycles racing": {
+        "word": "Велосипедизам",
+        "hint": "Велосипедизам"
+      },
+      "Sports\tSkiing\tSnow mountain": {
+        "word": "Скијање",
+        "hint": "Снежна планина"
+      },
+      "Sports\tSnowboarding\tOne board on snow": {
+        "word": "Сноубординг",
+        "hint": "Една даска на снег"
+      },
+      "Sports\tSurfing\tOcean waves": {
+        "word": "Сурфање",
+        "hint": "Океански бранови"
+      },
+      "Sports\tRugby\tScrum": {
+        "word": "Рагби",
+        "hint": "Скрам"
+      },
+      "Sports\tCricket\tBatsman and bowler": {
+        "word": "Крикет",
+        "hint": "Играч со палка и фрлач"
+      },
+      "Sports\tHockey\tPuck on ice": {
+        "word": "Хокеј",
+        "hint": "Пак на мраз"
+      },
+      "Sports\tTable Tennis\tPing pong": {
+        "word": "Пинг-понг",
+        "hint": "Пинг-понг"
+      },
+      "Musical Instruments\tPiano\tBlack and white keys": {
+        "word": "Пијано",
+        "hint": "Црно-бели копчиња"
+      },
+      "Musical Instruments\tGuitar\tSix strings strums": {
+        "word": "Гитара",
+        "hint": "Шест жици се свират"
+      },
+      "Musical Instruments\tViolin\tBow and chin": {
+        "word": "Виолина",
+        "hint": "Лак и брада"
+      },
+      "Musical Instruments\tDrum\tBeats and sticks": {
+        "word": "Тапан",
+        "hint": "Ритми и стапчиња"
+      },
+      "Musical Instruments\tFlute\tBlow across hole": {
+        "word": "Флејта",
+        "hint": "Дува преку дупка"
+      },
+      "Musical Instruments\tTrumpet\tBrass valves": {
+        "word": "Труба",
+        "hint": "Месингени вентили"
+      },
+      "Musical Instruments\tSaxophone\tJazz brass": {
+        "word": "Саксофон",
+        "hint": "Џез месинг"
+      },
+      "Musical Instruments\tCello\tLarge string seated": {
+        "word": "Виолончело",
+        "hint": "Голема жица седиште"
+      },
+      "Musical Instruments\tClarinet\tBlack woodwind": {
+        "word": "Кларинет",
+        "hint": "Црно дрво"
+      },
+      "Musical Instruments\tHarp\tAngel strings": {
+        "word": "Харфа",
+        "hint": "Ангелски жици"
+      },
+      "Musical Instruments\tTrombone\tBrass slide": {
+        "word": "Тромбон",
+        "hint": "Месингена лизгалка"
+      },
+      "Musical Instruments\tTuba\tLargest brass bass": {
+        "word": "Туба",
+        "hint": "Најголем месингена бас"
+      },
+      "Musical Instruments\tAccordion\tSqueeze box": {
+        "word": "Хармоника",
+        "hint": "Кутија за стискање"
+      },
+      "Musical Instruments\tBanjo\tFolk strings round": {
+        "word": "Банџо",
+        "hint": "Фолк жици кружни"
+      },
+      "Musical Instruments\tMandolin\tEight strings small": {
+        "word": "Мандолина",
+        "hint": "Осум жици мали"
+      },
+      "Musical Instruments\tUkulele\tHawaiian four strings": {
+        "word": "Укулеле",
+        "hint": "Хавајски четири жици"
+      },
+      "Musical Instruments\tXylophone\tWooden bars mallets": {
+        "word": "Ксилофон",
+        "hint": "Дрвени шипки чекани"
+      },
+      "Musical Instruments\tSynthesizer\tElectronic keys": {
+        "word": "Синтисајзер",
+        "hint": "Електронски копчиња"
+      },
+      "Musical Instruments\tBass\tLow frequency strings": {
+        "word": "Бас",
+        "hint": "Нискофреквентни жици"
+      },
+      "Musical Instruments\tOboe\tDouble reed": {
+        "word": "Обоа",
+        "hint": "Двоен трскин инструмент"
+      },
+      "Historical Events\tWorld War I\tTrenches": {
+        "word": "Прва светска војна",
+        "hint": "Тренчеви"
+      },
+      "Historical Events\tWorld War II\tAxis & Allies": {
+        "word": "Втора светска војна",
+        "hint": "Оска и Сојузници"
+      },
+      "Historical Events\tFrench Revolution\tGuillotine": {
+        "word": "Француска револуција",
+        "hint": "Гилотина"
+      },
+      "Historical Events\tAmerican Revolution\t1776": {
+        "word": "Американска револуција",
+        "hint": "1776"
+      },
+      "Historical Events\tMoon Landing\tApollo 11": {
+        "word": "Слетување на Месечината",
+        "hint": "Аполо 11"
+      },
+      "Historical Events\tFall of the Berlin Wall\tCold War ending": {
+        "word": "Пад на Берлинскиот ѕид",
+        "hint": "Крај на Студената војна"
+      },
+      "Historical Events\tCold War\tUSA vs USSR tension": {
+        "word": "Студена војна",
+        "hint": "Тензија меѓу САД и СССР"
+      },
+      "Historical Events\tRenaissance\tRebirth of art": {
+        "word": "Ренесанса",
+        "hint": "Преродба на уметноста"
+      },
+      "Historical Events\tIndustrial Revolution\tFactories & steam": {
+        "word": "Индустриска револуција",
+        "hint": "Фабрики и пареа"
+      },
+      "Historical Events\tDiscovery of America\tColumbus 1492": {
+        "word": "Откривање на Америка",
+        "hint": "Колумбо 1492"
+      },
+      "Historical Events\tBlack Death\tPlague": {
+        "word": "Црна смрт",
+        "hint": "Чума"
+      },
+      "Historical Events\tTitanic Sinking\tIceberg 1912": {
+        "word": "Потонување на Титаник",
+        "hint": "Леден брег 1912"
+      },
+      "Historical Events\tIndependence of India\t1947 partition": {
+        "word": "Независност на Индија",
+        "hint": "Поделба од 1947 година"
+      },
+      "Historical Events\tMagna Carta\t1215 document": {
+        "word": "Магна Карта",
+        "hint": "Документ од 1215 година"
+      },
+      "Historical Events\tDeclaration of Independence\tJuly 4": {
+        "word": "Декларација за независност",
+        "hint": "4 јули"
+      },
+      "Historical Events\tInvention Printing Press\tGutenberg": {
+        "word": "Изум на печатарската машина",
+        "hint": "Гутенберг"
+      },
+      "Historical Events\tInternet Creation\tWorld Wide Web starts": {
+        "word": "Создавање на Интернет",
+        "hint": "Започнува World Wide Web"
+      },
+      "Historical Events\tChernobyl Disaster\tNuclear meltdown": {
+        "word": "Катастрофа во Чернобил",
+        "hint": "Нуклеарна хаварија"
+      },
+      "Historical Events\t9/11 Attacks\tTwin towers": {
+        "word": "Напади од 11 септември",
+        "hint": "Кули близначки"
+      },
+      "Historical Events\tCOVID-19 Pandemic\tGlobal quarantine": {
+        "word": "Пандемија КОВИД-19",
+        "hint": "Глобален карантин"
+      },
+      "Fictional Characters\tSherlock Holmes\tDetective": {
+        "word": "Шерлок Холмс",
+        "hint": "Детектив"
+      },
+      "Fictional Characters\tMickey Mouse\tDisney mascot": {
+        "word": "Мики Маус",
+        "hint": "Маскота на Дизни"
+      },
+      "Fictional Characters\tBugs Bunny\tWhat's up doc": {
+        "word": "Багс Бани",
+        "hint": "Што има докторе"
+      },
+      "Fictional Characters\tHomer Simpson\tD'oh!": {
+        "word": "Хомер Симпсон",
+        "hint": "Доу!"
+      },
+      "Fictional Characters\tSpongeBob\tPineapple under sea": {
+        "word": "Сунѓерот Боб",
+        "hint": "Ананас под море"
+      },
+      "Fictional Characters\tMario\tPlumber hero": {
+        "word": "Марио",
+        "hint": "Водоводџија херој"
+      },
+      "Fictional Characters\tPikachu\tElectric mouse": {
+        "word": "Пикачу",
+        "hint": "Електричен глушец"
+      },
+      "Fictional Characters\tSonic\tBlue fast hedgehog": {
+        "word": "Соник",
+        "hint": "Син брз еж"
+      },
+      "Fictional Characters\tDarth Vader\tI am your father": {
+        "word": "Дарт Вејдер",
+        "hint": "Јас сум твојот татко"
+      },
+      "Fictional Characters\tJames Bond\t007": {
+        "word": "Џејмс Бонд",
+        "hint": "007"
+      },
+      "Fictional Characters\tHarry Potter\tBoy who lived": {
+        "word": "Хари Потер",
+        "hint": "Момчето што живееше"
+      },
+      "Fictional Characters\tFrodo Baggins\tRing bearer": {
+        "word": "Фродо Багинс",
+        "hint": "Носач на прстенот"
+      },
+      "Fictional Characters\tDracula\tVampire count": {
+        "word": "Дракула",
+        "hint": "Вампирски гроф"
+      },
+      "Fictional Characters\tFrankenstein\tMonster creator": {
+        "word": "Франкенштајн",
+        "hint": "Креатор на чудовишта"
+      },
+      "Fictional Characters\tKing Kong\tGiant ape": {
+        "word": "Кинг Конг",
+        "hint": "Џиновски мајмун"
+      },
+      "Fictional Characters\tGodzilla\tRadioactive lizard": {
+        "word": "Годзила",
+        "hint": "Радиоактивен гуштер"
+      },
+      "Fictional Characters\tSuperman\tClark Kent": {
+        "word": "Супермен",
+        "hint": "Кларк Кент"
+      },
+      "Fictional Characters\tBatman\tBruce Wayne": {
+        "word": "Бетмен",
+        "hint": "Брус Вејн"
+      },
+      "Fictional Characters\tSpider-Man\tPeter Parker": {
+        "word": "Спајдермен",
+        "hint": "Питер Паркер"
+      },
+      "Fictional Characters\tPeter Pan\tNeverland boy": {
+        "word": "Петар Пан",
+        "hint": "Момчето од Недоловленд"
+      },
+      "Video Games\tSuper Mario Bros\tJump on Goombas": {
+        "word": "Супер Марио Брос",
+        "hint": "Скокајте врз Гумбас"
+      },
+      "Video Games\tMinecraft\tBlocks and Creepers": {
+        "word": "Мајнкрафт",
+        "hint": "Блокови и Криперс"
+      },
+      "Video Games\tTetris\tFalling shapes": {
+        "word": "Тетрис",
+        "hint": "Паѓачки форми"
+      },
+      "Video Games\tPac-Man\tYellow circle ghosts": {
+        "word": "Пак-Мен",
+        "hint": "Жолт круг духови"
+      },
+      "Video Games\tGrand Theft Auto\tSteal cars": {
+        "word": "Гранд Тефт Ауто",
+        "hint": "Крадете автомобили"
+      },
+      "Video Games\tCall of Duty\tMilitary shooter": {
+        "word": "Кал оф Дјути",
+        "hint": "Воена пукачка игра"
+      },
+      "Video Games\tLegend of Zelda\tLink's quest": {
+        "word": "Легендата за Зелда",
+        "hint": "Потрагата на Линк"
+      },
+      "Video Games\tPokemon\tGotta catch them all": {
+        "word": "Покемон",
+        "hint": "Мора да ги фатиш сите"
+      },
+      "Video Games\tWorld of Warcraft\tHuge MMO": {
+        "word": "Ворлд оф Воркрафт",
+        "hint": "Огромна MMO"
+      },
+      "Video Games\tFortnite\tBattle Royale building": {
+        "word": "Фортнајт",
+        "hint": "Битка Ројал градење"
+      },
+      "Video Games\tLeague of Legends\tMOBA lanes": {
+        "word": "Лига на Легенди",
+        "hint": "MOBA патеки"
+      },
+      "Video Games\tOverwatch\tHero team shooter": {
+        "word": "Овервоч",
+        "hint": "Тимска пукачка игра со херои"
+      },
+      "Video Games\tThe Sims\tControl virtual lives": {
+        "word": "Симс",
+        "hint": "Контролирајте виртуелни животи"
+      },
+      "Video Games\tAnimal Crossing\tIsland villagers": {
+        "word": "Анимал Кросинг",
+        "hint": "Островски селани"
+      },
+      "Video Games\tSkyrim\tDragonborn": {
+        "word": "Скајрим",
+        "hint": "Драгонборн"
+      },
+      "Video Games\tRed Dead Redemption\tCowboy outlaw": {
+        "word": "Ред Дед Редемпшн",
+        "hint": "Каубојски одметник"
+      },
+      "Video Games\tHalo\tMaster Chief": {
+        "word": "Хало",
+        "hint": "Мастер Чиф"
+      },
+      "Video Games\tPortal\tTeleporting gun puzzle": {
+        "word": "Портал",
+        "hint": "Загатка со телепортирачки пиштол"
+      },
+      "Video Games\tBioshock\tUnderwater city": {
+        "word": "Биошок",
+        "hint": "Подводен град"
+      },
+      "Video Games\tHalf-Life\tGordon Freeman crowbar": {
+        "word": "Халф-Лајф",
+        "hint": "Гордон Фримен лост"
+      },
+      "Landmarks\tEiffel Tower\tParis iron": {
+        "word": "Ајфелова кула",
+        "hint": "Париско железо"
+      },
+      "Landmarks\tGreat Wall of China\tLongest brick structure": {
+        "word": "Голем ѕид на Кина",
+        "hint": "Најдолга структура од тули"
+      },
+      "Landmarks\tStatue of Liberty\tNY torch": {
+        "word": "Статуа на слободата",
+        "hint": "Њујоршка факел"
+      },
+      "Landmarks\tColosseum\tRoman gladiators": {
+        "word": "Колосеум",
+        "hint": "Римски гладијатори"
+      },
+      "Landmarks\tTaj Mahal\tIndian marble mausoleum": {
+        "word": "Таџ Махал",
+        "hint": "Индиски мермерен мавзолеј"
+      },
+      "Landmarks\tPyramids of Giza\tEgyptian ancient tombs": {
+        "word": "Пирамиди во Гиза",
+        "hint": "Египетски антички гробници"
+      },
+      "Landmarks\tMachu Picchu\tInca ruins": {
+        "word": "Мачу Пикчу",
+        "hint": "Рушевини на Инките"
+      },
+      "Landmarks\tStonehenge\tUK standing stones": {
+        "word": "Стоунхенџ",
+        "hint": "Обединето Кралство стоечки камења"
+      },
+      "Landmarks\tBig Ben\tLondon clock": {
+        "word": "Биг Бен",
+        "hint": "Лондонски часовник"
+      },
+      "Landmarks\tMount Rushmore\tPresidents carved mountain": {
+        "word": "Маунт Рашмор",
+        "hint": "Претседатели изрезбана планина"
+      },
+      "Landmarks\tChrist the Redeemer\tRio statue": {
+        "word": "Христос Спасител",
+        "hint": "Рио статуа"
+      },
+      "Landmarks\tSydney Opera House\tAustralian sails roof": {
+        "word": "Опера во Сиднеј",
+        "hint": "Австралиски покрив со едра"
+      },
+      "Landmarks\tAcropolis\tAthens hilltop": {
+        "word": "Акропол",
+        "hint": "Атина ридско плато"
+      },
+      "Landmarks\tPetronas Towers\tKuala Lumpur twin high": {
+        "word": "Кули Петронас",
+        "hint": "Куала Лумпур близначки високи"
+      },
+      "Landmarks\tBurj Khalifa\tDubai tallest": {
+        "word": "Бурџ Калифа",
+        "hint": "Дубаи највисока"
+      },
+      "Landmarks\tGolden Gate Bridge\tSan Francisco red": {
+        "word": "Мост Голден Гејт",
+        "hint": "Сан Франциско црвен"
+      },
+      "Landmarks\tNiagara Falls\tUS/Canada huge waterfall": {
+        "word": "Водопади на Нијагара",
+        "hint": "САД/Канада огромен водопад"
+      },
+      "Landmarks\tGrand Canyon\tArizona huge gorge": {
+        "word": "Големиот Кањон",
+        "hint": "Аризона огромна клисура"
+      },
+      "Landmarks\tLeaning Tower of Pisa\tTilted Italian base": {
+        "word": "Крива кула во Пиза",
+        "hint": "Италијанска наклонета основа"
+      },
+      "Landmarks\tMount Everest\tHighest peak": {
+        "word": "Монт Еверест",
+        "hint": "Највисок врв"
+      },
+      "Fears & Phobias\tSpiders\tArachnophobia": {
+        "word": "Пајаци",
+        "hint": "Арахнофобија"
+      },
+      "Fears & Phobias\tHeights\tAcrophobia": {
+        "word": "Висини",
+        "hint": "Акрофобија"
+      },
+      "Fears & Phobias\tConfined Spaces\tClaustrophobia": {
+        "word": "Затворени Простор",
+        "hint": "Клаустрофобија"
+      },
+      "Fears & Phobias\tDark\tNyctophobia": {
+        "word": "Темно",
+        "hint": "Никтофобија"
+      },
+      "Fears & Phobias\tSnakes\tOphidiophobia": {
+        "word": "Змии",
+        "hint": "Офидиофобија"
+      },
+      "Fears & Phobias\tFlying\tAviophobia": {
+        "word": "Летање",
+        "hint": "Авиофобија"
+      },
+      "Fears & Phobias\tDogs\tCynophobia": {
+        "word": "Кучиња",
+        "hint": "Кинофобија"
+      },
+      "Fears & Phobias\tNeedles\tTrypanophobia": {
+        "word": "Игли",
+        "hint": "Трипанофобија"
+      },
+      "Fears & Phobias\tSocializing\tSocial Phobia": {
+        "word": "Дружење",
+        "hint": "Социјална фобија"
+      },
+      "Fears & Phobias\tGerms\tMysophobia": {
+        "word": "Микроби",
+        "hint": "Мисофобија"
+      },
+      "Fears & Phobias\tPublic Speaking\tGlossophobia": {
+        "word": "Јавно Зборување",
+        "hint": "Глософобија"
+      },
+      "Fears & Phobias\tDeath\tThanatophobia": {
+        "word": "Смрт",
+        "hint": "Танатофобија"
+      },
+      "Fears & Phobias\tWater\tAquaphobia": {
+        "word": "Вода",
+        "hint": "Аквафобија"
+      },
+      "Fears & Phobias\tBlood\tHemophobia": {
+        "word": "Крв",
+        "hint": "Хемофобија"
+      },
+      "Fears & Phobias\tCrowds\tAgoraphobia": {
+        "word": "Толпи",
+        "hint": "Агорафобија"
+      },
+      "Fears & Phobias\tClowns\tCoulrophobia": {
+        "word": "Кловнови",
+        "hint": "Кулрофобија"
+      },
+      "Fears & Phobias\tDentists\tDentophobia": {
+        "word": "Забари",
+        "hint": "Дентофобија"
+      },
+      "Fears & Phobias\tThunder\tAstraphobia": {
+        "word": "Гром",
+        "hint": "Астрафобија"
+      },
+      "Fears & Phobias\tFire\tPyrophobia": {
+        "word": "Оган",
+        "hint": "Пирофобија"
+      },
+      "Fears & Phobias\tGhosts\tPhasmophobia": {
+        "word": "Духови",
+        "hint": "Фасмофобија"
+      },
+      "Mythological Creatures\tDragon\tBreathing fire scaling": {
+        "word": "Змеј",
+        "hint": "Дише оган лушпи"
+      },
+      "Mythological Creatures\tUnicorn\tOne horn horse": {
+        "word": "Еднорог",
+        "hint": "Еден рог коњ"
+      },
+      "Mythological Creatures\tPhoenix\tReborn fiery bird": {
+        "word": "Феникс",
+        "hint": "Прероден огнена птица"
+      },
+      "Mythological Creatures\tMermaid\tHalf fish half woman": {
+        "word": "Сирена",
+        "hint": "Половина риба половина жена"
+      },
+      "Mythological Creatures\tCentaur\tHalf horse half man": {
+        "word": "Кентаур",
+        "hint": "Половина коњ половина човек"
+      },
+      "Mythological Creatures\tGriffin\tLion eagle hybrid": {
+        "word": "Грифин",
+        "hint": "Хибрид лав орел"
+      },
+      "Mythological Creatures\tPegasus\tWinged horse": {
+        "word": "Пегаз",
+        "hint": "Крилест коњ"
+      },
+      "Mythological Creatures\tMinotaur\tBull headed man": {
+        "word": "Минотаур",
+        "hint": "Човек со глава на бик"
+      },
+      "Mythological Creatures\tMedusa\tSnake hair": {
+        "word": "Медуза",
+        "hint": "Змиски влакна"
+      },
+      "Mythological Creatures\tKraken\tGiant sea monster": {
+        "word": "Кракен",
+        "hint": "Џиновско морско чудовиште"
+      },
+      "Mythological Creatures\tCyclops\tOne eyed giant": {
+        "word": "Киклоп",
+        "hint": "Едноок џин"
+      },
+      "Mythological Creatures\tSphinx\tLion body human head": {
+        "word": "Сфинга",
+        "hint": "Тело на лав човечка глава"
+      },
+      "Mythological Creatures\tCerberus\tThree headed dog": {
+        "word": "Церберус",
+        "hint": "Куче со три глави"
+      },
+      "Mythological Creatures\tChimera\tLion goat snake fusion": {
+        "word": "Химера",
+        "hint": "Лав коза змија спојување"
+      },
+      "Mythological Creatures\tHydra\tMulti-headed serpent": {
+        "word": "Хидра",
+        "hint": "Повеќеглава змија"
+      },
+      "Mythological Creatures\tVampire\tBloodsucker": {
+        "word": "Вампир",
+        "hint": "Цицач на крв"
+      },
+      "Mythological Creatures\tWerewolf\tFull moon transformation": {
+        "word": "Волк",
+        "hint": "Трансформација на полна месечина"
+      },
+      "Mythological Creatures\tTroll\tBridge guardian": {
+        "word": "Трол",
+        "hint": "Чувар на мост"
+      },
+      "Mythological Creatures\tGoblin\tLittle green mischief": {
+        "word": "Гоблин",
+        "hint": "Мала зелена пакост"
+      },
+      "Mythological Creatures\tYeti\tAbominable snowman": {
+        "word": "Јети",
+        "hint": "Одвратниот снежен човек"
+      },
+      "Household Items\tTelevision\tWatching screen": {
+        "word": "Телевизија",
+        "hint": "Гледање екран"
+      },
+      "Household Items\tRefrigerator\tCooling food": {
+        "word": "Фрижидер",
+        "hint": "Ладење храна"
+      },
+      "Household Items\tMicrowave\tFast heating": {
+        "word": "Микробранова печка",
+        "hint": "Брзо загревање"
+      },
+      "Household Items\tWashing Machine\tCleaning clothes": {
+        "word": "Машина за перење",
+        "hint": "Чистење облека"
+      },
+      "Household Items\tBed\tSleeping furniture": {
+        "word": "Кревет",
+        "hint": "Мебел за спиење"
+      },
+      "Household Items\tSofa\tLiving room seating": {
+        "word": "Кауч",
+        "hint": "Седиште за дневна соба"
+      },
+      "Household Items\tTable\tEating surface": {
+        "word": "Маса",
+        "hint": "Површина за јадење"
+      },
+      "Household Items\tChair\tSitting furniture": {
+        "word": "Стол",
+        "hint": "Мебел за седење"
+      },
+      "Household Items\tLamp\tLighting device": {
+        "word": "Ламба",
+        "hint": "Уред за осветлување"
+      },
+      "Household Items\tClock\tTelling time": {
+        "word": "Часовник",
+        "hint": "Покажува време"
+      },
+      "Household Items\tMirror\tReflection glass": {
+        "word": "Огледало",
+        "hint": "Стакло за рефлексија"
+      },
+      "Household Items\tOven\tBaking food": {
+        "word": "Рерна",
+        "hint": "Печење храна"
+      },
+      "Household Items\tToaster\tCrispy bread": {
+        "word": "Тостер",
+        "hint": "Крцкав леб"
+      },
+      "Household Items\tBlender\tMixing smoothies": {
+        "word": "Блендер",
+        "hint": "Мешање смути"
+      },
+      "Household Items\tVacuum Cleaner\tSucking dust": {
+        "word": "Правосмукалка",
+        "hint": "Вшмукување прашина"
+      },
+      "Household Items\tIron\tPressing clothes": {
+        "word": "Пегла",
+        "hint": "Пеглање алишта"
+      },
+      "Household Items\tTrash Can\tGarbage holder": {
+        "word": "Канта за отпадоци",
+        "hint": "Држач за ѓубре"
+      },
+      "Household Items\tBathtub\tWashing body": {
+        "word": "Када",
+        "hint": "Миење тело"
+      },
+      "Household Items\tToilet\tBathroom necessity": {
+        "word": "Тоалет",
+        "hint": "Потреба за бања"
+      },
+      "Household Items\tBookcase\tHolding novels": {
+        "word": "Полица за книги",
+        "hint": "Држење романи"
+      },
+      "Nature\tTree\tLeaves & trunk": {
+        "word": "Дрво",
+        "hint": "Листови и стебло"
+      },
+      "Nature\tFlower\tPetals": {
+        "word": "Цвет",
+        "hint": "Ливчиња"
+      },
+      "Nature\tMountain\tHigh peak": {
+        "word": "Планина",
+        "hint": "Висок врв"
+      },
+      "Nature\tRiver\tFlowing water": {
+        "word": "Река",
+        "hint": "Тековна вода"
+      },
+      "Nature\tOcean\tSalty sea": {
+        "word": "Океан",
+        "hint": "Солено море"
+      },
+      "Nature\tForest\tMany trees": {
+        "word": "Шума",
+        "hint": "Многу дрвја"
+      },
+      "Nature\tDesert\tSand and dry": {
+        "word": "Пустина",
+        "hint": "Песок и суво"
+      },
+      "Nature\tSnow\tCold white flakes": {
+        "word": "Снег",
+        "hint": "Студени бели снегулки"
+      },
+      "Nature\tRain\tWater falling from sky": {
+        "word": "Дожд",
+        "hint": "Вода што паѓа од небо"
+      },
+      "Nature\tSun\tDaytime star": {
+        "word": "Сонце",
+        "hint": "Дневна ѕвезда"
+      },
+      "Nature\tMoon\tNighttime satellite": {
+        "word": "Месечина",
+        "hint": "Ноќен сателит"
+      },
+      "Nature\tStar\tTwinkling sky point": {
+        "word": "Ѕвезда",
+        "hint": "Треперлива точка на небото"
+      },
+      "Nature\tCloud\tWhite fluffy sky object": {
+        "word": "Облак",
+        "hint": "Бели меки небесни објекти"
+      },
+      "Nature\tLightning\tElectric storm flash": {
+        "word": "Молња",
+        "hint": "Електричен блесок од бура"
+      },
+      "Nature\tWind\tMoving air breeze": {
+        "word": "Ветер",
+        "hint": "Проток на воздух"
+      },
+      "Nature\tVolcano\tLava erupting mountain": {
+        "word": "Вулкан",
+        "hint": "Планина што исфрла лава"
+      },
+      "Nature\tCave\tDark hollow rocky": {
+        "word": "Пештера",
+        "hint": "Темна шуплива карпеста"
+      },
+      "Nature\tWaterfall\tWater dropping cliff": {
+        "word": "Водопад",
+        "hint": "Вода што паѓа од карпа"
+      },
+      "Nature\tIsland\tLand surrounded by water": {
+        "word": "Остров",
+        "hint": "Земја опкружена со вода"
+      },
+      "Nature\tGrass\tGreen lawn blades": {
+        "word": "Трева",
+        "hint": "Зелени сечила на тревникот"
+      },
+      "Clothing\tShirt\tUpper body wear": {
+        "word": "Кошула",
+        "hint": "Облека за горен дел од телото"
+      },
+      "Clothing\tPants\tLower body legs": {
+        "word": "Панталони",
+        "hint": "Облека за долниот дел од нозете"
+      },
+      "Clothing\tDress\tOne piece women wear": {
+        "word": "Фустан",
+        "hint": "Женска облека од едно парче"
+      },
+      "Clothing\tSkirt\tDangling lower wear": {
+        "word": "Здолниште",
+        "hint": "Долно парче облека што виси"
+      },
+      "Clothing\tJacket\tOuter wear coat": {
+        "word": "Јакна",
+        "hint": "Надворешна облека капут"
+      },
+      "Clothing\tSweater\tWarm knitted top": {
+        "word": "Џемпер",
+        "hint": "Топол плетен горен дел"
+      },
+      "Clothing\tSocks\tFoot covering soft": {
+        "word": "Чорапи",
+        "hint": "Мека покривка за стапала"
+      },
+      "Clothing\tShoes\tFoot covering hard": {
+        "word": "Чевли",
+        "hint": "Тврда покривка за стапала"
+      },
+      "Clothing\tHat\tHead covering gear": {
+        "word": "Капа",
+        "hint": "Опрема за покривање на глава"
+      },
+      "Clothing\tGloves\tHand warming cover": {
+        "word": "Ракавици",
+        "hint": "Покривка за загревање на раце"
+      },
+      "Clothing\tScarf\tNeck wrapper": {
+        "word": "Шал",
+        "hint": "Обвивка за врат"
+      },
+      "Clothing\tBelt\tWaist tightener": {
+        "word": "Каиш",
+        "hint": "Стегач за струк"
+      },
+      "Clothing\tTie\tSuit neck accessory": {
+        "word": "Вратоврска",
+        "hint": "Моден додаток за врат"
+      },
+      "Clothing\tUnderwear\tBase layer bottom": {
+        "word": "Долна облека",
+        "hint": "Долен слој"
+      },
+      "Clothing\tShorts\tSummer leg wear": {
+        "word": "Шорцеви",
+        "hint": "Летна облека за нозе"
+      },
+      "Clothing\tJeans\tDenim pants": {
+        "word": "Фармерки",
+        "hint": "Тексас панталони"
+      },
+      "Clothing\tT-shirt\tCasual short sleeve": {
+        "word": "Маица",
+        "hint": "Секојдневна маица со кратки ракави"
+      },
+      "Clothing\tCoat\tHeavy winter top": {
+        "word": "Палто",
+        "hint": "Тежок зимски горен дел"
+      },
+      "Clothing\tBoots\tHigh footwear ankle": {
+        "word": "Чизми",
+        "hint": "Високи обувки до глужд"
+      },
+      "Clothing\tSandals\tOpen toe summer shoes": {
+        "word": "Сандали",
+        "hint": "Отворени летни чевли"
+      },
+      "Hobbies\tReading\tBooks pages novels": {
+        "word": "Читање",
+        "hint": "Книги страници романи"
+      },
+      "Hobbies\tWriting\tPen paper stories": {
+        "word": "Пишување",
+        "hint": "Пенкало хартија приказни"
+      },
+      "Hobbies\tDrawing\tPencil art sketch": {
+        "word": "Цртање",
+        "hint": "Молив уметност скица"
+      },
+      "Hobbies\tPainting\tBrush colors canvas": {
+        "word": "Сликање",
+        "hint": "Четка бои платно"
+      },
+      "Hobbies\tPhotography\tTaking pictures camera": {
+        "word": "Фотографија",
+        "hint": "Фотографирање камера"
+      },
+      "Hobbies\tCooking\tMaking meals": {
+        "word": "Готвење",
+        "hint": "Подготвување оброци"
+      },
+      "Hobbies\tBaking\tOven sweets dough": {
+        "word": "Печење",
+        "hint": "Рерна слатки тесто"
+      },
+      "Hobbies\tGardening\tPlants soil flowers": {
+        "word": "Градинарство",
+        "hint": "Растенија почва цвеќиња"
+      },
+      "Hobbies\tFishing\tRod reel water": {
+        "word": "Риболов",
+        "hint": "Прачка макара вода"
+      },
+      "Hobbies\tHiking\tWalking trails mountains": {
+        "word": "Пешачење",
+        "hint": "Прошетки патеки планини"
+      },
+      "Hobbies\tCamping\tTent outdoors fire": {
+        "word": "Кампување",
+        "hint": "Шатор на отворено оган"
+      },
+      "Hobbies\tKnitting\tYarn needles sweater": {
+        "word": "Плетење",
+        "hint": "Предиво игли џемпер"
+      },
+      "Hobbies\tSewing\tThread fabric needle": {
+        "word": "Шиење",
+        "hint": "Конец ткаенина игла"
+      },
+      "Hobbies\tWoodworking\tCarving constructing timber": {
+        "word": "Дрводелство",
+        "hint": "Резба конструирање дрво"
+      },
+      "Hobbies\tPottery\tClay spinning wheel": {
+        "word": "Грнчарство",
+        "hint": "Глина грнчарско тркало"
+      },
+      "Hobbies\tGaming\tPlaying video consoles": {
+        "word": "Гејмање",
+        "hint": "Играње видео конзоли"
+      },
+      "Hobbies\tDancing\tMoving body rhythm": {
+        "word": "Танцување",
+        "hint": "Движење тело ритам"
+      },
+      "Hobbies\tSinging\tVocal melodies": {
+        "word": "Пеење",
+        "hint": "Вокални мелодии"
+      },
+      "Hobbies\tTraveling\tVisiting new places": {
+        "word": "Патување",
+        "hint": "Посета на нови места"
+      },
+      "Hobbies\tCollecting\tGathering specific items": {
+        "word": "Собирање",
+        "hint": "Собирање специфични предмети"
+      },
+      "Colors\tRed\tBlood apple": {
+        "word": "Црвена",
+        "hint": "Крв јаболко"
+      },
+      "Colors\tBlue\tSky ocean": {
+        "word": "Сина",
+        "hint": "Небо океан"
+      },
+      "Colors\tYellow\tSun banana": {
+        "word": "Жолта",
+        "hint": "Сонце банана"
+      },
+      "Colors\tGreen\tGrass leaves": {
+        "word": "Зелена",
+        "hint": "Трева лисја"
+      },
+      "Colors\tOrange\tCitrus fruit": {
+        "word": "Портокалова",
+        "hint": "Цитрусно овошје"
+      },
+      "Colors\tPurple\tGrapes royalty": {
+        "word": "Виолетова",
+        "hint": "Грозје кралско семејство"
+      },
+      "Colors\tPink\tPig cotton candy": {
+        "word": "Розова",
+        "hint": "Свиња шеќерна волна"
+      },
+      "Colors\tBlack\tNight coal": {
+        "word": "Црна",
+        "hint": "Ноќ јаглен"
+      },
+      "Colors\tWhite\tSnow milk": {
+        "word": "Бела",
+        "hint": "Снег млеко"
+      },
+      "Colors\tGray\tAsh clouds": {
+        "word": "Сива",
+        "hint": "Пепел облаци"
+      },
+      "Colors\tBrown\tDirt wood": {
+        "word": "Кафеава",
+        "hint": "Земја дрво"
+      },
+      "Colors\tGold\tShiny wealth": {
+        "word": "Златна",
+        "hint": "Сјајно богатство"
+      },
+      "Colors\tSilver\tSecond place metal": {
+        "word": "Сребрена",
+        "hint": "Второ место метал"
+      },
+      "Colors\tBronze\tThird place metal": {
+        "word": "Бронзена",
+        "hint": "Трето место метал"
+      },
+      "Colors\tCyan\tLight bright blue": {
+        "word": "Цијан",
+        "hint": "Светло светло сина"
+      },
+      "Colors\tMagenta\tDeep purplish red": {
+        "word": "Магента",
+        "hint": "Длабока виолетово-црвена"
+      },
+      "Colors\tIndigo\tDark violet blue": {
+        "word": "Индиго",
+        "hint": "Темно виолетово-сина"
+      },
+      "Colors\tTeal\tBlue green hue": {
+        "word": "Тиркизна",
+        "hint": "Сино-зелена нијанса"
+      },
+      "Colors\tMaroon\tDark brownish red": {
+        "word": "Темноцрвена",
+        "hint": "Темно кафеаво-црвена"
+      },
+      "Colors\tNavy\tDark military blue": {
+        "word": "Морнарска",
+        "hint": "Темно воено сина"
+      },
+      "Science\tBiology\tLife study": {
+        "word": "Биологија",
+        "hint": "Проучување на животот"
+      },
+      "Science\tChemistry\tElements reactions": {
+        "word": "Хемија",
+        "hint": "Реакции на елементи"
+      },
+      "Science\tPhysics\tMatter forces energy": {
+        "word": "Физика",
+        "hint": "Материја сили енергија"
+      },
+      "Science\tAstronomy\tSpace planets study": {
+        "word": "Астрономија",
+        "hint": "Проучување на вселената и планетите"
+      },
+      "Science\tGeology\tEarth rocks study": {
+        "word": "Геологија",
+        "hint": "Проучување на Земјата и карпите"
+      },
+      "Science\tAtom\tSmallest particle core": {
+        "word": "Атом",
+        "hint": "Најмала честичка јадро"
+      },
+      "Science\tMolecule\tAtoms bonded": {
+        "word": "Молекула",
+        "hint": "Поврзани атоми"
+      },
+      "Science\tCell\tBasic life unit": {
+        "word": "Клетка",
+        "hint": "Основна единица на животот"
+      },
+      "Science\tDNA\tGenetic ladder": {
+        "word": "ДНК",
+        "hint": "Генетска скала"
+      },
+      "Science\tGravity\tFalling pulling force": {
+        "word": "Гравитација",
+        "hint": "Сила на паѓање и привлекување"
+      },
+      "Science\tEvolution\tSpecies change over time": {
+        "word": "Еволуција",
+        "hint": "Промена на видовите со текот на времето"
+      },
+      "Science\tMicroscope\tSeeing tiny things": {
+        "word": "Микроскоп",
+        "hint": "Гледање ситни нешта"
+      },
+      "Science\tTelescope\tSeeing far things": {
+        "word": "Телескоп",
+        "hint": "Гледање далечни нешта"
+      },
+      "Science\tLaboratory\tScience workplace": {
+        "word": "Лабораторија",
+        "hint": "Научна работна средина"
+      },
+      "Science\tExperiment\tTesting hypothesis": {
+        "word": "Експеримент",
+        "hint": "Тестирање на хипотеза"
+      },
+      "Science\tTheory\tScientific explanation base": {
+        "word": "Теорија",
+        "hint": "Основа на научно објаснување"
+      },
+      "Science\tFossil\tAncient rock remains": {
+        "word": "Фосил",
+        "hint": "Остатоци од древни карпи"
+      },
+      "Science\tVirus\tMicroscopic disease agent": {
+        "word": "Вирус",
+        "hint": "Микроскопски предизвикувач на болести"
+      },
+      "Science\tBacteria\tSingle cell organisms": {
+        "word": "Бактерии",
+        "hint": "Едноклеточни организми"
+      },
+      "Science\tElement\tPeriodic table item": {
+        "word": "Елемент",
+        "hint": "Ставка од периодниот систем"
+      },
+      "Emotions\tHappiness\tJoy smile": {
+        "word": "Среќа",
+        "hint": "Радост насмевка"
+      },
+      "Emotions\tSadness\tTears crying": {
+        "word": "Тага",
+        "hint": "Солзи плачење"
+      },
+      "Emotions\tAnger\tMad furious rage": {
+        "word": "Гнев",
+        "hint": "Лут бесен бес"
+      },
+      "Emotions\tFear\tScared afraid terror": {
+        "word": "Страв",
+        "hint": "Исплашен уплашен терор"
+      },
+      "Emotions\tSurprise\tShock unexpected": {
+        "word": "Изненадување",
+        "hint": "Шок неочекувано"
+      },
+      "Emotions\tDisgust\tGrossed out sick": {
+        "word": "Гадење",
+        "hint": "Згрозен болен"
+      },
+      "Emotions\tLove\tAffection romance hearts": {
+        "word": "Љубов",
+        "hint": "Приврзаност романса срца"
+      },
+      "Emotions\tJealousy\tEnvy wanting theirs": {
+        "word": "Љубомора",
+        "hint": "Завист посакувајќи ги нивните"
+      },
+      "Emotions\tGuilt\tFeeling bad doing wrong": {
+        "word": "Вина",
+        "hint": "Се чувствувам лошо правејќи погрешно"
+      },
+      "Emotions\tShame\tEmbarrassment humiliating": {
+        "word": "Срам",
+        "hint": "Засраменост понижувачко"
+      },
+      "Emotions\tExcitement\tThrilled looking forward": {
+        "word": "Возбуда",
+        "hint": "Воодушевен со нетрпение очекувам"
+      },
+      "Emotions\tBoredom\tNothing to do dull": {
+        "word": "Досада",
+        "hint": "Ништо да се прави досадно"
+      },
+      "Emotions\tHope\tOptimism future bright": {
+        "word": "Надеж",
+        "hint": "Оптимизам иднината е светла"
+      },
+      "Emotions\tDespair\tTotal loss hope": {
+        "word": "Безнадежност",
+        "hint": "Тотална загуба надеж"
+      },
+      "Emotions\tConfusion\tNot understanding puzzle": {
+        "word": "Збунетост",
+        "hint": "Не разбирање загатка"
+      },
+      "Emotions\tPride\tSatisfied personal achievement": {
+        "word": "Гордост",
+        "hint": "Задоволен лично достигнување"
+      },
+      "Emotions\tRelief\tStress gone relaxing": {
+        "word": "Олеснување",
+        "hint": "Стресот го нема опуштање"
+      },
+      "Emotions\tNostalgia\tMissing past fondly": {
+        "word": "Носталгија",
+        "hint": "Недостасува минатото со љубов"
+      },
+      "Emotions\tLoneliness\tFeeling isolated solo": {
+        "word": "Осаменост",
+        "hint": "Се чувствувам изолирано соло"
+      },
+      "Emotions\tCuriosity\tWanting to know more": {
+        "word": "Љубопитност",
+        "hint": "Сакајќи да знаеш повеќе"
+      },
+      "School Subjects\tMathematics\tNumbers equations shapes": {
+        "word": "Математика",
+        "hint": "Броеви равенки форми"
+      },
+      "School Subjects\tScience\tExperiments biology physics": {
+        "word": "Наука",
+        "hint": "Експерименти биологија физика"
+      },
+      "School Subjects\tEnglish\tLiterature grammar writing": {
+        "word": "Англиски јазик",
+        "hint": "Книжевност граматика пишување"
+      },
+      "School Subjects\tHistory\tPast events wars": {
+        "word": "Историја",
+        "hint": "Минати настани војни"
+      },
+      "School Subjects\tGeography\tMaps countries capitals": {
+        "word": "Географија",
+        "hint": "Мапи земји главни градови"
+      },
+      "School Subjects\tArt\tPainting drawing creative": {
+        "word": "Ликовна уметност",
+        "hint": "Сликарство цртање креативност"
+      },
+      "School Subjects\tMusic\tPlaying instruments singing": {
+        "word": "Музика",
+        "hint": "Свирење инструменти пеење"
+      },
+      "School Subjects\tPhysical Education\tGym sports running": {
+        "word": "Физичко образование",
+        "hint": "Сала спорт трчање"
+      },
+      "School Subjects\tComputer Science\tCoding programming tech": {
+        "word": "Компјутерски науки",
+        "hint": "Кодирање програмирање технологија"
+      },
+      "School Subjects\tForeign Language\tSpeaking idioms overseas": {
+        "word": "Странски јазик",
+        "hint": "Зборување идиоми странство"
+      },
+      "School Subjects\tChemistry\tElements lab periodic": {
+        "word": "Хемија",
+        "hint": "Елементи лабораторија периодни"
+      },
+      "School Subjects\tBiology\tLife cells plants": {
+        "word": "Биологија",
+        "hint": "Живот клетки растенија"
+      },
+      "School Subjects\tPhysics\tForces gravity motion": {
+        "word": "Физика",
+        "hint": "Сили гравитација движење"
+      },
+      "School Subjects\tAlgebra\tLetters and numbers math": {
+        "word": "Алгебра",
+        "hint": "Букви и броеви математика"
+      },
+      "School Subjects\tGeometry\tShapes angles lines": {
+        "word": "Геометрија",
+        "hint": "Форми агли линии"
+      },
+      "School Subjects\tCalculus\tAdvanced math derivatives": {
+        "word": "Калкулус",
+        "hint": "Напредна математика деривати"
+      },
+      "School Subjects\tEconomics\tMoney markets trade": {
+        "word": "Економија",
+        "hint": "Пари пазари трговија"
+      },
+      "School Subjects\tPsychology\tMind behavior study": {
+        "word": "Психологија",
+        "hint": "Ум однесување проучување"
+      },
+      "School Subjects\tSociology\tSociety people culture": {
+        "word": "Социологија",
+        "hint": "Општество луѓе култура"
+      },
+      "School Subjects\tDrama\tTheater acting plays": {
+        "word": "Драма",
+        "hint": "Театар глума претстави"
+      },
+      "Toys\tLego\tBuilding blocks plastic": {
+        "word": "Лего",
+        "hint": "Пластични блокови за градење"
+      },
+      "Toys\tBarbie\tPopular fashion doll": {
+        "word": "Барби",
+        "hint": "Популарна модна кукла"
+      },
+      "Toys\tTeddy Bear\tStuffed animal plush": {
+        "word": "Мече",
+        "hint": "Полнето животинско плишано"
+      },
+      "Toys\tAction Figure\tPosable hero toy": {
+        "word": "Акциона фигура",
+        "hint": "Подвижна херојска играчка"
+      },
+      "Toys\tYo-Yo\tString spinning down up": {
+        "word": "Јо-Јо",
+        "hint": "Вртење на конец горе-долу"
+      },
+      "Toys\tKite\tFlying string wind": {
+        "word": "Змеј",
+        "hint": "Летање на конец со ветер"
+      },
+      "Toys\tFrisbee\tFlying disc throw": {
+        "word": "Фризби",
+        "hint": "Летачки диск за фрлање"
+      },
+      "Toys\tDollhouse\tMiniature home toy": {
+        "word": "Куклена куќа",
+        "hint": "Минијатурна куќна играчка"
+      },
+      "Toys\tPuzzle\tFitting pieces together picture": {
+        "word": "Загатка",
+        "hint": "Спојување парчиња заедно слика"
+      },
+      "Toys\tBoard Game\tTable top dice rules": {
+        "word": "Друштвена игра",
+        "hint": "Правила за коцки на маса"
+      },
+      "Toys\tRubik's Cube\tTwisting colorful square": {
+        "word": "Рубикова коцка",
+        "hint": "Вртење шарена коцка"
+      },
+      "Toys\tTrain Set\tTracks miniature engines": {
+        "word": "Воз сет",
+        "hint": "Патеки минијатурни локомотиви"
+      },
+      "Toys\tRemote Control Car\tDriving via frequency": {
+        "word": "Автомобил со далечински управувач",
+        "hint": "Возење преку фреквенција"
+      },
+      "Toys\tPlay-Doh\tModeling clay colors": {
+        "word": "Пластелин",
+        "hint": "Моделирање глина во бои"
+      },
+      "Toys\tHula Hoop\tSpinning around waist": {
+        "word": "Хулахоп",
+        "hint": "Вртење околу половината"
+      },
+      "Toys\tJump Rope\tSkipping string exercise": {
+        "word": "Јаже за прескокнување",
+        "hint": "Јаже за вежбање прескокнување"
+      },
+      "Toys\tWater Gun\tShooting liquid summer squirter": {
+        "word": "Воден пиштол",
+        "hint": "Пукање течност летен прскалка"
+      },
+      "Toys\tSlingshot\tPull back launch rock": {
+        "word": "Прачка",
+        "hint": "Повлечи назад лансирај камен"
+      },
+      "Toys\tTrampoline\tBouncy jumping surface": {
+        "word": "Трамболина",
+        "hint": "Површина за скокање"
+      },
+      "Toys\tRocking Horse\tSwing back forth animal seat": {
+        "word": "Коњ за нишање",
+        "hint": "Нишање напред назад животинско седиште"
+      },
+      "Weapons\tSword\tLong metal blade knight": {
+        "word": "Меч",
+        "hint": "Долго метално сечиво витез"
+      },
+      "Weapons\tBow and Arrow\tString pulling projectiles archery": {
+        "word": "Лак и стрела",
+        "hint": "Жица повлекување проектили стрелаштво"
+      },
+      "Weapons\tGun\tFirearm bullets shooting": {
+        "word": "Пиштол",
+        "hint": "Огнено оружје куршуми пукање"
+      },
+      "Weapons\tKnife\tShort sharp blade cutting": {
+        "word": "Нож",
+        "hint": "Кратко остро сечило сечење"
+      },
+      "Weapons\tSpear\tLong pole pointy end": {
+        "word": "Копје",
+        "hint": "Долга прачка зашилен крај"
+      },
+      "Weapons\tAxe\tChopping wood blade": {
+        "word": "Секира",
+        "hint": "Сечење дрво сечило"
+      },
+      "Weapons\tMace\tSpiked club medieval": {
+        "word": "Боздоган",
+        "hint": "Шилеста палка средновековна"
+      },
+      "Weapons\tShield\tDefensive blocking gear": {
+        "word": "Штит",
+        "hint": "Одбранбена опрема за блокирање"
+      },
+      "Weapons\tCrossbow\tHorizontal mechanical bow": {
+        "word": "Самострел",
+        "hint": "Хоризонтален механички лак"
+      },
+      "Weapons\tWhip\tSnapping leather cord": {
+        "word": "Камшик",
+        "hint": "Кожен конец за кршење"
+      },
+      "Weapons\tCannon\tHeavy ball firing artillery": {
+        "word": "Топ",
+        "hint": "Тешка артилерија што фрла топки"
+      },
+      "Weapons\tGrenade\tExplosive thrown pin": {
+        "word": "Граната",
+        "hint": "Експлозивна фрлена игла"
+      },
+      "Weapons\tDagger\tSmall personal stabbing knife": {
+        "word": "Кама",
+        "hint": "Мал личен нож за прободување"
+      },
+      "Weapons\tBoomerang\tReturning thrown curve": {
+        "word": "Бумеранг",
+        "hint": "Враќање фрлена крива"
+      },
+      "Weapons\tNunchucks\tTwo sticks chain martial arts": {
+        "word": "Нунчаку",
+        "hint": "Две стапчиња синџир боречки вештини"
+      },
+      "Weapons\tKatana\tJapanese samurai sword": {
+        "word": "Катана",
+        "hint": "Јапонски самурајски меч"
+      },
+      "Weapons\tSniper Rifle\tLong range scope gun": {
+        "word": "Снајперска пушка",
+        "hint": "Далекометна пушка со нишан"
+      },
+      "Weapons\tShotgun\tScatter close range gun": {
+        "word": "Пушка",
+        "hint": "Пушка за близок дострел"
+      },
+      "Weapons\tMachine Gun\tRapid fire heavy weapon": {
+        "word": "Митралез",
+        "hint": "Тешко оружје со брз оган"
+      },
+      "Weapons\tRocket Launcher\tExplosive projectile huge": {
+        "word": "Ракетен фрлач",
+        "hint": "Огромен експлозивен проектил"
+      },
+      "Technology\tComputer\tDesktop PC screen CPU": {
+        "word": "Компјутер",
+        "hint": "Десктоп компјутер екран процесор"
+      },
+      "Technology\tSmartphone\tMobile touchscreen device": {
+        "word": "Смартфон",
+        "hint": "Мобилен уред на допир"
+      },
+      "Technology\tTablet\tFlat screen portable computer": {
+        "word": "Таблет",
+        "hint": "Рамен екран пренослив компјутер"
+      },
+      "Technology\tLaptop\tFoldable portable PC": {
+        "word": "Лаптоп",
+        "hint": "Преклоплив пренослив компјутер"
+      },
+      "Technology\tSmartwatch\tWrist wearable tech": {
+        "word": "Смарт часовник",
+        "hint": "Технологија за носење на зглоб"
+      },
+      "Technology\tHeadphones\tEar listening audio": {
+        "word": "Слушалки",
+        "hint": "Уши слушање аудио"
+      },
+      "Technology\tCamera\tPhoto video capturing lens": {
+        "word": "Камера",
+        "hint": "Фотографско видео снимање објектив"
+      },
+      "Technology\tDrone\tUnmanned flying gadget": {
+        "word": "Дрон",
+        "hint": "Беспилотен летечки гаџет"
+      },
+      "Technology\tVirtual Reality Headset\tGoggles 3D immersive": {
+        "word": "Слушалки за виртуелна реалност",
+        "hint": "Очила 3Д импресивно"
+      },
+      "Technology\tGame Console\tTV hooked playing system": {
+        "word": "Конзола за игри",
+        "hint": "Систем за играње поврзан со ТВ"
+      },
+      "Technology\tRouter\tWiFi internet signal box": {
+        "word": "Рутер",
+        "hint": "Кутија за WiFi интернет сигнал"
+      },
+      "Technology\tSpeaker\tLoud audio output": {
+        "word": "Звучник",
+        "hint": "Гласен аудио излез"
+      },
+      "Technology\tMicrophone\tVoice sound input": {
+        "word": "Микрофон",
+        "hint": "Гласовен влез за звук"
+      },
+      "Technology\tKeyboard\tTyping keys buttons": {
+        "word": "Тастатура",
+        "hint": "Типкање копчиња"
+      },
+      "Technology\tMouse\tClicking pointing cursor": {
+        "word": "Глувче",
+        "hint": "Кликање покажување курсор"
+      },
+      "Technology\tPrinter\tPaper ink output": {
+        "word": "Принтер",
+        "hint": "Излез на хартија мастило"
+      },
+      "Technology\tScanner\tDigitalizing paper document": {
+        "word": "Скенер",
+        "hint": "Дигитализирање хартиен документ"
+      },
+      "Technology\tMonitor\tDisplay screen unit": {
+        "word": "Монитор",
+        "hint": "Единица за приказ на екран"
+      },
+      "Technology\tHard Drive\tData storage disk": {
+        "word": "Хард диск",
+        "hint": "Диск за складирање податоци"
+      },
+      "Technology\tUSB Flash Drive\tThumb stick storage byte": {
+        "word": "УСБ флеш драјв",
+        "hint": "УСБ меморија за складирање податоци"
+      },
+      "Holidays\tChristmas\tDecember trees presents Santa": {
+        "word": "Божиќ",
+        "hint": "Декември дрвја подароци Дедо Мраз"
+      },
+      "Holidays\tHalloween\tOctober costumes candy spooky": {
+        "word": "Ноќ на вештерките",
+        "hint": "Октомври костими бонбони морничаво"
+      },
+      "Holidays\tThanksgiving\tNovember turkey grateful": {
+        "word": "Ден на благодарноста",
+        "hint": "Ноември мисирка благодарни"
+      },
+      "Holidays\tEaster\tSpring bunnies eggs chocolate": {
+        "word": "Велигден",
+        "hint": "Пролет зајаци јајца чоколадо"
+      },
+      "Holidays\tValentine's Day\tFebruary love hearts romantic": {
+        "word": "Денот на вљубените",
+        "hint": "Февруари љубов срца романтично"
+      },
+      "Holidays\tNew Year's Eve\tDecember 31st midnight fireworks": {
+        "word": "Новогодишна ноќ",
+        "hint": "31 декември полноќ огномет"
+      },
+      "Holidays\tIndependence Day\tJuly 4th freedom fireworks": {
+        "word": "Ден на независноста",
+        "hint": "4 јули слобода огномет"
+      },
+      "Holidays\tSt. Patrick's Day\tMarch green luck Irish": {
+        "word": "Денот на Свети Патрик",
+        "hint": "Март зелена среќа ирски"
+      },
+      "Holidays\tMother's Day\tAppreciating mom Sunday": {
+        "word": "Ден на мајката",
+        "hint": "Ценење на мама Недела"
+      },
+      "Holidays\tFather's Day\tAppreciating dad Sunday": {
+        "word": "Ден на таткото",
+        "hint": "Ценење на тато Недела"
+      },
+      "Holidays\tEarth Day\tApril helping planet nature": {
+        "word": "Ден на планетата Земја",
+        "hint": "Април помагање на планетата природа"
+      },
+      "Holidays\tLabor Day\tSeptember workers end summer": {
+        "word": "Ден на трудот",
+        "hint": "Септември работници крај на летото"
+      },
+      "Holidays\tMemorial Day\tMay remembering fallen soldiers": {
+        "word": "Ден на сеќавање",
+        "hint": "Мај се сеќаваме на паднатите војници"
+      },
+      "Holidays\tVeterans Day\tNovember honoring military output": {
+        "word": "Ден на ветераните",
+        "hint": "Ноември почестување на воената служба"
+      },
+      "Holidays\tHanukkah\tJewish festival lights menorah": {
+        "word": "Ханука",
+        "hint": "Еврејски фестивал на светлината менора"
+      },
+      "Holidays\tDiwali\tIndian festival lights": {
+        "word": "Дивали",
+        "hint": "Индиски фестивал на светлината"
+      },
+      "Holidays\tRamadan\tIslamic fasting month": {
+        "word": "Рамазан",
+        "hint": "Исламски месец на постот"
+      },
+      "Holidays\tOktoberfest\tGerman beer festival": {
+        "word": "Октоберфест",
+        "hint": "Германски фестивал на пивото"
+      },
+      "Holidays\tCinco de Mayo\tMay 5th Mexican pride": {
+        "word": "Синко де Мајо",
+        "hint": "5 мај Мексиканска гордост"
+      },
+      "Holidays\tChinese New Year\tLunar calendar dragon": {
+        "word": "Кинеска Нова Година",
+        "hint": "Лунарен календар змеј"
+      },
+      "Insects\tButterfly\tColorful flying wings cocoon": {
+        "word": "Пеперутка",
+        "hint": "Шарени летечки крилја кожурец"
+      },
+      "Insects\tBee\tYellow black buzzing honey": {
+        "word": "Пчела",
+        "hint": "Жолто црно зуење мед"
+      },
+      "Insects\tAnt\tTiny marching strong colony": {
+        "word": "Мравка",
+        "hint": "Мала марширачка силна колонија"
+      },
+      "Insects\tMosquito\tBiting annoying blood sucker": {
+        "word": "Комарец",
+        "hint": "Каснува досадно крвопиец"
+      },
+      "Insects\tFly\tBuzzing house pest wing": {
+        "word": "Мува",
+        "hint": "Зуење куќен штетник крило"
+      },
+      "Insects\tSpider\tEight legs webs (Wait technically arachnid)": {
+        "word": "Пајак",
+        "hint": "Осум нозе мрежи (чекај технички арахнид)"
+      },
+      "Insects\tBeetle\tHard shell crawling bug": {
+        "word": "Бубачка",
+        "hint": "Тврда школка лазечка бубачка"
+      },
+      "Insects\tLadybug\tRed black dots spotted wings": {
+        "word": "Бубамара",
+        "hint": "Црвени црни точки забележани крилја"
+      },
+      "Insects\tGrasshopper\tJumping green long legs": {
+        "word": "Скакулец",
+        "hint": "Скокачко зелени долги нозе"
+      },
+      "Insects\tCricket\tChirping night sound jumper": {
+        "word": "Цврчок",
+        "hint": "Цвркотење ноќен звук скокач"
+      },
+      "Insects\tCockroach\tSurviving gross fast crawler": {
+        "word": "Лебарка",
+        "hint": "Опстанува одвратен брз лазач"
+      },
+      "Insects\tMoth\tDusty wings attracted light": {
+        "word": "Молец",
+        "hint": "Прашливи крилја привлечени од светлина"
+      },
+      "Insects\tWasp\tAggressive stinging yellow striped": {
+        "word": "Оса",
+        "hint": "Агресивно осило со жолти пруги"
+      },
+      "Insects\tHornet\tLarge aggressive stinging nest": {
+        "word": "Стршлен",
+        "hint": "Големо агресивно осило гнездо"
+      },
+      "Insects\tDragonfly\tLong body fast flying four wings": {
+        "word": "Вилински коњиц",
+        "hint": "Долго тело брзо летање четири крила"
+      },
+      "Insects\tCaterpillar\tCrawling wormy fuzzy butterfly baby": {
+        "word": "Гасеница",
+        "hint": "Лазечки црвлив меки пеперутка бебе"
+      },
+      "Insects\tCentipede\tMany long legs crawler fast": {
+        "word": "Стоногалка",
+        "hint": "Многу долги нозе лазач брз"
+      },
+      "Insects\tFlea\tJumping tiny pet pest": {
+        "word": "Болва",
+        "hint": "Скокачки ситен домашен штетник"
+      },
+      "Insects\tTick\tBlood sucking woods parasite": {
+        "word": "Крлеж",
+        "hint": "Крвопиечки шумски паразит"
+      },
+      "Insects\tBedbug\tMattress biting nuisance": {
+        "word": "Стеница",
+        "hint": "Душек каснување досада"
+      },
+      "Fairy Tales\tCinderella\tGlass slipper pumpkin coach": {
+        "word": "Пепелашка",
+        "hint": "Стаклена папуча кочија од тиква"
+      },
+      "Fairy Tales\tSnow White\tSeven dwarfs poisoned apple": {
+        "word": "Снежана",
+        "hint": "Седумте џуџиња отровно јаболко"
+      },
+      "Fairy Tales\tSleeping Beauty\tSpinning wheel hundred years nap": {
+        "word": "Заспаната убавица",
+        "hint": "Вртелешка сто години дремка"
+      },
+      "Fairy Tales\tLittle Red Riding Hood\tGrandma wolf basket": {
+        "word": "Црвенкапа",
+        "hint": "Баба волк кошница"
+      },
+      "Fairy Tales\tBeauty and the Beast\tCursed prince magical rose": {
+        "word": "Убавицата и Ѕверот",
+        "hint": "Проклет принц магична роза"
+      },
+      "Fairy Tales\tPeter Pan\tNeverland Tinkerbell hook": {
+        "word": "Петар Пан",
+        "hint": "Никогашландија Ѕвончица кука"
+      },
+      "Fairy Tales\tAlice in Wonderland\tRabbit hole mad hatter queen": {
+        "word": "Алиса во земјата на чудата",
+        "hint": "Зајачка дупка луд шешир кралица"
+      },
+      "Fairy Tales\tPinocchio\tWooden boy growing nose string": {
+        "word": "Пинокио",
+        "hint": "Дрвено момче растечки нос конец"
+      },
+      "Fairy Tales\tAladdin\tMagic lamp genie carpet": {
+        "word": "Аладин",
+        "hint": "Волшебна ламба дух килим"
+      },
+      "Fairy Tales\tThe Little Mermaid\tAriel sea legs voice": {
+        "word": "Малата сирена",
+        "hint": "Ариел море нозе глас"
+      },
+      "Fairy Tales\tHansel and Gretel\tBreadcrumbs gingerbread witch": {
+        "word": "Хензел и Гретел",
+        "hint": "Трошки од леб куќа од джинджифилово вештерка"
+      },
+      "Fairy Tales\tRapunzel\tLong hair tower let down": {
+        "word": "Рапунзел",
+        "hint": "Долга коса кула пушти надолу"
+      },
+      "Fairy Tales\tRumpelstiltskin\tSpinning straw gold name guess": {
+        "word": "Румпелштилцкин",
+        "hint": "Предење слама злато погоди име"
+      },
+      "Fairy Tales\tGoldilocks\tThree bears porridge bed chair": {
+        "word": "Златокоса",
+        "hint": "Три мечки каша кревет столче"
+      },
+      "Fairy Tales\tThe Ugly Duckling\tSwan transformation outcast": {
+        "word": "Грдото пајче",
+        "hint": "Трансформација во лебед отфрлен"
+      },
+      "Fairy Tales\tJack and the Beanstalk\tMagic beans giant sky stalk": {
+        "word": "Џек и волшебното стебленце",
+        "hint": "Магични зрна џин небесно стебленце"
+      },
+      "Fairy Tales\tPuss in Boots\tClever cat feline footwear": {
+        "word": "Мачорот во чизми",
+        "hint": "Паметна мачка мачкина обувка"
+      },
+      "Fairy Tales\tThe Princess and the Pea\tMattress stacking sensitive royal test": {
+        "word": "Принцезата на зрно грашок",
+        "hint": "Редење душеци чувствителен кралски тест"
+      },
+      "Fairy Tales\tThe Gingerbread Man\tRun fast catch me dough": {
+        "word": "Човечињата од джинджифилово",
+        "hint": "Бегај брзо фати ме тесто"
+      },
+      "Fairy Tales\tThe Pied Piper\tRats children flute magic tune": {
+        "word": "Шарениот свирач",
+        "hint": "Глувци деца флејта магична мелодија"
+      }
     }
-  ],
-  "Занимања": [
-    {
-      "word": "Доктор",
-      "hint": "Медицина"
-    },
-    {
-      "word": "Наставник",
-      "hint": "Училиште"
-    },
-    {
-      "word": "Полицаец",
-      "hint": "Закон"
-    },
-    {
-      "word": "Готвач",
-      "hint": "Кујна"
-    },
-    {
-      "word": "Пожарникар",
-      "hint": "Спасување"
-    },
-    {
-      "word": "Пилот",
-      "hint": "Летање"
-    },
-    {
-      "word": "Уметник",
-      "hint": "Креативен"
-    },
-    {
-      "word": "Инженер",
-      "hint": "Дизајн"
-    },
-    {
-      "word": "Земјоделец",
-      "hint": "Земјоделство"
-    },
-    {
-      "word": "Научник",
-      "hint": "Истражување"
-    },
-    {
-      "word": "Актер",
-      "hint": "Сцена"
-    },
-    {
-      "word": "Музичар",
-      "hint": "Инструменти"
-    },
-    {
-      "word": "Адвокат",
-      "hint": "Суд"
-    },
-    {
-      "word": "Судија",
-      "hint": "Чекан"
-    },
-    {
-      "word": "Водоводџија",
-      "hint": "Цевки"
-    },
-    {
-      "word": "Електричар",
-      "hint": "Жици"
-    },
-    {
-      "word": "Дрводелец",
-      "hint": "Дрво"
-    },
-    {
-      "word": "Механичар",
-      "hint": "Поправки"
-    },
-    {
-      "word": "Програмер",
-      "hint": "Код"
-    },
-    {
-      "word": "Астронаут",
-      "hint": "Вселена"
-    }
-  ],
-  "Животни": [
-    {
-      "word": "Лав",
-      "hint": "Рикање"
-    },
-    {
-      "word": "Слон",
-      "hint": "Сурла"
-    },
-    {
-      "word": "Жирафа",
-      "hint": "Врат"
-    },
-    {
-      "word": "Тигар",
-      "hint": "Шари"
-    },
-    {
-      "word": "Пингвин",
-      "hint": "Мраз"
-    },
-    {
-      "word": "Кенгур",
-      "hint": "Торба"
-    },
-    {
-      "word": "Делфин",
-      "hint": "Океан"
-    },
-    {
-      "word": "Кит",
-      "hint": "Огромен"
-    },
-    {
-      "word": "Ајкула",
-      "hint": "Заби"
-    },
-    {
-      "word": "Орел",
-      "hint": "Крила"
-    },
-    {
-      "word": "Волк",
-      "hint": "Завивање"
-    },
-    {
-      "word": "Мечка",
-      "hint": "Мед"
-    },
-    {
-      "word": "Мајмун",
-      "hint": "Дрвја"
-    },
-    {
-      "word": "Змија",
-      "hint": "Лизгање"
-    },
-    {
-      "word": "Крокодил",
-      "hint": "Мочуриште"
-    },
-    {
-      "word": "Нилски коњ",
-      "hint": "Река"
-    },
-    {
-      "word": "Носорог",
-      "hint": "Рог"
-    },
-    {
-      "word": "Зебра",
-      "hint": "Шари"
-    },
-    {
-      "word": "Гепард",
-      "hint": "Брз"
-    },
-    {
-      "word": "Панда",
-      "hint": "Бамбус"
-    }
-  ],
-  "Возила": [
-    {
-      "word": "Автомобил",
-      "hint": "Пат"
-    },
-    {
-      "word": "Велосипед",
-      "hint": "Педали"
-    },
-    {
-      "word": "Мотоцикл",
-      "hint": "Две тркала"
-    },
-    {
-      "word": "Автобус",
-      "hint": "Јавно"
-    },
-    {
-      "word": "Воз",
-      "hint": "Шини"
-    },
-    {
-      "word": "Авион",
-      "hint": "Небо"
-    },
-    {
-      "word": "Хеликоптер",
-      "hint": "Чопер"
-    },
-    {
-      "word": "Чамeц",
-      "hint": "Вода"
-    },
-    {
-      "word": "Брод",
-      "hint": "Океан"
-    },
-    {
-      "word": "Вселенски брод",
-      "hint": "Ѕвезди"
-    },
-    {
-      "word": "Подморница",
-      "hint": "Подводно"
-    },
-    {
-      "word": "Камион",
-      "hint": "Товар"
-    },
-    {
-      "word": "Трактор",
-      "hint": "Фарма"
-    },
-    {
-      "word": "Скутер",
-      "hint": "Мал"
-    },
-    {
-      "word": "Скејтборд",
-      "hint": "Трикови"
-    },
-    {
-      "word": "Рол шуи",
-      "hint": "Тркала"
-    },
-    {
-      "word": "Балон на топол воздух",
-      "hint": "Кошница"
-    },
-    {
-      "word": "Цепелин",
-      "hint": "Лебди"
-    },
-    {
-      "word": "Ховеркрафт",
-      "hint": "Воздушно перниче"
-    },
-    {
-      "word": "Моторна санка",
-      "hint": "Зима"
-    }
-  ],
-  "Храна и пијалоци": [
-    {
-      "word": "Пица",
-      "hint": "Парчиња"
-    },
-    {
-      "word": "Плескавица",
-      "hint": "Пункле"
-    },
-    {
-      "word": "Суши",
-      "hint": "Сирова риба"
-    },
-    {
-      "word": "Тестенини",
-      "hint": "Фиде"
-    },
-    {
-      "word": "Салата",
-      "hint": "Зеленило"
-    },
-    {
-      "word": "Тако",
-      "hint": "Лушпа"
-    },
-    {
-      "word": "Стек",
-      "hint": "Говедско месо"
-    },
-    {
-      "word": "Сладолед",
-      "hint": "Ладен десерт"
-    },
-    {
-      "word": "Торта",
-      "hint": "Роденден"
-    },
-    {
-      "word": "Чоколадо",
-      "hint": "Слатко какао"
-    },
-    {
-      "word": "Кафе",
-      "hint": "Утрински пијалок"
-    },
-    {
-      "word": "Чај",
-      "hint": "Лисја"
-    },
-    {
-      "word": "Сода",
-      "hint": "Газиран"
-    },
-    {
-      "word": "Сок",
-      "hint": "Овошен екстракт"
-    },
-    {
-      "word": "Вода",
-      "hint": "H2O"
-    },
-    {
-      "word": "Вино",
-      "hint": "Грозје"
-    },
-    {
-      "word": "Пиво",
-      "hint": "Пијалак"
-    },
-    {
-      "word": "Млеко",
-      "hint": "Млечни производи"
-    },
-    {
-      "word": "Сирење",
-      "hint": "Глувците го сакаат"
-    },
-    {
-      "word": "Леб",
-      "hint": "Пекар"
-    }
-  ],
-  "Земји": [
-    {
-      "word": "САД",
-      "hint": "Ѕвезди и ленти"
-    },
-    {
-      "word": "Канада",
-      "hint": "Јаворов лист"
-    },
-    {
-      "word": "Бразил",
-      "hint": "Самба"
-    },
-    {
-      "word": "Велика Британија",
-      "hint": "Чај и монархија"
-    },
-    {
-      "word": "Франција",
-      "hint": "Ајфел"
-    },
-    {
-      "word": "Германија",
-      "hint": "Октоберфест"
-    },
-    {
-      "word": "Италија",
-      "hint": "Облик на чизма"
-    },
-    {
-      "word": "Шпанија",
-      "hint": "Фламенко"
-    },
-    {
-      "word": "Русија",
-      "hint": "Најголема површина"
-    },
-    {
-      "word": "Кина",
-      "hint": "Големиот ѕид"
-    },
-    {
-      "word": "Јапонија",
-      "hint": "Изгрејсонце"
-    },
-    {
-      "word": "Индија",
-      "hint": "Таџ Махал"
-    },
-    {
-      "word": "Австралија",
-      "hint": "Кенгури"
-    },
-    {
-      "word": "Египет",
-      "hint": "Пирамиди"
-    },
-    {
-      "word": "Јужна Африка",
-      "hint": "Сафари"
-    },
-    {
-      "word": "Мексико",
-      "hint": "Сомбреро"
-    },
-    {
-      "word": "Аргентина",
-      "hint": "Танго"
-    },
-    {
-      "word": "Шведска",
-      "hint": "Икеа"
-    },
-    {
-      "word": "Норвешка",
-      "hint": "Фјордови"
-    },
-    {
-      "word": "Швајцарија",
-      "hint": "Алпи"
-    }
-  ],
-  "Познати личности": [
-    {
-      "word": "Алберт Ајнштајн",
-      "hint": "Е=mc2"
-    },
-    {
-      "word": "Исак Њутн",
-      "hint": "Јаболко гравитација"
-    },
-    {
-      "word": "Леонардо да Винчи",
-      "hint": "Мона Лиза"
-    },
-    {
-      "word": "Винсент ван Гог",
-      "hint": "Ѕвездена ноќ"
-    },
-    {
-      "word": "Вилијам Шекспир",
-      "hint": "Драматург"
-    },
-    {
-      "word": "Моцарт",
-      "hint": "Класичен композитор"
-    },
-    {
-      "word": "Бетовен",
-      "hint": "Глув композитор"
-    },
-    {
-      "word": "Елвис Присли",
-      "hint": "Крал на рокенролот"
-    },
-    {
-      "word": "Мајкл Џексон",
-      "hint": "Крал на попот"
-    },
-    {
-      "word": "Мерилин Монро",
-      "hint": "Холивудска икона"
-    },
-    {
-      "word": "Чарли Чаплин",
-      "hint": "Нема комедија"
-    },
-    {
-      "word": "Волт Дизни",
-      "hint": "Креаторот на Мики"
-    },
-    {
-      "word": "Стив Џобс",
-      "hint": "Основач на Епл"
-    },
-    {
-      "word": "Бил Гејтс",
-      "hint": "Основач на Мајкрософт"
-    },
-    {
-      "word": "Илон Маск",
-      "hint": "Тесла"
-    },
-    {
-      "word": "Нелсон Мандела",
-      "hint": "Водач на Јужна Африка"
-    },
-    {
-      "word": "Мартин Лутер Кинг Џуниор",
-      "hint": "Имам сон"
-    },
-    {
-      "word": "Ганди",
-      "hint": "Мирен протест"
-    },
-    {
-      "word": "Абрахам Линколн",
-      "hint": "Цилиндер"
-    },
-    {
-      "word": "Џорџ Вашингтон",
-      "hint": "Прв претседател на САД"
-    }
-  ],
-  "Филмови": [
-    {
-      "word": "Војна на ѕвездите",
-      "hint": "Џедај"
-    },
-    {
-      "word": "Паркот Јура",
-      "hint": "Диносауруси"
-    },
-    {
-      "word": "Матрицата",
-      "hint": "Црвена пилула"
-    },
-    {
-      "word": "Титаник",
-      "hint": "Тонински брод"
-    },
-    {
-      "word": "Аватар",
-      "hint": "Сини вонземјани"
-    },
-    {
-      "word": "Кум",
-      "hint": "Мафија"
-    },
-    {
-      "word": "Хари Потер",
-      "hint": "Волшебници"
-    },
-    {
-      "word": "Господар на прстените",
-      "hint": "Еден прстен"
-    },
-    {
-      "word": "Одмаздници",
-      "hint": "Марвелови херои"
-    },
-    {
-      "word": "Човекот пајак",
-      "hint": "Мрежен шутер"
-    },
-    {
-      "word": "Бетмен",
-      "hint": "Темен витез"
-    },
-    {
-      "word": "Супермен",
-      "hint": "Човек од челик"
-    },
-    {
-      "word": "Приказна за играчки",
-      "hint": "Живи играчки"
-    },
-    {
-      "word": "Кралот лав",
-      "hint": "Хакуна Матата"
-    },
-    {
-      "word": "Замрзната",
-      "hint": "Пушти ја"
-    },
-    {
-      "word": "Сам дома",
-      "hint": "Напущено дете"
-    },
-    {
-      "word": "Вилици",
-      "hint": "Џиновска ајкула"
-    },
-    {
-      "word": "Е.Т.",
-      "hint": "Јави се дома"
-    },
-    {
-      "word": "Индијана Џонс",
-      "hint": "Археолог со камшик"
-    },
-    {
-      "word": "Враќање во иднината",
-      "hint": "ДеЛореан време"
-    }
-  ],
-  "Суперхерои": [
-    {
-      "word": "Супермен",
-      "hint": "Криптон"
-    },
-    {
-      "word": "Бетмен",
-      "hint": "Готам"
-    },
-    {
-      "word": "Спајдермен",
-      "hint": "Мрежи"
-    },
-    {
-      "word": "Ајронмен",
-      "hint": "Тони Старк"
-    },
-    {
-      "word": "Капетан Америка",
-      "hint": "Вибраниумски штит"
-    },
-    {
-      "word": "Тор",
-      "hint": "Чекан"
-    },
-    {
-      "word": "Халк",
-      "hint": "Зелен лут"
-    },
-    {
-      "word": "Црна Вдовица",
-      "hint": "Шпионски Одмаздник"
-    },
-    {
-      "word": "Волверин",
-      "hint": "Адамантиумски канџи"
-    },
-    {
-      "word": "Флеш",
-      "hint": "Најбрзиот човек"
-    },
-    {
-      "word": "Вондер Вомен",
-      "hint": "Ласо на Вистината"
-    },
-    {
-      "word": "Аквамен",
-      "hint": "Атлантида"
-    },
-    {
-      "word": "Зелен Фенер",
-      "hint": "Прстен на моќ"
-    },
-    {
-      "word": "Дедпул",
-      "hint": "Платеник со уста"
-    },
-    {
-      "word": "Црн Пантер",
-      "hint": "Ваканда"
-    },
-    {
-      "word": "Доктор Стрејнџ",
-      "hint": "Врховен Волшебник"
-    },
-    {
-      "word": "Антмен",
-      "hint": "Смалување"
-    },
-    {
-      "word": "Дердевил",
-      "hint": "Слеп херој"
-    },
-    {
-      "word": "Панишер",
-      "hint": "Вигиланте"
-    },
-    {
-      "word": "Гоуст Рајдер",
-      "hint": "Запален череп"
-    }
-  ],
-  "Спорт": [
-    {
-      "word": "Фудбал",
-      "hint": "Пенал"
-    },
-    {
-      "word": "Кошарка",
-      "hint": "Кош"
-    },
-    {
-      "word": "Бејзбол",
-      "hint": "Домашен резултат"
-    },
-    {
-      "word": "Тенис",
-      "hint": "Рекет"
-    },
-    {
-      "word": "Голф",
-      "hint": "Дупка од прва"
-    },
-    {
-      "word": "Одбојка",
-      "hint": "Мрежа и забивање"
-    },
-    {
-      "word": "Пливање",
-      "hint": "Патеки во базен"
-    },
-    {
-      "word": "Атлетика",
-      "hint": "Атлетска патека"
-    },
-    {
-      "word": "Гимнастика",
-      "hint": "Греда"
-    },
-    {
-      "word": "Бокс",
-      "hint": "Ракавици и ринг"
-    },
-    {
-      "word": "Борење",
-      "hint": "Победа со закачување"
-    },
-    {
-      "word": "Боречки вештини",
-      "hint": "Црн појас"
-    },
-    {
-      "word": "Велосипедизам",
-      "hint": "Велосипедизам"
-    },
-    {
-      "word": "Скијање",
-      "hint": "Снежна планина"
-    },
-    {
-      "word": "Сноубординг",
-      "hint": "Една даска на снег"
-    },
-    {
-      "word": "Сурфање",
-      "hint": "Океански бранови"
-    },
-    {
-      "word": "Рагби",
-      "hint": "Скрам"
-    },
-    {
-      "word": "Крикет",
-      "hint": "Играч со палка и фрлач"
-    },
-    {
-      "word": "Хокеј",
-      "hint": "Пак на мраз"
-    },
-    {
-      "word": "Пинг-понг",
-      "hint": "Пинг-понг"
-    }
-  ],
-  "Музички Инструменти": [
-    {
-      "word": "Пијано",
-      "hint": "Црно-бели копчиња"
-    },
-    {
-      "word": "Гитара",
-      "hint": "Шест жици се свират"
-    },
-    {
-      "word": "Виолина",
-      "hint": "Лак и брада"
-    },
-    {
-      "word": "Тапан",
-      "hint": "Ритми и стапчиња"
-    },
-    {
-      "word": "Флејта",
-      "hint": "Дува преку дупка"
-    },
-    {
-      "word": "Труба",
-      "hint": "Месингени вентили"
-    },
-    {
-      "word": "Саксофон",
-      "hint": "Џез месинг"
-    },
-    {
-      "word": "Виолончело",
-      "hint": "Голема жица седиште"
-    },
-    {
-      "word": "Кларинет",
-      "hint": "Црно дрво"
-    },
-    {
-      "word": "Харфа",
-      "hint": "Ангелски жици"
-    },
-    {
-      "word": "Тромбон",
-      "hint": "Месингена лизгалка"
-    },
-    {
-      "word": "Туба",
-      "hint": "Најголем месингена бас"
-    },
-    {
-      "word": "Хармоника",
-      "hint": "Кутија за стискање"
-    },
-    {
-      "word": "Банџо",
-      "hint": "Фолк жици кружни"
-    },
-    {
-      "word": "Мандолина",
-      "hint": "Осум жици мали"
-    },
-    {
-      "word": "Укулеле",
-      "hint": "Хавајски четири жици"
-    },
-    {
-      "word": "Ксилофон",
-      "hint": "Дрвени шипки чекани"
-    },
-    {
-      "word": "Синтисајзер",
-      "hint": "Електронски копчиња"
-    },
-    {
-      "word": "Бас",
-      "hint": "Нискофреквентни жици"
-    },
-    {
-      "word": "Обоа",
-      "hint": "Двоен трскин инструмент"
-    }
-  ],
-  "Историски настани": [
-    {
-      "word": "Прва светска војна",
-      "hint": "Тренчеви"
-    },
-    {
-      "word": "Втора светска војна",
-      "hint": "Оска и Сојузници"
-    },
-    {
-      "word": "Француска револуција",
-      "hint": "Гилотина"
-    },
-    {
-      "word": "Американска револуција",
-      "hint": "1776"
-    },
-    {
-      "word": "Слетување на Месечината",
-      "hint": "Аполо 11"
-    },
-    {
-      "word": "Пад на Берлинскиот ѕид",
-      "hint": "Крај на Студената војна"
-    },
-    {
-      "word": "Студена војна",
-      "hint": "Тензија меѓу САД и СССР"
-    },
-    {
-      "word": "Ренесанса",
-      "hint": "Преродба на уметноста"
-    },
-    {
-      "word": "Индустриска револуција",
-      "hint": "Фабрики и пареа"
-    },
-    {
-      "word": "Откривање на Америка",
-      "hint": "Колумбо 1492"
-    },
-    {
-      "word": "Црна смрт",
-      "hint": "Чума"
-    },
-    {
-      "word": "Потонување на Титаник",
-      "hint": "Леден брег 1912"
-    },
-    {
-      "word": "Независност на Индија",
-      "hint": "Поделба од 1947 година"
-    },
-    {
-      "word": "Магна Карта",
-      "hint": "Документ од 1215 година"
-    },
-    {
-      "word": "Декларација за независност",
-      "hint": "4 јули"
-    },
-    {
-      "word": "Изум на печатарската машина",
-      "hint": "Гутенберг"
-    },
-    {
-      "word": "Создавање на Интернет",
-      "hint": "Започнува World Wide Web"
-    },
-    {
-      "word": "Катастрофа во Чернобил",
-      "hint": "Нуклеарна хаварија"
-    },
-    {
-      "word": "Напади од 11 септември",
-      "hint": "Кули близначки"
-    },
-    {
-      "word": "Пандемија КОВИД-19",
-      "hint": "Глобален карантин"
-    }
-  ],
-  "Измислени ликови": [
-    {
-      "word": "Шерлок Холмс",
-      "hint": "Детектив"
-    },
-    {
-      "word": "Мики Маус",
-      "hint": "Маскота на Дизни"
-    },
-    {
-      "word": "Багс Бани",
-      "hint": "Што има докторе"
-    },
-    {
-      "word": "Хомер Симпсон",
-      "hint": "Доу!"
-    },
-    {
-      "word": "Сунѓерот Боб",
-      "hint": "Ананас под море"
-    },
-    {
-      "word": "Марио",
-      "hint": "Водоводџија херој"
-    },
-    {
-      "word": "Пикачу",
-      "hint": "Електричен глушец"
-    },
-    {
-      "word": "Соник",
-      "hint": "Син брз еж"
-    },
-    {
-      "word": "Дарт Вејдер",
-      "hint": "Јас сум твојот татко"
-    },
-    {
-      "word": "Џејмс Бонд",
-      "hint": "007"
-    },
-    {
-      "word": "Хари Потер",
-      "hint": "Момчето што живееше"
-    },
-    {
-      "word": "Фродо Багинс",
-      "hint": "Носач на прстенот"
-    },
-    {
-      "word": "Дракула",
-      "hint": "Вампирски гроф"
-    },
-    {
-      "word": "Франкенштајн",
-      "hint": "Креатор на чудовишта"
-    },
-    {
-      "word": "Кинг Конг",
-      "hint": "Џиновски мајмун"
-    },
-    {
-      "word": "Годзила",
-      "hint": "Радиоактивен гуштер"
-    },
-    {
-      "word": "Супермен",
-      "hint": "Кларк Кент"
-    },
-    {
-      "word": "Бетмен",
-      "hint": "Брус Вејн"
-    },
-    {
-      "word": "Спајдермен",
-      "hint": "Питер Паркер"
-    },
-    {
-      "word": "Петар Пан",
-      "hint": "Момчето од Недоловленд"
-    }
-  ],
-  "Видео игри": [
-    {
-      "word": "Супер Марио Брос",
-      "hint": "Скокајте врз Гумбас"
-    },
-    {
-      "word": "Мајнкрафт",
-      "hint": "Блокови и Криперс"
-    },
-    {
-      "word": "Тетрис",
-      "hint": "Паѓачки форми"
-    },
-    {
-      "word": "Пак-Мен",
-      "hint": "Жолт круг духови"
-    },
-    {
-      "word": "Гранд Тефт Ауто",
-      "hint": "Крадете автомобили"
-    },
-    {
-      "word": "Кал оф Дјути",
-      "hint": "Воена пукачка игра"
-    },
-    {
-      "word": "Легендата за Зелда",
-      "hint": "Потрагата на Линк"
-    },
-    {
-      "word": "Покемон",
-      "hint": "Мора да ги фатиш сите"
-    },
-    {
-      "word": "Ворлд оф Воркрафт",
-      "hint": "Огромна MMO"
-    },
-    {
-      "word": "Фортнајт",
-      "hint": "Битка Ројал градење"
-    },
-    {
-      "word": "Лига на Легенди",
-      "hint": "MOBA патеки"
-    },
-    {
-      "word": "Овервоч",
-      "hint": "Тимска пукачка игра со херои"
-    },
-    {
-      "word": "Симс",
-      "hint": "Контролирајте виртуелни животи"
-    },
-    {
-      "word": "Анимал Кросинг",
-      "hint": "Островски селани"
-    },
-    {
-      "word": "Скајрим",
-      "hint": "Драгонборн"
-    },
-    {
-      "word": "Ред Дед Редемпшн",
-      "hint": "Каубојски одметник"
-    },
-    {
-      "word": "Хало",
-      "hint": "Мастер Чиф"
-    },
-    {
-      "word": "Портал",
-      "hint": "Загатка со телепортирачки пиштол"
-    },
-    {
-      "word": "Биошок",
-      "hint": "Подводен град"
-    },
-    {
-      "word": "Халф-Лајф",
-      "hint": "Гордон Фримен лост"
-    }
-  ],
-  "Знаменитости": [
-    {
-      "word": "Ајфелова кула",
-      "hint": "Париско железо"
-    },
-    {
-      "word": "Голем ѕид на Кина",
-      "hint": "Најдолга структура од тули"
-    },
-    {
-      "word": "Статуа на слободата",
-      "hint": "Њујоршка факел"
-    },
-    {
-      "word": "Колосеум",
-      "hint": "Римски гладијатори"
-    },
-    {
-      "word": "Таџ Махал",
-      "hint": "Индиски мермерен мавзолеј"
-    },
-    {
-      "word": "Пирамиди во Гиза",
-      "hint": "Египетски антички гробници"
-    },
-    {
-      "word": "Мачу Пикчу",
-      "hint": "Рушевини на Инките"
-    },
-    {
-      "word": "Стоунхенџ",
-      "hint": "Обединето Кралство стоечки камења"
-    },
-    {
-      "word": "Биг Бен",
-      "hint": "Лондонски часовник"
-    },
-    {
-      "word": "Маунт Рашмор",
-      "hint": "Претседатели изрезбана планина"
-    },
-    {
-      "word": "Христос Спасител",
-      "hint": "Рио статуа"
-    },
-    {
-      "word": "Опера во Сиднеј",
-      "hint": "Австралиски покрив со едра"
-    },
-    {
-      "word": "Акропол",
-      "hint": "Атина ридско плато"
-    },
-    {
-      "word": "Кули Петронас",
-      "hint": "Куала Лумпур близначки високи"
-    },
-    {
-      "word": "Бурџ Калифа",
-      "hint": "Дубаи највисока"
-    },
-    {
-      "word": "Мост Голден Гејт",
-      "hint": "Сан Франциско црвен"
-    },
-    {
-      "word": "Водопади на Нијагара",
-      "hint": "САД/Канада огромен водопад"
-    },
-    {
-      "word": "Големиот Кањон",
-      "hint": "Аризона огромна клисура"
-    },
-    {
-      "word": "Крива кула во Пиза",
-      "hint": "Италијанска наклонета основа"
-    },
-    {
-      "word": "Монт Еверест",
-      "hint": "Највисок врв"
-    }
-  ],
-  "Стравови и фобии": [
-    {
-      "word": "Пајаци",
-      "hint": "Арахнофобија"
-    },
-    {
-      "word": "Висини",
-      "hint": "Акрофобија"
-    },
-    {
-      "word": "Затворени Простор",
-      "hint": "Клаустрофобија"
-    },
-    {
-      "word": "Темно",
-      "hint": "Никтофобија"
-    },
-    {
-      "word": "Змии",
-      "hint": "Офидиофобија"
-    },
-    {
-      "word": "Летање",
-      "hint": "Авиофобија"
-    },
-    {
-      "word": "Кучиња",
-      "hint": "Кинофобија"
-    },
-    {
-      "word": "Игли",
-      "hint": "Трипанофобија"
-    },
-    {
-      "word": "Дружење",
-      "hint": "Социјална фобија"
-    },
-    {
-      "word": "Микроби",
-      "hint": "Мисофобија"
-    },
-    {
-      "word": "Јавно Зборување",
-      "hint": "Глософобија"
-    },
-    {
-      "word": "Смрт",
-      "hint": "Танатофобија"
-    },
-    {
-      "word": "Вода",
-      "hint": "Аквафобија"
-    },
-    {
-      "word": "Крв",
-      "hint": "Хемофобија"
-    },
-    {
-      "word": "Толпи",
-      "hint": "Агорафобија"
-    },
-    {
-      "word": "Кловнови",
-      "hint": "Кулрофобија"
-    },
-    {
-      "word": "Забари",
-      "hint": "Дентофобија"
-    },
-    {
-      "word": "Гром",
-      "hint": "Астрафобија"
-    },
-    {
-      "word": "Оган",
-      "hint": "Пирофобија"
-    },
-    {
-      "word": "Духови",
-      "hint": "Фасмофобија"
-    }
-  ],
-  "Митолошки суштества": [
-    {
-      "word": "Змеј",
-      "hint": "Дише оган лушпи"
-    },
-    {
-      "word": "Еднорог",
-      "hint": "Еден рог коњ"
-    },
-    {
-      "word": "Феникс",
-      "hint": "Прероден огнена птица"
-    },
-    {
-      "word": "Сирена",
-      "hint": "Половина риба половина жена"
-    },
-    {
-      "word": "Кентаур",
-      "hint": "Половина коњ половина човек"
-    },
-    {
-      "word": "Грифин",
-      "hint": "Хибрид лав орел"
-    },
-    {
-      "word": "Пегаз",
-      "hint": "Крилест коњ"
-    },
-    {
-      "word": "Минотаур",
-      "hint": "Човек со глава на бик"
-    },
-    {
-      "word": "Медуза",
-      "hint": "Змиски влакна"
-    },
-    {
-      "word": "Кракен",
-      "hint": "Џиновско морско чудовиште"
-    },
-    {
-      "word": "Киклоп",
-      "hint": "Едноок џин"
-    },
-    {
-      "word": "Сфинга",
-      "hint": "Тело на лав човечка глава"
-    },
-    {
-      "word": "Церберус",
-      "hint": "Куче со три глави"
-    },
-    {
-      "word": "Химера",
-      "hint": "Лав коза змија спојување"
-    },
-    {
-      "word": "Хидра",
-      "hint": "Повеќеглава змија"
-    },
-    {
-      "word": "Вампир",
-      "hint": "Цицач на крв"
-    },
-    {
-      "word": "Волк",
-      "hint": "Трансформација на полна месечина"
-    },
-    {
-      "word": "Трол",
-      "hint": "Чувар на мост"
-    },
-    {
-      "word": "Гоблин",
-      "hint": "Мала зелена пакост"
-    },
-    {
-      "word": "Јети",
-      "hint": "Одвратниот снежен човек"
-    }
-  ],
-  "Предмети за домаќинство": [
-    {
-      "word": "Телевизија",
-      "hint": "Гледање екран"
-    },
-    {
-      "word": "Фрижидер",
-      "hint": "Ладење храна"
-    },
-    {
-      "word": "Микробранова печка",
-      "hint": "Брзо загревање"
-    },
-    {
-      "word": "Машина за перење",
-      "hint": "Чистење облека"
-    },
-    {
-      "word": "Кревет",
-      "hint": "Мебел за спиење"
-    },
-    {
-      "word": "Кауч",
-      "hint": "Седиште за дневна соба"
-    },
-    {
-      "word": "Маса",
-      "hint": "Површина за јадење"
-    },
-    {
-      "word": "Стол",
-      "hint": "Мебел за седење"
-    },
-    {
-      "word": "Ламба",
-      "hint": "Уред за осветлување"
-    },
-    {
-      "word": "Часовник",
-      "hint": "Покажува време"
-    },
-    {
-      "word": "Огледало",
-      "hint": "Стакло за рефлексија"
-    },
-    {
-      "word": "Рерна",
-      "hint": "Печење храна"
-    },
-    {
-      "word": "Тостер",
-      "hint": "Крцкав леб"
-    },
-    {
-      "word": "Блендер",
-      "hint": "Мешање смути"
-    },
-    {
-      "word": "Правосмукалка",
-      "hint": "Вшмукување прашина"
-    },
-    {
-      "word": "Пегла",
-      "hint": "Пеглање алишта"
-    },
-    {
-      "word": "Канта за отпадоци",
-      "hint": "Држач за ѓубре"
-    },
-    {
-      "word": "Када",
-      "hint": "Миење тело"
-    },
-    {
-      "word": "Тоалет",
-      "hint": "Потреба за бања"
-    },
-    {
-      "word": "Полица за книги",
-      "hint": "Држење романи"
-    }
-  ],
-  "Природа": [
-    {
-      "word": "Дрво",
-      "hint": "Листови и стебло"
-    },
-    {
-      "word": "Цвет",
-      "hint": "Ливчиња"
-    },
-    {
-      "word": "Планина",
-      "hint": "Висок врв"
-    },
-    {
-      "word": "Река",
-      "hint": "Тековна вода"
-    },
-    {
-      "word": "Океан",
-      "hint": "Солено море"
-    },
-    {
-      "word": "Шума",
-      "hint": "Многу дрвја"
-    },
-    {
-      "word": "Пустина",
-      "hint": "Песок и суво"
-    },
-    {
-      "word": "Снег",
-      "hint": "Студени бели снегулки"
-    },
-    {
-      "word": "Дожд",
-      "hint": "Вода што паѓа од небо"
-    },
-    {
-      "word": "Сонце",
-      "hint": "Дневна ѕвезда"
-    },
-    {
-      "word": "Месечина",
-      "hint": "Ноќен сателит"
-    },
-    {
-      "word": "Ѕвезда",
-      "hint": "Треперлива точка на небото"
-    },
-    {
-      "word": "Облак",
-      "hint": "Бели меки небесни објекти"
-    },
-    {
-      "word": "Молња",
-      "hint": "Електричен блесок од бура"
-    },
-    {
-      "word": "Ветер",
-      "hint": "Проток на воздух"
-    },
-    {
-      "word": "Вулкан",
-      "hint": "Планина што исфрла лава"
-    },
-    {
-      "word": "Пештера",
-      "hint": "Темна шуплива карпеста"
-    },
-    {
-      "word": "Водопад",
-      "hint": "Вода што паѓа од карпа"
-    },
-    {
-      "word": "Остров",
-      "hint": "Земја опкружена со вода"
-    },
-    {
-      "word": "Трева",
-      "hint": "Зелени сечила на тревникот"
-    }
-  ],
-  "Облека": [
-    {
-      "word": "Кошула",
-      "hint": "Облека за горен дел од телото"
-    },
-    {
-      "word": "Панталони",
-      "hint": "Облека за долниот дел од нозете"
-    },
-    {
-      "word": "Фустан",
-      "hint": "Женска облека од едно парче"
-    },
-    {
-      "word": "Здолниште",
-      "hint": "Долно парче облека што виси"
-    },
-    {
-      "word": "Јакна",
-      "hint": "Надворешна облека капут"
-    },
-    {
-      "word": "Џемпер",
-      "hint": "Топол плетен горен дел"
-    },
-    {
-      "word": "Чорапи",
-      "hint": "Мека покривка за стапала"
-    },
-    {
-      "word": "Чевли",
-      "hint": "Тврда покривка за стапала"
-    },
-    {
-      "word": "Капа",
-      "hint": "Опрема за покривање на глава"
-    },
-    {
-      "word": "Ракавици",
-      "hint": "Покривка за загревање на раце"
-    },
-    {
-      "word": "Шал",
-      "hint": "Обвивка за врат"
-    },
-    {
-      "word": "Каиш",
-      "hint": "Стегач за струк"
-    },
-    {
-      "word": "Вратоврска",
-      "hint": "Моден додаток за врат"
-    },
-    {
-      "word": "Долна облека",
-      "hint": "Долен слој"
-    },
-    {
-      "word": "Шорцеви",
-      "hint": "Летна облека за нозе"
-    },
-    {
-      "word": "Фармерки",
-      "hint": "Тексас панталони"
-    },
-    {
-      "word": "Маица",
-      "hint": "Секојдневна маица со кратки ракави"
-    },
-    {
-      "word": "Палто",
-      "hint": "Тежок зимски горен дел"
-    },
-    {
-      "word": "Чизми",
-      "hint": "Високи обувки до глужд"
-    },
-    {
-      "word": "Сандали",
-      "hint": "Отворени летни чевли"
-    }
-  ],
-  "Хобија": [
-    {
-      "word": "Читање",
-      "hint": "Книги страници романи"
-    },
-    {
-      "word": "Пишување",
-      "hint": "Пенкало хартија приказни"
-    },
-    {
-      "word": "Цртање",
-      "hint": "Молив уметност скица"
-    },
-    {
-      "word": "Сликање",
-      "hint": "Четка бои платно"
-    },
-    {
-      "word": "Фотографија",
-      "hint": "Фотографирање камера"
-    },
-    {
-      "word": "Готвење",
-      "hint": "Подготвување оброци"
-    },
-    {
-      "word": "Печење",
-      "hint": "Рерна слатки тесто"
-    },
-    {
-      "word": "Градинарство",
-      "hint": "Растенија почва цвеќиња"
-    },
-    {
-      "word": "Риболов",
-      "hint": "Прачка макара вода"
-    },
-    {
-      "word": "Пешачење",
-      "hint": "Прошетки патеки планини"
-    },
-    {
-      "word": "Кампување",
-      "hint": "Шатор на отворено оган"
-    },
-    {
-      "word": "Плетење",
-      "hint": "Предиво игли џемпер"
-    },
-    {
-      "word": "Шиење",
-      "hint": "Конец ткаенина игла"
-    },
-    {
-      "word": "Дрводелство",
-      "hint": "Резба конструирање дрво"
-    },
-    {
-      "word": "Грнчарство",
-      "hint": "Глина грнчарско тркало"
-    },
-    {
-      "word": "Гејмање",
-      "hint": "Играње видео конзоли"
-    },
-    {
-      "word": "Танцување",
-      "hint": "Движење тело ритам"
-    },
-    {
-      "word": "Пеење",
-      "hint": "Вокални мелодии"
-    },
-    {
-      "word": "Патување",
-      "hint": "Посета на нови места"
-    },
-    {
-      "word": "Собирање",
-      "hint": "Собирање специфични предмети"
-    }
-  ],
-  "Бои": [
-    {
-      "word": "Црвена",
-      "hint": "Крв јаболко"
-    },
-    {
-      "word": "Сина",
-      "hint": "Небо океан"
-    },
-    {
-      "word": "Жолта",
-      "hint": "Сонце банана"
-    },
-    {
-      "word": "Зелена",
-      "hint": "Трева лисја"
-    },
-    {
-      "word": "Портокалова",
-      "hint": "Цитрусно овошје"
-    },
-    {
-      "word": "Виолетова",
-      "hint": "Грозје кралско семејство"
-    },
-    {
-      "word": "Розова",
-      "hint": "Свиња шеќерна волна"
-    },
-    {
-      "word": "Црна",
-      "hint": "Ноќ јаглен"
-    },
-    {
-      "word": "Бела",
-      "hint": "Снег млеко"
-    },
-    {
-      "word": "Сива",
-      "hint": "Пепел облаци"
-    },
-    {
-      "word": "Кафеава",
-      "hint": "Земја дрво"
-    },
-    {
-      "word": "Златна",
-      "hint": "Сјајно богатство"
-    },
-    {
-      "word": "Сребрена",
-      "hint": "Второ место метал"
-    },
-    {
-      "word": "Бронзена",
-      "hint": "Трето место метал"
-    },
-    {
-      "word": "Цијан",
-      "hint": "Светло светло сина"
-    },
-    {
-      "word": "Магента",
-      "hint": "Длабока виолетово-црвена"
-    },
-    {
-      "word": "Индиго",
-      "hint": "Темно виолетово-сина"
-    },
-    {
-      "word": "Тиркизна",
-      "hint": "Сино-зелена нијанса"
-    },
-    {
-      "word": "Темноцрвена",
-      "hint": "Темно кафеаво-црвена"
-    },
-    {
-      "word": "Морнарска",
-      "hint": "Темно воено сина"
-    }
-  ],
-  "Наука": [
-    {
-      "word": "Биологија",
-      "hint": "Проучување на животот"
-    },
-    {
-      "word": "Хемија",
-      "hint": "Реакции на елементи"
-    },
-    {
-      "word": "Физика",
-      "hint": "Материја сили енергија"
-    },
-    {
-      "word": "Астрономија",
-      "hint": "Проучување на вселената и планетите"
-    },
-    {
-      "word": "Геологија",
-      "hint": "Проучување на Земјата и карпите"
-    },
-    {
-      "word": "Атом",
-      "hint": "Најмала честичка јадро"
-    },
-    {
-      "word": "Молекула",
-      "hint": "Поврзани атоми"
-    },
-    {
-      "word": "Клетка",
-      "hint": "Основна единица на животот"
-    },
-    {
-      "word": "ДНК",
-      "hint": "Генетска скала"
-    },
-    {
-      "word": "Гравитација",
-      "hint": "Сила на паѓање и привлекување"
-    },
-    {
-      "word": "Еволуција",
-      "hint": "Промена на видовите со текот на времето"
-    },
-    {
-      "word": "Микроскоп",
-      "hint": "Гледање ситни нешта"
-    },
-    {
-      "word": "Телескоп",
-      "hint": "Гледање далечни нешта"
-    },
-    {
-      "word": "Лабораторија",
-      "hint": "Научна работна средина"
-    },
-    {
-      "word": "Експеримент",
-      "hint": "Тестирање на хипотеза"
-    },
-    {
-      "word": "Теорија",
-      "hint": "Основа на научно објаснување"
-    },
-    {
-      "word": "Фосил",
-      "hint": "Остатоци од древни карпи"
-    },
-    {
-      "word": "Вирус",
-      "hint": "Микроскопски предизвикувач на болести"
-    },
-    {
-      "word": "Бактерии",
-      "hint": "Едноклеточни организми"
-    },
-    {
-      "word": "Елемент",
-      "hint": "Ставка од периодниот систем"
-    }
-  ],
-  "Емоции": [
-    {
-      "word": "Среќа",
-      "hint": "Радост насмевка"
-    },
-    {
-      "word": "Тага",
-      "hint": "Солзи плачење"
-    },
-    {
-      "word": "Гнев",
-      "hint": "Лут бесен бес"
-    },
-    {
-      "word": "Страв",
-      "hint": "Исплашен уплашен терор"
-    },
-    {
-      "word": "Изненадување",
-      "hint": "Шок неочекувано"
-    },
-    {
-      "word": "Гадење",
-      "hint": "Згрозен болен"
-    },
-    {
-      "word": "Љубов",
-      "hint": "Приврзаност романса срца"
-    },
-    {
-      "word": "Љубомора",
-      "hint": "Завист посакувајќи ги нивните"
-    },
-    {
-      "word": "Вина",
-      "hint": "Се чувствувам лошо правејќи погрешно"
-    },
-    {
-      "word": "Срам",
-      "hint": "Засраменост понижувачко"
-    },
-    {
-      "word": "Возбуда",
-      "hint": "Воодушевен со нетрпение очекувам"
-    },
-    {
-      "word": "Досада",
-      "hint": "Ништо да се прави досадно"
-    },
-    {
-      "word": "Надеж",
-      "hint": "Оптимизам иднината е светла"
-    },
-    {
-      "word": "Безнадежност",
-      "hint": "Тотална загуба надеж"
-    },
-    {
-      "word": "Збунетост",
-      "hint": "Не разбирање загатка"
-    },
-    {
-      "word": "Гордост",
-      "hint": "Задоволен лично достигнување"
-    },
-    {
-      "word": "Олеснување",
-      "hint": "Стресот го нема опуштање"
-    },
-    {
-      "word": "Носталгија",
-      "hint": "Недостасува минатото со љубов"
-    },
-    {
-      "word": "Осаменост",
-      "hint": "Се чувствувам изолирано соло"
-    },
-    {
-      "word": "Љубопитност",
-      "hint": "Сакајќи да знаеш повеќе"
-    }
-  ],
-  "Училишни предмети": [
-    {
-      "word": "Математика",
-      "hint": "Броеви равенки форми"
-    },
-    {
-      "word": "Наука",
-      "hint": "Експерименти биологија физика"
-    },
-    {
-      "word": "Англиски јазик",
-      "hint": "Книжевност граматика пишување"
-    },
-    {
-      "word": "Историја",
-      "hint": "Минати настани војни"
-    },
-    {
-      "word": "Географија",
-      "hint": "Мапи земји главни градови"
-    },
-    {
-      "word": "Ликовна уметност",
-      "hint": "Сликарство цртање креативност"
-    },
-    {
-      "word": "Музика",
-      "hint": "Свирење инструменти пеење"
-    },
-    {
-      "word": "Физичко образование",
-      "hint": "Сала спорт трчање"
-    },
-    {
-      "word": "Компјутерски науки",
-      "hint": "Кодирање програмирање технологија"
-    },
-    {
-      "word": "Странски јазик",
-      "hint": "Зборување идиоми странство"
-    },
-    {
-      "word": "Хемија",
-      "hint": "Елементи лабораторија периодни"
-    },
-    {
-      "word": "Биологија",
-      "hint": "Живот клетки растенија"
-    },
-    {
-      "word": "Физика",
-      "hint": "Сили гравитација движење"
-    },
-    {
-      "word": "Алгебра",
-      "hint": "Букви и броеви математика"
-    },
-    {
-      "word": "Геометрија",
-      "hint": "Форми агли линии"
-    },
-    {
-      "word": "Калкулус",
-      "hint": "Напредна математика деривати"
-    },
-    {
-      "word": "Економија",
-      "hint": "Пари пазари трговија"
-    },
-    {
-      "word": "Психологија",
-      "hint": "Ум однесување проучување"
-    },
-    {
-      "word": "Социологија",
-      "hint": "Општество луѓе култура"
-    },
-    {
-      "word": "Драма",
-      "hint": "Театар глума претстави"
-    }
-  ],
-  "Играчки": [
-    {
-      "word": "Лего",
-      "hint": "Пластични блокови за градење"
-    },
-    {
-      "word": "Барби",
-      "hint": "Популарна модна кукла"
-    },
-    {
-      "word": "Мече",
-      "hint": "Полнето животинско плишано"
-    },
-    {
-      "word": "Акциона фигура",
-      "hint": "Подвижна херојска играчка"
-    },
-    {
-      "word": "Јо-Јо",
-      "hint": "Вртење на конец горе-долу"
-    },
-    {
-      "word": "Змеј",
-      "hint": "Летање на конец со ветер"
-    },
-    {
-      "word": "Фризби",
-      "hint": "Летачки диск за фрлање"
-    },
-    {
-      "word": "Куклена куќа",
-      "hint": "Минијатурна куќна играчка"
-    },
-    {
-      "word": "Загатка",
-      "hint": "Спојување парчиња заедно слика"
-    },
-    {
-      "word": "Друштвена игра",
-      "hint": "Правила за коцки на маса"
-    },
-    {
-      "word": "Рубикова коцка",
-      "hint": "Вртење шарена коцка"
-    },
-    {
-      "word": "Воз сет",
-      "hint": "Патеки минијатурни локомотиви"
-    },
-    {
-      "word": "Автомобил со далечински управувач",
-      "hint": "Возење преку фреквенција"
-    },
-    {
-      "word": "Пластелин",
-      "hint": "Моделирање глина во бои"
-    },
-    {
-      "word": "Хулахоп",
-      "hint": "Вртење околу половината"
-    },
-    {
-      "word": "Јаже за прескокнување",
-      "hint": "Јаже за вежбање прескокнување"
-    },
-    {
-      "word": "Воден пиштол",
-      "hint": "Пукање течност летен прскалка"
-    },
-    {
-      "word": "Прачка",
-      "hint": "Повлечи назад лансирај камен"
-    },
-    {
-      "word": "Трамболина",
-      "hint": "Површина за скокање"
-    },
-    {
-      "word": "Коњ за нишање",
-      "hint": "Нишање напред назад животинско седиште"
-    }
-  ],
-  "Оружје": [
-    {
-      "word": "Меч",
-      "hint": "Долго метално сечиво витез"
-    },
-    {
-      "word": "Лак и стрела",
-      "hint": "Жица повлекување проектили стрелаштво"
-    },
-    {
-      "word": "Пиштол",
-      "hint": "Огнено оружје куршуми пукање"
-    },
-    {
-      "word": "Нож",
-      "hint": "Кратко остро сечило сечење"
-    },
-    {
-      "word": "Копје",
-      "hint": "Долга прачка зашилен крај"
-    },
-    {
-      "word": "Секира",
-      "hint": "Сечење дрво сечило"
-    },
-    {
-      "word": "Боздоган",
-      "hint": "Шилеста палка средновековна"
-    },
-    {
-      "word": "Штит",
-      "hint": "Одбранбена опрема за блокирање"
-    },
-    {
-      "word": "Самострел",
-      "hint": "Хоризонтален механички лак"
-    },
-    {
-      "word": "Камшик",
-      "hint": "Кожен конец за кршење"
-    },
-    {
-      "word": "Топ",
-      "hint": "Тешка артилерија што фрла топки"
-    },
-    {
-      "word": "Граната",
-      "hint": "Експлозивна фрлена игла"
-    },
-    {
-      "word": "Кама",
-      "hint": "Мал личен нож за прободување"
-    },
-    {
-      "word": "Бумеранг",
-      "hint": "Враќање фрлена крива"
-    },
-    {
-      "word": "Нунчаку",
-      "hint": "Две стапчиња синџир боречки вештини"
-    },
-    {
-      "word": "Катана",
-      "hint": "Јапонски самурајски меч"
-    },
-    {
-      "word": "Снајперска пушка",
-      "hint": "Далекометна пушка со нишан"
-    },
-    {
-      "word": "Пушка",
-      "hint": "Пушка за близок дострел"
-    },
-    {
-      "word": "Митралез",
-      "hint": "Тешко оружје со брз оган"
-    },
-    {
-      "word": "Ракетен фрлач",
-      "hint": "Огромен експлозивен проектил"
-    }
-  ],
-  "Технологија": [
-    {
-      "word": "Компјутер",
-      "hint": "Десктоп компјутер екран процесор"
-    },
-    {
-      "word": "Смартфон",
-      "hint": "Мобилен уред на допир"
-    },
-    {
-      "word": "Таблет",
-      "hint": "Рамен екран пренослив компјутер"
-    },
-    {
-      "word": "Лаптоп",
-      "hint": "Преклоплив пренослив компјутер"
-    },
-    {
-      "word": "Смарт часовник",
-      "hint": "Технологија за носење на зглоб"
-    },
-    {
-      "word": "Слушалки",
-      "hint": "Уши слушање аудио"
-    },
-    {
-      "word": "Камера",
-      "hint": "Фотографско видео снимање објектив"
-    },
-    {
-      "word": "Дрон",
-      "hint": "Беспилотен летечки гаџет"
-    },
-    {
-      "word": "Слушалки за виртуелна реалност",
-      "hint": "Очила 3Д импресивно"
-    },
-    {
-      "word": "Конзола за игри",
-      "hint": "Систем за играње поврзан со ТВ"
-    },
-    {
-      "word": "Рутер",
-      "hint": "Кутија за WiFi интернет сигнал"
-    },
-    {
-      "word": "Звучник",
-      "hint": "Гласен аудио излез"
-    },
-    {
-      "word": "Микрофон",
-      "hint": "Гласовен влез за звук"
-    },
-    {
-      "word": "Тастатура",
-      "hint": "Типкање копчиња"
-    },
-    {
-      "word": "Глувче",
-      "hint": "Кликање покажување курсор"
-    },
-    {
-      "word": "Принтер",
-      "hint": "Излез на хартија мастило"
-    },
-    {
-      "word": "Скенер",
-      "hint": "Дигитализирање хартиен документ"
-    },
-    {
-      "word": "Монитор",
-      "hint": "Единица за приказ на екран"
-    },
-    {
-      "word": "Хард диск",
-      "hint": "Диск за складирање податоци"
-    },
-    {
-      "word": "УСБ флеш драјв",
-      "hint": "УСБ меморија за складирање податоци"
-    }
-  ],
-  "Празници": [
-    {
-      "word": "Божиќ",
-      "hint": "Декември дрвја подароци Дедо Мраз"
-    },
-    {
-      "word": "Ноќ на вештерките",
-      "hint": "Октомври костими бонбони морничаво"
-    },
-    {
-      "word": "Ден на благодарноста",
-      "hint": "Ноември мисирка благодарни"
-    },
-    {
-      "word": "Велигден",
-      "hint": "Пролет зајаци јајца чоколадо"
-    },
-    {
-      "word": "Денот на вљубените",
-      "hint": "Февруари љубов срца романтично"
-    },
-    {
-      "word": "Новогодишна ноќ",
-      "hint": "31 декември полноќ огномет"
-    },
-    {
-      "word": "Ден на независноста",
-      "hint": "4 јули слобода огномет"
-    },
-    {
-      "word": "Денот на Свети Патрик",
-      "hint": "Март зелена среќа ирски"
-    },
-    {
-      "word": "Ден на мајката",
-      "hint": "Ценење на мама Недела"
-    },
-    {
-      "word": "Ден на таткото",
-      "hint": "Ценење на тато Недела"
-    },
-    {
-      "word": "Ден на планетата Земја",
-      "hint": "Април помагање на планетата природа"
-    },
-    {
-      "word": "Ден на трудот",
-      "hint": "Септември работници крај на летото"
-    },
-    {
-      "word": "Ден на сеќавање",
-      "hint": "Мај се сеќаваме на паднатите војници"
-    },
-    {
-      "word": "Ден на ветераните",
-      "hint": "Ноември почестување на воената служба"
-    },
-    {
-      "word": "Ханука",
-      "hint": "Еврејски фестивал на светлината менора"
-    },
-    {
-      "word": "Дивали",
-      "hint": "Индиски фестивал на светлината"
-    },
-    {
-      "word": "Рамазан",
-      "hint": "Исламски месец на постот"
-    },
-    {
-      "word": "Октоберфест",
-      "hint": "Германски фестивал на пивото"
-    },
-    {
-      "word": "Синко де Мајо",
-      "hint": "5 мај Мексиканска гордост"
-    },
-    {
-      "word": "Кинеска Нова Година",
-      "hint": "Лунарен календар змеј"
-    }
-  ],
-  "Инсекти": [
-    {
-      "word": "Пеперутка",
-      "hint": "Шарени летечки крилја кожурец"
-    },
-    {
-      "word": "Пчела",
-      "hint": "Жолто црно зуење мед"
-    },
-    {
-      "word": "Мравка",
-      "hint": "Мала марширачка силна колонија"
-    },
-    {
-      "word": "Комарец",
-      "hint": "Каснува досадно крвопиец"
-    },
-    {
-      "word": "Мува",
-      "hint": "Зуење куќен штетник крило"
-    },
-    {
-      "word": "Пајак",
-      "hint": "Осум нозе мрежи (чекај технички арахнид)"
-    },
-    {
-      "word": "Бубачка",
-      "hint": "Тврда школка лазечка бубачка"
-    },
-    {
-      "word": "Бубамара",
-      "hint": "Црвени црни точки забележани крилја"
-    },
-    {
-      "word": "Скакулец",
-      "hint": "Скокачко зелени долги нозе"
-    },
-    {
-      "word": "Цврчок",
-      "hint": "Цвркотење ноќен звук скокач"
-    },
-    {
-      "word": "Лебарка",
-      "hint": "Опстанува одвратен брз лазач"
-    },
-    {
-      "word": "Молец",
-      "hint": "Прашливи крилја привлечени од светлина"
-    },
-    {
-      "word": "Оса",
-      "hint": "Агресивно осило со жолти пруги"
-    },
-    {
-      "word": "Стршлен",
-      "hint": "Големо агресивно осило гнездо"
-    },
-    {
-      "word": "Вилински коњиц",
-      "hint": "Долго тело брзо летање четири крила"
-    },
-    {
-      "word": "Гасеница",
-      "hint": "Лазечки црвлив меки пеперутка бебе"
-    },
-    {
-      "word": "Стоногалка",
-      "hint": "Многу долги нозе лазач брз"
-    },
-    {
-      "word": "Болва",
-      "hint": "Скокачки ситен домашен штетник"
-    },
-    {
-      "word": "Крлеж",
-      "hint": "Крвопиечки шумски паразит"
-    },
-    {
-      "word": "Стеница",
-      "hint": "Душек каснување досада"
-    }
-  ],
-  "Бајки": [
-    {
-      "word": "Пепелашка",
-      "hint": "Стаклена папуча кочија од тиква"
-    },
-    {
-      "word": "Снежана",
-      "hint": "Седумте џуџиња отровно јаболко"
-    },
-    {
-      "word": "Заспаната убавица",
-      "hint": "Вртелешка сто години дремка"
-    },
-    {
-      "word": "Црвенкапа",
-      "hint": "Баба волк кошница"
-    },
-    {
-      "word": "Убавицата и Ѕверот",
-      "hint": "Проклет принц магична роза"
-    },
-    {
-      "word": "Петар Пан",
-      "hint": "Никогашландија Ѕвончица кука"
-    },
-    {
-      "word": "Алиса во земјата на чудата",
-      "hint": "Зајачка дупка луд шешир кралица"
-    },
-    {
-      "word": "Пинокио",
-      "hint": "Дрвено момче растечки нос конец"
-    },
-    {
-      "word": "Аладин",
-      "hint": "Волшебна ламба дух килим"
-    },
-    {
-      "word": "Малата сирена",
-      "hint": "Ариел море нозе глас"
-    },
-    {
-      "word": "Хензел и Гретел",
-      "hint": "Трошки од леб куќа од джинджифилово вештерка"
-    },
-    {
-      "word": "Рапунзел",
-      "hint": "Долга коса кула пушти надолу"
-    },
-    {
-      "word": "Румпелштилцкин",
-      "hint": "Предење слама злато погоди име"
-    },
-    {
-      "word": "Златокоса",
-      "hint": "Три мечки каша кревет столче"
-    },
-    {
-      "word": "Грдото пајче",
-      "hint": "Трансформација во лебед отфрлен"
-    },
-    {
-      "word": "Џек и волшебното стебленце",
-      "hint": "Магични зрна џин небесно стебленце"
-    },
-    {
-      "word": "Мачорот во чизми",
-      "hint": "Паметна мачка мачкина обувка"
-    },
-    {
-      "word": "Принцезата на зрно грашок",
-      "hint": "Редење душеци чувствителен кралски тест"
-    },
-    {
-      "word": "Човечињата од джинджифилово",
-      "hint": "Бегај брзо фати ме тесто"
-    },
-    {
-      "word": "Шарениот свирач",
-      "hint": "Глувци деца флејта магична мелодија"
-    }
-  ]
+  }
 }

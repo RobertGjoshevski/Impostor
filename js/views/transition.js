@@ -1,8 +1,10 @@
-import { store } from '../store.js';
+import { store, normalizePlayerName } from '../store.js';
+import { t } from '../i18n.js';
 
 export const TransitionView = {
     render: (state) => {
         const player = state.players[state.currentPlayerIndex];
+        const handoffName = normalizePlayerName(player);
         return `
         <!-- Ambient Background Glows -->
         <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
@@ -20,21 +22,21 @@ export const TransitionView = {
                 <div class="pt-6">
                     <p class="font-label text-primary font-bold text-[10px] tracking-[0.25em] uppercase mb-3 flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                        Transfer Required
+                        ${t(state.language, 'transferRequired')}
                     </p>
                     <h1 class="font-headline text-5xl md:text-6xl font-black text-on-surface leading-[1.05] tracking-tighter">
-                        Pass<br>Device<br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-primary-container">To ${player.name}</span>
+                        ${t(state.language, 'passLine1')}<br>${t(state.language, 'passLine2')}<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-primary-container">${t(state.language, 'passTo')} ${handoffName}</span>
                     </h1>
                     <p class="mt-6 text-on-surface-variant text-sm font-medium leading-relaxed max-w-[200px]">
-                        Ensure you are alone before viewing your role assignment.
+                        ${t(state.language, 'aloneBeforeRole')}
                     </p>
                 </div>
                 
                 <div class="mt-10">
                     <button id="readyBtn" class="w-full py-5 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary-container font-headline font-extrabold text-lg shadow-[0_0_32px_rgba(208,149,255,0.15)] hover:shadow-[0_0_48px_rgba(208,149,255,0.25)] transition-all active:scale-95 flex items-center justify-center gap-3 group">
                         <span class="material-symbols-outlined transition-transform duration-300 group-hover:scale-110" style="font-variation-settings: 'FILL' 1;">touch_app</span>
-                        I'm Ready
+                        ${t(state.language, 'imReady')}
                     </button>
                 </div>
             </div>
@@ -44,5 +46,8 @@ export const TransitionView = {
         document.getElementById('readyBtn').addEventListener('click', () => {
             store.setState({ screen: 'reveal' });
         });
-    }
+    },
+
+    /** Avoid full DOM remount on unrelated store updates (e.g. language pack finishing). */
+    update: () => {},
 };

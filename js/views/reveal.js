@@ -1,10 +1,13 @@
-import { store } from '../store.js';
+import { store, normalizePlayerName } from '../store.js';
+import { t } from '../i18n.js';
 
 export const RevealView = {
     render: (state) => {
         const player = state.players[state.currentPlayerIndex];
+        const displayName = normalizePlayerName(player);
         const isImpostor = player.role === 'IMPOSTOR';
-        
+        const roleLabel = t(state.language, isImpostor ? 'roleImpostor' : 'roleInnocent');
+
         return `
         <!-- Ambient Background Glows -->
         <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
@@ -17,12 +20,12 @@ export const RevealView = {
                 <div class="relative group">
                     <div class="absolute inset-0 bg-tertiary rounded-full blur-md opacity-30"></div>
                     <div class="relative w-20 h-20 rounded-full bg-surface-variant flex items-center justify-center text-primary font-bold text-2xl uppercase border-4 border-surface shadow-[0_0_30px_rgba(255,107,155,0.15)] ring-2 ring-tertiary/50">
-                        ${player.name.substring(0, 2)}
+                        ${displayName.substring(0, 2)}
                     </div>
                 </div>
                 <div>
-                    <h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface">${player.name}</h2>
-                    <p class="text-on-surface-variant text-sm tracking-widest uppercase mt-1">Identity Check</p>
+                    <h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface">${displayName}</h2>
+                    <p class="text-on-surface-variant text-sm tracking-widest uppercase mt-1">${t(state.language, 'identityCheck')}</p>
                 </div>
             </header>
             
@@ -31,8 +34,8 @@ export const RevealView = {
                 
                 <div id="hiddenState" class="flex flex-col items-center py-8">
                     <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-4" style="font-variation-settings: 'FILL' 1;">visibility_off</span>
-                    <h3 class="font-headline text-2xl font-bold text-on-surface">Press & Hold</h3>
-                    <p class="text-on-surface-variant text-sm mt-2">To reveal your secret</p>
+                    <h3 class="font-headline text-2xl font-bold text-on-surface">${t(state.language, 'pressHold')}</h3>
+                    <p class="text-on-surface-variant text-sm mt-2">${t(state.language, 'revealSecretHint')}</p>
                 </div>
 
                 <div id="revealedState" class="hidden flex-col items-center w-full">
@@ -40,13 +43,13 @@ export const RevealView = {
                         <span class="material-symbols-outlined text-[16px] text-${isImpostor ? 'tertiary' : 'secondary'}" style="font-variation-settings: 'FILL' 1;">
                             ${isImpostor ? 'warning' : 'verified'}
                         </span>
-                        You Are The
+                        ${t(state.language, 'youAreThe')}
                     </p>
                     <h1 class="font-headline text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br ${isImpostor ? 'from-tertiary to-tertiary-dim' : 'from-secondary to-secondary-dim'} tracking-tighter mb-8 drop-shadow-[0_0_20px_rgba(255,107,155,0.2)]">
-                        ${player.role}
+                        ${roleLabel}
                     </h1>
                     <div class="w-full bg-surface-container-highest/60 rounded-2xl p-5 border border-outline-variant/10 shadow-inner">
-                        <p class="text-xs text-on-surface-variant uppercase tracking-wider mb-2">${isImpostor ? 'Category Hint' : 'Secret Word'}</p>
+                        <p class="text-xs text-on-surface-variant uppercase tracking-wider mb-2">${isImpostor ? t(state.language, 'categoryHint') : t(state.language, 'secretWord')}</p>
                         <p class="font-headline text-xl font-bold text-inverse-surface tracking-tight">
                             ${isImpostor ? state.word.hint : state.word.word}
                         </p>
@@ -57,11 +60,11 @@ export const RevealView = {
             <div class="w-full flex flex-col items-center gap-4 mt-4">
                 <button id="doneBtn" class="w-full rounded-full bg-surface-variant text-on-surface-variant font-headline font-bold text-lg py-5 opacity-50 cursor-not-allowed transition-all duration-200 flex justify-center items-center gap-3" disabled>
                     <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">task_alt</span>
-                    DONE PEEKING
+                    ${t(state.language, 'donePeeking')}
                 </button>
                 <p class="text-on-surface-variant text-sm text-center flex items-center gap-1.5 opacity-80">
                     <span class="material-symbols-outlined text-[16px]">sync</span>
-                    Pass device back after reading
+                    ${t(state.language, 'passDeviceBack')}
                 </p>
             </div>
         </main>

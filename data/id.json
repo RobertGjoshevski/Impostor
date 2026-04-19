@@ -1,16 +1,4941 @@
 {
   "Lokasi": [
-    { "word": "Stasiun Luar Angkasa", "hint": "Orbit" },
-    { "word": "Kapal Selam", "hint": "Kapal" },
-    { "word": "Kasino", "hint": "Judi" },
-    { "word": "Rumah Sakit", "hint": "Klinik" },
-    { "word": "Perpustakaan", "hint": "Buku" }
+    {
+      "word": "Stasiun Luar Angkasa",
+      "hint": "Orbit"
+    },
+    {
+      "word": "Kapal Selam",
+      "hint": "Kapal"
+    },
+    {
+      "word": "Kasino",
+      "hint": "Judi"
+    },
+    {
+      "word": "Rumah Sakit",
+      "hint": "Klinik"
+    },
+    {
+      "word": "Perpustakaan",
+      "hint": "Buku"
+    }
   ],
   "Pekerjaan": [
-    { "word": "Dokter", "hint": "Penyembuh" },
-    { "word": "Astronot", "hint": "Pilot" },
-    { "word": "Koki", "hint": "Masak" },
-    { "word": "Tukang Ledeng", "hint": "Pipa" },
-    { "word": "Detektif", "hint": "Penyelidik" }
-  ]
+    {
+      "word": "Dokter",
+      "hint": "Penyembuh"
+    },
+    {
+      "word": "Astronot",
+      "hint": "Pilot"
+    },
+    {
+      "word": "Koki",
+      "hint": "Masak"
+    },
+    {
+      "word": "Tukang Ledeng",
+      "hint": "Pipa"
+    },
+    {
+      "word": "Detektif",
+      "hint": "Penyelidik"
+    },
+    {
+      "word": "Pilot",
+      "hint": "Terbang"
+    },
+    {
+      "word": "Seniman",
+      "hint": "Kreatif"
+    },
+    {
+      "word": "Insinyur",
+      "hint": "Desain"
+    },
+    {
+      "word": "Petani",
+      "hint": "Pertanian"
+    },
+    {
+      "word": "Ilmuwan",
+      "hint": "Penelitian"
+    },
+    {
+      "word": "Aktor",
+      "hint": "Panggung"
+    },
+    {
+      "word": "Musisi",
+      "hint": "Instrumen"
+    },
+    {
+      "word": "Pengacara",
+      "hint": "Pengadilan"
+    },
+    {
+      "word": "Hakim",
+      "hint": "Palu"
+    },
+    {
+      "word": "Tukang Ledeng",
+      "hint": "Pipa"
+    },
+    {
+      "word": "Tukang Listrik",
+      "hint": "Kabel"
+    },
+    {
+      "word": "Tukang Kayu",
+      "hint": "Kayu"
+    },
+    {
+      "word": "Mekanik",
+      "hint": "Memperbaiki"
+    },
+    {
+      "word": "Programmer",
+      "hint": "Kode"
+    },
+    {
+      "word": "Astronot",
+      "hint": "Angkasa"
+    }
+  ],
+  "Hewan": [
+    {
+      "word": "Singa",
+      "hint": "Mengaum"
+    },
+    {
+      "word": "Gajah",
+      "hint": "Belalai"
+    },
+    {
+      "word": "Jerapah",
+      "hint": "Leher"
+    },
+    {
+      "word": "Harimau",
+      "hint": "Garis-garis"
+    },
+    {
+      "word": "Pinguin",
+      "hint": "Es"
+    },
+    {
+      "word": "Kangguru",
+      "hint": "Kantong"
+    },
+    {
+      "word": "Lumba-lumba",
+      "hint": "Samudra"
+    },
+    {
+      "word": "Paus",
+      "hint": "Besar"
+    },
+    {
+      "word": "Hiu",
+      "hint": "Gigi"
+    },
+    {
+      "word": "Elang",
+      "hint": "Sayap"
+    },
+    {
+      "word": "Serigala",
+      "hint": "Melolong"
+    },
+    {
+      "word": "Beruang",
+      "hint": "Madu"
+    },
+    {
+      "word": "Monyet",
+      "hint": "Pohon"
+    },
+    {
+      "word": "Ular",
+      "hint": "Melata"
+    },
+    {
+      "word": "Buaya",
+      "hint": "Rawa"
+    },
+    {
+      "word": "Kudanil",
+      "hint": "Sungai"
+    },
+    {
+      "word": "Badak",
+      "hint": "Cula"
+    },
+    {
+      "word": "Zebra",
+      "hint": "Garis-garis"
+    },
+    {
+      "word": "Citah",
+      "hint": "Cepat"
+    },
+    {
+      "word": "Panda",
+      "hint": "Bambu"
+    }
+  ],
+  "Kendaraan": [
+    {
+      "word": "Mobil",
+      "hint": "Jalan"
+    },
+    {
+      "word": "Sepeda",
+      "hint": "Pedal"
+    },
+    {
+      "word": "Sepeda Motor",
+      "hint": "Dua roda"
+    },
+    {
+      "word": "Bus",
+      "hint": "Publik"
+    },
+    {
+      "word": "Kereta Api",
+      "hint": "Rel"
+    },
+    {
+      "word": "Pesawat Terbang",
+      "hint": "Langit"
+    },
+    {
+      "word": "Helikopter",
+      "hint": "Chopper"
+    },
+    {
+      "word": "Perahu",
+      "hint": "Air"
+    },
+    {
+      "word": "Kapal",
+      "hint": "Samudra"
+    },
+    {
+      "word": "Pesawat Luar Angkasa",
+      "hint": "Bintang"
+    },
+    {
+      "word": "Kapal Selam",
+      "hint": "Bawah air"
+    },
+    {
+      "word": "Truk",
+      "hint": "Kargo"
+    },
+    {
+      "word": "Traktor",
+      "hint": "Pertanian"
+    },
+    {
+      "word": "Skuter",
+      "hint": "Kecil"
+    },
+    {
+      "word": "Papan Seluncur",
+      "hint": "Trik"
+    },
+    {
+      "word": "Sepatu Roda",
+      "hint": "Roda"
+    },
+    {
+      "word": "Balon Udara Panas",
+      "hint": "Keranjang"
+    },
+    {
+      "word": "Blimp",
+      "hint": "Mengambang"
+    },
+    {
+      "word": "Hovercraft",
+      "hint": "Bantalan udara"
+    },
+    {
+      "word": "Mobil Salju",
+      "hint": "Musim dingin"
+    }
+  ],
+  "Makanan & Minuman": [
+    {
+      "word": "Pizza",
+      "hint": "Potongan"
+    },
+    {
+      "word": "Burger",
+      "hint": "Roti bun"
+    },
+    {
+      "word": "Sushi",
+      "hint": "Ikan mentah"
+    },
+    {
+      "word": "Pasta",
+      "hint": "Mi"
+    },
+    {
+      "word": "Salad",
+      "hint": "Sayuran hijau"
+    },
+    {
+      "word": "Taco",
+      "hint": "Cangkang"
+    },
+    {
+      "word": "Steak",
+      "hint": "Daging sapi"
+    },
+    {
+      "word": "Es Krim",
+      "hint": "Pencuci mulut dingin"
+    },
+    {
+      "word": "Kue",
+      "hint": "Ulang tahun"
+    },
+    {
+      "word": "Cokelat",
+      "hint": "Kakao manis"
+    },
+    {
+      "word": "Kopi",
+      "hint": "Minuman pagi"
+    },
+    {
+      "word": "Teh",
+      "hint": "Daun"
+    },
+    {
+      "word": "Soda",
+      "hint": "Berkarbonasi"
+    },
+    {
+      "word": "Jus",
+      "hint": "Ekstrak buah"
+    },
+    {
+      "word": "Air",
+      "hint": "H2O"
+    },
+    {
+      "word": "Anggur",
+      "hint": "Buah anggur"
+    },
+    {
+      "word": "Bir",
+      "hint": "Seduhan"
+    },
+    {
+      "word": "Susu",
+      "hint": "Produk susu"
+    },
+    {
+      "word": "Keju",
+      "hint": "Tikus menyukainya"
+    },
+    {
+      "word": "Roti",
+      "hint": "Tukang roti"
+    }
+  ],
+  "Negara": [
+    {
+      "word": "Amerika Serikat",
+      "hint": "Bintang dan Garis"
+    },
+    {
+      "word": "Kanada",
+      "hint": "Daun Maple"
+    },
+    {
+      "word": "Brasil",
+      "hint": "Samba"
+    },
+    {
+      "word": "Britania Raya",
+      "hint": "Teh & Monarki"
+    },
+    {
+      "word": "Prancis",
+      "hint": "Eiffel"
+    },
+    {
+      "word": "Jerman",
+      "hint": "Oktoberfest"
+    },
+    {
+      "word": "Italia",
+      "hint": "Bentuk sepatu bot"
+    },
+    {
+      "word": "Spanyol",
+      "hint": "Flamenco"
+    },
+    {
+      "word": "Rusia",
+      "hint": "Area Terbesar"
+    },
+    {
+      "word": "Tiongkok",
+      "hint": "Tembok Besar"
+    },
+    {
+      "word": "Jepang",
+      "hint": "Matahari Terbit"
+    },
+    {
+      "word": "India",
+      "hint": "Taj Mahal"
+    },
+    {
+      "word": "Australia",
+      "hint": "Kangguru"
+    },
+    {
+      "word": "Mesir",
+      "hint": "Piramida"
+    },
+    {
+      "word": "Afrika Selatan",
+      "hint": "Safari"
+    },
+    {
+      "word": "Meksiko",
+      "hint": "Sombrero"
+    },
+    {
+      "word": "Argentina",
+      "hint": "Tango"
+    },
+    {
+      "word": "Swedia",
+      "hint": "Ikea"
+    },
+    {
+      "word": "Norwegia",
+      "hint": "Fjord"
+    },
+    {
+      "word": "Swiss",
+      "hint": "Pegunungan Alpen"
+    }
+  ],
+  "Tokoh Terkenal": [
+    {
+      "word": "Albert Einstein",
+      "hint": "E=mc2"
+    },
+    {
+      "word": "Isaac Newton",
+      "hint": "Gravitasi apel"
+    },
+    {
+      "word": "Leonardo da Vinci",
+      "hint": "Mona Lisa"
+    },
+    {
+      "word": "Vincent van Gogh",
+      "hint": "Malam Berbintang"
+    },
+    {
+      "word": "William Shakespeare",
+      "hint": "Penulis drama"
+    },
+    {
+      "word": "Mozart",
+      "hint": "Komposer klasik"
+    },
+    {
+      "word": "Beethoven",
+      "hint": "Komposer tuli"
+    },
+    {
+      "word": "Elvis Presley",
+      "hint": "Raja Rock"
+    },
+    {
+      "word": "Michael Jackson",
+      "hint": "Raja Pop"
+    },
+    {
+      "word": "Marilyn Monroe",
+      "hint": "Ikon Hollywood"
+    },
+    {
+      "word": "Charlie Chaplin",
+      "hint": "Komedi bisu"
+    },
+    {
+      "word": "Walt Disney",
+      "hint": "Pencipta Mickey"
+    },
+    {
+      "word": "Steve Jobs",
+      "hint": "Pendiri Apple"
+    },
+    {
+      "word": "Bill Gates",
+      "hint": "Pendiri Microsoft"
+    },
+    {
+      "word": "Elon Musk",
+      "hint": "Tesla"
+    },
+    {
+      "word": "Nelson Mandela",
+      "hint": "Pemimpin Afrika Selatan"
+    },
+    {
+      "word": "Martin Luther King Jr.",
+      "hint": "Saya punya mimpi"
+    },
+    {
+      "word": "Gandhi",
+      "hint": "Protes damai"
+    },
+    {
+      "word": "Abraham Lincoln",
+      "hint": "Topi tinggi"
+    },
+    {
+      "word": "George Washington",
+      "hint": "Presiden AS pertama"
+    }
+  ],
+  "Film": [
+    {
+      "word": "Star Wars",
+      "hint": "Jedi"
+    },
+    {
+      "word": "Jurassic Park",
+      "hint": "Dinosaurus"
+    },
+    {
+      "word": "The Matrix",
+      "hint": "Pil merah"
+    },
+    {
+      "word": "Titanic",
+      "hint": "Kapal tenggelam"
+    },
+    {
+      "word": "Avatar",
+      "hint": "Alien biru"
+    },
+    {
+      "word": "The Godfather",
+      "hint": "Mafia"
+    },
+    {
+      "word": "Harry Potter",
+      "hint": "Penyihir"
+    },
+    {
+      "word": "Lord of the Rings",
+      "hint": "Satu cincin"
+    },
+    {
+      "word": "Avengers",
+      "hint": "Pahlawan Marvel"
+    },
+    {
+      "word": "Spider-Man",
+      "hint": "Pelepas jaring"
+    },
+    {
+      "word": "Batman",
+      "hint": "Ksatria Kegelapan"
+    },
+    {
+      "word": "Superman",
+      "hint": "Manusia Baja"
+    },
+    {
+      "word": "Toy Story",
+      "hint": "Mainan hidup"
+    },
+    {
+      "word": "The Lion King",
+      "hint": "Hakuna Matata"
+    },
+    {
+      "word": "Frozen",
+      "hint": "Biarkan saja"
+    },
+    {
+      "word": "Home Alone",
+      "hint": "Anak tertinggal"
+    },
+    {
+      "word": "Jaws",
+      "hint": "Hiu raksasa"
+    },
+    {
+      "word": "E.T.",
+      "hint": "Telepon rumah"
+    },
+    {
+      "word": "Indiana Jones",
+      "hint": "Cambuk arkeolog"
+    },
+    {
+      "word": "Back to the Future",
+      "hint": "Waktu DeLorean"
+    }
+  ],
+  "Pahlawan Super": [
+    {
+      "word": "Superman",
+      "hint": "Krypton"
+    },
+    {
+      "word": "Batman",
+      "hint": "Gotham"
+    },
+    {
+      "word": "Spider-Man",
+      "hint": "Jaring"
+    },
+    {
+      "word": "Iron Man",
+      "hint": "Tony Stark"
+    },
+    {
+      "word": "Captain America",
+      "hint": "Perisai Vibranium"
+    },
+    {
+      "word": "Thor",
+      "hint": "Palu"
+    },
+    {
+      "word": "Hulk",
+      "hint": "Marah hijau"
+    },
+    {
+      "word": "Black Widow",
+      "hint": "Mata-mata Avenger"
+    },
+    {
+      "word": "Wolverine",
+      "hint": "Cakar Adamantium"
+    },
+    {
+      "word": "Flash",
+      "hint": "Pria tercepat"
+    },
+    {
+      "word": "Wonder Woman",
+      "hint": "Las Perisai Kebenaran"
+    },
+    {
+      "word": "Aquaman",
+      "hint": "Atlantis"
+    },
+    {
+      "word": "Green Lantern",
+      "hint": "Cincin kekuatan"
+    },
+    {
+      "word": "Deadpool",
+      "hint": "Membunuh dengan mulut"
+    },
+    {
+      "word": "Black Panther",
+      "hint": "Wakanda"
+    },
+    {
+      "word": "Doctor Strange",
+      "hint": "Penyihir Agung"
+    },
+    {
+      "word": "Ant-Man",
+      "hint": "Mengecil"
+    },
+    {
+      "word": "Daredevil",
+      "hint": "Pahlawan buta"
+    },
+    {
+      "word": "Punisher",
+      "hint": "Vigilante"
+    },
+    {
+      "word": "Ghost Rider",
+      "hint": "Tengkorak menyala"
+    }
+  ],
+  "Olahraga": [
+    {
+      "word": "Sepak Bola",
+      "hint": "Tendangan penalti"
+    },
+    {
+      "word": "Bola Basket",
+      "hint": "Ring"
+    },
+    {
+      "word": "Bisbol",
+      "hint": "Homerun"
+    },
+    {
+      "word": "Tenis",
+      "hint": "Raket"
+    },
+    {
+      "word": "Golf",
+      "hint": "Hole in one"
+    },
+    {
+      "word": "Bola Voli",
+      "hint": "Net dan spike"
+    },
+    {
+      "word": "Renang",
+      "hint": "Jalur kolam"
+    },
+    {
+      "word": "Atletik",
+      "hint": "Lintasan & lapangan"
+    },
+    {
+      "word": "Senam",
+      "hint": "Balok keseimbangan"
+    },
+    {
+      "word": "Tinju",
+      "hint": "Sarung tangan dan ring"
+    },
+    {
+      "word": "Gulat",
+      "hint": "Pin untuk menang"
+    },
+    {
+      "word": "Bela Diri",
+      "hint": "Sabuk hitam"
+    },
+    {
+      "word": "Bersepeda",
+      "hint": "Balapan sepeda"
+    },
+    {
+      "word": "Ski",
+      "hint": "Gunung salju"
+    },
+    {
+      "word": "Snowboarding",
+      "hint": "Satu papan di salju"
+    },
+    {
+      "word": "Berselancar",
+      "hint": "Ombak laut"
+    },
+    {
+      "word": "Rugby",
+      "hint": "Scrum"
+    },
+    {
+      "word": "Kriket",
+      "hint": "Pemain kriket dan pelempar"
+    },
+    {
+      "word": "Hoki",
+      "hint": "Kepingan di atas es"
+    },
+    {
+      "word": "Tenis Meja",
+      "hint": "Pingpong"
+    }
+  ],
+  "Alat Musik": [
+    {
+      "word": "Piano",
+      "hint": "Kunci hitam dan putih"
+    },
+    {
+      "word": "Gitar",
+      "hint": "Enam senar dipetik"
+    },
+    {
+      "word": "Biola",
+      "hint": "Busur dan dagu"
+    },
+    {
+      "word": "Drum",
+      "hint": "Pukulan dan stik"
+    },
+    {
+      "word": "Suling",
+      "hint": "Tiup melintasi lubang"
+    },
+    {
+      "word": "Terompet",
+      "hint": "Katup kuningan"
+    },
+    {
+      "word": "Saksofon",
+      "hint": "Kuningan Jazz"
+    },
+    {
+      "word": "Cello",
+      "hint": "Duduk senar besar"
+    },
+    {
+      "word": "Klarinet",
+      "hint": "Alat tiup kayu hitam"
+    },
+    {
+      "word": "Harpa",
+      "hint": "Senar malaikat"
+    },
+    {
+      "word": "Trombon",
+      "hint": "Geser kuningan"
+    },
+    {
+      "word": "Tuba",
+      "hint": "Bass kuningan terbesar"
+    },
+    {
+      "word": "Akordeon",
+      "hint": "Kotak yang diperas"
+    },
+    {
+      "word": "Banjo",
+      "hint": "Senar folk bulat"
+    },
+    {
+      "word": "Mandolin",
+      "hint": "Delapan senar kecil"
+    },
+    {
+      "word": "Ukulele",
+      "hint": "Empat senar Hawaii"
+    },
+    {
+      "word": "Gamelan",
+      "hint": "Batang kayu dipukul"
+    },
+    {
+      "word": "Synthesizer",
+      "hint": "Kunci elektronik"
+    },
+    {
+      "word": "Bass",
+      "hint": "Senar frekuensi rendah"
+    },
+    {
+      "word": "Oboe",
+      "hint": "Lidah ganda"
+    }
+  ],
+  "Peristiwa Bersejarah": [
+    {
+      "word": "Perang Dunia I",
+      "hint": "Parit"
+    },
+    {
+      "word": "Perang Dunia II",
+      "hint": "Blok Poros & Sekutu"
+    },
+    {
+      "word": "Revolusi Prancis",
+      "hint": "Guilotin"
+    },
+    {
+      "word": "Revolusi Amerika",
+      "hint": "1776"
+    },
+    {
+      "word": "Pendaratan di Bulan",
+      "hint": "Apollo 11"
+    },
+    {
+      "word": "Runtuhnya Tembok Berlin",
+      "hint": "Berakhirnya Perang Dingin"
+    },
+    {
+      "word": "Perang Dingin",
+      "hint": "Ketegangan AS vs Uni Soviet"
+    },
+    {
+      "word": "Renaisans",
+      "hint": "Kelahiran kembali seni"
+    },
+    {
+      "word": "Revolusi Industri",
+      "hint": "Pabrik & uap"
+    },
+    {
+      "word": "Penemuan Amerika",
+      "hint": "Columbus 1492"
+    },
+    {
+      "word": "Wabah Hitam",
+      "hint": "Wabah penyakit"
+    },
+    {
+      "word": "Tenggelamnya Titanic",
+      "hint": "Gunung es 1912"
+    },
+    {
+      "word": "Kemerdekaan India",
+      "hint": "Pembagian 1947"
+    },
+    {
+      "word": "Magna Carta",
+      "hint": "Dokumen 1215"
+    },
+    {
+      "word": "Deklarasi Kemerdekaan",
+      "hint": "4 Juli"
+    },
+    {
+      "word": "Penemuan Mesin Cetak",
+      "hint": "Gutenberg"
+    },
+    {
+      "word": "Penciptaan Internet",
+      "hint": "Dimulainya World Wide Web"
+    },
+    {
+      "word": "Bencana Chernobyl",
+      "hint": "Bencana nuklir"
+    },
+    {
+      "word": "Serangan 9/11",
+      "hint": "Menara Kembar"
+    },
+    {
+      "word": "Pandemi COVID-19",
+      "hint": "Karantina global"
+    }
+  ],
+  "Karakter Fiksi": [
+    {
+      "word": "Sherlock Holmes",
+      "hint": "Detektif"
+    },
+    {
+      "word": "Mickey Mouse",
+      "hint": "Maskot Disney"
+    },
+    {
+      "word": "Bugs Bunny",
+      "hint": "Ada apa, dok?"
+    },
+    {
+      "word": "Homer Simpson",
+      "hint": "D'oh!"
+    },
+    {
+      "word": "SpongeBob",
+      "hint": "Nanas di bawah laut"
+    },
+    {
+      "word": "Mario",
+      "hint": "Pahlawan tukang ledeng"
+    },
+    {
+      "word": "Pikachu",
+      "hint": "Tikus listrik"
+    },
+    {
+      "word": "Sonic",
+      "hint": "Landak biru cepat"
+    },
+    {
+      "word": "Darth Vader",
+      "hint": "Aku ayahmu"
+    },
+    {
+      "word": "James Bond",
+      "hint": "007"
+    },
+    {
+      "word": "Harry Potter",
+      "hint": "Anak laki-laki yang hidup"
+    },
+    {
+      "word": "Frodo Baggins",
+      "hint": "Pembawa cincin"
+    },
+    {
+      "word": "Dracula",
+      "hint": "Pangeran vampir"
+    },
+    {
+      "word": "Frankenstein",
+      "hint": "Pencipta monster"
+    },
+    {
+      "word": "King Kong",
+      "hint": "Kera raksasa"
+    },
+    {
+      "word": "Godzilla",
+      "hint": "Kadal radioaktif"
+    },
+    {
+      "word": "Superman",
+      "hint": "Clark Kent"
+    },
+    {
+      "word": "Batman",
+      "hint": "Bruce Wayne"
+    },
+    {
+      "word": "Spider-Man",
+      "hint": "Peter Parker"
+    },
+    {
+      "word": "Peter Pan",
+      "hint": "Anak laki-laki Neverland"
+    }
+  ],
+  "Video Game": [
+    {
+      "word": "Super Mario Bros",
+      "hint": "Melompati Goomba"
+    },
+    {
+      "word": "Minecraft",
+      "hint": "Blok dan Creeper"
+    },
+    {
+      "word": "Tetris",
+      "hint": "Bentuk yang jatuh"
+    },
+    {
+      "word": "Pac-Man",
+      "hint": "Lingkaran kuning dan hantu"
+    },
+    {
+      "word": "Grand Theft Auto",
+      "hint": "Mencuri mobil"
+    },
+    {
+      "word": "Call of Duty",
+      "hint": "Penembak militer"
+    },
+    {
+      "word": "Legend of Zelda",
+      "hint": "Pencarian Link"
+    },
+    {
+      "word": "Pokemon",
+      "hint": "Harus menangkap semuanya"
+    },
+    {
+      "word": "World of Warcraft",
+      "hint": "MMO besar"
+    },
+    {
+      "word": "Fortnite",
+      "hint": "Membangun Battle Royale"
+    },
+    {
+      "word": "League of Legends",
+      "hint": "Jalur MOBA"
+    },
+    {
+      "word": "Overwatch",
+      "hint": "Penembak tim pahlawan"
+    },
+    {
+      "word": "The Sims",
+      "hint": "Mengendalikan kehidupan virtual"
+    },
+    {
+      "word": "Animal Crossing",
+      "hint": "Penduduk desa di pulau"
+    },
+    {
+      "word": "Skyrim",
+      "hint": "Dragonborn"
+    },
+    {
+      "word": "Red Dead Redemption",
+      "hint": "Penjahat koboi"
+    },
+    {
+      "word": "Halo",
+      "hint": "Master Chief"
+    },
+    {
+      "word": "Portal",
+      "hint": "Teka-teki senjata teleportasi"
+    },
+    {
+      "word": "Bioshock",
+      "hint": "Kota bawah air"
+    },
+    {
+      "word": "Half-Life",
+      "hint": "Linggis Gordon Freeman"
+    }
+  ],
+  "Tengaran": [
+    {
+      "word": "Menara Eiffel",
+      "hint": "Besi Paris"
+    },
+    {
+      "word": "Tembok Besar Tiongkok",
+      "hint": "Struktur bata terpanjang"
+    },
+    {
+      "word": "Patung Liberty",
+      "hint": "Obor NY"
+    },
+    {
+      "word": "Colosseum",
+      "hint": "Gladiator Romawi"
+    },
+    {
+      "word": "Taj Mahal",
+      "hint": "Mausoleum marmer India"
+    },
+    {
+      "word": "Piramida Giza",
+      "hint": "Makam kuno Mesir"
+    },
+    {
+      "word": "Machu Picchu",
+      "hint": "Reruntuhan Inca"
+    },
+    {
+      "word": "Stonehenge",
+      "hint": "Batu berdiri Inggris"
+    },
+    {
+      "word": "Big Ben",
+      "hint": "Jam London"
+    },
+    {
+      "word": "Gunung Rushmore",
+      "hint": "Gunung pahatan Presiden"
+    },
+    {
+      "word": "Kristus Penebus",
+      "hint": "Patung Rio"
+    },
+    {
+      "word": "Gedung Opera Sydney",
+      "hint": "Atap layar Australia"
+    },
+    {
+      "word": "Akropolis",
+      "hint": "Puncak bukit Athena"
+    },
+    {
+      "word": "Menara Petronas",
+      "hint": "Menara kembar tinggi Kuala Lumpur"
+    },
+    {
+      "word": "Burj Khalifa",
+      "hint": "Tertinggi di Dubai"
+    },
+    {
+      "word": "Jembatan Golden Gate",
+      "hint": "Merah San Francisco"
+    },
+    {
+      "word": "Air Terjun Niagara",
+      "hint": "Air terjun besar AS/Kanada"
+    },
+    {
+      "word": "Grand Canyon",
+      "hint": "Ngarai besar Arizona"
+    },
+    {
+      "word": "Menara Miring Pisa",
+      "hint": "Dasar Italia miring"
+    },
+    {
+      "word": "Gunung Everest",
+      "hint": "Puncak tertinggi"
+    }
+  ],
+  "Ketakutan & Fobia": [
+    {
+      "word": "Laba-laba",
+      "hint": "Arachnophobia"
+    },
+    {
+      "word": "Ketinggian",
+      "hint": "Acrophobia"
+    },
+    {
+      "word": "Ruang Terbatas",
+      "hint": "Claustrophobia"
+    },
+    {
+      "word": "Gelap",
+      "hint": "Nyctophobia"
+    },
+    {
+      "word": "Ular",
+      "hint": "Ophidiophobia"
+    },
+    {
+      "word": "Terbang",
+      "hint": "Aviophobia"
+    },
+    {
+      "word": "Anjing",
+      "hint": "Cynophobia"
+    },
+    {
+      "word": "Jarum",
+      "hint": "Trypanophobia"
+    },
+    {
+      "word": "Bersosialisasi",
+      "hint": "Fobia Sosial"
+    },
+    {
+      "word": "Kuman",
+      "hint": "Mysophobia"
+    },
+    {
+      "word": "Berbicara di Depan Umum",
+      "hint": "Glossophobia"
+    },
+    {
+      "word": "Kematian",
+      "hint": "Thanatophobia"
+    },
+    {
+      "word": "Air",
+      "hint": "Aquaphobia"
+    },
+    {
+      "word": "Darah",
+      "hint": "Hemophobia"
+    },
+    {
+      "word": "Keramaian",
+      "hint": "Agoraphobia"
+    },
+    {
+      "word": "Badut",
+      "hint": "Coulrophobia"
+    },
+    {
+      "word": "Dokter Gigi",
+      "hint": "Dentophobia"
+    },
+    {
+      "word": "Guntur",
+      "hint": "Astraphobia"
+    },
+    {
+      "word": "Api",
+      "hint": "Pyrophobia"
+    },
+    {
+      "word": "Hantu",
+      "hint": "Phasmophobia"
+    }
+  ],
+  "Makhluk Mitologi": [
+    {
+      "word": "Naga",
+      "hint": "Napas api bersisik"
+    },
+    {
+      "word": "Unicorn",
+      "hint": "Kuda bertanduk satu"
+    },
+    {
+      "word": "Phoenix",
+      "hint": "Burung api terlahir kembali"
+    },
+    {
+      "word": "Putri Duyung",
+      "hint": "Setengah ikan setengah wanita"
+    },
+    {
+      "word": "Centaur",
+      "hint": "Setengah kuda setengah manusia"
+    },
+    {
+      "word": "Griffin",
+      "hint": "Hibrida singa elang"
+    },
+    {
+      "word": "Pegasus",
+      "hint": "Kuda bersayap"
+    },
+    {
+      "word": "Minotaur",
+      "hint": "Manusia berkepala banteng"
+    },
+    {
+      "word": "Medusa",
+      "hint": "Rambut ular"
+    },
+    {
+      "word": "Kraken",
+      "hint": "Monster laut raksasa"
+    },
+    {
+      "word": "Cyclops",
+      "hint": "Raksasa bermata satu"
+    },
+    {
+      "word": "Sphinx",
+      "hint": "Tubuh singa kepala manusia"
+    },
+    {
+      "word": "Cerberus",
+      "hint": "Anjing berkepala tiga"
+    },
+    {
+      "word": "Chimera",
+      "hint": "Gabungan singa kambing ular"
+    },
+    {
+      "word": "Hydra",
+      "hint": "Ular berkepala banyak"
+    },
+    {
+      "word": "Vampir",
+      "hint": "Penghisap darah"
+    },
+    {
+      "word": "Manusia Serigala",
+      "hint": "Transformasi bulan purnama"
+    },
+    {
+      "word": "Troll",
+      "hint": "Penjaga jembatan"
+    },
+    {
+      "word": "Goblin",
+      "hint": "Kekacauan hijau kecil"
+    },
+    {
+      "word": "Yeti",
+      "hint": "Manusia salju abominabel"
+    }
+  ],
+  "Peralatan Rumah Tangga": [
+    {
+      "word": "Televisi",
+      "hint": "Layar tontonan"
+    },
+    {
+      "word": "Kulkas",
+      "hint": "Pendingin makanan"
+    },
+    {
+      "word": "Microwave",
+      "hint": "Pemanas cepat"
+    },
+    {
+      "word": "Mesin Cuci",
+      "hint": "Pencuci pakaian"
+    },
+    {
+      "word": "Tempat Tidur",
+      "hint": "Furnitur tidur"
+    },
+    {
+      "word": "Sofa",
+      "hint": "Tempat duduk ruang tamu"
+    },
+    {
+      "word": "Meja",
+      "hint": "Permukaan makan"
+    },
+    {
+      "word": "Kursi",
+      "hint": "Furnitur duduk"
+    },
+    {
+      "word": "Lampu",
+      "hint": "Alat penerangan"
+    },
+    {
+      "word": "Jam",
+      "hint": "Penunjuk waktu"
+    },
+    {
+      "word": "Cermin",
+      "hint": "Kaca pantulan"
+    },
+    {
+      "word": "Oven",
+      "hint": "Pemanggang makanan"
+    },
+    {
+      "word": "Pemanggang Roti",
+      "hint": "Roti renyah"
+    },
+    {
+      "word": "Blender",
+      "hint": "Pengaduk smoothie"
+    },
+    {
+      "word": "Penyedot Debu",
+      "hint": "Penghisap debu"
+    },
+    {
+      "word": "Setrika",
+      "hint": "Pengepres pakaian"
+    },
+    {
+      "word": "Tempat Sampah",
+      "hint": "Wadah sampah"
+    },
+    {
+      "word": "Bak Mandi",
+      "hint": "Pencuci badan"
+    },
+    {
+      "word": "Toilet",
+      "hint": "Kebutuhan kamar mandi"
+    },
+    {
+      "word": "Rak Buku",
+      "hint": "Penyimpan novel"
+    }
+  ],
+  "Alam": [
+    {
+      "word": "Pohon",
+      "hint": "Daun & batang"
+    },
+    {
+      "word": "Bunga",
+      "hint": "Kelopak"
+    },
+    {
+      "word": "Gunung",
+      "hint": "Puncak tinggi"
+    },
+    {
+      "word": "Sungai",
+      "hint": "Air mengalir"
+    },
+    {
+      "word": "Samudra",
+      "hint": "Laut asin"
+    },
+    {
+      "word": "Hutan",
+      "hint": "Banyak pohon"
+    },
+    {
+      "word": "Gurun",
+      "hint": "Pasir dan kering"
+    },
+    {
+      "word": "Salju",
+      "hint": "Kepingan putih dingin"
+    },
+    {
+      "word": "Hujan",
+      "hint": "Air jatuh dari langit"
+    },
+    {
+      "word": "Matahari",
+      "hint": "Bintang siang hari"
+    },
+    {
+      "word": "Bulan",
+      "hint": "Satelit malam hari"
+    },
+    {
+      "word": "Bintang",
+      "hint": "Titik langit berkelip"
+    },
+    {
+      "word": "Awan",
+      "hint": "Objek langit putih lembut"
+    },
+    {
+      "word": "Petir",
+      "hint": "Kilatan listrik badai"
+    },
+    {
+      "word": "Angin",
+      "hint": "Angin sepoi-sepoi udara bergerak"
+    },
+    {
+      "word": "Gunung Berapi",
+      "hint": "Gunung letusan lava"
+    },
+    {
+      "word": "Gua",
+      "hint": "Batu berongga gelap"
+    },
+    {
+      "word": "Air Terjun",
+      "hint": "Tebing jatuhnya air"
+    },
+    {
+      "word": "Pulau",
+      "hint": "Tanah dikelilingi air"
+    },
+    {
+      "word": "Rumput",
+      "hint": "Bilah rumput hijau"
+    }
+  ],
+  "Pakaian": [
+    {
+      "word": "Kemeja",
+      "hint": "Pakaian tubuh atas"
+    },
+    {
+      "word": "Celana",
+      "hint": "Kaki tubuh bawah"
+    },
+    {
+      "word": "Gaun",
+      "hint": "Pakaian wanita terusan"
+    },
+    {
+      "word": "Rok",
+      "hint": "Pakaian bawah menjuntai"
+    },
+    {
+      "word": "Jaket",
+      "hint": "Mantel pakaian luar"
+    },
+    {
+      "word": "Sweater",
+      "hint": "Atasan rajutan hangat"
+    },
+    {
+      "word": "Kaus Kaki",
+      "hint": "Penutup kaki lembut"
+    },
+    {
+      "word": "Sepatu",
+      "hint": "Penutup kaki keras"
+    },
+    {
+      "word": "Topi",
+      "hint": "Penutup kepala"
+    },
+    {
+      "word": "Sarung Tangan",
+      "hint": "Penutup penghangat tangan"
+    },
+    {
+      "word": "Syal",
+      "hint": "Pembungkus leher"
+    },
+    {
+      "word": "Ikat Pinggang",
+      "hint": "Pengencang pinggang"
+    },
+    {
+      "word": "Dasi",
+      "hint": "Aksesori leher jas"
+    },
+    {
+      "word": "Pakaian Dalam",
+      "hint": "Lapisan dasar bawah"
+    },
+    {
+      "word": "Celana Pendek",
+      "hint": "Pakaian kaki musim panas"
+    },
+    {
+      "word": "Jeans",
+      "hint": "Celana denim"
+    },
+    {
+      "word": "Kaos",
+      "hint": "Lengan pendek kasual"
+    },
+    {
+      "word": "Mantel Tebal",
+      "hint": "Atasan musim dingin berat"
+    },
+    {
+      "word": "Sepatu Bot",
+      "hint": "Alas kaki tinggi mata kaki"
+    },
+    {
+      "word": "Sandal",
+      "hint": "Sepatu musim panas ujung terbuka"
+    }
+  ],
+  "Hobi": [
+    {
+      "word": "Membaca",
+      "hint": "Buku halaman novel"
+    },
+    {
+      "word": "Menulis",
+      "hint": "Pena kertas cerita"
+    },
+    {
+      "word": "Menggambar",
+      "hint": "Pensil seni sketsa"
+    },
+    {
+      "word": "Melukis",
+      "hint": "Kuas warna kanvas"
+    },
+    {
+      "word": "Fotografi",
+      "hint": "Mengambil gambar kamera"
+    },
+    {
+      "word": "Memasak",
+      "hint": "Membuat makanan"
+    },
+    {
+      "word": "Memanggang",
+      "hint": "Oven kue adonan"
+    },
+    {
+      "word": "Berkebun",
+      "hint": "Tanaman tanah bunga"
+    },
+    {
+      "word": "Memancing",
+      "hint": "Joran ril air"
+    },
+    {
+      "word": "Mendaki",
+      "hint": "Berjalan jalur gunung"
+    },
+    {
+      "word": "Berkemah",
+      "hint": "Tenda luar ruangan api"
+    },
+    {
+      "word": "Merajut",
+      "hint": "Benang jarum sweter"
+    },
+    {
+      "word": "Menjahit",
+      "hint": "Benang kain jarum"
+    },
+    {
+      "word": "Kerajinan Kayu",
+      "hint": "Mengukir membangun kayu"
+    },
+    {
+      "word": "Keramik",
+      "hint": "Tanah liat roda berputar"
+    },
+    {
+      "word": "Bermain Game",
+      "hint": "Bermain konsol video"
+    },
+    {
+      "word": "Menari",
+      "hint": "Menggerakkan tubuh ritme"
+    },
+    {
+      "word": "Menyanyi",
+      "hint": "Melodi vokal"
+    },
+    {
+      "word": "Bepergian",
+      "hint": "Mengunjungi tempat-tempat baru"
+    },
+    {
+      "word": "Mengoleksi",
+      "hint": "Mengumpulkan barang-barang tertentu"
+    }
+  ],
+  "Warna": [
+    {
+      "word": "Merah",
+      "hint": "Darah apel"
+    },
+    {
+      "word": "Biru",
+      "hint": "Langit samudra"
+    },
+    {
+      "word": "Kuning",
+      "hint": "Matahari pisang"
+    },
+    {
+      "word": "Hijau",
+      "hint": "Rumput daun"
+    },
+    {
+      "word": "Jingga",
+      "hint": "Jeruk buah"
+    },
+    {
+      "word": "Ungu",
+      "hint": "Anggur bangsawan"
+    },
+    {
+      "word": "Merah Jambu",
+      "hint": "Babi permen kapas"
+    },
+    {
+      "word": "Hitam",
+      "hint": "Malam batu bara"
+    },
+    {
+      "word": "Putih",
+      "hint": "Salju susu"
+    },
+    {
+      "word": "Abu-abu",
+      "hint": "Abu awan"
+    },
+    {
+      "word": "Coklat",
+      "hint": "Tanah kayu"
+    },
+    {
+      "word": "Emas",
+      "hint": "Kekayaan berkilau"
+    },
+    {
+      "word": "Perak",
+      "hint": "Logam juara kedua"
+    },
+    {
+      "word": "Perunggu",
+      "hint": "Logam juara ketiga"
+    },
+    {
+      "word": "Sian",
+      "hint": "Biru terang"
+    },
+    {
+      "word": "Magenta",
+      "hint": "Merah keunguan pekat"
+    },
+    {
+      "word": "Nila",
+      "hint": "Biru violet gelap"
+    },
+    {
+      "word": "Teal",
+      "hint": "Nuansa biru hijau"
+    },
+    {
+      "word": "Merah Marun",
+      "hint": "Merah kecoklatan gelap"
+    },
+    {
+      "word": "Biru Dongker",
+      "hint": "Biru militer gelap"
+    }
+  ],
+  "Sains": [
+    {
+      "word": "Biologi",
+      "hint": "Studi kehidupan"
+    },
+    {
+      "word": "Kimia",
+      "hint": "Reaksi unsur"
+    },
+    {
+      "word": "Fisika",
+      "hint": "Materi gaya energi"
+    },
+    {
+      "word": "Astronomi",
+      "hint": "Studi planet antariksa"
+    },
+    {
+      "word": "Geologi",
+      "hint": "Studi batuan bumi"
+    },
+    {
+      "word": "Atom",
+      "hint": "Inti partikel terkecil"
+    },
+    {
+      "word": "Molekul",
+      "hint": "Atom terikat"
+    },
+    {
+      "word": "Sel",
+      "hint": "Unit dasar kehidupan"
+    },
+    {
+      "word": "DNA",
+      "hint": "Tangga genetik"
+    },
+    {
+      "word": "Gravitasi",
+      "hint": "Gaya tarik jatuh"
+    },
+    {
+      "word": "Evolusi",
+      "hint": "Perubahan spesies seiring waktu"
+    },
+    {
+      "word": "Mikroskop",
+      "hint": "Melihat benda kecil"
+    },
+    {
+      "word": "Teleskop",
+      "hint": "Melihat benda jauh"
+    },
+    {
+      "word": "Laboratorium",
+      "hint": "Tempat kerja sains"
+    },
+    {
+      "word": "Eksperimen",
+      "hint": "Menguji hipotesis"
+    },
+    {
+      "word": "Teori",
+      "hint": "Dasar penjelasan ilmiah"
+    },
+    {
+      "word": "Fosil",
+      "hint": "Sisa batuan purba"
+    },
+    {
+      "word": "Virus",
+      "hint": "Agen penyakit mikroskopis"
+    },
+    {
+      "word": "Bakteri",
+      "hint": "Organisme sel tunggal"
+    },
+    {
+      "word": "Unsur",
+      "hint": "Item tabel periodik"
+    }
+  ],
+  "Emosi": [
+    {
+      "word": "Kebahagiaan",
+      "hint": "Senyum kegembiraan"
+    },
+    {
+      "word": "Kesedihan",
+      "hint": "Air mata menangis"
+    },
+    {
+      "word": "Kemarahan",
+      "hint": "Marah murka amuk"
+    },
+    {
+      "word": "Ketakutan",
+      "hint": "Takut ngeri teror"
+    },
+    {
+      "word": "Kejutan",
+      "hint": "Terkejut tak terduga"
+    },
+    {
+      "word": "Jijik",
+      "hint": "Mual sakit"
+    },
+    {
+      "word": "Cinta",
+      "hint": "Kasih sayang romansa hati"
+    },
+    {
+      "word": "Kecemburuan",
+      "hint": "Iri menginginkan milik mereka"
+    },
+    {
+      "word": "Rasa bersalah",
+      "hint": "Merasa buruk berbuat salah"
+    },
+    {
+      "word": "Malu",
+      "hint": "Memalukan mempermalukan"
+    },
+    {
+      "word": "Kegembiraan",
+      "hint": "Sangat antusias menantikan"
+    },
+    {
+      "word": "Kebosanan",
+      "hint": "Tidak ada yang dapat dilakukan membosankan"
+    },
+    {
+      "word": "Harapan",
+      "hint": "Optimisme masa depan cerah"
+    },
+    {
+      "word": "Keputusasaan",
+      "hint": "Kehilangan harapan total"
+    },
+    {
+      "word": "Kebingungan",
+      "hint": "Tidak mengerti teka-teki"
+    },
+    {
+      "word": "Kebanggaan",
+      "hint": "Puas prestasi pribadi"
+    },
+    {
+      "word": "Kelegaan",
+      "hint": "Stres hilang santai"
+    },
+    {
+      "word": "Nostalgia",
+      "hint": "Merindukan masa lalu dengan suka cita"
+    },
+    {
+      "word": "Kesepian",
+      "hint": "Merasa terisolasi sendiri"
+    },
+    {
+      "word": "Keingintahuan",
+      "hint": "Ingin tahu lebih banyak"
+    }
+  ],
+  "Mata Pelajaran Sekolah": [
+    {
+      "word": "Matematika",
+      "hint": "Angka persamaan bentuk"
+    },
+    {
+      "word": "Sains",
+      "hint": "Eksperimen biologi fisika"
+    },
+    {
+      "word": "Bahasa Inggris",
+      "hint": "Sastra tata bahasa menulis"
+    },
+    {
+      "word": "Sejarah",
+      "hint": "Peristiwa masa lalu perang"
+    },
+    {
+      "word": "Geografi",
+      "hint": "Peta negara ibu kota"
+    },
+    {
+      "word": "Seni",
+      "hint": "Melukis menggambar kreatif"
+    },
+    {
+      "word": "Musik",
+      "hint": "Bermain alat musik menyanyi"
+    },
+    {
+      "word": "Pendidikan Jasmani",
+      "hint": "Gym olahraga lari"
+    },
+    {
+      "word": "Ilmu Komputer",
+      "hint": "Coding pemrograman teknologi"
+    },
+    {
+      "word": "Bahasa Asing",
+      "hint": "Berbicara idiom luar negeri"
+    },
+    {
+      "word": "Kimia",
+      "hint": "Unsur lab periodik"
+    },
+    {
+      "word": "Biologi",
+      "hint": "Kehidupan sel tumbuhan"
+    },
+    {
+      "word": "Fisika",
+      "hint": "Gaya gravitasi gerak"
+    },
+    {
+      "word": "Aljabar",
+      "hint": "Huruf dan angka matematika"
+    },
+    {
+      "word": "Geometri",
+      "hint": "Bentuk sudut garis"
+    },
+    {
+      "word": "Kalkulus",
+      "hint": "Matematika tingkat lanjut turunan"
+    },
+    {
+      "word": "Ekonomi",
+      "hint": "Uang pasar perdagangan"
+    },
+    {
+      "word": "Psikologi",
+      "hint": "Pikiran perilaku studi"
+    },
+    {
+      "word": "Sosiologi",
+      "hint": "Masyarakat orang budaya"
+    },
+    {
+      "word": "Drama",
+      "hint": "Teater akting sandiwara"
+    }
+  ],
+  "Mainan": [
+    {
+      "word": "Lego",
+      "hint": "Balok-balok susun plastik"
+    },
+    {
+      "word": "Barbie",
+      "hint": "Boneka mode populer"
+    },
+    {
+      "word": "Boneka Beruang",
+      "hint": "Hewan mainan empuk"
+    },
+    {
+      "word": "Figur Aksi",
+      "hint": "Mainan pahlawan yang bisa diposisikan"
+    },
+    {
+      "word": "Yo-Yo",
+      "hint": "Tali berputar ke atas bawah"
+    },
+    {
+      "word": "Layangan",
+      "hint": "Terbang tali angin"
+    },
+    {
+      "word": "Frisbee",
+      "hint": "Piringan terbang lempar"
+    },
+    {
+      "word": "Rumah Boneka",
+      "hint": "Mainan rumah mini"
+    },
+    {
+      "word": "Teka-teki",
+      "hint": "Menyatukan potongan gambar"
+    },
+    {
+      "word": "Permainan Papan",
+      "hint": "Meja dadu aturan"
+    },
+    {
+      "word": "Rubik's Cube",
+      "hint": "Kotak warna-warni memutar"
+    },
+    {
+      "word": "Set Kereta",
+      "hint": "Rel mesin miniatur"
+    },
+    {
+      "word": "Mobil Remote Control",
+      "hint": "Mengemudi melalui frekuensi"
+    },
+    {
+      "word": "Play-Doh",
+      "hint": "Lilin malam warna-warni"
+    },
+    {
+      "word": "Hula Hoop",
+      "hint": "Berputar di pinggang"
+    },
+    {
+      "word": "Tali Lompat",
+      "hint": "Melompati tali latihan"
+    },
+    {
+      "word": "Pistol Air",
+      "hint": "Menembak cairan musim panas"
+    },
+    {
+      "word": "Katapel",
+      "hint": "Menarik kembali meluncurkan batu"
+    },
+    {
+      "word": "Trampolin",
+      "hint": "Permukaan melompat memantul"
+    },
+    {
+      "word": "Kursi Goyang Kuda",
+      "hint": "Mengayun maju mundur kursi hewan"
+    }
+  ],
+  "Senjata": [
+    {
+      "word": "Pedang",
+      "hint": "Pisau logam panjang kesatria"
+    },
+    {
+      "word": "Panah dan Busur",
+      "hint": "Proyektil penarik benang panahan"
+    },
+    {
+      "word": "Senjata Api",
+      "hint": "Peluru tembak senjata api"
+    },
+    {
+      "word": "Pisau",
+      "hint": "Pisau tajam pendek memotong"
+    },
+    {
+      "word": "Tombak",
+      "hint": "Tiang panjang ujung runcing"
+    },
+    {
+      "word": "Kapak",
+      "hint": "Pisau pemotong kayu"
+    },
+    {
+      "word": "Mace",
+      "hint": "Gada berduri abad pertengahan"
+    },
+    {
+      "word": "Perisai",
+      "hint": "Alat pelindung memblokir"
+    },
+    {
+      "word": "Busur Panah",
+      "hint": "Busur mekanis horizontal"
+    },
+    {
+      "word": "Cambuk",
+      "hint": "Tali kulit yang menjentik"
+    },
+    {
+      "word": "Meriam",
+      "hint": "Artileri penembak bola berat"
+    },
+    {
+      "word": "Granat",
+      "hint": "Peledak yang dilempar pin"
+    },
+    {
+      "word": "Belati",
+      "hint": "Pisau penusuk pribadi kecil"
+    },
+    {
+      "word": "Bumerang",
+      "hint": "Lekukan lemparan kembali"
+    },
+    {
+      "word": "Nunchucks",
+      "hint": "Dua tongkat rantai bela diri"
+    },
+    {
+      "word": "Katana",
+      "hint": "Pedang samurai Jepang"
+    },
+    {
+      "word": "Senapan Penembak Jitu",
+      "hint": "Senjata jarak jauh dengan teropong"
+    },
+    {
+      "word": "Senapan",
+      "hint": "Senjata jarak dekat menyebar"
+    },
+    {
+      "word": "Senapan Mesin",
+      "hint": "Senjata berat tembakan cepat"
+    },
+    {
+      "word": "Peluncur Roket",
+      "hint": "Proyektil peledak besar"
+    }
+  ],
+  "Teknologi": [
+    {
+      "word": "Komputer",
+      "hint": "Layar PC desktop CPU"
+    },
+    {
+      "word": "Ponsel Pintar",
+      "hint": "Perangkat layar sentuh seluler"
+    },
+    {
+      "word": "Tablet",
+      "hint": "Komputer portabel layar datar"
+    },
+    {
+      "word": "Laptop",
+      "hint": "PC portabel yang bisa dilipat"
+    },
+    {
+      "word": "Jam Tangan Pintar",
+      "hint": "Perangkat teknologi yang dikenakan di pergelangan tangan"
+    },
+    {
+      "word": "Headphone",
+      "hint": "Audio mendengarkan telinga"
+    },
+    {
+      "word": "Kamera",
+      "hint": "Lensa penangkap foto video"
+    },
+    {
+      "word": "Drone",
+      "hint": "Gadget terbang tanpa awak"
+    },
+    {
+      "word": "Headset Realitas Virtual",
+      "hint": "Kacamata 3D imersif"
+    },
+    {
+      "word": "Konsol Game",
+      "hint": "Sistem bermain yang terhubung ke TV"
+    },
+    {
+      "word": "Router",
+      "hint": "Kotak sinyal internet WiFi"
+    },
+    {
+      "word": "Speaker",
+      "hint": "Keluaran audio keras"
+    },
+    {
+      "word": "Mikrofon",
+      "hint": "Masukan suara suara"
+    },
+    {
+      "word": "Keyboard",
+      "hint": "Tombol tombol pengetikan"
+    },
+    {
+      "word": "Mouse",
+      "hint": "Kursor penunjuk klik"
+    },
+    {
+      "word": "Printer",
+      "hint": "Keluaran tinta kertas"
+    },
+    {
+      "word": "Pemindai",
+      "hint": "Mendigitalkan dokumen kertas"
+    },
+    {
+      "word": "Monitor",
+      "hint": "Unit layar tampilan"
+    },
+    {
+      "word": "Hard Drive",
+      "hint": "Disk penyimpanan data"
+    },
+    {
+      "word": "USB Flash Drive",
+      "hint": "Byte penyimpanan stik jempol"
+    }
+  ],
+  "Hari Libur": [
+    {
+      "word": "Natal",
+      "hint": "Pohon Desember hadiah Sinterklas"
+    },
+    {
+      "word": "Halloween",
+      "hint": "Oktober kostum permen seram"
+    },
+    {
+      "word": "Thanksgiving",
+      "hint": "November kalkun bersyukur"
+    },
+    {
+      "word": "Paskah",
+      "hint": "Musim semi kelinci telur cokelat"
+    },
+    {
+      "word": "Hari Valentine",
+      "hint": "Cinta Februari hati romantis"
+    },
+    {
+      "word": "Malam Tahun Baru",
+      "hint": "31 Desember tengah malam kembang api"
+    },
+    {
+      "word": "Hari Kemerdekaan",
+      "hint": "4 Juli kebebasan kembang api"
+    },
+    {
+      "word": "Hari St. Patrick",
+      "hint": "Maret hijau keberuntungan Irlandia"
+    },
+    {
+      "word": "Hari Ibu",
+      "hint": "Menghargai ibu Minggu"
+    },
+    {
+      "word": "Hari Ayah",
+      "hint": "Menghargai ayah Minggu"
+    },
+    {
+      "word": "Hari Bumi",
+      "hint": "April membantu planet alam"
+    },
+    {
+      "word": "Hari Buruh",
+      "hint": "Pekerja September akhir musim panas"
+    },
+    {
+      "word": "Hari Peringatan",
+      "hint": "Mei mengenang tentara gugur"
+    },
+    {
+      "word": "Hari Veteran",
+      "hint": "November menghormati hasil militer"
+    },
+    {
+      "word": "Hanukkah",
+      "hint": "Festival cahaya Yahudi menorah"
+    },
+    {
+      "word": "Diwali",
+      "hint": "Festival cahaya India"
+    },
+    {
+      "word": "Ramadan",
+      "hint": "Bulan puasa Islam"
+    },
+    {
+      "word": "Oktoberfest",
+      "hint": "Festival bir Jerman"
+    },
+    {
+      "word": "Cinco de Mayo",
+      "hint": "5 Mei kebanggaan Meksiko"
+    },
+    {
+      "word": "Tahun Baru Imlek",
+      "hint": "Naga kalender lunar"
+    }
+  ],
+  "Serangga": [
+    {
+      "word": "Kupu-kupu",
+      "hint": "Sayap terbang berwarna kepompong"
+    },
+    {
+      "word": "Lebah",
+      "hint": "Kuning hitam berdengung madu"
+    },
+    {
+      "word": "Semut",
+      "hint": "Koloni kecil berbaris kuat"
+    },
+    {
+      "word": "Nyamuk",
+      "hint": "Menggigit pengganggu penghisap darah"
+    },
+    {
+      "word": "Lalat",
+      "hint": "Serangga rumah berdengung sayap"
+    },
+    {
+      "word": "Laba-laba",
+      "hint": "Delapan kaki jaring (Sebenarnya arachnida)"
+    },
+    {
+      "word": "Kumbang",
+      "hint": "Serangga merayap cangkang keras"
+    },
+    {
+      "word": "Kumbang koksi",
+      "hint": "Merah titik hitam sayap berbintik"
+    },
+    {
+      "word": "Belalang",
+      "hint": "Melompat hijau kaki panjang"
+    },
+    {
+      "word": "Jangkrik",
+      "hint": "Suara malam berderik pelompat"
+    },
+    {
+      "word": "Kecoa",
+      "hint": "Bertahan hidup menjijikkan perayap cepat"
+    },
+    {
+      "word": "Ngengat",
+      "hint": "Sayap berdebu tertarik cahaya"
+    },
+    {
+      "word": "Tawon",
+      "hint": "Agresif menyengat bergaris kuning"
+    },
+    {
+      "word": "Tabuhan",
+      "hint": "Sarang besar agresif menyengat"
+    },
+    {
+      "word": "Capung",
+      "hint": "Tubuh panjang terbang cepat empat sayap"
+    },
+    {
+      "word": "Ulat",
+      "hint": "Bayi kupu-kupu berbulu seperti cacing merayap"
+    },
+    {
+      "word": "Kelabang",
+      "hint": "Perayap berkaki banyak dan panjang cepat"
+    },
+    {
+      "word": "Kutu",
+      "hint": "Hama hewan peliharaan kecil melompat"
+    },
+    {
+      "word": "Kutu caplak",
+      "hint": "Parasit penghisap darah di hutan"
+    },
+    {
+      "word": "Kutu busuk",
+      "hint": "Gangguan menggigit kasur"
+    }
+  ],
+  "Dongeng": [
+    {
+      "word": "Cinderella",
+      "hint": "Sepatu kaca kereta labu"
+    },
+    {
+      "word": "Putri Salju",
+      "hint": "Tujuh kurcaci apel beracun"
+    },
+    {
+      "word": "Putri Tidur",
+      "hint": "Roda pemintal tidur seratus tahun"
+    },
+    {
+      "word": "Gadis Kerudung Merah",
+      "hint": "Nenek serigala keranjang"
+    },
+    {
+      "word": "Si Cantik dan Si Buruk Rupa",
+      "hint": "Pangeran terkutuk mawar ajaib"
+    },
+    {
+      "word": "Peter Pan",
+      "hint": "Neverland Tinkerbell kapten Hook"
+    },
+    {
+      "word": "Alice di Negeri Ajaib",
+      "hint": "Lubang kelinci topi gila ratu"
+    },
+    {
+      "word": "Pinocchio",
+      "hint": "Anak kayu hidung memanjang tali"
+    },
+    {
+      "word": "Aladdin",
+      "hint": "Lampu ajaib jin karpet"
+    },
+    {
+      "word": "Putri Duyung Kecil",
+      "hint": "Ariel laut kaki suara"
+    },
+    {
+      "word": "Hansel dan Gretel",
+      "hint": "Remah roti kue jahe penyihir"
+    },
+    {
+      "word": "Rapunzel",
+      "hint": "Rambut panjang menara ulurkan"
+    },
+    {
+      "word": "Rumpelstiltskin",
+      "hint": "Memintal jerami emas tebak nama"
+    },
+    {
+      "word": "Goldilocks",
+      "hint": "Tiga beruang bubur tempat tidur kursi"
+    },
+    {
+      "word": "Itik Buruk Rupa",
+      "hint": "Transformasi angsa buangan"
+    },
+    {
+      "word": "Jack dan Pohon Kacang",
+      "hint": "Kacang ajaib raksasa langit batang"
+    },
+    {
+      "word": "Kucing Bersepatu Bot",
+      "hint": "Kucing pintar alas kaki kucing"
+    },
+    {
+      "word": "Putri dan Kacang Polong",
+      "hint": "Tumpukan kasur uji sensitivitas kerajaan"
+    },
+    {
+      "word": "Manusia Roti Jahe",
+      "hint": "Lari cepat tangkap aku adonan"
+    },
+    {
+      "word": "Tukang Seruling Hamelin",
+      "hint": "Tikus anak-anak seruling lagu ajaib"
+    }
+  ],
+  "__translations": {
+    "categories": {
+      "Locations": "Lokasi",
+      "Occupations": "Pekerjaan",
+      "Movies": "Film",
+      "Countries": "Negara",
+      "Vehicles": "Kendaraan",
+      "Food & Drinks": "Makanan & Minuman",
+      "Famous People": "Tokoh Terkenal",
+      "Animals": "Hewan",
+      "Superheroes": "Pahlawan Super",
+      "Sports": "Olahraga",
+      "Fictional Characters": "Karakter Fiksi",
+      "Historical Events": "Peristiwa Bersejarah",
+      "Musical Instruments": "Alat Musik",
+      "Video Games": "Video Game",
+      "Landmarks": "Tengaran",
+      "Fears & Phobias": "Ketakutan & Fobia",
+      "Household Items": "Peralatan Rumah Tangga",
+      "Mythological Creatures": "Makhluk Mitologi",
+      "Nature": "Alam",
+      "Clothing": "Pakaian",
+      "Colors": "Warna",
+      "Hobbies": "Hobi",
+      "Science": "Sains",
+      "School Subjects": "Mata Pelajaran Sekolah",
+      "Toys": "Mainan",
+      "Emotions": "Emosi",
+      "Technology": "Teknologi",
+      "Weapons": "Senjata",
+      "Insects": "Serangga",
+      "Holidays": "Hari Libur",
+      "Fairy Tales": "Dongeng"
+    },
+    "items": {
+      "Locations\tSpace Station\tOrbit": {
+        "word": "Stasiun Luar Angkasa",
+        "hint": "Orbit"
+      },
+      "Locations\tSubmarine\tVessel": {
+        "word": "Kapal Selam",
+        "hint": "Kapal"
+      },
+      "Locations\tCasino\tBetting": {
+        "word": "Kasino",
+        "hint": "Judi"
+      },
+      "Locations\tHospital\tClinic": {
+        "word": "Rumah Sakit",
+        "hint": "Klinik"
+      },
+      "Locations\tLibrary\tBooks": {
+        "word": "Perpustakaan",
+        "hint": "Buku"
+      },
+      "Occupations\tDoctor\tMedical": {
+        "word": "Dokter",
+        "hint": "Penyembuh"
+      },
+      "Occupations\tTeacher\tSchool": {
+        "word": "Astronot",
+        "hint": "Pilot"
+      },
+      "Occupations\tPolice Officer\tLaw": {
+        "word": "Koki",
+        "hint": "Masak"
+      },
+      "Occupations\tChef\tKitchen": {
+        "word": "Tukang Ledeng",
+        "hint": "Pipa"
+      },
+      "Occupations\tFirefighter\tRescue": {
+        "word": "Detektif",
+        "hint": "Penyelidik"
+      },
+      "Movies\tStar Wars\tJedi": {
+        "word": "Star Wars",
+        "hint": "Jedi"
+      },
+      "Movies\tJurassic Park\tDinosaurs": {
+        "word": "Jurassic Park",
+        "hint": "Dinosaurus"
+      },
+      "Movies\tThe Matrix\tRed pill": {
+        "word": "The Matrix",
+        "hint": "Pil merah"
+      },
+      "Movies\tTitanic\tSinking ship": {
+        "word": "Titanic",
+        "hint": "Kapal tenggelam"
+      },
+      "Movies\tAvatar\tBlue aliens": {
+        "word": "Avatar",
+        "hint": "Alien biru"
+      },
+      "Movies\tThe Godfather\tMafia": {
+        "word": "The Godfather",
+        "hint": "Mafia"
+      },
+      "Movies\tHarry Potter\tWizards": {
+        "word": "Harry Potter",
+        "hint": "Penyihir"
+      },
+      "Movies\tLord of the Rings\tOne ring": {
+        "word": "Lord of the Rings",
+        "hint": "Satu cincin"
+      },
+      "Movies\tAvengers\tMarvel heroes": {
+        "word": "Avengers",
+        "hint": "Pahlawan Marvel"
+      },
+      "Movies\tSpider-Man\tWeb-slinger": {
+        "word": "Spider-Man",
+        "hint": "Pelepas jaring"
+      },
+      "Movies\tBatman\tDark Knight": {
+        "word": "Batman",
+        "hint": "Ksatria Kegelapan"
+      },
+      "Movies\tSuperman\tMan of Steel": {
+        "word": "Superman",
+        "hint": "Manusia Baja"
+      },
+      "Movies\tToy Story\tLiving toys": {
+        "word": "Toy Story",
+        "hint": "Mainan hidup"
+      },
+      "Movies\tThe Lion King\tHakuna Matata": {
+        "word": "The Lion King",
+        "hint": "Hakuna Matata"
+      },
+      "Movies\tFrozen\tLet it go": {
+        "word": "Frozen",
+        "hint": "Biarkan saja"
+      },
+      "Movies\tHome Alone\tLeft behind child": {
+        "word": "Home Alone",
+        "hint": "Anak tertinggal"
+      },
+      "Movies\tJaws\tGiant shark": {
+        "word": "Jaws",
+        "hint": "Hiu raksasa"
+      },
+      "Movies\tE.T.\tPhone home": {
+        "word": "E.T.",
+        "hint": "Telepon rumah"
+      },
+      "Movies\tIndiana Jones\tArchaeologist whip": {
+        "word": "Indiana Jones",
+        "hint": "Cambuk arkeolog"
+      },
+      "Movies\tBack to the Future\tDeLorean time": {
+        "word": "Back to the Future",
+        "hint": "Waktu DeLorean"
+      },
+      "Countries\tUSA\tStars and Stripes": {
+        "word": "Amerika Serikat",
+        "hint": "Bintang dan Garis"
+      },
+      "Countries\tCanada\tMaple Leaf": {
+        "word": "Kanada",
+        "hint": "Daun Maple"
+      },
+      "Countries\tBrazil\tSamba": {
+        "word": "Brasil",
+        "hint": "Samba"
+      },
+      "Countries\tUK\tTea & Monarchy": {
+        "word": "Britania Raya",
+        "hint": "Teh & Monarki"
+      },
+      "Countries\tFrance\tEiffel": {
+        "word": "Prancis",
+        "hint": "Eiffel"
+      },
+      "Countries\tGermany\tOktoberfest": {
+        "word": "Jerman",
+        "hint": "Oktoberfest"
+      },
+      "Countries\tItaly\tBoot shape": {
+        "word": "Italia",
+        "hint": "Bentuk sepatu bot"
+      },
+      "Countries\tSpain\tFlamenco": {
+        "word": "Spanyol",
+        "hint": "Flamenco"
+      },
+      "Countries\tRussia\tLargest area": {
+        "word": "Rusia",
+        "hint": "Area Terbesar"
+      },
+      "Countries\tChina\tGreat Wall": {
+        "word": "Tiongkok",
+        "hint": "Tembok Besar"
+      },
+      "Countries\tJapan\tRising Sun": {
+        "word": "Jepang",
+        "hint": "Matahari Terbit"
+      },
+      "Countries\tIndia\tTaj Mahal": {
+        "word": "India",
+        "hint": "Taj Mahal"
+      },
+      "Countries\tAustralia\tKangaroos": {
+        "word": "Australia",
+        "hint": "Kangguru"
+      },
+      "Countries\tEgypt\tPyramids": {
+        "word": "Mesir",
+        "hint": "Piramida"
+      },
+      "Countries\tSouth Africa\tSafari": {
+        "word": "Afrika Selatan",
+        "hint": "Safari"
+      },
+      "Countries\tMexico\tSombrero": {
+        "word": "Meksiko",
+        "hint": "Sombrero"
+      },
+      "Countries\tArgentina\tTango": {
+        "word": "Argentina",
+        "hint": "Tango"
+      },
+      "Countries\tSweden\tIkea": {
+        "word": "Swedia",
+        "hint": "Ikea"
+      },
+      "Countries\tNorway\tFjords": {
+        "word": "Norwegia",
+        "hint": "Fjord"
+      },
+      "Countries\tSwitzerland\tAlps": {
+        "word": "Swiss",
+        "hint": "Pegunungan Alpen"
+      },
+      "Vehicles\tCar\tRoad": {
+        "word": "Mobil",
+        "hint": "Jalan"
+      },
+      "Vehicles\tBicycle\tPedals": {
+        "word": "Sepeda",
+        "hint": "Pedal"
+      },
+      "Vehicles\tMotorcycle\tTwo wheels": {
+        "word": "Sepeda Motor",
+        "hint": "Dua roda"
+      },
+      "Vehicles\tBus\tPublic": {
+        "word": "Bus",
+        "hint": "Publik"
+      },
+      "Vehicles\tTrain\tTracks": {
+        "word": "Kereta Api",
+        "hint": "Rel"
+      },
+      "Vehicles\tAirplane\tSky": {
+        "word": "Pesawat Terbang",
+        "hint": "Langit"
+      },
+      "Vehicles\tHelicopter\tChopper": {
+        "word": "Helikopter",
+        "hint": "Chopper"
+      },
+      "Vehicles\tBoat\tWater": {
+        "word": "Perahu",
+        "hint": "Air"
+      },
+      "Vehicles\tShip\tOcean": {
+        "word": "Kapal",
+        "hint": "Samudra"
+      },
+      "Vehicles\tSpaceship\tStars": {
+        "word": "Pesawat Luar Angkasa",
+        "hint": "Bintang"
+      },
+      "Vehicles\tSubmarine\tUnderwater": {
+        "word": "Kapal Selam",
+        "hint": "Bawah air"
+      },
+      "Vehicles\tTruck\tCargo": {
+        "word": "Truk",
+        "hint": "Kargo"
+      },
+      "Vehicles\tTractor\tFarm": {
+        "word": "Traktor",
+        "hint": "Pertanian"
+      },
+      "Vehicles\tScooter\tSmall": {
+        "word": "Skuter",
+        "hint": "Kecil"
+      },
+      "Vehicles\tSkateboard\tTricks": {
+        "word": "Papan Seluncur",
+        "hint": "Trik"
+      },
+      "Vehicles\tRollerblades\tWheels": {
+        "word": "Sepatu Roda",
+        "hint": "Roda"
+      },
+      "Vehicles\tHot Air Balloon\tBasket": {
+        "word": "Balon Udara Panas",
+        "hint": "Keranjang"
+      },
+      "Vehicles\tBlimp\tFloating": {
+        "word": "Blimp",
+        "hint": "Mengambang"
+      },
+      "Vehicles\tHovercraft\tAir cushion": {
+        "word": "Hovercraft",
+        "hint": "Bantalan udara"
+      },
+      "Vehicles\tSnowmobile\tWinter": {
+        "word": "Mobil Salju",
+        "hint": "Musim dingin"
+      },
+      "Food & Drinks\tPizza\tSlices": {
+        "word": "Pizza",
+        "hint": "Potongan"
+      },
+      "Food & Drinks\tBurger\tBuns": {
+        "word": "Burger",
+        "hint": "Roti bun"
+      },
+      "Food & Drinks\tSushi\tRaw fish": {
+        "word": "Sushi",
+        "hint": "Ikan mentah"
+      },
+      "Food & Drinks\tPasta\tNoodles": {
+        "word": "Pasta",
+        "hint": "Mi"
+      },
+      "Food & Drinks\tSalad\tGreens": {
+        "word": "Salad",
+        "hint": "Sayuran hijau"
+      },
+      "Food & Drinks\tTaco\tShell": {
+        "word": "Taco",
+        "hint": "Cangkang"
+      },
+      "Food & Drinks\tSteak\tBeef": {
+        "word": "Steak",
+        "hint": "Daging sapi"
+      },
+      "Food & Drinks\tIce Cream\tCold dessert": {
+        "word": "Es Krim",
+        "hint": "Pencuci mulut dingin"
+      },
+      "Food & Drinks\tCake\tBirthday": {
+        "word": "Kue",
+        "hint": "Ulang tahun"
+      },
+      "Food & Drinks\tChocolate\tSweet cocoa": {
+        "word": "Cokelat",
+        "hint": "Kakao manis"
+      },
+      "Food & Drinks\tCoffee\tMorning drink": {
+        "word": "Kopi",
+        "hint": "Minuman pagi"
+      },
+      "Food & Drinks\tTea\tLeaves": {
+        "word": "Teh",
+        "hint": "Daun"
+      },
+      "Food & Drinks\tSoda\tBubbly": {
+        "word": "Soda",
+        "hint": "Berkarbonasi"
+      },
+      "Food & Drinks\tJuice\tFruit extract": {
+        "word": "Jus",
+        "hint": "Ekstrak buah"
+      },
+      "Food & Drinks\tWater\tH2O": {
+        "word": "Air",
+        "hint": "H2O"
+      },
+      "Food & Drinks\tWine\tGrapes": {
+        "word": "Anggur",
+        "hint": "Buah anggur"
+      },
+      "Food & Drinks\tBeer\tBrew": {
+        "word": "Bir",
+        "hint": "Seduhan"
+      },
+      "Food & Drinks\tMilk\tDairy": {
+        "word": "Susu",
+        "hint": "Produk susu"
+      },
+      "Food & Drinks\tCheese\tMice love it": {
+        "word": "Keju",
+        "hint": "Tikus menyukainya"
+      },
+      "Food & Drinks\tBread\tBaker": {
+        "word": "Roti",
+        "hint": "Tukang roti"
+      },
+      "Famous People\tAlbert Einstein\tE=mc2": {
+        "word": "Albert Einstein",
+        "hint": "E=mc2"
+      },
+      "Famous People\tIsaac Newton\tApple gravity": {
+        "word": "Isaac Newton",
+        "hint": "Gravitasi apel"
+      },
+      "Famous People\tLeonardo da Vinci\tMona Lisa": {
+        "word": "Leonardo da Vinci",
+        "hint": "Mona Lisa"
+      },
+      "Famous People\tVincent van Gogh\tStarry Night": {
+        "word": "Vincent van Gogh",
+        "hint": "Malam Berbintang"
+      },
+      "Famous People\tWilliam Shakespeare\tPlaywright": {
+        "word": "William Shakespeare",
+        "hint": "Penulis drama"
+      },
+      "Famous People\tMozart\tClassical composer": {
+        "word": "Mozart",
+        "hint": "Komposer klasik"
+      },
+      "Famous People\tBeethoven\tDeaf composer": {
+        "word": "Beethoven",
+        "hint": "Komposer tuli"
+      },
+      "Famous People\tElvis Presley\tKing of Rock": {
+        "word": "Elvis Presley",
+        "hint": "Raja Rock"
+      },
+      "Famous People\tMichael Jackson\tKing of Pop": {
+        "word": "Michael Jackson",
+        "hint": "Raja Pop"
+      },
+      "Famous People\tMarilyn Monroe\tHollywood icon": {
+        "word": "Marilyn Monroe",
+        "hint": "Ikon Hollywood"
+      },
+      "Famous People\tCharlie Chaplin\tSilent comedy": {
+        "word": "Charlie Chaplin",
+        "hint": "Komedi bisu"
+      },
+      "Famous People\tWalt Disney\tMickey's creator": {
+        "word": "Walt Disney",
+        "hint": "Pencipta Mickey"
+      },
+      "Famous People\tSteve Jobs\tApple founder": {
+        "word": "Steve Jobs",
+        "hint": "Pendiri Apple"
+      },
+      "Famous People\tBill Gates\tMicrosoft founder": {
+        "word": "Bill Gates",
+        "hint": "Pendiri Microsoft"
+      },
+      "Famous People\tElon Musk\tTesla": {
+        "word": "Elon Musk",
+        "hint": "Tesla"
+      },
+      "Famous People\tNelson Mandela\tSouth Africa leader": {
+        "word": "Nelson Mandela",
+        "hint": "Pemimpin Afrika Selatan"
+      },
+      "Famous People\tMartin Luther King Jr.\tI have a dream": {
+        "word": "Martin Luther King Jr.",
+        "hint": "Saya punya mimpi"
+      },
+      "Famous People\tGandhi\tPeaceful protest": {
+        "word": "Gandhi",
+        "hint": "Protes damai"
+      },
+      "Famous People\tAbraham Lincoln\tTop hat": {
+        "word": "Abraham Lincoln",
+        "hint": "Topi tinggi"
+      },
+      "Famous People\tGeorge Washington\tFirst US President": {
+        "word": "George Washington",
+        "hint": "Presiden AS pertama"
+      },
+      "Animals\tLion\tRoar": {
+        "word": "Singa",
+        "hint": "Mengaum"
+      },
+      "Animals\tElephant\tTrunk": {
+        "word": "Gajah",
+        "hint": "Belalai"
+      },
+      "Animals\tGiraffe\tNeck": {
+        "word": "Jerapah",
+        "hint": "Leher"
+      },
+      "Animals\tTiger\tStripes": {
+        "word": "Harimau",
+        "hint": "Garis-garis"
+      },
+      "Animals\tPenguin\tIce": {
+        "word": "Pinguin",
+        "hint": "Es"
+      },
+      "Animals\tKangaroo\tPouch": {
+        "word": "Kangguru",
+        "hint": "Kantong"
+      },
+      "Animals\tDolphin\tOcean": {
+        "word": "Lumba-lumba",
+        "hint": "Samudra"
+      },
+      "Animals\tWhale\tHuge": {
+        "word": "Paus",
+        "hint": "Besar"
+      },
+      "Animals\tShark\tTeeth": {
+        "word": "Hiu",
+        "hint": "Gigi"
+      },
+      "Animals\tEagle\tWings": {
+        "word": "Elang",
+        "hint": "Sayap"
+      },
+      "Animals\tWolf\tHowl": {
+        "word": "Serigala",
+        "hint": "Melolong"
+      },
+      "Animals\tBear\tHoney": {
+        "word": "Beruang",
+        "hint": "Madu"
+      },
+      "Animals\tMonkey\tTrees": {
+        "word": "Monyet",
+        "hint": "Pohon"
+      },
+      "Animals\tSnake\tSlither": {
+        "word": "Ular",
+        "hint": "Melata"
+      },
+      "Animals\tCrocodile\tSwamp": {
+        "word": "Buaya",
+        "hint": "Rawa"
+      },
+      "Animals\tHippopotamus\tRiver": {
+        "word": "Kudanil",
+        "hint": "Sungai"
+      },
+      "Animals\tRhinoceros\tHorn": {
+        "word": "Badak",
+        "hint": "Cula"
+      },
+      "Animals\tZebra\tStripes": {
+        "word": "Zebra",
+        "hint": "Garis-garis"
+      },
+      "Animals\tCheetah\tFast": {
+        "word": "Citah",
+        "hint": "Cepat"
+      },
+      "Animals\tPanda\tBamboo": {
+        "word": "Panda",
+        "hint": "Bambu"
+      },
+      "Superheroes\tSuperman\tKrypton": {
+        "word": "Superman",
+        "hint": "Krypton"
+      },
+      "Superheroes\tBatman\tGotham": {
+        "word": "Batman",
+        "hint": "Gotham"
+      },
+      "Superheroes\tSpider-Man\tWebs": {
+        "word": "Spider-Man",
+        "hint": "Jaring"
+      },
+      "Superheroes\tIron Man\tTony Stark": {
+        "word": "Iron Man",
+        "hint": "Tony Stark"
+      },
+      "Superheroes\tCaptain America\tVibranium shield": {
+        "word": "Captain America",
+        "hint": "Perisai Vibranium"
+      },
+      "Superheroes\tThor\tHammer": {
+        "word": "Thor",
+        "hint": "Palu"
+      },
+      "Superheroes\tHulk\tGreen angry": {
+        "word": "Hulk",
+        "hint": "Marah hijau"
+      },
+      "Superheroes\tBlack Widow\tSpy Avenger": {
+        "word": "Black Widow",
+        "hint": "Mata-mata Avenger"
+      },
+      "Superheroes\tWolverine\tAdamantium claws": {
+        "word": "Wolverine",
+        "hint": "Cakar Adamantium"
+      },
+      "Superheroes\tFlash\tFastest man": {
+        "word": "Flash",
+        "hint": "Pria tercepat"
+      },
+      "Superheroes\tWonder Woman\tLasso of Truth": {
+        "word": "Wonder Woman",
+        "hint": "Las Perisai Kebenaran"
+      },
+      "Superheroes\tAquaman\tAtlantis": {
+        "word": "Aquaman",
+        "hint": "Atlantis"
+      },
+      "Superheroes\tGreen Lantern\tPower ring": {
+        "word": "Green Lantern",
+        "hint": "Cincin kekuatan"
+      },
+      "Superheroes\tDeadpool\tMerc with a mouth": {
+        "word": "Deadpool",
+        "hint": "Membunuh dengan mulut"
+      },
+      "Superheroes\tBlack Panther\tWakanda": {
+        "word": "Black Panther",
+        "hint": "Wakanda"
+      },
+      "Superheroes\tDoctor Strange\tSorcerer Supreme": {
+        "word": "Doctor Strange",
+        "hint": "Penyihir Agung"
+      },
+      "Superheroes\tAnt-Man\tShrinking": {
+        "word": "Ant-Man",
+        "hint": "Mengecil"
+      },
+      "Superheroes\tDaredevil\tBlind hero": {
+        "word": "Daredevil",
+        "hint": "Pahlawan buta"
+      },
+      "Superheroes\tPunisher\tVigilante": {
+        "word": "Punisher",
+        "hint": "Vigilante"
+      },
+      "Superheroes\tGhost Rider\tFlaming skull": {
+        "word": "Ghost Rider",
+        "hint": "Tengkorak menyala"
+      },
+      "Sports\tSoccer\tPenalty kick": {
+        "word": "Sepak Bola",
+        "hint": "Tendangan penalti"
+      },
+      "Sports\tBasketball\tHoop": {
+        "word": "Bola Basket",
+        "hint": "Ring"
+      },
+      "Sports\tBaseball\tHome run": {
+        "word": "Bisbol",
+        "hint": "Homerun"
+      },
+      "Sports\tTennis\tRacket": {
+        "word": "Tenis",
+        "hint": "Raket"
+      },
+      "Sports\tGolf\tHole in one": {
+        "word": "Golf",
+        "hint": "Hole in one"
+      },
+      "Sports\tVolleyball\tNet and spike": {
+        "word": "Bola Voli",
+        "hint": "Net dan spike"
+      },
+      "Sports\tSwimming\tPool lanes": {
+        "word": "Renang",
+        "hint": "Jalur kolam"
+      },
+      "Sports\tAthletics\tTrack & field": {
+        "word": "Atletik",
+        "hint": "Lintasan & lapangan"
+      },
+      "Sports\tGymnastics\tBalance beam": {
+        "word": "Senam",
+        "hint": "Balok keseimbangan"
+      },
+      "Sports\tBoxing\tGloves and ring": {
+        "word": "Tinju",
+        "hint": "Sarung tangan dan ring"
+      },
+      "Sports\tWrestling\tPin to win": {
+        "word": "Gulat",
+        "hint": "Pin untuk menang"
+      },
+      "Sports\tMartial Arts\tBlack belt": {
+        "word": "Bela Diri",
+        "hint": "Sabuk hitam"
+      },
+      "Sports\tCycling\tBicycles racing": {
+        "word": "Bersepeda",
+        "hint": "Balapan sepeda"
+      },
+      "Sports\tSkiing\tSnow mountain": {
+        "word": "Ski",
+        "hint": "Gunung salju"
+      },
+      "Sports\tSnowboarding\tOne board on snow": {
+        "word": "Snowboarding",
+        "hint": "Satu papan di salju"
+      },
+      "Sports\tSurfing\tOcean waves": {
+        "word": "Berselancar",
+        "hint": "Ombak laut"
+      },
+      "Sports\tRugby\tScrum": {
+        "word": "Rugby",
+        "hint": "Scrum"
+      },
+      "Sports\tCricket\tBatsman and bowler": {
+        "word": "Kriket",
+        "hint": "Pemain kriket dan pelempar"
+      },
+      "Sports\tHockey\tPuck on ice": {
+        "word": "Hoki",
+        "hint": "Kepingan di atas es"
+      },
+      "Sports\tTable Tennis\tPing pong": {
+        "word": "Tenis Meja",
+        "hint": "Pingpong"
+      },
+      "Fictional Characters\tSherlock Holmes\tDetective": {
+        "word": "Sherlock Holmes",
+        "hint": "Detektif"
+      },
+      "Fictional Characters\tMickey Mouse\tDisney mascot": {
+        "word": "Mickey Mouse",
+        "hint": "Maskot Disney"
+      },
+      "Fictional Characters\tBugs Bunny\tWhat's up doc": {
+        "word": "Bugs Bunny",
+        "hint": "Ada apa, dok?"
+      },
+      "Fictional Characters\tHomer Simpson\tD'oh!": {
+        "word": "Homer Simpson",
+        "hint": "D'oh!"
+      },
+      "Fictional Characters\tSpongeBob\tPineapple under sea": {
+        "word": "SpongeBob",
+        "hint": "Nanas di bawah laut"
+      },
+      "Fictional Characters\tMario\tPlumber hero": {
+        "word": "Mario",
+        "hint": "Pahlawan tukang ledeng"
+      },
+      "Fictional Characters\tPikachu\tElectric mouse": {
+        "word": "Pikachu",
+        "hint": "Tikus listrik"
+      },
+      "Fictional Characters\tSonic\tBlue fast hedgehog": {
+        "word": "Sonic",
+        "hint": "Landak biru cepat"
+      },
+      "Fictional Characters\tDarth Vader\tI am your father": {
+        "word": "Darth Vader",
+        "hint": "Aku ayahmu"
+      },
+      "Fictional Characters\tJames Bond\t007": {
+        "word": "James Bond",
+        "hint": "007"
+      },
+      "Fictional Characters\tHarry Potter\tBoy who lived": {
+        "word": "Harry Potter",
+        "hint": "Anak laki-laki yang hidup"
+      },
+      "Fictional Characters\tFrodo Baggins\tRing bearer": {
+        "word": "Frodo Baggins",
+        "hint": "Pembawa cincin"
+      },
+      "Fictional Characters\tDracula\tVampire count": {
+        "word": "Dracula",
+        "hint": "Pangeran vampir"
+      },
+      "Fictional Characters\tFrankenstein\tMonster creator": {
+        "word": "Frankenstein",
+        "hint": "Pencipta monster"
+      },
+      "Fictional Characters\tKing Kong\tGiant ape": {
+        "word": "King Kong",
+        "hint": "Kera raksasa"
+      },
+      "Fictional Characters\tGodzilla\tRadioactive lizard": {
+        "word": "Godzilla",
+        "hint": "Kadal radioaktif"
+      },
+      "Fictional Characters\tSuperman\tClark Kent": {
+        "word": "Superman",
+        "hint": "Clark Kent"
+      },
+      "Fictional Characters\tBatman\tBruce Wayne": {
+        "word": "Batman",
+        "hint": "Bruce Wayne"
+      },
+      "Fictional Characters\tSpider-Man\tPeter Parker": {
+        "word": "Spider-Man",
+        "hint": "Peter Parker"
+      },
+      "Fictional Characters\tPeter Pan\tNeverland boy": {
+        "word": "Peter Pan",
+        "hint": "Anak laki-laki Neverland"
+      },
+      "Historical Events\tWorld War I\tTrenches": {
+        "word": "Perang Dunia I",
+        "hint": "Parit"
+      },
+      "Historical Events\tWorld War II\tAxis & Allies": {
+        "word": "Perang Dunia II",
+        "hint": "Blok Poros & Sekutu"
+      },
+      "Historical Events\tFrench Revolution\tGuillotine": {
+        "word": "Revolusi Prancis",
+        "hint": "Guilotin"
+      },
+      "Historical Events\tAmerican Revolution\t1776": {
+        "word": "Revolusi Amerika",
+        "hint": "1776"
+      },
+      "Historical Events\tMoon Landing\tApollo 11": {
+        "word": "Pendaratan di Bulan",
+        "hint": "Apollo 11"
+      },
+      "Historical Events\tFall of the Berlin Wall\tCold War ending": {
+        "word": "Runtuhnya Tembok Berlin",
+        "hint": "Berakhirnya Perang Dingin"
+      },
+      "Historical Events\tCold War\tUSA vs USSR tension": {
+        "word": "Perang Dingin",
+        "hint": "Ketegangan AS vs Uni Soviet"
+      },
+      "Historical Events\tRenaissance\tRebirth of art": {
+        "word": "Renaisans",
+        "hint": "Kelahiran kembali seni"
+      },
+      "Historical Events\tIndustrial Revolution\tFactories & steam": {
+        "word": "Revolusi Industri",
+        "hint": "Pabrik & uap"
+      },
+      "Historical Events\tDiscovery of America\tColumbus 1492": {
+        "word": "Penemuan Amerika",
+        "hint": "Columbus 1492"
+      },
+      "Historical Events\tBlack Death\tPlague": {
+        "word": "Wabah Hitam",
+        "hint": "Wabah penyakit"
+      },
+      "Historical Events\tTitanic Sinking\tIceberg 1912": {
+        "word": "Tenggelamnya Titanic",
+        "hint": "Gunung es 1912"
+      },
+      "Historical Events\tIndependence of India\t1947 partition": {
+        "word": "Kemerdekaan India",
+        "hint": "Pembagian 1947"
+      },
+      "Historical Events\tMagna Carta\t1215 document": {
+        "word": "Magna Carta",
+        "hint": "Dokumen 1215"
+      },
+      "Historical Events\tDeclaration of Independence\tJuly 4": {
+        "word": "Deklarasi Kemerdekaan",
+        "hint": "4 Juli"
+      },
+      "Historical Events\tInvention Printing Press\tGutenberg": {
+        "word": "Penemuan Mesin Cetak",
+        "hint": "Gutenberg"
+      },
+      "Historical Events\tInternet Creation\tWorld Wide Web starts": {
+        "word": "Penciptaan Internet",
+        "hint": "Dimulainya World Wide Web"
+      },
+      "Historical Events\tChernobyl Disaster\tNuclear meltdown": {
+        "word": "Bencana Chernobyl",
+        "hint": "Bencana nuklir"
+      },
+      "Historical Events\t9/11 Attacks\tTwin towers": {
+        "word": "Serangan 9/11",
+        "hint": "Menara Kembar"
+      },
+      "Historical Events\tCOVID-19 Pandemic\tGlobal quarantine": {
+        "word": "Pandemi COVID-19",
+        "hint": "Karantina global"
+      },
+      "Musical Instruments\tPiano\tBlack and white keys": {
+        "word": "Piano",
+        "hint": "Kunci hitam dan putih"
+      },
+      "Musical Instruments\tGuitar\tSix strings strums": {
+        "word": "Gitar",
+        "hint": "Enam senar dipetik"
+      },
+      "Musical Instruments\tViolin\tBow and chin": {
+        "word": "Biola",
+        "hint": "Busur dan dagu"
+      },
+      "Musical Instruments\tDrum\tBeats and sticks": {
+        "word": "Drum",
+        "hint": "Pukulan dan stik"
+      },
+      "Musical Instruments\tFlute\tBlow across hole": {
+        "word": "Suling",
+        "hint": "Tiup melintasi lubang"
+      },
+      "Musical Instruments\tTrumpet\tBrass valves": {
+        "word": "Terompet",
+        "hint": "Katup kuningan"
+      },
+      "Musical Instruments\tSaxophone\tJazz brass": {
+        "word": "Saksofon",
+        "hint": "Kuningan Jazz"
+      },
+      "Musical Instruments\tCello\tLarge string seated": {
+        "word": "Cello",
+        "hint": "Duduk senar besar"
+      },
+      "Musical Instruments\tClarinet\tBlack woodwind": {
+        "word": "Klarinet",
+        "hint": "Alat tiup kayu hitam"
+      },
+      "Musical Instruments\tHarp\tAngel strings": {
+        "word": "Harpa",
+        "hint": "Senar malaikat"
+      },
+      "Musical Instruments\tTrombone\tBrass slide": {
+        "word": "Trombon",
+        "hint": "Geser kuningan"
+      },
+      "Musical Instruments\tTuba\tLargest brass bass": {
+        "word": "Tuba",
+        "hint": "Bass kuningan terbesar"
+      },
+      "Musical Instruments\tAccordion\tSqueeze box": {
+        "word": "Akordeon",
+        "hint": "Kotak yang diperas"
+      },
+      "Musical Instruments\tBanjo\tFolk strings round": {
+        "word": "Banjo",
+        "hint": "Senar folk bulat"
+      },
+      "Musical Instruments\tMandolin\tEight strings small": {
+        "word": "Mandolin",
+        "hint": "Delapan senar kecil"
+      },
+      "Musical Instruments\tUkulele\tHawaiian four strings": {
+        "word": "Ukulele",
+        "hint": "Empat senar Hawaii"
+      },
+      "Musical Instruments\tXylophone\tWooden bars mallets": {
+        "word": "Gamelan",
+        "hint": "Batang kayu dipukul"
+      },
+      "Musical Instruments\tSynthesizer\tElectronic keys": {
+        "word": "Synthesizer",
+        "hint": "Kunci elektronik"
+      },
+      "Musical Instruments\tBass\tLow frequency strings": {
+        "word": "Bass",
+        "hint": "Senar frekuensi rendah"
+      },
+      "Musical Instruments\tOboe\tDouble reed": {
+        "word": "Oboe",
+        "hint": "Lidah ganda"
+      },
+      "Video Games\tSuper Mario Bros\tJump on Goombas": {
+        "word": "Super Mario Bros",
+        "hint": "Melompati Goomba"
+      },
+      "Video Games\tMinecraft\tBlocks and Creepers": {
+        "word": "Minecraft",
+        "hint": "Blok dan Creeper"
+      },
+      "Video Games\tTetris\tFalling shapes": {
+        "word": "Tetris",
+        "hint": "Bentuk yang jatuh"
+      },
+      "Video Games\tPac-Man\tYellow circle ghosts": {
+        "word": "Pac-Man",
+        "hint": "Lingkaran kuning dan hantu"
+      },
+      "Video Games\tGrand Theft Auto\tSteal cars": {
+        "word": "Grand Theft Auto",
+        "hint": "Mencuri mobil"
+      },
+      "Video Games\tCall of Duty\tMilitary shooter": {
+        "word": "Call of Duty",
+        "hint": "Penembak militer"
+      },
+      "Video Games\tLegend of Zelda\tLink's quest": {
+        "word": "Legend of Zelda",
+        "hint": "Pencarian Link"
+      },
+      "Video Games\tPokemon\tGotta catch them all": {
+        "word": "Pokemon",
+        "hint": "Harus menangkap semuanya"
+      },
+      "Video Games\tWorld of Warcraft\tHuge MMO": {
+        "word": "World of Warcraft",
+        "hint": "MMO besar"
+      },
+      "Video Games\tFortnite\tBattle Royale building": {
+        "word": "Fortnite",
+        "hint": "Membangun Battle Royale"
+      },
+      "Video Games\tLeague of Legends\tMOBA lanes": {
+        "word": "League of Legends",
+        "hint": "Jalur MOBA"
+      },
+      "Video Games\tOverwatch\tHero team shooter": {
+        "word": "Overwatch",
+        "hint": "Penembak tim pahlawan"
+      },
+      "Video Games\tThe Sims\tControl virtual lives": {
+        "word": "The Sims",
+        "hint": "Mengendalikan kehidupan virtual"
+      },
+      "Video Games\tAnimal Crossing\tIsland villagers": {
+        "word": "Animal Crossing",
+        "hint": "Penduduk desa di pulau"
+      },
+      "Video Games\tSkyrim\tDragonborn": {
+        "word": "Skyrim",
+        "hint": "Dragonborn"
+      },
+      "Video Games\tRed Dead Redemption\tCowboy outlaw": {
+        "word": "Red Dead Redemption",
+        "hint": "Penjahat koboi"
+      },
+      "Video Games\tHalo\tMaster Chief": {
+        "word": "Halo",
+        "hint": "Master Chief"
+      },
+      "Video Games\tPortal\tTeleporting gun puzzle": {
+        "word": "Portal",
+        "hint": "Teka-teki senjata teleportasi"
+      },
+      "Video Games\tBioshock\tUnderwater city": {
+        "word": "Bioshock",
+        "hint": "Kota bawah air"
+      },
+      "Video Games\tHalf-Life\tGordon Freeman crowbar": {
+        "word": "Half-Life",
+        "hint": "Linggis Gordon Freeman"
+      },
+      "Landmarks\tEiffel Tower\tParis iron": {
+        "word": "Menara Eiffel",
+        "hint": "Besi Paris"
+      },
+      "Landmarks\tGreat Wall of China\tLongest brick structure": {
+        "word": "Tembok Besar Tiongkok",
+        "hint": "Struktur bata terpanjang"
+      },
+      "Landmarks\tStatue of Liberty\tNY torch": {
+        "word": "Patung Liberty",
+        "hint": "Obor NY"
+      },
+      "Landmarks\tColosseum\tRoman gladiators": {
+        "word": "Colosseum",
+        "hint": "Gladiator Romawi"
+      },
+      "Landmarks\tTaj Mahal\tIndian marble mausoleum": {
+        "word": "Taj Mahal",
+        "hint": "Mausoleum marmer India"
+      },
+      "Landmarks\tPyramids of Giza\tEgyptian ancient tombs": {
+        "word": "Piramida Giza",
+        "hint": "Makam kuno Mesir"
+      },
+      "Landmarks\tMachu Picchu\tInca ruins": {
+        "word": "Machu Picchu",
+        "hint": "Reruntuhan Inca"
+      },
+      "Landmarks\tStonehenge\tUK standing stones": {
+        "word": "Stonehenge",
+        "hint": "Batu berdiri Inggris"
+      },
+      "Landmarks\tBig Ben\tLondon clock": {
+        "word": "Big Ben",
+        "hint": "Jam London"
+      },
+      "Landmarks\tMount Rushmore\tPresidents carved mountain": {
+        "word": "Gunung Rushmore",
+        "hint": "Gunung pahatan Presiden"
+      },
+      "Landmarks\tChrist the Redeemer\tRio statue": {
+        "word": "Kristus Penebus",
+        "hint": "Patung Rio"
+      },
+      "Landmarks\tSydney Opera House\tAustralian sails roof": {
+        "word": "Gedung Opera Sydney",
+        "hint": "Atap layar Australia"
+      },
+      "Landmarks\tAcropolis\tAthens hilltop": {
+        "word": "Akropolis",
+        "hint": "Puncak bukit Athena"
+      },
+      "Landmarks\tPetronas Towers\tKuala Lumpur twin high": {
+        "word": "Menara Petronas",
+        "hint": "Menara kembar tinggi Kuala Lumpur"
+      },
+      "Landmarks\tBurj Khalifa\tDubai tallest": {
+        "word": "Burj Khalifa",
+        "hint": "Tertinggi di Dubai"
+      },
+      "Landmarks\tGolden Gate Bridge\tSan Francisco red": {
+        "word": "Jembatan Golden Gate",
+        "hint": "Merah San Francisco"
+      },
+      "Landmarks\tNiagara Falls\tUS/Canada huge waterfall": {
+        "word": "Air Terjun Niagara",
+        "hint": "Air terjun besar AS/Kanada"
+      },
+      "Landmarks\tGrand Canyon\tArizona huge gorge": {
+        "word": "Grand Canyon",
+        "hint": "Ngarai besar Arizona"
+      },
+      "Landmarks\tLeaning Tower of Pisa\tTilted Italian base": {
+        "word": "Menara Miring Pisa",
+        "hint": "Dasar Italia miring"
+      },
+      "Landmarks\tMount Everest\tHighest peak": {
+        "word": "Gunung Everest",
+        "hint": "Puncak tertinggi"
+      },
+      "Fears & Phobias\tSpiders\tArachnophobia": {
+        "word": "Laba-laba",
+        "hint": "Arachnophobia"
+      },
+      "Fears & Phobias\tHeights\tAcrophobia": {
+        "word": "Ketinggian",
+        "hint": "Acrophobia"
+      },
+      "Fears & Phobias\tConfined Spaces\tClaustrophobia": {
+        "word": "Ruang Terbatas",
+        "hint": "Claustrophobia"
+      },
+      "Fears & Phobias\tDark\tNyctophobia": {
+        "word": "Gelap",
+        "hint": "Nyctophobia"
+      },
+      "Fears & Phobias\tSnakes\tOphidiophobia": {
+        "word": "Ular",
+        "hint": "Ophidiophobia"
+      },
+      "Fears & Phobias\tFlying\tAviophobia": {
+        "word": "Terbang",
+        "hint": "Aviophobia"
+      },
+      "Fears & Phobias\tDogs\tCynophobia": {
+        "word": "Anjing",
+        "hint": "Cynophobia"
+      },
+      "Fears & Phobias\tNeedles\tTrypanophobia": {
+        "word": "Jarum",
+        "hint": "Trypanophobia"
+      },
+      "Fears & Phobias\tSocializing\tSocial Phobia": {
+        "word": "Bersosialisasi",
+        "hint": "Fobia Sosial"
+      },
+      "Fears & Phobias\tGerms\tMysophobia": {
+        "word": "Kuman",
+        "hint": "Mysophobia"
+      },
+      "Fears & Phobias\tPublic Speaking\tGlossophobia": {
+        "word": "Berbicara di Depan Umum",
+        "hint": "Glossophobia"
+      },
+      "Fears & Phobias\tDeath\tThanatophobia": {
+        "word": "Kematian",
+        "hint": "Thanatophobia"
+      },
+      "Fears & Phobias\tWater\tAquaphobia": {
+        "word": "Air",
+        "hint": "Aquaphobia"
+      },
+      "Fears & Phobias\tBlood\tHemophobia": {
+        "word": "Darah",
+        "hint": "Hemophobia"
+      },
+      "Fears & Phobias\tCrowds\tAgoraphobia": {
+        "word": "Keramaian",
+        "hint": "Agoraphobia"
+      },
+      "Fears & Phobias\tClowns\tCoulrophobia": {
+        "word": "Badut",
+        "hint": "Coulrophobia"
+      },
+      "Fears & Phobias\tDentists\tDentophobia": {
+        "word": "Dokter Gigi",
+        "hint": "Dentophobia"
+      },
+      "Fears & Phobias\tThunder\tAstraphobia": {
+        "word": "Guntur",
+        "hint": "Astraphobia"
+      },
+      "Fears & Phobias\tFire\tPyrophobia": {
+        "word": "Api",
+        "hint": "Pyrophobia"
+      },
+      "Fears & Phobias\tGhosts\tPhasmophobia": {
+        "word": "Hantu",
+        "hint": "Phasmophobia"
+      },
+      "Household Items\tTelevision\tWatching screen": {
+        "word": "Televisi",
+        "hint": "Layar tontonan"
+      },
+      "Household Items\tRefrigerator\tCooling food": {
+        "word": "Kulkas",
+        "hint": "Pendingin makanan"
+      },
+      "Household Items\tMicrowave\tFast heating": {
+        "word": "Microwave",
+        "hint": "Pemanas cepat"
+      },
+      "Household Items\tWashing Machine\tCleaning clothes": {
+        "word": "Mesin Cuci",
+        "hint": "Pencuci pakaian"
+      },
+      "Household Items\tBed\tSleeping furniture": {
+        "word": "Tempat Tidur",
+        "hint": "Furnitur tidur"
+      },
+      "Household Items\tSofa\tLiving room seating": {
+        "word": "Sofa",
+        "hint": "Tempat duduk ruang tamu"
+      },
+      "Household Items\tTable\tEating surface": {
+        "word": "Meja",
+        "hint": "Permukaan makan"
+      },
+      "Household Items\tChair\tSitting furniture": {
+        "word": "Kursi",
+        "hint": "Furnitur duduk"
+      },
+      "Household Items\tLamp\tLighting device": {
+        "word": "Lampu",
+        "hint": "Alat penerangan"
+      },
+      "Household Items\tClock\tTelling time": {
+        "word": "Jam",
+        "hint": "Penunjuk waktu"
+      },
+      "Household Items\tMirror\tReflection glass": {
+        "word": "Cermin",
+        "hint": "Kaca pantulan"
+      },
+      "Household Items\tOven\tBaking food": {
+        "word": "Oven",
+        "hint": "Pemanggang makanan"
+      },
+      "Household Items\tToaster\tCrispy bread": {
+        "word": "Pemanggang Roti",
+        "hint": "Roti renyah"
+      },
+      "Household Items\tBlender\tMixing smoothies": {
+        "word": "Blender",
+        "hint": "Pengaduk smoothie"
+      },
+      "Household Items\tVacuum Cleaner\tSucking dust": {
+        "word": "Penyedot Debu",
+        "hint": "Penghisap debu"
+      },
+      "Household Items\tIron\tPressing clothes": {
+        "word": "Setrika",
+        "hint": "Pengepres pakaian"
+      },
+      "Household Items\tTrash Can\tGarbage holder": {
+        "word": "Tempat Sampah",
+        "hint": "Wadah sampah"
+      },
+      "Household Items\tBathtub\tWashing body": {
+        "word": "Bak Mandi",
+        "hint": "Pencuci badan"
+      },
+      "Household Items\tToilet\tBathroom necessity": {
+        "word": "Toilet",
+        "hint": "Kebutuhan kamar mandi"
+      },
+      "Household Items\tBookcase\tHolding novels": {
+        "word": "Rak Buku",
+        "hint": "Penyimpan novel"
+      },
+      "Mythological Creatures\tDragon\tBreathing fire scaling": {
+        "word": "Naga",
+        "hint": "Napas api bersisik"
+      },
+      "Mythological Creatures\tUnicorn\tOne horn horse": {
+        "word": "Unicorn",
+        "hint": "Kuda bertanduk satu"
+      },
+      "Mythological Creatures\tPhoenix\tReborn fiery bird": {
+        "word": "Phoenix",
+        "hint": "Burung api terlahir kembali"
+      },
+      "Mythological Creatures\tMermaid\tHalf fish half woman": {
+        "word": "Putri Duyung",
+        "hint": "Setengah ikan setengah wanita"
+      },
+      "Mythological Creatures\tCentaur\tHalf horse half man": {
+        "word": "Centaur",
+        "hint": "Setengah kuda setengah manusia"
+      },
+      "Mythological Creatures\tGriffin\tLion eagle hybrid": {
+        "word": "Griffin",
+        "hint": "Hibrida singa elang"
+      },
+      "Mythological Creatures\tPegasus\tWinged horse": {
+        "word": "Pegasus",
+        "hint": "Kuda bersayap"
+      },
+      "Mythological Creatures\tMinotaur\tBull headed man": {
+        "word": "Minotaur",
+        "hint": "Manusia berkepala banteng"
+      },
+      "Mythological Creatures\tMedusa\tSnake hair": {
+        "word": "Medusa",
+        "hint": "Rambut ular"
+      },
+      "Mythological Creatures\tKraken\tGiant sea monster": {
+        "word": "Kraken",
+        "hint": "Monster laut raksasa"
+      },
+      "Mythological Creatures\tCyclops\tOne eyed giant": {
+        "word": "Cyclops",
+        "hint": "Raksasa bermata satu"
+      },
+      "Mythological Creatures\tSphinx\tLion body human head": {
+        "word": "Sphinx",
+        "hint": "Tubuh singa kepala manusia"
+      },
+      "Mythological Creatures\tCerberus\tThree headed dog": {
+        "word": "Cerberus",
+        "hint": "Anjing berkepala tiga"
+      },
+      "Mythological Creatures\tChimera\tLion goat snake fusion": {
+        "word": "Chimera",
+        "hint": "Gabungan singa kambing ular"
+      },
+      "Mythological Creatures\tHydra\tMulti-headed serpent": {
+        "word": "Hydra",
+        "hint": "Ular berkepala banyak"
+      },
+      "Mythological Creatures\tVampire\tBloodsucker": {
+        "word": "Vampir",
+        "hint": "Penghisap darah"
+      },
+      "Mythological Creatures\tWerewolf\tFull moon transformation": {
+        "word": "Manusia Serigala",
+        "hint": "Transformasi bulan purnama"
+      },
+      "Mythological Creatures\tTroll\tBridge guardian": {
+        "word": "Troll",
+        "hint": "Penjaga jembatan"
+      },
+      "Mythological Creatures\tGoblin\tLittle green mischief": {
+        "word": "Goblin",
+        "hint": "Kekacauan hijau kecil"
+      },
+      "Mythological Creatures\tYeti\tAbominable snowman": {
+        "word": "Yeti",
+        "hint": "Manusia salju abominabel"
+      },
+      "Nature\tTree\tLeaves & trunk": {
+        "word": "Pohon",
+        "hint": "Daun & batang"
+      },
+      "Nature\tFlower\tPetals": {
+        "word": "Bunga",
+        "hint": "Kelopak"
+      },
+      "Nature\tMountain\tHigh peak": {
+        "word": "Gunung",
+        "hint": "Puncak tinggi"
+      },
+      "Nature\tRiver\tFlowing water": {
+        "word": "Sungai",
+        "hint": "Air mengalir"
+      },
+      "Nature\tOcean\tSalty sea": {
+        "word": "Samudra",
+        "hint": "Laut asin"
+      },
+      "Nature\tForest\tMany trees": {
+        "word": "Hutan",
+        "hint": "Banyak pohon"
+      },
+      "Nature\tDesert\tSand and dry": {
+        "word": "Gurun",
+        "hint": "Pasir dan kering"
+      },
+      "Nature\tSnow\tCold white flakes": {
+        "word": "Salju",
+        "hint": "Kepingan putih dingin"
+      },
+      "Nature\tRain\tWater falling from sky": {
+        "word": "Hujan",
+        "hint": "Air jatuh dari langit"
+      },
+      "Nature\tSun\tDaytime star": {
+        "word": "Matahari",
+        "hint": "Bintang siang hari"
+      },
+      "Nature\tMoon\tNighttime satellite": {
+        "word": "Bulan",
+        "hint": "Satelit malam hari"
+      },
+      "Nature\tStar\tTwinkling sky point": {
+        "word": "Bintang",
+        "hint": "Titik langit berkelip"
+      },
+      "Nature\tCloud\tWhite fluffy sky object": {
+        "word": "Awan",
+        "hint": "Objek langit putih lembut"
+      },
+      "Nature\tLightning\tElectric storm flash": {
+        "word": "Petir",
+        "hint": "Kilatan listrik badai"
+      },
+      "Nature\tWind\tMoving air breeze": {
+        "word": "Angin",
+        "hint": "Angin sepoi-sepoi udara bergerak"
+      },
+      "Nature\tVolcano\tLava erupting mountain": {
+        "word": "Gunung Berapi",
+        "hint": "Gunung letusan lava"
+      },
+      "Nature\tCave\tDark hollow rocky": {
+        "word": "Gua",
+        "hint": "Batu berongga gelap"
+      },
+      "Nature\tWaterfall\tWater dropping cliff": {
+        "word": "Air Terjun",
+        "hint": "Tebing jatuhnya air"
+      },
+      "Nature\tIsland\tLand surrounded by water": {
+        "word": "Pulau",
+        "hint": "Tanah dikelilingi air"
+      },
+      "Nature\tGrass\tGreen lawn blades": {
+        "word": "Rumput",
+        "hint": "Bilah rumput hijau"
+      },
+      "Clothing\tShirt\tUpper body wear": {
+        "word": "Kemeja",
+        "hint": "Pakaian tubuh atas"
+      },
+      "Clothing\tPants\tLower body legs": {
+        "word": "Celana",
+        "hint": "Kaki tubuh bawah"
+      },
+      "Clothing\tDress\tOne piece women wear": {
+        "word": "Gaun",
+        "hint": "Pakaian wanita terusan"
+      },
+      "Clothing\tSkirt\tDangling lower wear": {
+        "word": "Rok",
+        "hint": "Pakaian bawah menjuntai"
+      },
+      "Clothing\tJacket\tOuter wear coat": {
+        "word": "Jaket",
+        "hint": "Mantel pakaian luar"
+      },
+      "Clothing\tSweater\tWarm knitted top": {
+        "word": "Sweater",
+        "hint": "Atasan rajutan hangat"
+      },
+      "Clothing\tSocks\tFoot covering soft": {
+        "word": "Kaus Kaki",
+        "hint": "Penutup kaki lembut"
+      },
+      "Clothing\tShoes\tFoot covering hard": {
+        "word": "Sepatu",
+        "hint": "Penutup kaki keras"
+      },
+      "Clothing\tHat\tHead covering gear": {
+        "word": "Topi",
+        "hint": "Penutup kepala"
+      },
+      "Clothing\tGloves\tHand warming cover": {
+        "word": "Sarung Tangan",
+        "hint": "Penutup penghangat tangan"
+      },
+      "Clothing\tScarf\tNeck wrapper": {
+        "word": "Syal",
+        "hint": "Pembungkus leher"
+      },
+      "Clothing\tBelt\tWaist tightener": {
+        "word": "Ikat Pinggang",
+        "hint": "Pengencang pinggang"
+      },
+      "Clothing\tTie\tSuit neck accessory": {
+        "word": "Dasi",
+        "hint": "Aksesori leher jas"
+      },
+      "Clothing\tUnderwear\tBase layer bottom": {
+        "word": "Pakaian Dalam",
+        "hint": "Lapisan dasar bawah"
+      },
+      "Clothing\tShorts\tSummer leg wear": {
+        "word": "Celana Pendek",
+        "hint": "Pakaian kaki musim panas"
+      },
+      "Clothing\tJeans\tDenim pants": {
+        "word": "Jeans",
+        "hint": "Celana denim"
+      },
+      "Clothing\tT-shirt\tCasual short sleeve": {
+        "word": "Kaos",
+        "hint": "Lengan pendek kasual"
+      },
+      "Clothing\tCoat\tHeavy winter top": {
+        "word": "Mantel Tebal",
+        "hint": "Atasan musim dingin berat"
+      },
+      "Clothing\tBoots\tHigh footwear ankle": {
+        "word": "Sepatu Bot",
+        "hint": "Alas kaki tinggi mata kaki"
+      },
+      "Clothing\tSandals\tOpen toe summer shoes": {
+        "word": "Sandal",
+        "hint": "Sepatu musim panas ujung terbuka"
+      },
+      "Colors\tRed\tBlood apple": {
+        "word": "Merah",
+        "hint": "Darah apel"
+      },
+      "Colors\tBlue\tSky ocean": {
+        "word": "Biru",
+        "hint": "Langit samudra"
+      },
+      "Colors\tYellow\tSun banana": {
+        "word": "Kuning",
+        "hint": "Matahari pisang"
+      },
+      "Colors\tGreen\tGrass leaves": {
+        "word": "Hijau",
+        "hint": "Rumput daun"
+      },
+      "Colors\tOrange\tCitrus fruit": {
+        "word": "Jingga",
+        "hint": "Jeruk buah"
+      },
+      "Colors\tPurple\tGrapes royalty": {
+        "word": "Ungu",
+        "hint": "Anggur bangsawan"
+      },
+      "Colors\tPink\tPig cotton candy": {
+        "word": "Merah Jambu",
+        "hint": "Babi permen kapas"
+      },
+      "Colors\tBlack\tNight coal": {
+        "word": "Hitam",
+        "hint": "Malam batu bara"
+      },
+      "Colors\tWhite\tSnow milk": {
+        "word": "Putih",
+        "hint": "Salju susu"
+      },
+      "Colors\tGray\tAsh clouds": {
+        "word": "Abu-abu",
+        "hint": "Abu awan"
+      },
+      "Colors\tBrown\tDirt wood": {
+        "word": "Coklat",
+        "hint": "Tanah kayu"
+      },
+      "Colors\tGold\tShiny wealth": {
+        "word": "Emas",
+        "hint": "Kekayaan berkilau"
+      },
+      "Colors\tSilver\tSecond place metal": {
+        "word": "Perak",
+        "hint": "Logam juara kedua"
+      },
+      "Colors\tBronze\tThird place metal": {
+        "word": "Perunggu",
+        "hint": "Logam juara ketiga"
+      },
+      "Colors\tCyan\tLight bright blue": {
+        "word": "Sian",
+        "hint": "Biru terang"
+      },
+      "Colors\tMagenta\tDeep purplish red": {
+        "word": "Magenta",
+        "hint": "Merah keunguan pekat"
+      },
+      "Colors\tIndigo\tDark violet blue": {
+        "word": "Nila",
+        "hint": "Biru violet gelap"
+      },
+      "Colors\tTeal\tBlue green hue": {
+        "word": "Teal",
+        "hint": "Nuansa biru hijau"
+      },
+      "Colors\tMaroon\tDark brownish red": {
+        "word": "Merah Marun",
+        "hint": "Merah kecoklatan gelap"
+      },
+      "Colors\tNavy\tDark military blue": {
+        "word": "Biru Dongker",
+        "hint": "Biru militer gelap"
+      },
+      "Hobbies\tReading\tBooks pages novels": {
+        "word": "Membaca",
+        "hint": "Buku halaman novel"
+      },
+      "Hobbies\tWriting\tPen paper stories": {
+        "word": "Menulis",
+        "hint": "Pena kertas cerita"
+      },
+      "Hobbies\tDrawing\tPencil art sketch": {
+        "word": "Menggambar",
+        "hint": "Pensil seni sketsa"
+      },
+      "Hobbies\tPainting\tBrush colors canvas": {
+        "word": "Melukis",
+        "hint": "Kuas warna kanvas"
+      },
+      "Hobbies\tPhotography\tTaking pictures camera": {
+        "word": "Fotografi",
+        "hint": "Mengambil gambar kamera"
+      },
+      "Hobbies\tCooking\tMaking meals": {
+        "word": "Memasak",
+        "hint": "Membuat makanan"
+      },
+      "Hobbies\tBaking\tOven sweets dough": {
+        "word": "Memanggang",
+        "hint": "Oven kue adonan"
+      },
+      "Hobbies\tGardening\tPlants soil flowers": {
+        "word": "Berkebun",
+        "hint": "Tanaman tanah bunga"
+      },
+      "Hobbies\tFishing\tRod reel water": {
+        "word": "Memancing",
+        "hint": "Joran ril air"
+      },
+      "Hobbies\tHiking\tWalking trails mountains": {
+        "word": "Mendaki",
+        "hint": "Berjalan jalur gunung"
+      },
+      "Hobbies\tCamping\tTent outdoors fire": {
+        "word": "Berkemah",
+        "hint": "Tenda luar ruangan api"
+      },
+      "Hobbies\tKnitting\tYarn needles sweater": {
+        "word": "Merajut",
+        "hint": "Benang jarum sweter"
+      },
+      "Hobbies\tSewing\tThread fabric needle": {
+        "word": "Menjahit",
+        "hint": "Benang kain jarum"
+      },
+      "Hobbies\tWoodworking\tCarving constructing timber": {
+        "word": "Kerajinan Kayu",
+        "hint": "Mengukir membangun kayu"
+      },
+      "Hobbies\tPottery\tClay spinning wheel": {
+        "word": "Keramik",
+        "hint": "Tanah liat roda berputar"
+      },
+      "Hobbies\tGaming\tPlaying video consoles": {
+        "word": "Bermain Game",
+        "hint": "Bermain konsol video"
+      },
+      "Hobbies\tDancing\tMoving body rhythm": {
+        "word": "Menari",
+        "hint": "Menggerakkan tubuh ritme"
+      },
+      "Hobbies\tSinging\tVocal melodies": {
+        "word": "Menyanyi",
+        "hint": "Melodi vokal"
+      },
+      "Hobbies\tTraveling\tVisiting new places": {
+        "word": "Bepergian",
+        "hint": "Mengunjungi tempat-tempat baru"
+      },
+      "Hobbies\tCollecting\tGathering specific items": {
+        "word": "Mengoleksi",
+        "hint": "Mengumpulkan barang-barang tertentu"
+      },
+      "Science\tBiology\tLife study": {
+        "word": "Biologi",
+        "hint": "Studi kehidupan"
+      },
+      "Science\tChemistry\tElements reactions": {
+        "word": "Kimia",
+        "hint": "Reaksi unsur"
+      },
+      "Science\tPhysics\tMatter forces energy": {
+        "word": "Fisika",
+        "hint": "Materi gaya energi"
+      },
+      "Science\tAstronomy\tSpace planets study": {
+        "word": "Astronomi",
+        "hint": "Studi planet antariksa"
+      },
+      "Science\tGeology\tEarth rocks study": {
+        "word": "Geologi",
+        "hint": "Studi batuan bumi"
+      },
+      "Science\tAtom\tSmallest particle core": {
+        "word": "Atom",
+        "hint": "Inti partikel terkecil"
+      },
+      "Science\tMolecule\tAtoms bonded": {
+        "word": "Molekul",
+        "hint": "Atom terikat"
+      },
+      "Science\tCell\tBasic life unit": {
+        "word": "Sel",
+        "hint": "Unit dasar kehidupan"
+      },
+      "Science\tDNA\tGenetic ladder": {
+        "word": "DNA",
+        "hint": "Tangga genetik"
+      },
+      "Science\tGravity\tFalling pulling force": {
+        "word": "Gravitasi",
+        "hint": "Gaya tarik jatuh"
+      },
+      "Science\tEvolution\tSpecies change over time": {
+        "word": "Evolusi",
+        "hint": "Perubahan spesies seiring waktu"
+      },
+      "Science\tMicroscope\tSeeing tiny things": {
+        "word": "Mikroskop",
+        "hint": "Melihat benda kecil"
+      },
+      "Science\tTelescope\tSeeing far things": {
+        "word": "Teleskop",
+        "hint": "Melihat benda jauh"
+      },
+      "Science\tLaboratory\tScience workplace": {
+        "word": "Laboratorium",
+        "hint": "Tempat kerja sains"
+      },
+      "Science\tExperiment\tTesting hypothesis": {
+        "word": "Eksperimen",
+        "hint": "Menguji hipotesis"
+      },
+      "Science\tTheory\tScientific explanation base": {
+        "word": "Teori",
+        "hint": "Dasar penjelasan ilmiah"
+      },
+      "Science\tFossil\tAncient rock remains": {
+        "word": "Fosil",
+        "hint": "Sisa batuan purba"
+      },
+      "Science\tVirus\tMicroscopic disease agent": {
+        "word": "Virus",
+        "hint": "Agen penyakit mikroskopis"
+      },
+      "Science\tBacteria\tSingle cell organisms": {
+        "word": "Bakteri",
+        "hint": "Organisme sel tunggal"
+      },
+      "Science\tElement\tPeriodic table item": {
+        "word": "Unsur",
+        "hint": "Item tabel periodik"
+      },
+      "School Subjects\tMathematics\tNumbers equations shapes": {
+        "word": "Matematika",
+        "hint": "Angka persamaan bentuk"
+      },
+      "School Subjects\tScience\tExperiments biology physics": {
+        "word": "Sains",
+        "hint": "Eksperimen biologi fisika"
+      },
+      "School Subjects\tEnglish\tLiterature grammar writing": {
+        "word": "Bahasa Inggris",
+        "hint": "Sastra tata bahasa menulis"
+      },
+      "School Subjects\tHistory\tPast events wars": {
+        "word": "Sejarah",
+        "hint": "Peristiwa masa lalu perang"
+      },
+      "School Subjects\tGeography\tMaps countries capitals": {
+        "word": "Geografi",
+        "hint": "Peta negara ibu kota"
+      },
+      "School Subjects\tArt\tPainting drawing creative": {
+        "word": "Seni",
+        "hint": "Melukis menggambar kreatif"
+      },
+      "School Subjects\tMusic\tPlaying instruments singing": {
+        "word": "Musik",
+        "hint": "Bermain alat musik menyanyi"
+      },
+      "School Subjects\tPhysical Education\tGym sports running": {
+        "word": "Pendidikan Jasmani",
+        "hint": "Gym olahraga lari"
+      },
+      "School Subjects\tComputer Science\tCoding programming tech": {
+        "word": "Ilmu Komputer",
+        "hint": "Coding pemrograman teknologi"
+      },
+      "School Subjects\tForeign Language\tSpeaking idioms overseas": {
+        "word": "Bahasa Asing",
+        "hint": "Berbicara idiom luar negeri"
+      },
+      "School Subjects\tChemistry\tElements lab periodic": {
+        "word": "Kimia",
+        "hint": "Unsur lab periodik"
+      },
+      "School Subjects\tBiology\tLife cells plants": {
+        "word": "Biologi",
+        "hint": "Kehidupan sel tumbuhan"
+      },
+      "School Subjects\tPhysics\tForces gravity motion": {
+        "word": "Fisika",
+        "hint": "Gaya gravitasi gerak"
+      },
+      "School Subjects\tAlgebra\tLetters and numbers math": {
+        "word": "Aljabar",
+        "hint": "Huruf dan angka matematika"
+      },
+      "School Subjects\tGeometry\tShapes angles lines": {
+        "word": "Geometri",
+        "hint": "Bentuk sudut garis"
+      },
+      "School Subjects\tCalculus\tAdvanced math derivatives": {
+        "word": "Kalkulus",
+        "hint": "Matematika tingkat lanjut turunan"
+      },
+      "School Subjects\tEconomics\tMoney markets trade": {
+        "word": "Ekonomi",
+        "hint": "Uang pasar perdagangan"
+      },
+      "School Subjects\tPsychology\tMind behavior study": {
+        "word": "Psikologi",
+        "hint": "Pikiran perilaku studi"
+      },
+      "School Subjects\tSociology\tSociety people culture": {
+        "word": "Sosiologi",
+        "hint": "Masyarakat orang budaya"
+      },
+      "School Subjects\tDrama\tTheater acting plays": {
+        "word": "Drama",
+        "hint": "Teater akting sandiwara"
+      },
+      "Toys\tLego\tBuilding blocks plastic": {
+        "word": "Lego",
+        "hint": "Balok-balok susun plastik"
+      },
+      "Toys\tBarbie\tPopular fashion doll": {
+        "word": "Barbie",
+        "hint": "Boneka mode populer"
+      },
+      "Toys\tTeddy Bear\tStuffed animal plush": {
+        "word": "Boneka Beruang",
+        "hint": "Hewan mainan empuk"
+      },
+      "Toys\tAction Figure\tPosable hero toy": {
+        "word": "Figur Aksi",
+        "hint": "Mainan pahlawan yang bisa diposisikan"
+      },
+      "Toys\tYo-Yo\tString spinning down up": {
+        "word": "Yo-Yo",
+        "hint": "Tali berputar ke atas bawah"
+      },
+      "Toys\tKite\tFlying string wind": {
+        "word": "Layangan",
+        "hint": "Terbang tali angin"
+      },
+      "Toys\tFrisbee\tFlying disc throw": {
+        "word": "Frisbee",
+        "hint": "Piringan terbang lempar"
+      },
+      "Toys\tDollhouse\tMiniature home toy": {
+        "word": "Rumah Boneka",
+        "hint": "Mainan rumah mini"
+      },
+      "Toys\tPuzzle\tFitting pieces together picture": {
+        "word": "Teka-teki",
+        "hint": "Menyatukan potongan gambar"
+      },
+      "Toys\tBoard Game\tTable top dice rules": {
+        "word": "Permainan Papan",
+        "hint": "Meja dadu aturan"
+      },
+      "Toys\tRubik's Cube\tTwisting colorful square": {
+        "word": "Rubik's Cube",
+        "hint": "Kotak warna-warni memutar"
+      },
+      "Toys\tTrain Set\tTracks miniature engines": {
+        "word": "Set Kereta",
+        "hint": "Rel mesin miniatur"
+      },
+      "Toys\tRemote Control Car\tDriving via frequency": {
+        "word": "Mobil Remote Control",
+        "hint": "Mengemudi melalui frekuensi"
+      },
+      "Toys\tPlay-Doh\tModeling clay colors": {
+        "word": "Play-Doh",
+        "hint": "Lilin malam warna-warni"
+      },
+      "Toys\tHula Hoop\tSpinning around waist": {
+        "word": "Hula Hoop",
+        "hint": "Berputar di pinggang"
+      },
+      "Toys\tJump Rope\tSkipping string exercise": {
+        "word": "Tali Lompat",
+        "hint": "Melompati tali latihan"
+      },
+      "Toys\tWater Gun\tShooting liquid summer squirter": {
+        "word": "Pistol Air",
+        "hint": "Menembak cairan musim panas"
+      },
+      "Toys\tSlingshot\tPull back launch rock": {
+        "word": "Katapel",
+        "hint": "Menarik kembali meluncurkan batu"
+      },
+      "Toys\tTrampoline\tBouncy jumping surface": {
+        "word": "Trampolin",
+        "hint": "Permukaan melompat memantul"
+      },
+      "Toys\tRocking Horse\tSwing back forth animal seat": {
+        "word": "Kursi Goyang Kuda",
+        "hint": "Mengayun maju mundur kursi hewan"
+      },
+      "Emotions\tHappiness\tJoy smile": {
+        "word": "Kebahagiaan",
+        "hint": "Senyum kegembiraan"
+      },
+      "Emotions\tSadness\tTears crying": {
+        "word": "Kesedihan",
+        "hint": "Air mata menangis"
+      },
+      "Emotions\tAnger\tMad furious rage": {
+        "word": "Kemarahan",
+        "hint": "Marah murka amuk"
+      },
+      "Emotions\tFear\tScared afraid terror": {
+        "word": "Ketakutan",
+        "hint": "Takut ngeri teror"
+      },
+      "Emotions\tSurprise\tShock unexpected": {
+        "word": "Kejutan",
+        "hint": "Terkejut tak terduga"
+      },
+      "Emotions\tDisgust\tGrossed out sick": {
+        "word": "Jijik",
+        "hint": "Mual sakit"
+      },
+      "Emotions\tLove\tAffection romance hearts": {
+        "word": "Cinta",
+        "hint": "Kasih sayang romansa hati"
+      },
+      "Emotions\tJealousy\tEnvy wanting theirs": {
+        "word": "Kecemburuan",
+        "hint": "Iri menginginkan milik mereka"
+      },
+      "Emotions\tGuilt\tFeeling bad doing wrong": {
+        "word": "Rasa bersalah",
+        "hint": "Merasa buruk berbuat salah"
+      },
+      "Emotions\tShame\tEmbarrassment humiliating": {
+        "word": "Malu",
+        "hint": "Memalukan mempermalukan"
+      },
+      "Emotions\tExcitement\tThrilled looking forward": {
+        "word": "Kegembiraan",
+        "hint": "Sangat antusias menantikan"
+      },
+      "Emotions\tBoredom\tNothing to do dull": {
+        "word": "Kebosanan",
+        "hint": "Tidak ada yang dapat dilakukan membosankan"
+      },
+      "Emotions\tHope\tOptimism future bright": {
+        "word": "Harapan",
+        "hint": "Optimisme masa depan cerah"
+      },
+      "Emotions\tDespair\tTotal loss hope": {
+        "word": "Keputusasaan",
+        "hint": "Kehilangan harapan total"
+      },
+      "Emotions\tConfusion\tNot understanding puzzle": {
+        "word": "Kebingungan",
+        "hint": "Tidak mengerti teka-teki"
+      },
+      "Emotions\tPride\tSatisfied personal achievement": {
+        "word": "Kebanggaan",
+        "hint": "Puas prestasi pribadi"
+      },
+      "Emotions\tRelief\tStress gone relaxing": {
+        "word": "Kelegaan",
+        "hint": "Stres hilang santai"
+      },
+      "Emotions\tNostalgia\tMissing past fondly": {
+        "word": "Nostalgia",
+        "hint": "Merindukan masa lalu dengan suka cita"
+      },
+      "Emotions\tLoneliness\tFeeling isolated solo": {
+        "word": "Kesepian",
+        "hint": "Merasa terisolasi sendiri"
+      },
+      "Emotions\tCuriosity\tWanting to know more": {
+        "word": "Keingintahuan",
+        "hint": "Ingin tahu lebih banyak"
+      },
+      "Technology\tComputer\tDesktop PC screen CPU": {
+        "word": "Komputer",
+        "hint": "Layar PC desktop CPU"
+      },
+      "Technology\tSmartphone\tMobile touchscreen device": {
+        "word": "Ponsel Pintar",
+        "hint": "Perangkat layar sentuh seluler"
+      },
+      "Technology\tTablet\tFlat screen portable computer": {
+        "word": "Tablet",
+        "hint": "Komputer portabel layar datar"
+      },
+      "Technology\tLaptop\tFoldable portable PC": {
+        "word": "Laptop",
+        "hint": "PC portabel yang bisa dilipat"
+      },
+      "Technology\tSmartwatch\tWrist wearable tech": {
+        "word": "Jam Tangan Pintar",
+        "hint": "Perangkat teknologi yang dikenakan di pergelangan tangan"
+      },
+      "Technology\tHeadphones\tEar listening audio": {
+        "word": "Headphone",
+        "hint": "Audio mendengarkan telinga"
+      },
+      "Technology\tCamera\tPhoto video capturing lens": {
+        "word": "Kamera",
+        "hint": "Lensa penangkap foto video"
+      },
+      "Technology\tDrone\tUnmanned flying gadget": {
+        "word": "Drone",
+        "hint": "Gadget terbang tanpa awak"
+      },
+      "Technology\tVirtual Reality Headset\tGoggles 3D immersive": {
+        "word": "Headset Realitas Virtual",
+        "hint": "Kacamata 3D imersif"
+      },
+      "Technology\tGame Console\tTV hooked playing system": {
+        "word": "Konsol Game",
+        "hint": "Sistem bermain yang terhubung ke TV"
+      },
+      "Technology\tRouter\tWiFi internet signal box": {
+        "word": "Router",
+        "hint": "Kotak sinyal internet WiFi"
+      },
+      "Technology\tSpeaker\tLoud audio output": {
+        "word": "Speaker",
+        "hint": "Keluaran audio keras"
+      },
+      "Technology\tMicrophone\tVoice sound input": {
+        "word": "Mikrofon",
+        "hint": "Masukan suara suara"
+      },
+      "Technology\tKeyboard\tTyping keys buttons": {
+        "word": "Keyboard",
+        "hint": "Tombol tombol pengetikan"
+      },
+      "Technology\tMouse\tClicking pointing cursor": {
+        "word": "Mouse",
+        "hint": "Kursor penunjuk klik"
+      },
+      "Technology\tPrinter\tPaper ink output": {
+        "word": "Printer",
+        "hint": "Keluaran tinta kertas"
+      },
+      "Technology\tScanner\tDigitalizing paper document": {
+        "word": "Pemindai",
+        "hint": "Mendigitalkan dokumen kertas"
+      },
+      "Technology\tMonitor\tDisplay screen unit": {
+        "word": "Monitor",
+        "hint": "Unit layar tampilan"
+      },
+      "Technology\tHard Drive\tData storage disk": {
+        "word": "Hard Drive",
+        "hint": "Disk penyimpanan data"
+      },
+      "Technology\tUSB Flash Drive\tThumb stick storage byte": {
+        "word": "USB Flash Drive",
+        "hint": "Byte penyimpanan stik jempol"
+      },
+      "Weapons\tSword\tLong metal blade knight": {
+        "word": "Pedang",
+        "hint": "Pisau logam panjang kesatria"
+      },
+      "Weapons\tBow and Arrow\tString pulling projectiles archery": {
+        "word": "Panah dan Busur",
+        "hint": "Proyektil penarik benang panahan"
+      },
+      "Weapons\tGun\tFirearm bullets shooting": {
+        "word": "Senjata Api",
+        "hint": "Peluru tembak senjata api"
+      },
+      "Weapons\tKnife\tShort sharp blade cutting": {
+        "word": "Pisau",
+        "hint": "Pisau tajam pendek memotong"
+      },
+      "Weapons\tSpear\tLong pole pointy end": {
+        "word": "Tombak",
+        "hint": "Tiang panjang ujung runcing"
+      },
+      "Weapons\tAxe\tChopping wood blade": {
+        "word": "Kapak",
+        "hint": "Pisau pemotong kayu"
+      },
+      "Weapons\tMace\tSpiked club medieval": {
+        "word": "Mace",
+        "hint": "Gada berduri abad pertengahan"
+      },
+      "Weapons\tShield\tDefensive blocking gear": {
+        "word": "Perisai",
+        "hint": "Alat pelindung memblokir"
+      },
+      "Weapons\tCrossbow\tHorizontal mechanical bow": {
+        "word": "Busur Panah",
+        "hint": "Busur mekanis horizontal"
+      },
+      "Weapons\tWhip\tSnapping leather cord": {
+        "word": "Cambuk",
+        "hint": "Tali kulit yang menjentik"
+      },
+      "Weapons\tCannon\tHeavy ball firing artillery": {
+        "word": "Meriam",
+        "hint": "Artileri penembak bola berat"
+      },
+      "Weapons\tGrenade\tExplosive thrown pin": {
+        "word": "Granat",
+        "hint": "Peledak yang dilempar pin"
+      },
+      "Weapons\tDagger\tSmall personal stabbing knife": {
+        "word": "Belati",
+        "hint": "Pisau penusuk pribadi kecil"
+      },
+      "Weapons\tBoomerang\tReturning thrown curve": {
+        "word": "Bumerang",
+        "hint": "Lekukan lemparan kembali"
+      },
+      "Weapons\tNunchucks\tTwo sticks chain martial arts": {
+        "word": "Nunchucks",
+        "hint": "Dua tongkat rantai bela diri"
+      },
+      "Weapons\tKatana\tJapanese samurai sword": {
+        "word": "Katana",
+        "hint": "Pedang samurai Jepang"
+      },
+      "Weapons\tSniper Rifle\tLong range scope gun": {
+        "word": "Senapan Penembak Jitu",
+        "hint": "Senjata jarak jauh dengan teropong"
+      },
+      "Weapons\tShotgun\tScatter close range gun": {
+        "word": "Senapan",
+        "hint": "Senjata jarak dekat menyebar"
+      },
+      "Weapons\tMachine Gun\tRapid fire heavy weapon": {
+        "word": "Senapan Mesin",
+        "hint": "Senjata berat tembakan cepat"
+      },
+      "Weapons\tRocket Launcher\tExplosive projectile huge": {
+        "word": "Peluncur Roket",
+        "hint": "Proyektil peledak besar"
+      },
+      "Insects\tButterfly\tColorful flying wings cocoon": {
+        "word": "Kupu-kupu",
+        "hint": "Sayap terbang berwarna kepompong"
+      },
+      "Insects\tBee\tYellow black buzzing honey": {
+        "word": "Lebah",
+        "hint": "Kuning hitam berdengung madu"
+      },
+      "Insects\tAnt\tTiny marching strong colony": {
+        "word": "Semut",
+        "hint": "Koloni kecil berbaris kuat"
+      },
+      "Insects\tMosquito\tBiting annoying blood sucker": {
+        "word": "Nyamuk",
+        "hint": "Menggigit pengganggu penghisap darah"
+      },
+      "Insects\tFly\tBuzzing house pest wing": {
+        "word": "Lalat",
+        "hint": "Serangga rumah berdengung sayap"
+      },
+      "Insects\tSpider\tEight legs webs (Wait technically arachnid)": {
+        "word": "Laba-laba",
+        "hint": "Delapan kaki jaring (Sebenarnya arachnida)"
+      },
+      "Insects\tBeetle\tHard shell crawling bug": {
+        "word": "Kumbang",
+        "hint": "Serangga merayap cangkang keras"
+      },
+      "Insects\tLadybug\tRed black dots spotted wings": {
+        "word": "Kumbang koksi",
+        "hint": "Merah titik hitam sayap berbintik"
+      },
+      "Insects\tGrasshopper\tJumping green long legs": {
+        "word": "Belalang",
+        "hint": "Melompat hijau kaki panjang"
+      },
+      "Insects\tCricket\tChirping night sound jumper": {
+        "word": "Jangkrik",
+        "hint": "Suara malam berderik pelompat"
+      },
+      "Insects\tCockroach\tSurviving gross fast crawler": {
+        "word": "Kecoa",
+        "hint": "Bertahan hidup menjijikkan perayap cepat"
+      },
+      "Insects\tMoth\tDusty wings attracted light": {
+        "word": "Ngengat",
+        "hint": "Sayap berdebu tertarik cahaya"
+      },
+      "Insects\tWasp\tAggressive stinging yellow striped": {
+        "word": "Tawon",
+        "hint": "Agresif menyengat bergaris kuning"
+      },
+      "Insects\tHornet\tLarge aggressive stinging nest": {
+        "word": "Tabuhan",
+        "hint": "Sarang besar agresif menyengat"
+      },
+      "Insects\tDragonfly\tLong body fast flying four wings": {
+        "word": "Capung",
+        "hint": "Tubuh panjang terbang cepat empat sayap"
+      },
+      "Insects\tCaterpillar\tCrawling wormy fuzzy butterfly baby": {
+        "word": "Ulat",
+        "hint": "Bayi kupu-kupu berbulu seperti cacing merayap"
+      },
+      "Insects\tCentipede\tMany long legs crawler fast": {
+        "word": "Kelabang",
+        "hint": "Perayap berkaki banyak dan panjang cepat"
+      },
+      "Insects\tFlea\tJumping tiny pet pest": {
+        "word": "Kutu",
+        "hint": "Hama hewan peliharaan kecil melompat"
+      },
+      "Insects\tTick\tBlood sucking woods parasite": {
+        "word": "Kutu caplak",
+        "hint": "Parasit penghisap darah di hutan"
+      },
+      "Insects\tBedbug\tMattress biting nuisance": {
+        "word": "Kutu busuk",
+        "hint": "Gangguan menggigit kasur"
+      },
+      "Occupations\tPilot\tFlying": {
+        "word": "Pilot",
+        "hint": "Terbang"
+      },
+      "Occupations\tArtist\tCreative": {
+        "word": "Seniman",
+        "hint": "Kreatif"
+      },
+      "Occupations\tEngineer\tDesign": {
+        "word": "Insinyur",
+        "hint": "Desain"
+      },
+      "Occupations\tFarmer\tAgriculture": {
+        "word": "Petani",
+        "hint": "Pertanian"
+      },
+      "Occupations\tScientist\tResearch": {
+        "word": "Ilmuwan",
+        "hint": "Penelitian"
+      },
+      "Occupations\tActor\tStage": {
+        "word": "Aktor",
+        "hint": "Panggung"
+      },
+      "Occupations\tMusician\tInstruments": {
+        "word": "Musisi",
+        "hint": "Instrumen"
+      },
+      "Occupations\tLawyer\tCourt": {
+        "word": "Pengacara",
+        "hint": "Pengadilan"
+      },
+      "Occupations\tJudge\tGavel": {
+        "word": "Hakim",
+        "hint": "Palu"
+      },
+      "Occupations\tPlumber\tPipes": {
+        "word": "Tukang Ledeng",
+        "hint": "Pipa"
+      },
+      "Occupations\tElectrician\tWires": {
+        "word": "Tukang Listrik",
+        "hint": "Kabel"
+      },
+      "Occupations\tCarpenter\tWood": {
+        "word": "Tukang Kayu",
+        "hint": "Kayu"
+      },
+      "Occupations\tMechanic\tFixes": {
+        "word": "Mekanik",
+        "hint": "Memperbaiki"
+      },
+      "Occupations\tProgrammer\tCode": {
+        "word": "Programmer",
+        "hint": "Kode"
+      },
+      "Occupations\tAstronaut\tSpace": {
+        "word": "Astronot",
+        "hint": "Angkasa"
+      },
+      "Holidays\tChristmas\tDecember trees presents Santa": {
+        "word": "Natal",
+        "hint": "Pohon Desember hadiah Sinterklas"
+      },
+      "Holidays\tHalloween\tOctober costumes candy spooky": {
+        "word": "Halloween",
+        "hint": "Oktober kostum permen seram"
+      },
+      "Holidays\tThanksgiving\tNovember turkey grateful": {
+        "word": "Thanksgiving",
+        "hint": "November kalkun bersyukur"
+      },
+      "Holidays\tEaster\tSpring bunnies eggs chocolate": {
+        "word": "Paskah",
+        "hint": "Musim semi kelinci telur cokelat"
+      },
+      "Holidays\tValentine's Day\tFebruary love hearts romantic": {
+        "word": "Hari Valentine",
+        "hint": "Cinta Februari hati romantis"
+      },
+      "Holidays\tNew Year's Eve\tDecember 31st midnight fireworks": {
+        "word": "Malam Tahun Baru",
+        "hint": "31 Desember tengah malam kembang api"
+      },
+      "Holidays\tIndependence Day\tJuly 4th freedom fireworks": {
+        "word": "Hari Kemerdekaan",
+        "hint": "4 Juli kebebasan kembang api"
+      },
+      "Holidays\tSt. Patrick's Day\tMarch green luck Irish": {
+        "word": "Hari St. Patrick",
+        "hint": "Maret hijau keberuntungan Irlandia"
+      },
+      "Holidays\tMother's Day\tAppreciating mom Sunday": {
+        "word": "Hari Ibu",
+        "hint": "Menghargai ibu Minggu"
+      },
+      "Holidays\tFather's Day\tAppreciating dad Sunday": {
+        "word": "Hari Ayah",
+        "hint": "Menghargai ayah Minggu"
+      },
+      "Holidays\tEarth Day\tApril helping planet nature": {
+        "word": "Hari Bumi",
+        "hint": "April membantu planet alam"
+      },
+      "Holidays\tLabor Day\tSeptember workers end summer": {
+        "word": "Hari Buruh",
+        "hint": "Pekerja September akhir musim panas"
+      },
+      "Holidays\tMemorial Day\tMay remembering fallen soldiers": {
+        "word": "Hari Peringatan",
+        "hint": "Mei mengenang tentara gugur"
+      },
+      "Holidays\tVeterans Day\tNovember honoring military output": {
+        "word": "Hari Veteran",
+        "hint": "November menghormati hasil militer"
+      },
+      "Holidays\tHanukkah\tJewish festival lights menorah": {
+        "word": "Hanukkah",
+        "hint": "Festival cahaya Yahudi menorah"
+      },
+      "Holidays\tDiwali\tIndian festival lights": {
+        "word": "Diwali",
+        "hint": "Festival cahaya India"
+      },
+      "Holidays\tRamadan\tIslamic fasting month": {
+        "word": "Ramadan",
+        "hint": "Bulan puasa Islam"
+      },
+      "Holidays\tOktoberfest\tGerman beer festival": {
+        "word": "Oktoberfest",
+        "hint": "Festival bir Jerman"
+      },
+      "Holidays\tCinco de Mayo\tMay 5th Mexican pride": {
+        "word": "Cinco de Mayo",
+        "hint": "5 Mei kebanggaan Meksiko"
+      },
+      "Holidays\tChinese New Year\tLunar calendar dragon": {
+        "word": "Tahun Baru Imlek",
+        "hint": "Naga kalender lunar"
+      },
+      "Fairy Tales\tCinderella\tGlass slipper pumpkin coach": {
+        "word": "Cinderella",
+        "hint": "Sepatu kaca kereta labu"
+      },
+      "Fairy Tales\tSnow White\tSeven dwarfs poisoned apple": {
+        "word": "Putri Salju",
+        "hint": "Tujuh kurcaci apel beracun"
+      },
+      "Fairy Tales\tSleeping Beauty\tSpinning wheel hundred years nap": {
+        "word": "Putri Tidur",
+        "hint": "Roda pemintal tidur seratus tahun"
+      },
+      "Fairy Tales\tLittle Red Riding Hood\tGrandma wolf basket": {
+        "word": "Gadis Kerudung Merah",
+        "hint": "Nenek serigala keranjang"
+      },
+      "Fairy Tales\tBeauty and the Beast\tCursed prince magical rose": {
+        "word": "Si Cantik dan Si Buruk Rupa",
+        "hint": "Pangeran terkutuk mawar ajaib"
+      },
+      "Fairy Tales\tPeter Pan\tNeverland Tinkerbell hook": {
+        "word": "Peter Pan",
+        "hint": "Neverland Tinkerbell kapten Hook"
+      },
+      "Fairy Tales\tAlice in Wonderland\tRabbit hole mad hatter queen": {
+        "word": "Alice di Negeri Ajaib",
+        "hint": "Lubang kelinci topi gila ratu"
+      },
+      "Fairy Tales\tPinocchio\tWooden boy growing nose string": {
+        "word": "Pinocchio",
+        "hint": "Anak kayu hidung memanjang tali"
+      },
+      "Fairy Tales\tAladdin\tMagic lamp genie carpet": {
+        "word": "Aladdin",
+        "hint": "Lampu ajaib jin karpet"
+      },
+      "Fairy Tales\tThe Little Mermaid\tAriel sea legs voice": {
+        "word": "Putri Duyung Kecil",
+        "hint": "Ariel laut kaki suara"
+      },
+      "Fairy Tales\tHansel and Gretel\tBreadcrumbs gingerbread witch": {
+        "word": "Hansel dan Gretel",
+        "hint": "Remah roti kue jahe penyihir"
+      },
+      "Fairy Tales\tRapunzel\tLong hair tower let down": {
+        "word": "Rapunzel",
+        "hint": "Rambut panjang menara ulurkan"
+      },
+      "Fairy Tales\tRumpelstiltskin\tSpinning straw gold name guess": {
+        "word": "Rumpelstiltskin",
+        "hint": "Memintal jerami emas tebak nama"
+      },
+      "Fairy Tales\tGoldilocks\tThree bears porridge bed chair": {
+        "word": "Goldilocks",
+        "hint": "Tiga beruang bubur tempat tidur kursi"
+      },
+      "Fairy Tales\tThe Ugly Duckling\tSwan transformation outcast": {
+        "word": "Itik Buruk Rupa",
+        "hint": "Transformasi angsa buangan"
+      },
+      "Fairy Tales\tJack and the Beanstalk\tMagic beans giant sky stalk": {
+        "word": "Jack dan Pohon Kacang",
+        "hint": "Kacang ajaib raksasa langit batang"
+      },
+      "Fairy Tales\tPuss in Boots\tClever cat feline footwear": {
+        "word": "Kucing Bersepatu Bot",
+        "hint": "Kucing pintar alas kaki kucing"
+      },
+      "Fairy Tales\tThe Princess and the Pea\tMattress stacking sensitive royal test": {
+        "word": "Putri dan Kacang Polong",
+        "hint": "Tumpukan kasur uji sensitivitas kerajaan"
+      },
+      "Fairy Tales\tThe Gingerbread Man\tRun fast catch me dough": {
+        "word": "Manusia Roti Jahe",
+        "hint": "Lari cepat tangkap aku adonan"
+      },
+      "Fairy Tales\tThe Pied Piper\tRats children flute magic tune": {
+        "word": "Tukang Seruling Hamelin",
+        "hint": "Tikus anak-anak seruling lagu ajaib"
+      }
+    }
+  }
 }

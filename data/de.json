@@ -1,16 +1,4941 @@
 {
   "Orte": [
-    { "word": "Raumstation", "hint": "Orbit" },
-    { "word": "U-Boot", "hint": "Schiff" },
-    { "word": "Kasino", "hint": "Wetten" },
-    { "word": "Krankenhaus", "hint": "Klinik" },
-    { "word": "Bibliothek", "hint": "Bücher" }
+    {
+      "word": "Raumstation",
+      "hint": "Orbit"
+    },
+    {
+      "word": "U-Boot",
+      "hint": "Schiff"
+    },
+    {
+      "word": "Kasino",
+      "hint": "Wetten"
+    },
+    {
+      "word": "Krankenhaus",
+      "hint": "Klinik"
+    },
+    {
+      "word": "Bibliothek",
+      "hint": "Bücher"
+    }
   ],
   "Berufe": [
-    { "word": "Arzt", "hint": "Heiler" },
-    { "word": "Astronaut", "hint": "Pilot" },
-    { "word": "Koch", "hint": "Küche" },
-    { "word": "Klempner", "hint": "Rohre" },
-    { "word": "Detektiv", "hint": "Spürhund" }
-  ]
+    {
+      "word": "Arzt",
+      "hint": "Heiler"
+    },
+    {
+      "word": "Astronaut",
+      "hint": "Pilot"
+    },
+    {
+      "word": "Koch",
+      "hint": "Küche"
+    },
+    {
+      "word": "Klempner",
+      "hint": "Rohre"
+    },
+    {
+      "word": "Detektiv",
+      "hint": "Spürhund"
+    },
+    {
+      "word": "Pilot",
+      "hint": "Fliegen"
+    },
+    {
+      "word": "Künstler",
+      "hint": "Kreativ"
+    },
+    {
+      "word": "Ingenieur",
+      "hint": "Design"
+    },
+    {
+      "word": "Bauer",
+      "hint": "Landwirtschaft"
+    },
+    {
+      "word": "Wissenschaftler",
+      "hint": "Forschung"
+    },
+    {
+      "word": "Schauspieler",
+      "hint": "Bühne"
+    },
+    {
+      "word": "Musiker",
+      "hint": "Instrumente"
+    },
+    {
+      "word": "Anwalt",
+      "hint": "Gericht"
+    },
+    {
+      "word": "Richter",
+      "hint": "Hammer"
+    },
+    {
+      "word": "Klempner",
+      "hint": "Rohre"
+    },
+    {
+      "word": "Elektriker",
+      "hint": "Kabel"
+    },
+    {
+      "word": "Schreiner",
+      "hint": "Holz"
+    },
+    {
+      "word": "Mechaniker",
+      "hint": "Reparaturen"
+    },
+    {
+      "word": "Programmierer",
+      "hint": "Code"
+    },
+    {
+      "word": "Astronaut",
+      "hint": "Weltraum"
+    }
+  ],
+  "Tiere": [
+    {
+      "word": "Löwe",
+      "hint": "Brüllen"
+    },
+    {
+      "word": "Elefant",
+      "hint": "Rüssel"
+    },
+    {
+      "word": "Giraffe",
+      "hint": "Hals"
+    },
+    {
+      "word": "Tiger",
+      "hint": "Streifen"
+    },
+    {
+      "word": "Pinguin",
+      "hint": "Eis"
+    },
+    {
+      "word": "Känguru",
+      "hint": "Beutel"
+    },
+    {
+      "word": "Delfin",
+      "hint": "Ozean"
+    },
+    {
+      "word": "Wal",
+      "hint": "Riesig"
+    },
+    {
+      "word": "Hai",
+      "hint": "Zähne"
+    },
+    {
+      "word": "Adler",
+      "hint": "Flügel"
+    },
+    {
+      "word": "Wolf",
+      "hint": "Heulen"
+    },
+    {
+      "word": "Bär",
+      "hint": "Honig"
+    },
+    {
+      "word": "Affe",
+      "hint": "Bäume"
+    },
+    {
+      "word": "Schlange",
+      "hint": "Kriechen"
+    },
+    {
+      "word": "Krokodil",
+      "hint": "Sumpf"
+    },
+    {
+      "word": "Nilpferd",
+      "hint": "Fluss"
+    },
+    {
+      "word": "Nashorn",
+      "hint": "Horn"
+    },
+    {
+      "word": "Zebra",
+      "hint": "Streifen"
+    },
+    {
+      "word": "Gepard",
+      "hint": "Schnell"
+    },
+    {
+      "word": "Panda",
+      "hint": "Bambus"
+    }
+  ],
+  "Fahrzeuge": [
+    {
+      "word": "Auto",
+      "hint": "Straße"
+    },
+    {
+      "word": "Fahrrad",
+      "hint": "Pedale"
+    },
+    {
+      "word": "Motorrad",
+      "hint": "Zwei Räder"
+    },
+    {
+      "word": "Bus",
+      "hint": "Öffentlich"
+    },
+    {
+      "word": "Zug",
+      "hint": "Schienen"
+    },
+    {
+      "word": "Flugzeug",
+      "hint": "Himmel"
+    },
+    {
+      "word": "Hubschrauber",
+      "hint": "Chopper"
+    },
+    {
+      "word": "Boot",
+      "hint": "Wasser"
+    },
+    {
+      "word": "Schiff",
+      "hint": "Ozean"
+    },
+    {
+      "word": "Raumschiff",
+      "hint": "Sterne"
+    },
+    {
+      "word": "U-Boot",
+      "hint": "Unterwasser"
+    },
+    {
+      "word": "Lastwagen",
+      "hint": "Ladung"
+    },
+    {
+      "word": "Traktor",
+      "hint": "Bauernhof"
+    },
+    {
+      "word": "Roller",
+      "hint": "Klein"
+    },
+    {
+      "word": "Skateboard",
+      "hint": "Tricks"
+    },
+    {
+      "word": "Inlineskates",
+      "hint": "Räder"
+    },
+    {
+      "word": "Heißluftballon",
+      "hint": "Korb"
+    },
+    {
+      "word": "Luftschiff",
+      "hint": "Schwebend"
+    },
+    {
+      "word": "Luftkissenfahrzeug",
+      "hint": "Luftkissen"
+    },
+    {
+      "word": "Schneemobil",
+      "hint": "Winter"
+    }
+  ],
+  "Essen & Trinken": [
+    {
+      "word": "Pizza",
+      "hint": "Scheiben"
+    },
+    {
+      "word": "Burger",
+      "hint": "Brötchen"
+    },
+    {
+      "word": "Sushi",
+      "hint": "Roher Fisch"
+    },
+    {
+      "word": "Pasta",
+      "hint": "Nudeln"
+    },
+    {
+      "word": "Salat",
+      "hint": "Grünzeug"
+    },
+    {
+      "word": "Taco",
+      "hint": "Schale"
+    },
+    {
+      "word": "Steak",
+      "hint": "Rindfleisch"
+    },
+    {
+      "word": "Eis",
+      "hint": "Kaltes Dessert"
+    },
+    {
+      "word": "Kuchen",
+      "hint": "Geburtstag"
+    },
+    {
+      "word": "Schokolade",
+      "hint": "Süßer Kakao"
+    },
+    {
+      "word": "Kaffee",
+      "hint": "Morgengetränk"
+    },
+    {
+      "word": "Tee",
+      "hint": "Blätter"
+    },
+    {
+      "word": "Limonade",
+      "hint": "Sprudelnd"
+    },
+    {
+      "word": "Saft",
+      "hint": "Fruchtextrakt"
+    },
+    {
+      "word": "Wasser",
+      "hint": "H2O"
+    },
+    {
+      "word": "Wein",
+      "hint": "Trauben"
+    },
+    {
+      "word": "Bier",
+      "hint": "Brauen"
+    },
+    {
+      "word": "Milch",
+      "hint": "Milchprodukt"
+    },
+    {
+      "word": "Käse",
+      "hint": "Mäuse lieben ihn"
+    },
+    {
+      "word": "Brot",
+      "hint": "Bäcker"
+    }
+  ],
+  "Länder": [
+    {
+      "word": "USA",
+      "hint": "Sterne und Streifen"
+    },
+    {
+      "word": "Kanada",
+      "hint": "Ahornblatt"
+    },
+    {
+      "word": "Brasilien",
+      "hint": "Samba"
+    },
+    {
+      "word": "UK",
+      "hint": "Tee & Monarchie"
+    },
+    {
+      "word": "Frankreich",
+      "hint": "Eiffel"
+    },
+    {
+      "word": "Deutschland",
+      "hint": "Oktoberfest"
+    },
+    {
+      "word": "Italien",
+      "hint": "Stiefelform"
+    },
+    {
+      "word": "Spanien",
+      "hint": "Flamenco"
+    },
+    {
+      "word": "Russland",
+      "hint": "Größte Fläche"
+    },
+    {
+      "word": "China",
+      "hint": "Große Mauer"
+    },
+    {
+      "word": "Japan",
+      "hint": "Aufgehende Sonne"
+    },
+    {
+      "word": "Indien",
+      "hint": "Taj Mahal"
+    },
+    {
+      "word": "Australien",
+      "hint": "Kängurus"
+    },
+    {
+      "word": "Ägypten",
+      "hint": "Pyramiden"
+    },
+    {
+      "word": "Südafrika",
+      "hint": "Safari"
+    },
+    {
+      "word": "Mexiko",
+      "hint": "Sombrero"
+    },
+    {
+      "word": "Argentinien",
+      "hint": "Tango"
+    },
+    {
+      "word": "Schweden",
+      "hint": "Ikea"
+    },
+    {
+      "word": "Norwegen",
+      "hint": "Fjorde"
+    },
+    {
+      "word": "Schweiz",
+      "hint": "Alpen"
+    }
+  ],
+  "Berühmte Persönlichkeiten": [
+    {
+      "word": "Albert Einstein",
+      "hint": "E=mc2"
+    },
+    {
+      "word": "Isaac Newton",
+      "hint": "Apfel Schwerkraft"
+    },
+    {
+      "word": "Leonardo da Vinci",
+      "hint": "Mona Lisa"
+    },
+    {
+      "word": "Vincent van Gogh",
+      "hint": "Sternennacht"
+    },
+    {
+      "word": "William Shakespeare",
+      "hint": "Dramatiker"
+    },
+    {
+      "word": "Mozart",
+      "hint": "Klassischer Komponist"
+    },
+    {
+      "word": "Beethoven",
+      "hint": "Tauber Komponist"
+    },
+    {
+      "word": "Elvis Presley",
+      "hint": "King des Rock"
+    },
+    {
+      "word": "Michael Jackson",
+      "hint": "King des Pop"
+    },
+    {
+      "word": "Marilyn Monroe",
+      "hint": "Hollywood-Ikone"
+    },
+    {
+      "word": "Charlie Chaplin",
+      "hint": "Stummfilmkomödie"
+    },
+    {
+      "word": "Walt Disney",
+      "hint": "Mickeys Schöpfer"
+    },
+    {
+      "word": "Steve Jobs",
+      "hint": "Apple-Gründer"
+    },
+    {
+      "word": "Bill Gates",
+      "hint": "Microsoft-Gründer"
+    },
+    {
+      "word": "Elon Musk",
+      "hint": "Tesla"
+    },
+    {
+      "word": "Nelson Mandela",
+      "hint": "Südafrika Anführer"
+    },
+    {
+      "word": "Martin Luther King Jr.",
+      "hint": "Ich habe einen Traum"
+    },
+    {
+      "word": "Gandhi",
+      "hint": "Friedlicher Protest"
+    },
+    {
+      "word": "Abraham Lincoln",
+      "hint": "Zylinderhut"
+    },
+    {
+      "word": "George Washington",
+      "hint": "Erster US-Präsident"
+    }
+  ],
+  "Filme": [
+    {
+      "word": "Star Wars",
+      "hint": "Jedi"
+    },
+    {
+      "word": "Jurassic Park",
+      "hint": "Dinosaurier"
+    },
+    {
+      "word": "The Matrix",
+      "hint": "Rote Pille"
+    },
+    {
+      "word": "Titanic",
+      "hint": "Sinkendes Schiff"
+    },
+    {
+      "word": "Avatar",
+      "hint": "Blaue Außerirdische"
+    },
+    {
+      "word": "Der Pate",
+      "hint": "Mafia"
+    },
+    {
+      "word": "Harry Potter",
+      "hint": "Zauberer"
+    },
+    {
+      "word": "Herr der Ringe",
+      "hint": "Ein Ring"
+    },
+    {
+      "word": "Avengers",
+      "hint": "Marvel Helden"
+    },
+    {
+      "word": "Spider-Man",
+      "hint": "Netzschwinger"
+    },
+    {
+      "word": "Batman",
+      "hint": "Dunkler Ritter"
+    },
+    {
+      "word": "Superman",
+      "hint": "Mann aus Stahl"
+    },
+    {
+      "word": "Toy Story",
+      "hint": "Lebendiges Spielzeug"
+    },
+    {
+      "word": "Der König der Löwen",
+      "hint": "Hakuna Matata"
+    },
+    {
+      "word": "Die Eiskönigin",
+      "hint": "Lass jetzt los"
+    },
+    {
+      "word": "Kevin – Allein zu Haus",
+      "hint": "Zurückgelassenes Kind"
+    },
+    {
+      "word": "Der weiße Hai",
+      "hint": "Riesenhai"
+    },
+    {
+      "word": "E.T.",
+      "hint": "Nach Hause telefonieren"
+    },
+    {
+      "word": "Indiana Jones",
+      "hint": "Archäologenpeitsche"
+    },
+    {
+      "word": "Zurück in die Zukunft",
+      "hint": "DeLorean Zeit"
+    }
+  ],
+  "Superhelden": [
+    {
+      "word": "Superman",
+      "hint": "Krypton"
+    },
+    {
+      "word": "Batman",
+      "hint": "Gotham"
+    },
+    {
+      "word": "Spider-Man",
+      "hint": "Netze"
+    },
+    {
+      "word": "Iron Man",
+      "hint": "Tony Stark"
+    },
+    {
+      "word": "Captain America",
+      "hint": "Vibranium-Schild"
+    },
+    {
+      "word": "Thor",
+      "hint": "Hammer"
+    },
+    {
+      "word": "Hulk",
+      "hint": "Grün wütend"
+    },
+    {
+      "word": "Black Widow",
+      "hint": "Spionin, Avenger"
+    },
+    {
+      "word": "Wolverine",
+      "hint": "Adamantium-Krallen"
+    },
+    {
+      "word": "Flash",
+      "hint": "Schnellster Mann"
+    },
+    {
+      "word": "Wonder Woman",
+      "hint": "Lasso der Wahrheit"
+    },
+    {
+      "word": "Aquaman",
+      "hint": "Atlantis"
+    },
+    {
+      "word": "Green Lantern",
+      "hint": "Kraftring"
+    },
+    {
+      "word": "Deadpool",
+      "hint": "Söldner mit Mundwerk"
+    },
+    {
+      "word": "Black Panther",
+      "hint": "Wakanda"
+    },
+    {
+      "word": "Doctor Strange",
+      "hint": "Oberster Zauberer"
+    },
+    {
+      "word": "Ant-Man",
+      "hint": "Schrumpfen"
+    },
+    {
+      "word": "Daredevil",
+      "hint": "Blinder Held"
+    },
+    {
+      "word": "Punisher",
+      "hint": "Selbstjustiz"
+    },
+    {
+      "word": "Ghost Rider",
+      "hint": "Brennender Schädel"
+    }
+  ],
+  "Sport": [
+    {
+      "word": "Fußball",
+      "hint": "Elfmeter"
+    },
+    {
+      "word": "Basketball",
+      "hint": "Korb"
+    },
+    {
+      "word": "Baseball",
+      "hint": "Homerun"
+    },
+    {
+      "word": "Tennis",
+      "hint": "Schläger"
+    },
+    {
+      "word": "Golf",
+      "hint": "Hole-in-one"
+    },
+    {
+      "word": "Volleyball",
+      "hint": "Netz und Schmetterschlag"
+    },
+    {
+      "word": "Schwimmen",
+      "hint": "Schwimmbahnen"
+    },
+    {
+      "word": "Leichtathletik",
+      "hint": "Bahn und Feld"
+    },
+    {
+      "word": "Gymnastik",
+      "hint": "Schwebebalken"
+    },
+    {
+      "word": "Boxen",
+      "hint": "Handschuhe und Ring"
+    },
+    {
+      "word": "Ringen",
+      "hint": "Festnageln zum Sieg"
+    },
+    {
+      "word": "Kampfsport",
+      "hint": "Schwarzer Gürtel"
+    },
+    {
+      "word": "Radfahren",
+      "hint": "Fahrradrennen"
+    },
+    {
+      "word": "Skifahren",
+      "hint": "Schneeberg"
+    },
+    {
+      "word": "Snowboarden",
+      "hint": "Ein Brett auf Schnee"
+    },
+    {
+      "word": "Surfen",
+      "hint": "Meereswellen"
+    },
+    {
+      "word": "Rugby",
+      "hint": "Gedränge"
+    },
+    {
+      "word": "Cricket",
+      "hint": "Schlagmann und Werfer"
+    },
+    {
+      "word": "Eishockey",
+      "hint": "Puck auf Eis"
+    },
+    {
+      "word": "Tischtennis",
+      "hint": "Pingpong"
+    }
+  ],
+  "Musikinstrumente": [
+    {
+      "word": "Klavier",
+      "hint": "Schwarz-weiße Tasten"
+    },
+    {
+      "word": "Gitarre",
+      "hint": "Sechs Saiten anschlagen"
+    },
+    {
+      "word": "Geige",
+      "hint": "Bogen und Kinnauflage"
+    },
+    {
+      "word": "Trommel",
+      "hint": "Schläge und Stöcke"
+    },
+    {
+      "word": "Flöte",
+      "hint": "Über Loch blasen"
+    },
+    {
+      "word": "Trompete",
+      "hint": "Messingventile"
+    },
+    {
+      "word": "Saxophon",
+      "hint": "Jazz-Messingblasinstrument"
+    },
+    {
+      "word": "Cello",
+      "hint": "Großes Saiteninstrument sitzend"
+    },
+    {
+      "word": "Klarinette",
+      "hint": "Schwarzes Holzblasinstrument"
+    },
+    {
+      "word": "Harfe",
+      "hint": "Engelsaiten"
+    },
+    {
+      "word": "Posaune",
+      "hint": "Messingschlitten"
+    },
+    {
+      "word": "Tuba",
+      "hint": "Größtes Blechblasinstrument Bass"
+    },
+    {
+      "word": "Akkordeon",
+      "hint": "Ziehharmonika"
+    },
+    {
+      "word": "Banjo",
+      "hint": "Volkssaiten rund"
+    },
+    {
+      "word": "Mandoline",
+      "hint": "Acht Saiten klein"
+    },
+    {
+      "word": "Ukulele",
+      "hint": "Hawaiianische vier Saiten"
+    },
+    {
+      "word": "Xylophon",
+      "hint": "Holzstäbe Schlägel"
+    },
+    {
+      "word": "Synthesizer",
+      "hint": "Elektronische Tasten"
+    },
+    {
+      "word": "Bass",
+      "hint": "Tieffrequenz-Saiten"
+    },
+    {
+      "word": "Oboe",
+      "hint": "Doppelrohrblatt"
+    }
+  ],
+  "Historische Ereignisse": [
+    {
+      "word": "Erster Weltkrieg",
+      "hint": "Schützengräben"
+    },
+    {
+      "word": "Zweiter Weltkrieg",
+      "hint": "Achsenmächte & Alliierte"
+    },
+    {
+      "word": "Französische Revolution",
+      "hint": "Guillotine"
+    },
+    {
+      "word": "Amerikanische Revolution",
+      "hint": "1776"
+    },
+    {
+      "word": "Mondlandung",
+      "hint": "Apollo 11"
+    },
+    {
+      "word": "Fall der Berliner Mauer",
+      "hint": "Ende des Kalten Krieges"
+    },
+    {
+      "word": "Kalter Krieg",
+      "hint": "Spannung USA vs. UdSSR"
+    },
+    {
+      "word": "Renaissance",
+      "hint": "Wiedergeburt der Kunst"
+    },
+    {
+      "word": "Industrielle Revolution",
+      "hint": "Fabriken & Dampf"
+    },
+    {
+      "word": "Entdeckung Amerikas",
+      "hint": "Kolumbus 1492"
+    },
+    {
+      "word": "Schwarzer Tod",
+      "hint": "Pest"
+    },
+    {
+      "word": "Untergang der Titanic",
+      "hint": "Eisberg 1912"
+    },
+    {
+      "word": "Unabhängigkeit Indiens",
+      "hint": "Teilung 1947"
+    },
+    {
+      "word": "Magna Carta",
+      "hint": "Dokument von 1215"
+    },
+    {
+      "word": "Unabhängigkeitserklärung",
+      "hint": "4. Juli"
+    },
+    {
+      "word": "Erfindung Buchdruck",
+      "hint": "Gutenberg"
+    },
+    {
+      "word": "Entstehung des Internets",
+      "hint": "World Wide Web beginnt"
+    },
+    {
+      "word": "Katastrophe von Tschernobyl",
+      "hint": "Nukleare Kernschmelze"
+    },
+    {
+      "word": "Anschläge vom 11. September",
+      "hint": "Zwillingstürme"
+    },
+    {
+      "word": "COVID-19 Pandemie",
+      "hint": "Globale Quarantäne"
+    }
+  ],
+  "Fiktive Charaktere": [
+    {
+      "word": "Sherlock Holmes",
+      "hint": "Detektiv"
+    },
+    {
+      "word": "Mickey Maus",
+      "hint": "Disney-Maskottchen"
+    },
+    {
+      "word": "Bugs Bunny",
+      "hint": "Was geht, Doc?"
+    },
+    {
+      "word": "Homer Simpson",
+      "hint": "Nein!"
+    },
+    {
+      "word": "SpongeBob",
+      "hint": "Ananas unter dem Meer"
+    },
+    {
+      "word": "Mario",
+      "hint": "Klempnerheld"
+    },
+    {
+      "word": "Pikachu",
+      "hint": "Elektrische Maus"
+    },
+    {
+      "word": "Sonic",
+      "hint": "Blauer, schneller Igel"
+    },
+    {
+      "word": "Darth Vader",
+      "hint": "Ich bin dein Vater"
+    },
+    {
+      "word": "James Bond",
+      "hint": "007"
+    },
+    {
+      "word": "Harry Potter",
+      "hint": "Der Junge, der lebte"
+    },
+    {
+      "word": "Frodo Beutlin",
+      "hint": "Ringträger"
+    },
+    {
+      "word": "Dracula",
+      "hint": "Vampirgraf"
+    },
+    {
+      "word": "Frankenstein",
+      "hint": "Monsterschöpfer"
+    },
+    {
+      "word": "King Kong",
+      "hint": "Riesenaffe"
+    },
+    {
+      "word": "Godzilla",
+      "hint": "Radioaktive Eidechse"
+    },
+    {
+      "word": "Superman",
+      "hint": "Clark Kent"
+    },
+    {
+      "word": "Batman",
+      "hint": "Bruce Wayne"
+    },
+    {
+      "word": "Spider-Man",
+      "hint": "Peter Parker"
+    },
+    {
+      "word": "Peter Pan",
+      "hint": "Nimmerland-Junge"
+    }
+  ],
+  "Videospiele": [
+    {
+      "word": "Super Mario Bros",
+      "hint": "Spring auf Goombas"
+    },
+    {
+      "word": "Minecraft",
+      "hint": "Blöcke und Creeper"
+    },
+    {
+      "word": "Tetris",
+      "hint": "Fallende Formen"
+    },
+    {
+      "word": "Pac-Man",
+      "hint": "Gelbe Kreis-Geister"
+    },
+    {
+      "word": "Grand Theft Auto",
+      "hint": "Autos stehlen"
+    },
+    {
+      "word": "Call of Duty",
+      "hint": "Militär-Shooter"
+    },
+    {
+      "word": "Legend of Zelda",
+      "hint": "Links Aufgabe"
+    },
+    {
+      "word": "Pokemon",
+      "hint": "Muss sie alle fangen"
+    },
+    {
+      "word": "World of Warcraft",
+      "hint": "Riesiges MMO"
+    },
+    {
+      "word": "Fortnite",
+      "hint": "Battle Royale Bauen"
+    },
+    {
+      "word": "League of Legends",
+      "hint": "MOBA Lanes"
+    },
+    {
+      "word": "Overwatch",
+      "hint": "Helden-Team-Shooter"
+    },
+    {
+      "word": "Die Sims",
+      "hint": "Steuere virtuelle Leben"
+    },
+    {
+      "word": "Animal Crossing",
+      "hint": "Inselbewohner"
+    },
+    {
+      "word": "Skyrim",
+      "hint": "Drachenblut"
+    },
+    {
+      "word": "Red Dead Redemption",
+      "hint": "Cowboy Gesetzloser"
+    },
+    {
+      "word": "Halo",
+      "hint": "Master Chief"
+    },
+    {
+      "word": "Portal",
+      "hint": "Teleportations-Waffenrätsel"
+    },
+    {
+      "word": "Bioshock",
+      "hint": "Unterwasserstadt"
+    },
+    {
+      "word": "Half-Life",
+      "hint": "Gordon Freeman Brechstange"
+    }
+  ],
+  "Wahrzeichen": [
+    {
+      "word": "Eiffelturm",
+      "hint": "Paris Eisen"
+    },
+    {
+      "word": "Chinesische Mauer",
+      "hint": "Längstes Mauerwerk"
+    },
+    {
+      "word": "Freiheitsstatue",
+      "hint": "NY Fackel"
+    },
+    {
+      "word": "Kolosseum",
+      "hint": "Römische Gladiatoren"
+    },
+    {
+      "word": "Taj Mahal",
+      "hint": "Indisches Marmor-Mausoleum"
+    },
+    {
+      "word": "Pyramiden von Gizeh",
+      "hint": "Ägyptische alte Gräber"
+    },
+    {
+      "word": "Machu Picchu",
+      "hint": "Inka-Ruinen"
+    },
+    {
+      "word": "Stonehenge",
+      "hint": "UK stehende Steine"
+    },
+    {
+      "word": "Big Ben",
+      "hint": "Londoner Uhr"
+    },
+    {
+      "word": "Mount Rushmore",
+      "hint": "Präsidenten in Berg gemeißelt"
+    },
+    {
+      "word": "Christus der Erlöser",
+      "hint": "Rio Statue"
+    },
+    {
+      "word": "Sydney Opera House",
+      "hint": "Australisches Segeldach"
+    },
+    {
+      "word": "Akropolis",
+      "hint": "Athener Hügel"
+    },
+    {
+      "word": "Petronas Towers",
+      "hint": "Kuala Lumpur Zwillingshoch"
+    },
+    {
+      "word": "Burj Khalifa",
+      "hint": "Dubai höchstes"
+    },
+    {
+      "word": "Golden Gate Bridge",
+      "hint": "San Francisco rot"
+    },
+    {
+      "word": "Niagarafälle",
+      "hint": "USA/Kanada riesiger Wasserfall"
+    },
+    {
+      "word": "Grand Canyon",
+      "hint": "Arizona riesige Schlucht"
+    },
+    {
+      "word": "Schiefer Turm von Pisa",
+      "hint": "Geneigte italienische Basis"
+    },
+    {
+      "word": "Mount Everest",
+      "hint": "Höchster Gipfel"
+    }
+  ],
+  "Ängste & Phobien": [
+    {
+      "word": "Spinnen",
+      "hint": "Arachnophobie"
+    },
+    {
+      "word": "Höhen",
+      "hint": "Akrophobie"
+    },
+    {
+      "word": "Geschlossene Räume",
+      "hint": "Klaustrophobie"
+    },
+    {
+      "word": "Dunkelheit",
+      "hint": "Nyktophobie"
+    },
+    {
+      "word": "Schlangen",
+      "hint": "Ophidiophobie"
+    },
+    {
+      "word": "Fliegen",
+      "hint": "Aviophobie"
+    },
+    {
+      "word": "Hunde",
+      "hint": "Kynophobie"
+    },
+    {
+      "word": "Nadeln",
+      "hint": "Trypanophobie"
+    },
+    {
+      "word": "Geselligkeit",
+      "hint": "Soziale Phobie"
+    },
+    {
+      "word": "Keime",
+      "hint": "Mysophobie"
+    },
+    {
+      "word": "Öffentliches Sprechen",
+      "hint": "Glossophobie"
+    },
+    {
+      "word": "Tod",
+      "hint": "Thanatophobie"
+    },
+    {
+      "word": "Wasser",
+      "hint": "Aquaphobie"
+    },
+    {
+      "word": "Blut",
+      "hint": "Hämophobie"
+    },
+    {
+      "word": "Menschenmassen",
+      "hint": "Agoraphobie"
+    },
+    {
+      "word": "Clowns",
+      "hint": "Coulrophobie"
+    },
+    {
+      "word": "Zahnärzte",
+      "hint": "Dentophobie"
+    },
+    {
+      "word": "Donner",
+      "hint": "Astraphobie"
+    },
+    {
+      "word": "Feuer",
+      "hint": "Pyrophobie"
+    },
+    {
+      "word": "Geister",
+      "hint": "Phasmophobie"
+    }
+  ],
+  "Mythologische Kreaturen": [
+    {
+      "word": "Drache",
+      "hint": "Feuerspeiende Schuppen"
+    },
+    {
+      "word": "Einhorn",
+      "hint": "Ein Horn Pferd"
+    },
+    {
+      "word": "Phönix",
+      "hint": "Wiedergeborener feuriger Vogel"
+    },
+    {
+      "word": "Meerjungfrau",
+      "hint": "Halb Fisch halb Frau"
+    },
+    {
+      "word": "Zentaur",
+      "hint": "Halb Pferd halb Mann"
+    },
+    {
+      "word": "Greif",
+      "hint": "Löwen-Adler-Hybrid"
+    },
+    {
+      "word": "Pegasus",
+      "hint": "Geflügeltes Pferd"
+    },
+    {
+      "word": "Minotaurus",
+      "hint": "Stierköpfiger Mann"
+    },
+    {
+      "word": "Medusa",
+      "hint": "Schlangenhaare"
+    },
+    {
+      "word": "Krake",
+      "hint": "Riesiges Seeungeheuer"
+    },
+    {
+      "word": "Zyklop",
+      "hint": "Einäugiger Riese"
+    },
+    {
+      "word": "Sphinx",
+      "hint": "Löwenkörper Menschenkopf"
+    },
+    {
+      "word": "Cerberus",
+      "hint": "Dreiköpfiger Hund"
+    },
+    {
+      "word": "Chimäre",
+      "hint": "Löwen-Ziegen-Schlangen-Fusion"
+    },
+    {
+      "word": "Hydra",
+      "hint": "Vielköpfige Schlange"
+    },
+    {
+      "word": "Vampir",
+      "hint": "Blutsauger"
+    },
+    {
+      "word": "Werwolf",
+      "hint": "Vollmond-Transformation"
+    },
+    {
+      "word": "Troll",
+      "hint": "Brückenwächter"
+    },
+    {
+      "word": "Kobold",
+      "hint": "Kleiner grüner Unruhestifter"
+    },
+    {
+      "word": "Yeti",
+      "hint": "Abscheulicher Schneemensch"
+    }
+  ],
+  "Haushaltsgegenstände": [
+    {
+      "word": "Fernseher",
+      "hint": "Bildschirm zum Anschauen"
+    },
+    {
+      "word": "Kühlschrank",
+      "hint": "Kühlen von Speisen"
+    },
+    {
+      "word": "Mikrowelle",
+      "hint": "Schnelles Aufheizen"
+    },
+    {
+      "word": "Waschmaschine",
+      "hint": "Reinigung von Kleidung"
+    },
+    {
+      "word": "Bett",
+      "hint": "Schlafmöbel"
+    },
+    {
+      "word": "Sofa",
+      "hint": "Sitzgelegenheit im Wohnzimmer"
+    },
+    {
+      "word": "Tisch",
+      "hint": "Essfläche"
+    },
+    {
+      "word": "Stuhl",
+      "hint": "Sitzmöbel"
+    },
+    {
+      "word": "Lampe",
+      "hint": "Beleuchtungsgerät"
+    },
+    {
+      "word": "Uhr",
+      "hint": "Zeitanzeige"
+    },
+    {
+      "word": "Spiegel",
+      "hint": "Reflektierendes Glas"
+    },
+    {
+      "word": "Ofen",
+      "hint": "Backen von Speisen"
+    },
+    {
+      "word": "Toaster",
+      "hint": "Knuspriges Brot"
+    },
+    {
+      "word": "Mixer",
+      "hint": "Mischen von Smoothies"
+    },
+    {
+      "word": "Staubsauger",
+      "hint": "Saugen von Staub"
+    },
+    {
+      "word": "Bügeleisen",
+      "hint": "Bügeln von Kleidung"
+    },
+    {
+      "word": "Mülleimer",
+      "hint": "Müllbehälter"
+    },
+    {
+      "word": "Badewanne",
+      "hint": "Körperwäsche"
+    },
+    {
+      "word": "Toilette",
+      "hint": "Badnotwendigkeit"
+    },
+    {
+      "word": "Bücherregal",
+      "hint": "Aufbewahrung von Romanen"
+    }
+  ],
+  "Natur": [
+    {
+      "word": "Baum",
+      "hint": "Blätter & Stamm"
+    },
+    {
+      "word": "Blume",
+      "hint": "Blütenblätter"
+    },
+    {
+      "word": "Berg",
+      "hint": "Hoher Gipfel"
+    },
+    {
+      "word": "Fluss",
+      "hint": "Fließendes Wasser"
+    },
+    {
+      "word": "Ozean",
+      "hint": "Salziges Meer"
+    },
+    {
+      "word": "Wald",
+      "hint": "Viele Bäume"
+    },
+    {
+      "word": "Wüste",
+      "hint": "Sand und trocken"
+    },
+    {
+      "word": "Schnee",
+      "hint": "Kalte weiße Flocken"
+    },
+    {
+      "word": "Regen",
+      "hint": "Wasser fällt vom Himmel"
+    },
+    {
+      "word": "Sonne",
+      "hint": "Tagesstern"
+    },
+    {
+      "word": "Mond",
+      "hint": "Nachtsatellit"
+    },
+    {
+      "word": "Stern",
+      "hint": "Funkelnder Himmelspunkt"
+    },
+    {
+      "word": "Wolke",
+      "hint": "Weißes flauschiges Himmelsobjekt"
+    },
+    {
+      "word": "Blitz",
+      "hint": "Elektrischer Sturmblitz"
+    },
+    {
+      "word": "Wind",
+      "hint": "Sich bewegende Luftbrise"
+    },
+    {
+      "word": "Vulkan",
+      "hint": "Lava speiender Berg"
+    },
+    {
+      "word": "Höhle",
+      "hint": "Dunkel hohl felsig"
+    },
+    {
+      "word": "Wasserfall",
+      "hint": "Wasser fällt von Klippe"
+    },
+    {
+      "word": "Insel",
+      "hint": "Land umgeben von Wasser"
+    },
+    {
+      "word": "Gras",
+      "hint": "Grüne Rasenhalme"
+    }
+  ],
+  "Kleidung": [
+    {
+      "word": "Hemd",
+      "hint": "Oberkörperbekleidung"
+    },
+    {
+      "word": "Hose",
+      "hint": "Unterkörperbeine"
+    },
+    {
+      "word": "Kleid",
+      "hint": "Einteilige Damenbekleidung"
+    },
+    {
+      "word": "Rock",
+      "hint": "Herunterhängende Unterbekleidung"
+    },
+    {
+      "word": "Jacke",
+      "hint": "Oberbekleidung Mantel"
+    },
+    {
+      "word": "Pullover",
+      "hint": "Warmer Strickoberteil"
+    },
+    {
+      "word": "Socken",
+      "hint": "Fußbedeckung weich"
+    },
+    {
+      "word": "Schuhe",
+      "hint": "Fußbedeckung hart"
+    },
+    {
+      "word": "Hut",
+      "hint": "Kopfbedeckung Ausrüstung"
+    },
+    {
+      "word": "Handschuhe",
+      "hint": "Handwärmer Abdeckung"
+    },
+    {
+      "word": "Schal",
+      "hint": "Halstuch"
+    },
+    {
+      "word": "Gürtel",
+      "hint": "Taillenstraffer"
+    },
+    {
+      "word": "Krawatte",
+      "hint": "Anzug Halsaccessoire"
+    },
+    {
+      "word": "Unterwäsche",
+      "hint": "Basisschicht unten"
+    },
+    {
+      "word": "Shorts",
+      "hint": "Sommer Beinbekleidung"
+    },
+    {
+      "word": "Jeans",
+      "hint": "Denim Hose"
+    },
+    {
+      "word": "T-Shirt",
+      "hint": "Lässiges Kurzarmshirt"
+    },
+    {
+      "word": "Mantel",
+      "hint": "Schweres Winteroberteil"
+    },
+    {
+      "word": "Stiefel",
+      "hint": "Hoher Schuh Knöchel"
+    },
+    {
+      "word": "Sandalen",
+      "hint": "Offene Zehen Sommerschuhe"
+    }
+  ],
+  "Hobbys": [
+    {
+      "word": "Lesen",
+      "hint": "Bücher Seiten Romane"
+    },
+    {
+      "word": "Schreiben",
+      "hint": "Stift Papier Geschichten"
+    },
+    {
+      "word": "Zeichnen",
+      "hint": "Bleistift Kunst Skizze"
+    },
+    {
+      "word": "Malen",
+      "hint": "Pinsel Farben Leinwand"
+    },
+    {
+      "word": "Fotografie",
+      "hint": "Bilder machen Kamera"
+    },
+    {
+      "word": "Kochen",
+      "hint": "Mahlzeiten zubereiten"
+    },
+    {
+      "word": "Backen",
+      "hint": "Ofen Süßigkeiten Teig"
+    },
+    {
+      "word": "Gartenarbeit",
+      "hint": "Pflanzen Erde Blumen"
+    },
+    {
+      "word": "Angeln",
+      "hint": "Rute Rolle Wasser"
+    },
+    {
+      "word": "Wandern",
+      "hint": "Wege Berge laufen"
+    },
+    {
+      "word": "Camping",
+      "hint": "Zelt Natur Feuer"
+    },
+    {
+      "word": "Stricken",
+      "hint": "Wolle Nadeln Pullover"
+    },
+    {
+      "word": "Nähen",
+      "hint": "Faden Stoff Nadel"
+    },
+    {
+      "word": "Holzarbeiten",
+      "hint": "Schnitzen Bauen Holz"
+    },
+    {
+      "word": "Töpfern",
+      "hint": "Ton Drehscheibe"
+    },
+    {
+      "word": "Spielen",
+      "hint": "Videospiele Konsolen spielen"
+    },
+    {
+      "word": "Tanzen",
+      "hint": "Körper bewegen Rhythmus"
+    },
+    {
+      "word": "Singen",
+      "hint": "Vokale Melodien"
+    },
+    {
+      "word": "Reisen",
+      "hint": "Neue Orte besuchen"
+    },
+    {
+      "word": "Sammeln",
+      "hint": "Bestimmte Gegenstände sammeln"
+    }
+  ],
+  "Farben": [
+    {
+      "word": "Rot",
+      "hint": "Blut Apfel"
+    },
+    {
+      "word": "Blau",
+      "hint": "Himmel Ozean"
+    },
+    {
+      "word": "Gelb",
+      "hint": "Sonne Banane"
+    },
+    {
+      "word": "Grün",
+      "hint": "Gras Blätter"
+    },
+    {
+      "word": "Orange",
+      "hint": "Zitrusfrucht"
+    },
+    {
+      "word": "Lila",
+      "hint": "Trauben Königtum"
+    },
+    {
+      "word": "Rosa",
+      "hint": "Schwein Zuckerwatte"
+    },
+    {
+      "word": "Schwarz",
+      "hint": "Nacht Kohle"
+    },
+    {
+      "word": "Weiß",
+      "hint": "Schnee Milch"
+    },
+    {
+      "word": "Grau",
+      "hint": "Asche Wolken"
+    },
+    {
+      "word": "Braun",
+      "hint": "Erde Holz"
+    },
+    {
+      "word": "Gold",
+      "hint": "Glänzender Reichtum"
+    },
+    {
+      "word": "Silber",
+      "hint": "Zweiter Platz Metall"
+    },
+    {
+      "word": "Bronze",
+      "hint": "Dritter Platz Metall"
+    },
+    {
+      "word": "Cyan",
+      "hint": "Helles leuchtendes Blau"
+    },
+    {
+      "word": "Magenta",
+      "hint": "Tiefes purpurrotes Rot"
+    },
+    {
+      "word": "Indigo",
+      "hint": "Dunkles violett Blau"
+    },
+    {
+      "word": "Türkis",
+      "hint": "Blaugrüner Farbton"
+    },
+    {
+      "word": "Kastanienbraun",
+      "hint": "Dunkles bräunliches Rot"
+    },
+    {
+      "word": "Marineblau",
+      "hint": "Dunkles militärisches Blau"
+    }
+  ],
+  "Wissenschaft": [
+    {
+      "word": "Biologie",
+      "hint": "Lehre vom Leben"
+    },
+    {
+      "word": "Chemie",
+      "hint": "Elemente Reaktionen"
+    },
+    {
+      "word": "Physik",
+      "hint": "Materie Kräfte Energie"
+    },
+    {
+      "word": "Astronomie",
+      "hint": "Weltraum Planetenforschung"
+    },
+    {
+      "word": "Geologie",
+      "hint": "Erde Gesteinsstudie"
+    },
+    {
+      "word": "Atom",
+      "hint": "Kleinstes Teilchen Kern"
+    },
+    {
+      "word": "Molekül",
+      "hint": "Atome verbunden"
+    },
+    {
+      "word": "Zelle",
+      "hint": "Grundlegende Lebenseinheit"
+    },
+    {
+      "word": "DNA",
+      "hint": "Genetische Leiter"
+    },
+    {
+      "word": "Gravitation",
+      "hint": "Fallende Zugkraft"
+    },
+    {
+      "word": "Evolution",
+      "hint": "Spezies ändern sich im Laufe der Zeit"
+    },
+    {
+      "word": "Mikroskop",
+      "hint": "Winzige Dinge sehen"
+    },
+    {
+      "word": "Teleskop",
+      "hint": "Weite Dinge sehen"
+    },
+    {
+      "word": "Labor",
+      "hint": "Wissenschaftlicher Arbeitsplatz"
+    },
+    {
+      "word": "Experiment",
+      "hint": "Hypothese testen"
+    },
+    {
+      "word": "Theorie",
+      "hint": "Wissenschaftliche Erklärung Basis"
+    },
+    {
+      "word": "Fossil",
+      "hint": "Alte Gesteinsreste"
+    },
+    {
+      "word": "Virus",
+      "hint": "Mikroskopischer Krankheitserreger"
+    },
+    {
+      "word": "Bakterien",
+      "hint": "Einzelzellige Organismen"
+    },
+    {
+      "word": "Element",
+      "hint": "Periodensystem Element"
+    }
+  ],
+  "Emotionen": [
+    {
+      "word": "Glück",
+      "hint": "Freude lächeln"
+    },
+    {
+      "word": "Traurigkeit",
+      "hint": "Tränen weinen"
+    },
+    {
+      "word": "Wut",
+      "hint": "Wütend zornig rasen"
+    },
+    {
+      "word": "Angst",
+      "hint": "Verängstigt Furcht Terror"
+    },
+    {
+      "word": "Überraschung",
+      "hint": "Schock unerwartet"
+    },
+    {
+      "word": "Ekel",
+      "hint": "Angeekelt krank"
+    },
+    {
+      "word": "Liebe",
+      "hint": "Zuneigung Romantik Herzen"
+    },
+    {
+      "word": "Eifersucht",
+      "hint": "Neid das haben wollen"
+    },
+    {
+      "word": "Schuld",
+      "hint": "Sich schlecht fühlen falsch machen"
+    },
+    {
+      "word": "Scham",
+      "hint": "Verlegenheit demütigend"
+    },
+    {
+      "word": "Begeisterung",
+      "hint": "Begeistert sich freuen"
+    },
+    {
+      "word": "Langeweile",
+      "hint": "Nichts zu tun langweilig"
+    },
+    {
+      "word": "Hoffnung",
+      "hint": "Optimismus Zukunft hell"
+    },
+    {
+      "word": "Verzweiflung",
+      "hint": "Völliger Verlust Hoffnung"
+    },
+    {
+      "word": "Verwirrung",
+      "hint": "Nicht verstehen Rätsel"
+    },
+    {
+      "word": "Stolz",
+      "hint": "Zufrieden persönliche Leistung"
+    },
+    {
+      "word": "Erleichterung",
+      "hint": "Stress weg entspannend"
+    },
+    {
+      "word": "Nostalgie",
+      "hint": "Vergangenheit vermissen liebevoll"
+    },
+    {
+      "word": "Einsamkeit",
+      "hint": "Sich isoliert fühlen allein"
+    },
+    {
+      "word": "Neugier",
+      "hint": "Mehr wissen wollen"
+    }
+  ],
+  "Schulfächer": [
+    {
+      "word": "Mathematik",
+      "hint": "Zahlen Gleichungen Formen"
+    },
+    {
+      "word": "Naturwissenschaften",
+      "hint": "Experimente Biologie Physik"
+    },
+    {
+      "word": "Englisch",
+      "hint": "Literatur Grammatik Schreiben"
+    },
+    {
+      "word": "Geschichte",
+      "hint": "Vergangene Ereignisse Kriege"
+    },
+    {
+      "word": "Geographie",
+      "hint": "Karten Länder Hauptstädte"
+    },
+    {
+      "word": "Kunst",
+      "hint": "Malen Zeichnen Kreativ"
+    },
+    {
+      "word": "Musik",
+      "hint": "Instrumente spielen Singen"
+    },
+    {
+      "word": "Sport",
+      "hint": "Turnhalle Sport Laufen"
+    },
+    {
+      "word": "Informatik",
+      "hint": "Codieren Programmieren Technik"
+    },
+    {
+      "word": "Fremdsprache",
+      "hint": "Sprechen Redewendungen Übersee"
+    },
+    {
+      "word": "Chemie",
+      "hint": "Elemente Labor Periodensystem"
+    },
+    {
+      "word": "Biologie",
+      "hint": "Leben Zellen Pflanzen"
+    },
+    {
+      "word": "Physik",
+      "hint": "Kräfte Schwerkraft Bewegung"
+    },
+    {
+      "word": "Algebra",
+      "hint": "Buchstaben und Zahlen Mathe"
+    },
+    {
+      "word": "Geometrie",
+      "hint": "Formen Winkel Linien"
+    },
+    {
+      "word": "Analysis",
+      "hint": "Höhere Mathematik Ableitungen"
+    },
+    {
+      "word": "Wirtschaft",
+      "hint": "Geld Märkte Handel"
+    },
+    {
+      "word": "Psychologie",
+      "hint": "Geist Verhalten Studium"
+    },
+    {
+      "word": "Soziologie",
+      "hint": "Gesellschaft Menschen Kultur"
+    },
+    {
+      "word": "Theater",
+      "hint": "Bühne Schauspiel Stücke"
+    }
+  ],
+  "Spielzeug": [
+    {
+      "word": "Lego",
+      "hint": "Bausteine Plastik"
+    },
+    {
+      "word": "Barbie",
+      "hint": "Beliebte Modepuppe"
+    },
+    {
+      "word": "Teddybär",
+      "hint": "Stofftier Plüsch"
+    },
+    {
+      "word": "Actionfigur",
+      "hint": "Bewegliche Heldenfigur"
+    },
+    {
+      "word": "Jo-Jo",
+      "hint": "Schnur dreht sich rauf runter"
+    },
+    {
+      "word": "Drachen",
+      "hint": "Fliegend Schnur Wind"
+    },
+    {
+      "word": "Frisbee",
+      "hint": "Fliegende Scheibe werfen"
+    },
+    {
+      "word": "Puppenhaus",
+      "hint": "Miniaturhaus Spielzeug"
+    },
+    {
+      "word": "Puzzle",
+      "hint": "Teile zusammenfügen Bild"
+    },
+    {
+      "word": "Brettspiel",
+      "hint": "Tischwürfel Regeln"
+    },
+    {
+      "word": "Rubik's Würfel",
+      "hint": "Drehbarer bunter Würfel"
+    },
+    {
+      "word": "Eisenbahn",
+      "hint": "Schienen Miniatur-Lokomotiven"
+    },
+    {
+      "word": "Ferngesteuertes Auto",
+      "hint": "Fahren über Frequenz"
+    },
+    {
+      "word": "Play-Doh",
+      "hint": "Knetmasse Farben"
+    },
+    {
+      "word": "Hula-Hoop",
+      "hint": "Drehen um die Taille"
+    },
+    {
+      "word": "Springseil",
+      "hint": "Seilspringen Übung"
+    },
+    {
+      "word": "Wasserpistole",
+      "hint": "Flüssigkeit schießen Sommer Spritzer"
+    },
+    {
+      "word": "Steinschleuder",
+      "hint": "Zurückziehen Stein abschleudern"
+    },
+    {
+      "word": "Trampolin",
+      "hint": "Federnde Sprungfläche"
+    },
+    {
+      "word": "Schaukelpferd",
+      "hint": "Hin und her schaukeln Tiersitz"
+    }
+  ],
+  "Waffen": [
+    {
+      "word": "Schwert",
+      "hint": "Lange Metallklinge Ritter"
+    },
+    {
+      "word": "Pfeil und Bogen",
+      "hint": "Sehne ziehen Projektile Bogenschießen"
+    },
+    {
+      "word": "Gewehr",
+      "hint": "Schusswaffe Kugeln schießen"
+    },
+    {
+      "word": "Messer",
+      "hint": "Kurze scharfe Klinge schneiden"
+    },
+    {
+      "word": "Speer",
+      "hint": "Langer Stock spitzes Ende"
+    },
+    {
+      "word": "Axt",
+      "hint": "Holz hacken Klinge"
+    },
+    {
+      "word": "Streitkolben",
+      "hint": "Stachelkeule Mittelalter"
+    },
+    {
+      "word": "Schild",
+      "hint": "Verteidigende Blockierausrüstung"
+    },
+    {
+      "word": "Armbrust",
+      "hint": "Horizontaler mechanischer Bogen"
+    },
+    {
+      "word": "Peitsche",
+      "hint": "Schnappende Lederschnur"
+    },
+    {
+      "word": "Kanone",
+      "hint": "Schwere Kugel feuernde Artillerie"
+    },
+    {
+      "word": "Granate",
+      "hint": "Sprengstoff geworfen Stift"
+    },
+    {
+      "word": "Dolch",
+      "hint": "Kleines persönliches Stechmesser"
+    },
+    {
+      "word": "Bumerang",
+      "hint": "Zurückkehrender geworfener Bogen"
+    },
+    {
+      "word": "Nunchakus",
+      "hint": "Zwei Stöcke Kette Kampfsport"
+    },
+    {
+      "word": "Katana",
+      "hint": "Japanisches Samuraischwert"
+    },
+    {
+      "word": "Scharfschützengewehr",
+      "hint": "Große Reichweite Zielfernrohrgewehr"
+    },
+    {
+      "word": "Schrotflinte",
+      "hint": "Streugewehr Nahkampf"
+    },
+    {
+      "word": "Maschinengewehr",
+      "hint": "Schnellfeuer-Schwerwaffe"
+    },
+    {
+      "word": "Raketenwerfer",
+      "hint": "Explosives Projektil riesig"
+    }
+  ],
+  "Technologie": [
+    {
+      "word": "Computer",
+      "hint": "Desktop-PC-Bildschirm CPU"
+    },
+    {
+      "word": "Smartphone",
+      "hint": "Mobiles Touchscreen-Gerät"
+    },
+    {
+      "word": "Tablet",
+      "hint": "Flachbildschirm tragbarer Computer"
+    },
+    {
+      "word": "Laptop",
+      "hint": "Klappbarer tragbarer PC"
+    },
+    {
+      "word": "Smartwatch",
+      "hint": "Am Handgelenk tragbare Technologie"
+    },
+    {
+      "word": "Kopfhörer",
+      "hint": "Ohr-Hör-Audio"
+    },
+    {
+      "word": "Kamera",
+      "hint": "Foto Video Aufnahmeobjektiv"
+    },
+    {
+      "word": "Drohne",
+      "hint": "Unbemanntes fliegendes Gerät"
+    },
+    {
+      "word": "Virtual-Reality-Headset",
+      "hint": "Brille 3D immersiv"
+    },
+    {
+      "word": "Spielkonsole",
+      "hint": "An Fernseher angeschlossenes Spielsystem"
+    },
+    {
+      "word": "Router",
+      "hint": "WLAN Internet Signalbox"
+    },
+    {
+      "word": "Lautsprecher",
+      "hint": "Laute Audioausgabe"
+    },
+    {
+      "word": "Mikrofon",
+      "hint": "Stimme Toneingabe"
+    },
+    {
+      "word": "Tastatur",
+      "hint": "Schreiben Tasten Knöpfe"
+    },
+    {
+      "word": "Maus",
+      "hint": "Klicken Zeigen Cursor"
+    },
+    {
+      "word": "Drucker",
+      "hint": "Papier Tintenausgabe"
+    },
+    {
+      "word": "Scanner",
+      "hint": "Digitalisierung Papierdokument"
+    },
+    {
+      "word": "Monitor",
+      "hint": "Anzeigebildschirm Einheit"
+    },
+    {
+      "word": "Festplatte",
+      "hint": "Datenspeicher Disk"
+    },
+    {
+      "word": "USB-Speicherstick",
+      "hint": "Daumenstick Speicher Byte"
+    }
+  ],
+  "Feiertage": [
+    {
+      "word": "Weihnachten",
+      "hint": "Dezember Bäume Geschenke Weihnachtsmann"
+    },
+    {
+      "word": "Halloween",
+      "hint": "Oktober Kostüme Süßigkeiten gruselig"
+    },
+    {
+      "word": "Erntedankfest",
+      "hint": "November Truthahn dankbar"
+    },
+    {
+      "word": "Ostern",
+      "hint": "Frühling Hasen Eier Schokolade"
+    },
+    {
+      "word": "Valentinstag",
+      "hint": "Februar Liebe Herzen romantisch"
+    },
+    {
+      "word": "Silvester",
+      "hint": "31. Dezember Mitternacht Feuerwerk"
+    },
+    {
+      "word": "Unabhängigkeitstag",
+      "hint": "4. Juli Freiheit Feuerwerk"
+    },
+    {
+      "word": "St. Patrick's Day",
+      "hint": "März grün Glück irisch"
+    },
+    {
+      "word": "Muttertag",
+      "hint": "Mama wertschätzen Sonntag"
+    },
+    {
+      "word": "Vatertag",
+      "hint": "Papa wertschätzen Sonntag"
+    },
+    {
+      "word": "Tag der Erde",
+      "hint": "April Planet Natur helfen"
+    },
+    {
+      "word": "Tag der Arbeit",
+      "hint": "September Arbeiter Sommerende"
+    },
+    {
+      "word": "Memorial Day",
+      "hint": "Mai gefallene Soldaten gedenken"
+    },
+    {
+      "word": "Veterans Day",
+      "hint": "November Militärleistung ehren"
+    },
+    {
+      "word": "Chanukka",
+      "hint": "Jüdisches Lichterfest Menora"
+    },
+    {
+      "word": "Diwali",
+      "hint": "Indisches Lichterfest"
+    },
+    {
+      "word": "Ramadan",
+      "hint": "Islamischer Fastenmonat"
+    },
+    {
+      "word": "Oktoberfest",
+      "hint": "Deutsches Bierfest"
+    },
+    {
+      "word": "Cinco de Mayo",
+      "hint": "5. Mai mexikanischer Stolz"
+    },
+    {
+      "word": "Chinesisches Neujahr",
+      "hint": "Mondkalender Drache"
+    }
+  ],
+  "Insekten": [
+    {
+      "word": "Schmetterling",
+      "hint": "Bunte fliegende Flügel Kokon"
+    },
+    {
+      "word": "Biene",
+      "hint": "Gelb schwarz summend Honig"
+    },
+    {
+      "word": "Ameise",
+      "hint": "Winzig marschierend starke Kolonie"
+    },
+    {
+      "word": "Mücke",
+      "hint": "Stechend lästig Blutsauger"
+    },
+    {
+      "word": "Fliege",
+      "hint": "Summendes Haus Plage Flügel"
+    },
+    {
+      "word": "Spinne",
+      "hint": "Acht Beine Netze (technisch eigentlich Spinnentier)"
+    },
+    {
+      "word": "Käfer",
+      "hint": "Harter Panzer kriechendes Insekt"
+    },
+    {
+      "word": "Marienkäfer",
+      "hint": "Rot schwarze Punkte gefleckte Flügel"
+    },
+    {
+      "word": "Heuschrecke",
+      "hint": "Springend grün lange Beine"
+    },
+    {
+      "word": "Grille",
+      "hint": "Zirpendes Nachtgeräusch Springer"
+    },
+    {
+      "word": "Kakerlake",
+      "hint": "Überlebensfähig eklig schnell Kriecher"
+    },
+    {
+      "word": "Motte",
+      "hint": "Staubige Flügel angezogen Licht"
+    },
+    {
+      "word": "Wespe",
+      "hint": "Aggressiv stechend gelb gestreift"
+    },
+    {
+      "word": "Hornisse",
+      "hint": "Groß aggressiv stechend Nest"
+    },
+    {
+      "word": "Libelle",
+      "hint": "Langer Körper schnell fliegend vier Flügel"
+    },
+    {
+      "word": "Raupe",
+      "hint": "Kriechend wurmartig haarig Schmetterlingsbaby"
+    },
+    {
+      "word": "Hundertfüßer",
+      "hint": "Viele lange Beine Kriechtier schnell"
+    },
+    {
+      "word": "Floh",
+      "hint": "Springend winzig Haustier Schädling"
+    },
+    {
+      "word": "Zecke",
+      "hint": "Blutsaugend Wald Parasit"
+    },
+    {
+      "word": "Bettwanze",
+      "hint": "Matratze beißende Plage"
+    }
+  ],
+  "Märchen": [
+    {
+      "word": "Aschenputtel",
+      "hint": "Glasschuh Kürbiskutsche"
+    },
+    {
+      "word": "Schneewittchen",
+      "hint": "Sieben Zwerge vergifteter Apfel"
+    },
+    {
+      "word": "Dornröschen",
+      "hint": "Spinnrad hundertjähriger Schlaf"
+    },
+    {
+      "word": "Rotkäppchen",
+      "hint": "Großmutter Wolf Korb"
+    },
+    {
+      "word": "Die Schöne und das Biest",
+      "hint": "Verfluchter Prinz magische Rose"
+    },
+    {
+      "word": "Peter Pan",
+      "hint": "Nimmerland Tinkerbell Haken"
+    },
+    {
+      "word": "Alice im Wunderland",
+      "hint": "Kaninchenbau verrückter Hutmacher Königin"
+    },
+    {
+      "word": "Pinocchio",
+      "hint": "Holzjunge wachsende Nase Schnur"
+    },
+    {
+      "word": "Aladdin",
+      "hint": "Wunderlampe Geist Teppich"
+    },
+    {
+      "word": "Die kleine Meerjungfrau",
+      "hint": "Arielle Meer Beine Stimme"
+    },
+    {
+      "word": "Hänsel und Gretel",
+      "hint": "Brotkrumen Lebkuchenhexe"
+    },
+    {
+      "word": "Rapunzel",
+      "hint": "Langes Haar Turm herunterlassen"
+    },
+    {
+      "word": "Rumpelstilzchen",
+      "hint": "Stroh zu Gold spinnen Name erraten"
+    },
+    {
+      "word": "Goldlöckchen",
+      "hint": "Drei Bären Brei Bett Stuhl"
+    },
+    {
+      "word": "Das hässliche Entlein",
+      "hint": "Schwanenverwandlung Ausgestoßener"
+    },
+    {
+      "word": "Hans und die Bohnenranke",
+      "hint": "Magische Bohnen Riese Himmelsstiel"
+    },
+    {
+      "word": "Der gestiefelte Kater",
+      "hint": "Kluger Katze Katzenfussbekleidung"
+    },
+    {
+      "word": "Die Prinzessin auf der Erbse",
+      "hint": "Matratzenstapel empfindlicher königlicher Test"
+    },
+    {
+      "word": "Der Lebkuchenmann",
+      "hint": "Lauf schnell fang mich Teig"
+    },
+    {
+      "word": "Der Rattenfänger von Hameln",
+      "hint": "Ratten Kinder Flötenzauber Melodie"
+    }
+  ],
+  "__translations": {
+    "categories": {
+      "Locations": "Orte",
+      "Occupations": "Berufe",
+      "Famous People": "Berühmte Persönlichkeiten",
+      "Vehicles": "Fahrzeuge",
+      "Food & Drinks": "Essen & Trinken",
+      "Countries": "Länder",
+      "Animals": "Tiere",
+      "Movies": "Filme",
+      "Superheroes": "Superhelden",
+      "Sports": "Sport",
+      "Musical Instruments": "Musikinstrumente",
+      "Fictional Characters": "Fiktive Charaktere",
+      "Historical Events": "Historische Ereignisse",
+      "Video Games": "Videospiele",
+      "Landmarks": "Wahrzeichen",
+      "Fears & Phobias": "Ängste & Phobien",
+      "Household Items": "Haushaltsgegenstände",
+      "Nature": "Natur",
+      "Clothing": "Kleidung",
+      "Mythological Creatures": "Mythologische Kreaturen",
+      "Hobbies": "Hobbys",
+      "Science": "Wissenschaft",
+      "Colors": "Farben",
+      "School Subjects": "Schulfächer",
+      "Toys": "Spielzeug",
+      "Emotions": "Emotionen",
+      "Technology": "Technologie",
+      "Weapons": "Waffen",
+      "Holidays": "Feiertage",
+      "Insects": "Insekten",
+      "Fairy Tales": "Märchen"
+    },
+    "items": {
+      "Locations\tSpace Station\tOrbit": {
+        "word": "Raumstation",
+        "hint": "Orbit"
+      },
+      "Locations\tSubmarine\tVessel": {
+        "word": "U-Boot",
+        "hint": "Schiff"
+      },
+      "Locations\tCasino\tBetting": {
+        "word": "Kasino",
+        "hint": "Wetten"
+      },
+      "Locations\tHospital\tClinic": {
+        "word": "Krankenhaus",
+        "hint": "Klinik"
+      },
+      "Locations\tLibrary\tBooks": {
+        "word": "Bibliothek",
+        "hint": "Bücher"
+      },
+      "Occupations\tDoctor\tMedical": {
+        "word": "Arzt",
+        "hint": "Heiler"
+      },
+      "Occupations\tTeacher\tSchool": {
+        "word": "Astronaut",
+        "hint": "Pilot"
+      },
+      "Occupations\tPolice Officer\tLaw": {
+        "word": "Koch",
+        "hint": "Küche"
+      },
+      "Occupations\tChef\tKitchen": {
+        "word": "Klempner",
+        "hint": "Rohre"
+      },
+      "Occupations\tFirefighter\tRescue": {
+        "word": "Detektiv",
+        "hint": "Spürhund"
+      },
+      "Famous People\tAlbert Einstein\tE=mc2": {
+        "word": "Albert Einstein",
+        "hint": "E=mc2"
+      },
+      "Famous People\tIsaac Newton\tApple gravity": {
+        "word": "Isaac Newton",
+        "hint": "Apfel Schwerkraft"
+      },
+      "Famous People\tLeonardo da Vinci\tMona Lisa": {
+        "word": "Leonardo da Vinci",
+        "hint": "Mona Lisa"
+      },
+      "Famous People\tVincent van Gogh\tStarry Night": {
+        "word": "Vincent van Gogh",
+        "hint": "Sternennacht"
+      },
+      "Famous People\tWilliam Shakespeare\tPlaywright": {
+        "word": "William Shakespeare",
+        "hint": "Dramatiker"
+      },
+      "Famous People\tMozart\tClassical composer": {
+        "word": "Mozart",
+        "hint": "Klassischer Komponist"
+      },
+      "Famous People\tBeethoven\tDeaf composer": {
+        "word": "Beethoven",
+        "hint": "Tauber Komponist"
+      },
+      "Famous People\tElvis Presley\tKing of Rock": {
+        "word": "Elvis Presley",
+        "hint": "King des Rock"
+      },
+      "Famous People\tMichael Jackson\tKing of Pop": {
+        "word": "Michael Jackson",
+        "hint": "King des Pop"
+      },
+      "Famous People\tMarilyn Monroe\tHollywood icon": {
+        "word": "Marilyn Monroe",
+        "hint": "Hollywood-Ikone"
+      },
+      "Famous People\tCharlie Chaplin\tSilent comedy": {
+        "word": "Charlie Chaplin",
+        "hint": "Stummfilmkomödie"
+      },
+      "Famous People\tWalt Disney\tMickey's creator": {
+        "word": "Walt Disney",
+        "hint": "Mickeys Schöpfer"
+      },
+      "Famous People\tSteve Jobs\tApple founder": {
+        "word": "Steve Jobs",
+        "hint": "Apple-Gründer"
+      },
+      "Famous People\tBill Gates\tMicrosoft founder": {
+        "word": "Bill Gates",
+        "hint": "Microsoft-Gründer"
+      },
+      "Famous People\tElon Musk\tTesla": {
+        "word": "Elon Musk",
+        "hint": "Tesla"
+      },
+      "Famous People\tNelson Mandela\tSouth Africa leader": {
+        "word": "Nelson Mandela",
+        "hint": "Südafrika Anführer"
+      },
+      "Famous People\tMartin Luther King Jr.\tI have a dream": {
+        "word": "Martin Luther King Jr.",
+        "hint": "Ich habe einen Traum"
+      },
+      "Famous People\tGandhi\tPeaceful protest": {
+        "word": "Gandhi",
+        "hint": "Friedlicher Protest"
+      },
+      "Famous People\tAbraham Lincoln\tTop hat": {
+        "word": "Abraham Lincoln",
+        "hint": "Zylinderhut"
+      },
+      "Famous People\tGeorge Washington\tFirst US President": {
+        "word": "George Washington",
+        "hint": "Erster US-Präsident"
+      },
+      "Vehicles\tCar\tRoad": {
+        "word": "Auto",
+        "hint": "Straße"
+      },
+      "Vehicles\tBicycle\tPedals": {
+        "word": "Fahrrad",
+        "hint": "Pedale"
+      },
+      "Vehicles\tMotorcycle\tTwo wheels": {
+        "word": "Motorrad",
+        "hint": "Zwei Räder"
+      },
+      "Vehicles\tBus\tPublic": {
+        "word": "Bus",
+        "hint": "Öffentlich"
+      },
+      "Vehicles\tTrain\tTracks": {
+        "word": "Zug",
+        "hint": "Schienen"
+      },
+      "Vehicles\tAirplane\tSky": {
+        "word": "Flugzeug",
+        "hint": "Himmel"
+      },
+      "Vehicles\tHelicopter\tChopper": {
+        "word": "Hubschrauber",
+        "hint": "Chopper"
+      },
+      "Vehicles\tBoat\tWater": {
+        "word": "Boot",
+        "hint": "Wasser"
+      },
+      "Vehicles\tShip\tOcean": {
+        "word": "Schiff",
+        "hint": "Ozean"
+      },
+      "Vehicles\tSpaceship\tStars": {
+        "word": "Raumschiff",
+        "hint": "Sterne"
+      },
+      "Vehicles\tSubmarine\tUnderwater": {
+        "word": "U-Boot",
+        "hint": "Unterwasser"
+      },
+      "Vehicles\tTruck\tCargo": {
+        "word": "Lastwagen",
+        "hint": "Ladung"
+      },
+      "Vehicles\tTractor\tFarm": {
+        "word": "Traktor",
+        "hint": "Bauernhof"
+      },
+      "Vehicles\tScooter\tSmall": {
+        "word": "Roller",
+        "hint": "Klein"
+      },
+      "Vehicles\tSkateboard\tTricks": {
+        "word": "Skateboard",
+        "hint": "Tricks"
+      },
+      "Vehicles\tRollerblades\tWheels": {
+        "word": "Inlineskates",
+        "hint": "Räder"
+      },
+      "Vehicles\tHot Air Balloon\tBasket": {
+        "word": "Heißluftballon",
+        "hint": "Korb"
+      },
+      "Vehicles\tBlimp\tFloating": {
+        "word": "Luftschiff",
+        "hint": "Schwebend"
+      },
+      "Vehicles\tHovercraft\tAir cushion": {
+        "word": "Luftkissenfahrzeug",
+        "hint": "Luftkissen"
+      },
+      "Vehicles\tSnowmobile\tWinter": {
+        "word": "Schneemobil",
+        "hint": "Winter"
+      },
+      "Food & Drinks\tPizza\tSlices": {
+        "word": "Pizza",
+        "hint": "Scheiben"
+      },
+      "Food & Drinks\tBurger\tBuns": {
+        "word": "Burger",
+        "hint": "Brötchen"
+      },
+      "Food & Drinks\tSushi\tRaw fish": {
+        "word": "Sushi",
+        "hint": "Roher Fisch"
+      },
+      "Food & Drinks\tPasta\tNoodles": {
+        "word": "Pasta",
+        "hint": "Nudeln"
+      },
+      "Food & Drinks\tSalad\tGreens": {
+        "word": "Salat",
+        "hint": "Grünzeug"
+      },
+      "Food & Drinks\tTaco\tShell": {
+        "word": "Taco",
+        "hint": "Schale"
+      },
+      "Food & Drinks\tSteak\tBeef": {
+        "word": "Steak",
+        "hint": "Rindfleisch"
+      },
+      "Food & Drinks\tIce Cream\tCold dessert": {
+        "word": "Eis",
+        "hint": "Kaltes Dessert"
+      },
+      "Food & Drinks\tCake\tBirthday": {
+        "word": "Kuchen",
+        "hint": "Geburtstag"
+      },
+      "Food & Drinks\tChocolate\tSweet cocoa": {
+        "word": "Schokolade",
+        "hint": "Süßer Kakao"
+      },
+      "Food & Drinks\tCoffee\tMorning drink": {
+        "word": "Kaffee",
+        "hint": "Morgengetränk"
+      },
+      "Food & Drinks\tTea\tLeaves": {
+        "word": "Tee",
+        "hint": "Blätter"
+      },
+      "Food & Drinks\tSoda\tBubbly": {
+        "word": "Limonade",
+        "hint": "Sprudelnd"
+      },
+      "Food & Drinks\tJuice\tFruit extract": {
+        "word": "Saft",
+        "hint": "Fruchtextrakt"
+      },
+      "Food & Drinks\tWater\tH2O": {
+        "word": "Wasser",
+        "hint": "H2O"
+      },
+      "Food & Drinks\tWine\tGrapes": {
+        "word": "Wein",
+        "hint": "Trauben"
+      },
+      "Food & Drinks\tBeer\tBrew": {
+        "word": "Bier",
+        "hint": "Brauen"
+      },
+      "Food & Drinks\tMilk\tDairy": {
+        "word": "Milch",
+        "hint": "Milchprodukt"
+      },
+      "Food & Drinks\tCheese\tMice love it": {
+        "word": "Käse",
+        "hint": "Mäuse lieben ihn"
+      },
+      "Food & Drinks\tBread\tBaker": {
+        "word": "Brot",
+        "hint": "Bäcker"
+      },
+      "Countries\tUSA\tStars and Stripes": {
+        "word": "USA",
+        "hint": "Sterne und Streifen"
+      },
+      "Countries\tCanada\tMaple Leaf": {
+        "word": "Kanada",
+        "hint": "Ahornblatt"
+      },
+      "Countries\tBrazil\tSamba": {
+        "word": "Brasilien",
+        "hint": "Samba"
+      },
+      "Countries\tUK\tTea & Monarchy": {
+        "word": "UK",
+        "hint": "Tee & Monarchie"
+      },
+      "Countries\tFrance\tEiffel": {
+        "word": "Frankreich",
+        "hint": "Eiffel"
+      },
+      "Countries\tGermany\tOktoberfest": {
+        "word": "Deutschland",
+        "hint": "Oktoberfest"
+      },
+      "Countries\tItaly\tBoot shape": {
+        "word": "Italien",
+        "hint": "Stiefelform"
+      },
+      "Countries\tSpain\tFlamenco": {
+        "word": "Spanien",
+        "hint": "Flamenco"
+      },
+      "Countries\tRussia\tLargest area": {
+        "word": "Russland",
+        "hint": "Größte Fläche"
+      },
+      "Countries\tChina\tGreat Wall": {
+        "word": "China",
+        "hint": "Große Mauer"
+      },
+      "Countries\tJapan\tRising Sun": {
+        "word": "Japan",
+        "hint": "Aufgehende Sonne"
+      },
+      "Countries\tIndia\tTaj Mahal": {
+        "word": "Indien",
+        "hint": "Taj Mahal"
+      },
+      "Countries\tAustralia\tKangaroos": {
+        "word": "Australien",
+        "hint": "Kängurus"
+      },
+      "Countries\tEgypt\tPyramids": {
+        "word": "Ägypten",
+        "hint": "Pyramiden"
+      },
+      "Countries\tSouth Africa\tSafari": {
+        "word": "Südafrika",
+        "hint": "Safari"
+      },
+      "Countries\tMexico\tSombrero": {
+        "word": "Mexiko",
+        "hint": "Sombrero"
+      },
+      "Countries\tArgentina\tTango": {
+        "word": "Argentinien",
+        "hint": "Tango"
+      },
+      "Countries\tSweden\tIkea": {
+        "word": "Schweden",
+        "hint": "Ikea"
+      },
+      "Countries\tNorway\tFjords": {
+        "word": "Norwegen",
+        "hint": "Fjorde"
+      },
+      "Countries\tSwitzerland\tAlps": {
+        "word": "Schweiz",
+        "hint": "Alpen"
+      },
+      "Animals\tLion\tRoar": {
+        "word": "Löwe",
+        "hint": "Brüllen"
+      },
+      "Animals\tElephant\tTrunk": {
+        "word": "Elefant",
+        "hint": "Rüssel"
+      },
+      "Animals\tGiraffe\tNeck": {
+        "word": "Giraffe",
+        "hint": "Hals"
+      },
+      "Animals\tTiger\tStripes": {
+        "word": "Tiger",
+        "hint": "Streifen"
+      },
+      "Animals\tPenguin\tIce": {
+        "word": "Pinguin",
+        "hint": "Eis"
+      },
+      "Animals\tKangaroo\tPouch": {
+        "word": "Känguru",
+        "hint": "Beutel"
+      },
+      "Animals\tDolphin\tOcean": {
+        "word": "Delfin",
+        "hint": "Ozean"
+      },
+      "Animals\tWhale\tHuge": {
+        "word": "Wal",
+        "hint": "Riesig"
+      },
+      "Animals\tShark\tTeeth": {
+        "word": "Hai",
+        "hint": "Zähne"
+      },
+      "Animals\tEagle\tWings": {
+        "word": "Adler",
+        "hint": "Flügel"
+      },
+      "Animals\tWolf\tHowl": {
+        "word": "Wolf",
+        "hint": "Heulen"
+      },
+      "Animals\tBear\tHoney": {
+        "word": "Bär",
+        "hint": "Honig"
+      },
+      "Animals\tMonkey\tTrees": {
+        "word": "Affe",
+        "hint": "Bäume"
+      },
+      "Animals\tSnake\tSlither": {
+        "word": "Schlange",
+        "hint": "Kriechen"
+      },
+      "Animals\tCrocodile\tSwamp": {
+        "word": "Krokodil",
+        "hint": "Sumpf"
+      },
+      "Animals\tHippopotamus\tRiver": {
+        "word": "Nilpferd",
+        "hint": "Fluss"
+      },
+      "Animals\tRhinoceros\tHorn": {
+        "word": "Nashorn",
+        "hint": "Horn"
+      },
+      "Animals\tZebra\tStripes": {
+        "word": "Zebra",
+        "hint": "Streifen"
+      },
+      "Animals\tCheetah\tFast": {
+        "word": "Gepard",
+        "hint": "Schnell"
+      },
+      "Animals\tPanda\tBamboo": {
+        "word": "Panda",
+        "hint": "Bambus"
+      },
+      "Movies\tStar Wars\tJedi": {
+        "word": "Star Wars",
+        "hint": "Jedi"
+      },
+      "Movies\tJurassic Park\tDinosaurs": {
+        "word": "Jurassic Park",
+        "hint": "Dinosaurier"
+      },
+      "Movies\tThe Matrix\tRed pill": {
+        "word": "The Matrix",
+        "hint": "Rote Pille"
+      },
+      "Movies\tTitanic\tSinking ship": {
+        "word": "Titanic",
+        "hint": "Sinkendes Schiff"
+      },
+      "Movies\tAvatar\tBlue aliens": {
+        "word": "Avatar",
+        "hint": "Blaue Außerirdische"
+      },
+      "Movies\tThe Godfather\tMafia": {
+        "word": "Der Pate",
+        "hint": "Mafia"
+      },
+      "Movies\tHarry Potter\tWizards": {
+        "word": "Harry Potter",
+        "hint": "Zauberer"
+      },
+      "Movies\tLord of the Rings\tOne ring": {
+        "word": "Herr der Ringe",
+        "hint": "Ein Ring"
+      },
+      "Movies\tAvengers\tMarvel heroes": {
+        "word": "Avengers",
+        "hint": "Marvel Helden"
+      },
+      "Movies\tSpider-Man\tWeb-slinger": {
+        "word": "Spider-Man",
+        "hint": "Netzschwinger"
+      },
+      "Movies\tBatman\tDark Knight": {
+        "word": "Batman",
+        "hint": "Dunkler Ritter"
+      },
+      "Movies\tSuperman\tMan of Steel": {
+        "word": "Superman",
+        "hint": "Mann aus Stahl"
+      },
+      "Movies\tToy Story\tLiving toys": {
+        "word": "Toy Story",
+        "hint": "Lebendiges Spielzeug"
+      },
+      "Movies\tThe Lion King\tHakuna Matata": {
+        "word": "Der König der Löwen",
+        "hint": "Hakuna Matata"
+      },
+      "Movies\tFrozen\tLet it go": {
+        "word": "Die Eiskönigin",
+        "hint": "Lass jetzt los"
+      },
+      "Movies\tHome Alone\tLeft behind child": {
+        "word": "Kevin – Allein zu Haus",
+        "hint": "Zurückgelassenes Kind"
+      },
+      "Movies\tJaws\tGiant shark": {
+        "word": "Der weiße Hai",
+        "hint": "Riesenhai"
+      },
+      "Movies\tE.T.\tPhone home": {
+        "word": "E.T.",
+        "hint": "Nach Hause telefonieren"
+      },
+      "Movies\tIndiana Jones\tArchaeologist whip": {
+        "word": "Indiana Jones",
+        "hint": "Archäologenpeitsche"
+      },
+      "Movies\tBack to the Future\tDeLorean time": {
+        "word": "Zurück in die Zukunft",
+        "hint": "DeLorean Zeit"
+      },
+      "Superheroes\tSuperman\tKrypton": {
+        "word": "Superman",
+        "hint": "Krypton"
+      },
+      "Superheroes\tBatman\tGotham": {
+        "word": "Batman",
+        "hint": "Gotham"
+      },
+      "Superheroes\tSpider-Man\tWebs": {
+        "word": "Spider-Man",
+        "hint": "Netze"
+      },
+      "Superheroes\tIron Man\tTony Stark": {
+        "word": "Iron Man",
+        "hint": "Tony Stark"
+      },
+      "Superheroes\tCaptain America\tVibranium shield": {
+        "word": "Captain America",
+        "hint": "Vibranium-Schild"
+      },
+      "Superheroes\tThor\tHammer": {
+        "word": "Thor",
+        "hint": "Hammer"
+      },
+      "Superheroes\tHulk\tGreen angry": {
+        "word": "Hulk",
+        "hint": "Grün wütend"
+      },
+      "Superheroes\tBlack Widow\tSpy Avenger": {
+        "word": "Black Widow",
+        "hint": "Spionin, Avenger"
+      },
+      "Superheroes\tWolverine\tAdamantium claws": {
+        "word": "Wolverine",
+        "hint": "Adamantium-Krallen"
+      },
+      "Superheroes\tFlash\tFastest man": {
+        "word": "Flash",
+        "hint": "Schnellster Mann"
+      },
+      "Superheroes\tWonder Woman\tLasso of Truth": {
+        "word": "Wonder Woman",
+        "hint": "Lasso der Wahrheit"
+      },
+      "Superheroes\tAquaman\tAtlantis": {
+        "word": "Aquaman",
+        "hint": "Atlantis"
+      },
+      "Superheroes\tGreen Lantern\tPower ring": {
+        "word": "Green Lantern",
+        "hint": "Kraftring"
+      },
+      "Superheroes\tDeadpool\tMerc with a mouth": {
+        "word": "Deadpool",
+        "hint": "Söldner mit Mundwerk"
+      },
+      "Superheroes\tBlack Panther\tWakanda": {
+        "word": "Black Panther",
+        "hint": "Wakanda"
+      },
+      "Superheroes\tDoctor Strange\tSorcerer Supreme": {
+        "word": "Doctor Strange",
+        "hint": "Oberster Zauberer"
+      },
+      "Superheroes\tAnt-Man\tShrinking": {
+        "word": "Ant-Man",
+        "hint": "Schrumpfen"
+      },
+      "Superheroes\tDaredevil\tBlind hero": {
+        "word": "Daredevil",
+        "hint": "Blinder Held"
+      },
+      "Superheroes\tPunisher\tVigilante": {
+        "word": "Punisher",
+        "hint": "Selbstjustiz"
+      },
+      "Superheroes\tGhost Rider\tFlaming skull": {
+        "word": "Ghost Rider",
+        "hint": "Brennender Schädel"
+      },
+      "Sports\tSoccer\tPenalty kick": {
+        "word": "Fußball",
+        "hint": "Elfmeter"
+      },
+      "Sports\tBasketball\tHoop": {
+        "word": "Basketball",
+        "hint": "Korb"
+      },
+      "Sports\tBaseball\tHome run": {
+        "word": "Baseball",
+        "hint": "Homerun"
+      },
+      "Sports\tTennis\tRacket": {
+        "word": "Tennis",
+        "hint": "Schläger"
+      },
+      "Sports\tGolf\tHole in one": {
+        "word": "Golf",
+        "hint": "Hole-in-one"
+      },
+      "Sports\tVolleyball\tNet and spike": {
+        "word": "Volleyball",
+        "hint": "Netz und Schmetterschlag"
+      },
+      "Sports\tSwimming\tPool lanes": {
+        "word": "Schwimmen",
+        "hint": "Schwimmbahnen"
+      },
+      "Sports\tAthletics\tTrack & field": {
+        "word": "Leichtathletik",
+        "hint": "Bahn und Feld"
+      },
+      "Sports\tGymnastics\tBalance beam": {
+        "word": "Gymnastik",
+        "hint": "Schwebebalken"
+      },
+      "Sports\tBoxing\tGloves and ring": {
+        "word": "Boxen",
+        "hint": "Handschuhe und Ring"
+      },
+      "Sports\tWrestling\tPin to win": {
+        "word": "Ringen",
+        "hint": "Festnageln zum Sieg"
+      },
+      "Sports\tMartial Arts\tBlack belt": {
+        "word": "Kampfsport",
+        "hint": "Schwarzer Gürtel"
+      },
+      "Sports\tCycling\tBicycles racing": {
+        "word": "Radfahren",
+        "hint": "Fahrradrennen"
+      },
+      "Sports\tSkiing\tSnow mountain": {
+        "word": "Skifahren",
+        "hint": "Schneeberg"
+      },
+      "Sports\tSnowboarding\tOne board on snow": {
+        "word": "Snowboarden",
+        "hint": "Ein Brett auf Schnee"
+      },
+      "Sports\tSurfing\tOcean waves": {
+        "word": "Surfen",
+        "hint": "Meereswellen"
+      },
+      "Sports\tRugby\tScrum": {
+        "word": "Rugby",
+        "hint": "Gedränge"
+      },
+      "Sports\tCricket\tBatsman and bowler": {
+        "word": "Cricket",
+        "hint": "Schlagmann und Werfer"
+      },
+      "Sports\tHockey\tPuck on ice": {
+        "word": "Eishockey",
+        "hint": "Puck auf Eis"
+      },
+      "Sports\tTable Tennis\tPing pong": {
+        "word": "Tischtennis",
+        "hint": "Pingpong"
+      },
+      "Musical Instruments\tPiano\tBlack and white keys": {
+        "word": "Klavier",
+        "hint": "Schwarz-weiße Tasten"
+      },
+      "Musical Instruments\tGuitar\tSix strings strums": {
+        "word": "Gitarre",
+        "hint": "Sechs Saiten anschlagen"
+      },
+      "Musical Instruments\tViolin\tBow and chin": {
+        "word": "Geige",
+        "hint": "Bogen und Kinnauflage"
+      },
+      "Musical Instruments\tDrum\tBeats and sticks": {
+        "word": "Trommel",
+        "hint": "Schläge und Stöcke"
+      },
+      "Musical Instruments\tFlute\tBlow across hole": {
+        "word": "Flöte",
+        "hint": "Über Loch blasen"
+      },
+      "Musical Instruments\tTrumpet\tBrass valves": {
+        "word": "Trompete",
+        "hint": "Messingventile"
+      },
+      "Musical Instruments\tSaxophone\tJazz brass": {
+        "word": "Saxophon",
+        "hint": "Jazz-Messingblasinstrument"
+      },
+      "Musical Instruments\tCello\tLarge string seated": {
+        "word": "Cello",
+        "hint": "Großes Saiteninstrument sitzend"
+      },
+      "Musical Instruments\tClarinet\tBlack woodwind": {
+        "word": "Klarinette",
+        "hint": "Schwarzes Holzblasinstrument"
+      },
+      "Musical Instruments\tHarp\tAngel strings": {
+        "word": "Harfe",
+        "hint": "Engelsaiten"
+      },
+      "Musical Instruments\tTrombone\tBrass slide": {
+        "word": "Posaune",
+        "hint": "Messingschlitten"
+      },
+      "Musical Instruments\tTuba\tLargest brass bass": {
+        "word": "Tuba",
+        "hint": "Größtes Blechblasinstrument Bass"
+      },
+      "Musical Instruments\tAccordion\tSqueeze box": {
+        "word": "Akkordeon",
+        "hint": "Ziehharmonika"
+      },
+      "Musical Instruments\tBanjo\tFolk strings round": {
+        "word": "Banjo",
+        "hint": "Volkssaiten rund"
+      },
+      "Musical Instruments\tMandolin\tEight strings small": {
+        "word": "Mandoline",
+        "hint": "Acht Saiten klein"
+      },
+      "Musical Instruments\tUkulele\tHawaiian four strings": {
+        "word": "Ukulele",
+        "hint": "Hawaiianische vier Saiten"
+      },
+      "Musical Instruments\tXylophone\tWooden bars mallets": {
+        "word": "Xylophon",
+        "hint": "Holzstäbe Schlägel"
+      },
+      "Musical Instruments\tSynthesizer\tElectronic keys": {
+        "word": "Synthesizer",
+        "hint": "Elektronische Tasten"
+      },
+      "Musical Instruments\tBass\tLow frequency strings": {
+        "word": "Bass",
+        "hint": "Tieffrequenz-Saiten"
+      },
+      "Musical Instruments\tOboe\tDouble reed": {
+        "word": "Oboe",
+        "hint": "Doppelrohrblatt"
+      },
+      "Fictional Characters\tSherlock Holmes\tDetective": {
+        "word": "Sherlock Holmes",
+        "hint": "Detektiv"
+      },
+      "Fictional Characters\tMickey Mouse\tDisney mascot": {
+        "word": "Mickey Maus",
+        "hint": "Disney-Maskottchen"
+      },
+      "Fictional Characters\tBugs Bunny\tWhat's up doc": {
+        "word": "Bugs Bunny",
+        "hint": "Was geht, Doc?"
+      },
+      "Fictional Characters\tHomer Simpson\tD'oh!": {
+        "word": "Homer Simpson",
+        "hint": "Nein!"
+      },
+      "Fictional Characters\tSpongeBob\tPineapple under sea": {
+        "word": "SpongeBob",
+        "hint": "Ananas unter dem Meer"
+      },
+      "Fictional Characters\tMario\tPlumber hero": {
+        "word": "Mario",
+        "hint": "Klempnerheld"
+      },
+      "Fictional Characters\tPikachu\tElectric mouse": {
+        "word": "Pikachu",
+        "hint": "Elektrische Maus"
+      },
+      "Fictional Characters\tSonic\tBlue fast hedgehog": {
+        "word": "Sonic",
+        "hint": "Blauer, schneller Igel"
+      },
+      "Fictional Characters\tDarth Vader\tI am your father": {
+        "word": "Darth Vader",
+        "hint": "Ich bin dein Vater"
+      },
+      "Fictional Characters\tJames Bond\t007": {
+        "word": "James Bond",
+        "hint": "007"
+      },
+      "Fictional Characters\tHarry Potter\tBoy who lived": {
+        "word": "Harry Potter",
+        "hint": "Der Junge, der lebte"
+      },
+      "Fictional Characters\tFrodo Baggins\tRing bearer": {
+        "word": "Frodo Beutlin",
+        "hint": "Ringträger"
+      },
+      "Fictional Characters\tDracula\tVampire count": {
+        "word": "Dracula",
+        "hint": "Vampirgraf"
+      },
+      "Fictional Characters\tFrankenstein\tMonster creator": {
+        "word": "Frankenstein",
+        "hint": "Monsterschöpfer"
+      },
+      "Fictional Characters\tKing Kong\tGiant ape": {
+        "word": "King Kong",
+        "hint": "Riesenaffe"
+      },
+      "Fictional Characters\tGodzilla\tRadioactive lizard": {
+        "word": "Godzilla",
+        "hint": "Radioaktive Eidechse"
+      },
+      "Fictional Characters\tSuperman\tClark Kent": {
+        "word": "Superman",
+        "hint": "Clark Kent"
+      },
+      "Fictional Characters\tBatman\tBruce Wayne": {
+        "word": "Batman",
+        "hint": "Bruce Wayne"
+      },
+      "Fictional Characters\tSpider-Man\tPeter Parker": {
+        "word": "Spider-Man",
+        "hint": "Peter Parker"
+      },
+      "Fictional Characters\tPeter Pan\tNeverland boy": {
+        "word": "Peter Pan",
+        "hint": "Nimmerland-Junge"
+      },
+      "Historical Events\tWorld War I\tTrenches": {
+        "word": "Erster Weltkrieg",
+        "hint": "Schützengräben"
+      },
+      "Historical Events\tWorld War II\tAxis & Allies": {
+        "word": "Zweiter Weltkrieg",
+        "hint": "Achsenmächte & Alliierte"
+      },
+      "Historical Events\tFrench Revolution\tGuillotine": {
+        "word": "Französische Revolution",
+        "hint": "Guillotine"
+      },
+      "Historical Events\tAmerican Revolution\t1776": {
+        "word": "Amerikanische Revolution",
+        "hint": "1776"
+      },
+      "Historical Events\tMoon Landing\tApollo 11": {
+        "word": "Mondlandung",
+        "hint": "Apollo 11"
+      },
+      "Historical Events\tFall of the Berlin Wall\tCold War ending": {
+        "word": "Fall der Berliner Mauer",
+        "hint": "Ende des Kalten Krieges"
+      },
+      "Historical Events\tCold War\tUSA vs USSR tension": {
+        "word": "Kalter Krieg",
+        "hint": "Spannung USA vs. UdSSR"
+      },
+      "Historical Events\tRenaissance\tRebirth of art": {
+        "word": "Renaissance",
+        "hint": "Wiedergeburt der Kunst"
+      },
+      "Historical Events\tIndustrial Revolution\tFactories & steam": {
+        "word": "Industrielle Revolution",
+        "hint": "Fabriken & Dampf"
+      },
+      "Historical Events\tDiscovery of America\tColumbus 1492": {
+        "word": "Entdeckung Amerikas",
+        "hint": "Kolumbus 1492"
+      },
+      "Historical Events\tBlack Death\tPlague": {
+        "word": "Schwarzer Tod",
+        "hint": "Pest"
+      },
+      "Historical Events\tTitanic Sinking\tIceberg 1912": {
+        "word": "Untergang der Titanic",
+        "hint": "Eisberg 1912"
+      },
+      "Historical Events\tIndependence of India\t1947 partition": {
+        "word": "Unabhängigkeit Indiens",
+        "hint": "Teilung 1947"
+      },
+      "Historical Events\tMagna Carta\t1215 document": {
+        "word": "Magna Carta",
+        "hint": "Dokument von 1215"
+      },
+      "Historical Events\tDeclaration of Independence\tJuly 4": {
+        "word": "Unabhängigkeitserklärung",
+        "hint": "4. Juli"
+      },
+      "Historical Events\tInvention Printing Press\tGutenberg": {
+        "word": "Erfindung Buchdruck",
+        "hint": "Gutenberg"
+      },
+      "Historical Events\tInternet Creation\tWorld Wide Web starts": {
+        "word": "Entstehung des Internets",
+        "hint": "World Wide Web beginnt"
+      },
+      "Historical Events\tChernobyl Disaster\tNuclear meltdown": {
+        "word": "Katastrophe von Tschernobyl",
+        "hint": "Nukleare Kernschmelze"
+      },
+      "Historical Events\t9/11 Attacks\tTwin towers": {
+        "word": "Anschläge vom 11. September",
+        "hint": "Zwillingstürme"
+      },
+      "Historical Events\tCOVID-19 Pandemic\tGlobal quarantine": {
+        "word": "COVID-19 Pandemie",
+        "hint": "Globale Quarantäne"
+      },
+      "Video Games\tSuper Mario Bros\tJump on Goombas": {
+        "word": "Super Mario Bros",
+        "hint": "Spring auf Goombas"
+      },
+      "Video Games\tMinecraft\tBlocks and Creepers": {
+        "word": "Minecraft",
+        "hint": "Blöcke und Creeper"
+      },
+      "Video Games\tTetris\tFalling shapes": {
+        "word": "Tetris",
+        "hint": "Fallende Formen"
+      },
+      "Video Games\tPac-Man\tYellow circle ghosts": {
+        "word": "Pac-Man",
+        "hint": "Gelbe Kreis-Geister"
+      },
+      "Video Games\tGrand Theft Auto\tSteal cars": {
+        "word": "Grand Theft Auto",
+        "hint": "Autos stehlen"
+      },
+      "Video Games\tCall of Duty\tMilitary shooter": {
+        "word": "Call of Duty",
+        "hint": "Militär-Shooter"
+      },
+      "Video Games\tLegend of Zelda\tLink's quest": {
+        "word": "Legend of Zelda",
+        "hint": "Links Aufgabe"
+      },
+      "Video Games\tPokemon\tGotta catch them all": {
+        "word": "Pokemon",
+        "hint": "Muss sie alle fangen"
+      },
+      "Video Games\tWorld of Warcraft\tHuge MMO": {
+        "word": "World of Warcraft",
+        "hint": "Riesiges MMO"
+      },
+      "Video Games\tFortnite\tBattle Royale building": {
+        "word": "Fortnite",
+        "hint": "Battle Royale Bauen"
+      },
+      "Video Games\tLeague of Legends\tMOBA lanes": {
+        "word": "League of Legends",
+        "hint": "MOBA Lanes"
+      },
+      "Video Games\tOverwatch\tHero team shooter": {
+        "word": "Overwatch",
+        "hint": "Helden-Team-Shooter"
+      },
+      "Video Games\tThe Sims\tControl virtual lives": {
+        "word": "Die Sims",
+        "hint": "Steuere virtuelle Leben"
+      },
+      "Video Games\tAnimal Crossing\tIsland villagers": {
+        "word": "Animal Crossing",
+        "hint": "Inselbewohner"
+      },
+      "Video Games\tSkyrim\tDragonborn": {
+        "word": "Skyrim",
+        "hint": "Drachenblut"
+      },
+      "Video Games\tRed Dead Redemption\tCowboy outlaw": {
+        "word": "Red Dead Redemption",
+        "hint": "Cowboy Gesetzloser"
+      },
+      "Video Games\tHalo\tMaster Chief": {
+        "word": "Halo",
+        "hint": "Master Chief"
+      },
+      "Video Games\tPortal\tTeleporting gun puzzle": {
+        "word": "Portal",
+        "hint": "Teleportations-Waffenrätsel"
+      },
+      "Video Games\tBioshock\tUnderwater city": {
+        "word": "Bioshock",
+        "hint": "Unterwasserstadt"
+      },
+      "Video Games\tHalf-Life\tGordon Freeman crowbar": {
+        "word": "Half-Life",
+        "hint": "Gordon Freeman Brechstange"
+      },
+      "Landmarks\tEiffel Tower\tParis iron": {
+        "word": "Eiffelturm",
+        "hint": "Paris Eisen"
+      },
+      "Landmarks\tGreat Wall of China\tLongest brick structure": {
+        "word": "Chinesische Mauer",
+        "hint": "Längstes Mauerwerk"
+      },
+      "Landmarks\tStatue of Liberty\tNY torch": {
+        "word": "Freiheitsstatue",
+        "hint": "NY Fackel"
+      },
+      "Landmarks\tColosseum\tRoman gladiators": {
+        "word": "Kolosseum",
+        "hint": "Römische Gladiatoren"
+      },
+      "Landmarks\tTaj Mahal\tIndian marble mausoleum": {
+        "word": "Taj Mahal",
+        "hint": "Indisches Marmor-Mausoleum"
+      },
+      "Landmarks\tPyramids of Giza\tEgyptian ancient tombs": {
+        "word": "Pyramiden von Gizeh",
+        "hint": "Ägyptische alte Gräber"
+      },
+      "Landmarks\tMachu Picchu\tInca ruins": {
+        "word": "Machu Picchu",
+        "hint": "Inka-Ruinen"
+      },
+      "Landmarks\tStonehenge\tUK standing stones": {
+        "word": "Stonehenge",
+        "hint": "UK stehende Steine"
+      },
+      "Landmarks\tBig Ben\tLondon clock": {
+        "word": "Big Ben",
+        "hint": "Londoner Uhr"
+      },
+      "Landmarks\tMount Rushmore\tPresidents carved mountain": {
+        "word": "Mount Rushmore",
+        "hint": "Präsidenten in Berg gemeißelt"
+      },
+      "Landmarks\tChrist the Redeemer\tRio statue": {
+        "word": "Christus der Erlöser",
+        "hint": "Rio Statue"
+      },
+      "Landmarks\tSydney Opera House\tAustralian sails roof": {
+        "word": "Sydney Opera House",
+        "hint": "Australisches Segeldach"
+      },
+      "Landmarks\tAcropolis\tAthens hilltop": {
+        "word": "Akropolis",
+        "hint": "Athener Hügel"
+      },
+      "Landmarks\tPetronas Towers\tKuala Lumpur twin high": {
+        "word": "Petronas Towers",
+        "hint": "Kuala Lumpur Zwillingshoch"
+      },
+      "Landmarks\tBurj Khalifa\tDubai tallest": {
+        "word": "Burj Khalifa",
+        "hint": "Dubai höchstes"
+      },
+      "Landmarks\tGolden Gate Bridge\tSan Francisco red": {
+        "word": "Golden Gate Bridge",
+        "hint": "San Francisco rot"
+      },
+      "Landmarks\tNiagara Falls\tUS/Canada huge waterfall": {
+        "word": "Niagarafälle",
+        "hint": "USA/Kanada riesiger Wasserfall"
+      },
+      "Landmarks\tGrand Canyon\tArizona huge gorge": {
+        "word": "Grand Canyon",
+        "hint": "Arizona riesige Schlucht"
+      },
+      "Landmarks\tLeaning Tower of Pisa\tTilted Italian base": {
+        "word": "Schiefer Turm von Pisa",
+        "hint": "Geneigte italienische Basis"
+      },
+      "Landmarks\tMount Everest\tHighest peak": {
+        "word": "Mount Everest",
+        "hint": "Höchster Gipfel"
+      },
+      "Fears & Phobias\tSpiders\tArachnophobia": {
+        "word": "Spinnen",
+        "hint": "Arachnophobie"
+      },
+      "Fears & Phobias\tHeights\tAcrophobia": {
+        "word": "Höhen",
+        "hint": "Akrophobie"
+      },
+      "Fears & Phobias\tConfined Spaces\tClaustrophobia": {
+        "word": "Geschlossene Räume",
+        "hint": "Klaustrophobie"
+      },
+      "Fears & Phobias\tDark\tNyctophobia": {
+        "word": "Dunkelheit",
+        "hint": "Nyktophobie"
+      },
+      "Fears & Phobias\tSnakes\tOphidiophobia": {
+        "word": "Schlangen",
+        "hint": "Ophidiophobie"
+      },
+      "Fears & Phobias\tFlying\tAviophobia": {
+        "word": "Fliegen",
+        "hint": "Aviophobie"
+      },
+      "Fears & Phobias\tDogs\tCynophobia": {
+        "word": "Hunde",
+        "hint": "Kynophobie"
+      },
+      "Fears & Phobias\tNeedles\tTrypanophobia": {
+        "word": "Nadeln",
+        "hint": "Trypanophobie"
+      },
+      "Fears & Phobias\tSocializing\tSocial Phobia": {
+        "word": "Geselligkeit",
+        "hint": "Soziale Phobie"
+      },
+      "Fears & Phobias\tGerms\tMysophobia": {
+        "word": "Keime",
+        "hint": "Mysophobie"
+      },
+      "Fears & Phobias\tPublic Speaking\tGlossophobia": {
+        "word": "Öffentliches Sprechen",
+        "hint": "Glossophobie"
+      },
+      "Fears & Phobias\tDeath\tThanatophobia": {
+        "word": "Tod",
+        "hint": "Thanatophobie"
+      },
+      "Fears & Phobias\tWater\tAquaphobia": {
+        "word": "Wasser",
+        "hint": "Aquaphobie"
+      },
+      "Fears & Phobias\tBlood\tHemophobia": {
+        "word": "Blut",
+        "hint": "Hämophobie"
+      },
+      "Fears & Phobias\tCrowds\tAgoraphobia": {
+        "word": "Menschenmassen",
+        "hint": "Agoraphobie"
+      },
+      "Fears & Phobias\tClowns\tCoulrophobia": {
+        "word": "Clowns",
+        "hint": "Coulrophobie"
+      },
+      "Fears & Phobias\tDentists\tDentophobia": {
+        "word": "Zahnärzte",
+        "hint": "Dentophobie"
+      },
+      "Fears & Phobias\tThunder\tAstraphobia": {
+        "word": "Donner",
+        "hint": "Astraphobie"
+      },
+      "Fears & Phobias\tFire\tPyrophobia": {
+        "word": "Feuer",
+        "hint": "Pyrophobie"
+      },
+      "Fears & Phobias\tGhosts\tPhasmophobia": {
+        "word": "Geister",
+        "hint": "Phasmophobie"
+      },
+      "Household Items\tTelevision\tWatching screen": {
+        "word": "Fernseher",
+        "hint": "Bildschirm zum Anschauen"
+      },
+      "Household Items\tRefrigerator\tCooling food": {
+        "word": "Kühlschrank",
+        "hint": "Kühlen von Speisen"
+      },
+      "Household Items\tMicrowave\tFast heating": {
+        "word": "Mikrowelle",
+        "hint": "Schnelles Aufheizen"
+      },
+      "Household Items\tWashing Machine\tCleaning clothes": {
+        "word": "Waschmaschine",
+        "hint": "Reinigung von Kleidung"
+      },
+      "Household Items\tBed\tSleeping furniture": {
+        "word": "Bett",
+        "hint": "Schlafmöbel"
+      },
+      "Household Items\tSofa\tLiving room seating": {
+        "word": "Sofa",
+        "hint": "Sitzgelegenheit im Wohnzimmer"
+      },
+      "Household Items\tTable\tEating surface": {
+        "word": "Tisch",
+        "hint": "Essfläche"
+      },
+      "Household Items\tChair\tSitting furniture": {
+        "word": "Stuhl",
+        "hint": "Sitzmöbel"
+      },
+      "Household Items\tLamp\tLighting device": {
+        "word": "Lampe",
+        "hint": "Beleuchtungsgerät"
+      },
+      "Household Items\tClock\tTelling time": {
+        "word": "Uhr",
+        "hint": "Zeitanzeige"
+      },
+      "Household Items\tMirror\tReflection glass": {
+        "word": "Spiegel",
+        "hint": "Reflektierendes Glas"
+      },
+      "Household Items\tOven\tBaking food": {
+        "word": "Ofen",
+        "hint": "Backen von Speisen"
+      },
+      "Household Items\tToaster\tCrispy bread": {
+        "word": "Toaster",
+        "hint": "Knuspriges Brot"
+      },
+      "Household Items\tBlender\tMixing smoothies": {
+        "word": "Mixer",
+        "hint": "Mischen von Smoothies"
+      },
+      "Household Items\tVacuum Cleaner\tSucking dust": {
+        "word": "Staubsauger",
+        "hint": "Saugen von Staub"
+      },
+      "Household Items\tIron\tPressing clothes": {
+        "word": "Bügeleisen",
+        "hint": "Bügeln von Kleidung"
+      },
+      "Household Items\tTrash Can\tGarbage holder": {
+        "word": "Mülleimer",
+        "hint": "Müllbehälter"
+      },
+      "Household Items\tBathtub\tWashing body": {
+        "word": "Badewanne",
+        "hint": "Körperwäsche"
+      },
+      "Household Items\tToilet\tBathroom necessity": {
+        "word": "Toilette",
+        "hint": "Badnotwendigkeit"
+      },
+      "Household Items\tBookcase\tHolding novels": {
+        "word": "Bücherregal",
+        "hint": "Aufbewahrung von Romanen"
+      },
+      "Nature\tTree\tLeaves & trunk": {
+        "word": "Baum",
+        "hint": "Blätter & Stamm"
+      },
+      "Nature\tFlower\tPetals": {
+        "word": "Blume",
+        "hint": "Blütenblätter"
+      },
+      "Nature\tMountain\tHigh peak": {
+        "word": "Berg",
+        "hint": "Hoher Gipfel"
+      },
+      "Nature\tRiver\tFlowing water": {
+        "word": "Fluss",
+        "hint": "Fließendes Wasser"
+      },
+      "Nature\tOcean\tSalty sea": {
+        "word": "Ozean",
+        "hint": "Salziges Meer"
+      },
+      "Nature\tForest\tMany trees": {
+        "word": "Wald",
+        "hint": "Viele Bäume"
+      },
+      "Nature\tDesert\tSand and dry": {
+        "word": "Wüste",
+        "hint": "Sand und trocken"
+      },
+      "Nature\tSnow\tCold white flakes": {
+        "word": "Schnee",
+        "hint": "Kalte weiße Flocken"
+      },
+      "Nature\tRain\tWater falling from sky": {
+        "word": "Regen",
+        "hint": "Wasser fällt vom Himmel"
+      },
+      "Nature\tSun\tDaytime star": {
+        "word": "Sonne",
+        "hint": "Tagesstern"
+      },
+      "Nature\tMoon\tNighttime satellite": {
+        "word": "Mond",
+        "hint": "Nachtsatellit"
+      },
+      "Nature\tStar\tTwinkling sky point": {
+        "word": "Stern",
+        "hint": "Funkelnder Himmelspunkt"
+      },
+      "Nature\tCloud\tWhite fluffy sky object": {
+        "word": "Wolke",
+        "hint": "Weißes flauschiges Himmelsobjekt"
+      },
+      "Nature\tLightning\tElectric storm flash": {
+        "word": "Blitz",
+        "hint": "Elektrischer Sturmblitz"
+      },
+      "Nature\tWind\tMoving air breeze": {
+        "word": "Wind",
+        "hint": "Sich bewegende Luftbrise"
+      },
+      "Nature\tVolcano\tLava erupting mountain": {
+        "word": "Vulkan",
+        "hint": "Lava speiender Berg"
+      },
+      "Nature\tCave\tDark hollow rocky": {
+        "word": "Höhle",
+        "hint": "Dunkel hohl felsig"
+      },
+      "Nature\tWaterfall\tWater dropping cliff": {
+        "word": "Wasserfall",
+        "hint": "Wasser fällt von Klippe"
+      },
+      "Nature\tIsland\tLand surrounded by water": {
+        "word": "Insel",
+        "hint": "Land umgeben von Wasser"
+      },
+      "Nature\tGrass\tGreen lawn blades": {
+        "word": "Gras",
+        "hint": "Grüne Rasenhalme"
+      },
+      "Clothing\tShirt\tUpper body wear": {
+        "word": "Hemd",
+        "hint": "Oberkörperbekleidung"
+      },
+      "Clothing\tPants\tLower body legs": {
+        "word": "Hose",
+        "hint": "Unterkörperbeine"
+      },
+      "Clothing\tDress\tOne piece women wear": {
+        "word": "Kleid",
+        "hint": "Einteilige Damenbekleidung"
+      },
+      "Clothing\tSkirt\tDangling lower wear": {
+        "word": "Rock",
+        "hint": "Herunterhängende Unterbekleidung"
+      },
+      "Clothing\tJacket\tOuter wear coat": {
+        "word": "Jacke",
+        "hint": "Oberbekleidung Mantel"
+      },
+      "Clothing\tSweater\tWarm knitted top": {
+        "word": "Pullover",
+        "hint": "Warmer Strickoberteil"
+      },
+      "Clothing\tSocks\tFoot covering soft": {
+        "word": "Socken",
+        "hint": "Fußbedeckung weich"
+      },
+      "Clothing\tShoes\tFoot covering hard": {
+        "word": "Schuhe",
+        "hint": "Fußbedeckung hart"
+      },
+      "Clothing\tHat\tHead covering gear": {
+        "word": "Hut",
+        "hint": "Kopfbedeckung Ausrüstung"
+      },
+      "Clothing\tGloves\tHand warming cover": {
+        "word": "Handschuhe",
+        "hint": "Handwärmer Abdeckung"
+      },
+      "Clothing\tScarf\tNeck wrapper": {
+        "word": "Schal",
+        "hint": "Halstuch"
+      },
+      "Clothing\tBelt\tWaist tightener": {
+        "word": "Gürtel",
+        "hint": "Taillenstraffer"
+      },
+      "Clothing\tTie\tSuit neck accessory": {
+        "word": "Krawatte",
+        "hint": "Anzug Halsaccessoire"
+      },
+      "Clothing\tUnderwear\tBase layer bottom": {
+        "word": "Unterwäsche",
+        "hint": "Basisschicht unten"
+      },
+      "Clothing\tShorts\tSummer leg wear": {
+        "word": "Shorts",
+        "hint": "Sommer Beinbekleidung"
+      },
+      "Clothing\tJeans\tDenim pants": {
+        "word": "Jeans",
+        "hint": "Denim Hose"
+      },
+      "Clothing\tT-shirt\tCasual short sleeve": {
+        "word": "T-Shirt",
+        "hint": "Lässiges Kurzarmshirt"
+      },
+      "Clothing\tCoat\tHeavy winter top": {
+        "word": "Mantel",
+        "hint": "Schweres Winteroberteil"
+      },
+      "Clothing\tBoots\tHigh footwear ankle": {
+        "word": "Stiefel",
+        "hint": "Hoher Schuh Knöchel"
+      },
+      "Clothing\tSandals\tOpen toe summer shoes": {
+        "word": "Sandalen",
+        "hint": "Offene Zehen Sommerschuhe"
+      },
+      "Mythological Creatures\tDragon\tBreathing fire scaling": {
+        "word": "Drache",
+        "hint": "Feuerspeiende Schuppen"
+      },
+      "Mythological Creatures\tUnicorn\tOne horn horse": {
+        "word": "Einhorn",
+        "hint": "Ein Horn Pferd"
+      },
+      "Mythological Creatures\tPhoenix\tReborn fiery bird": {
+        "word": "Phönix",
+        "hint": "Wiedergeborener feuriger Vogel"
+      },
+      "Mythological Creatures\tMermaid\tHalf fish half woman": {
+        "word": "Meerjungfrau",
+        "hint": "Halb Fisch halb Frau"
+      },
+      "Mythological Creatures\tCentaur\tHalf horse half man": {
+        "word": "Zentaur",
+        "hint": "Halb Pferd halb Mann"
+      },
+      "Mythological Creatures\tGriffin\tLion eagle hybrid": {
+        "word": "Greif",
+        "hint": "Löwen-Adler-Hybrid"
+      },
+      "Mythological Creatures\tPegasus\tWinged horse": {
+        "word": "Pegasus",
+        "hint": "Geflügeltes Pferd"
+      },
+      "Mythological Creatures\tMinotaur\tBull headed man": {
+        "word": "Minotaurus",
+        "hint": "Stierköpfiger Mann"
+      },
+      "Mythological Creatures\tMedusa\tSnake hair": {
+        "word": "Medusa",
+        "hint": "Schlangenhaare"
+      },
+      "Mythological Creatures\tKraken\tGiant sea monster": {
+        "word": "Krake",
+        "hint": "Riesiges Seeungeheuer"
+      },
+      "Mythological Creatures\tCyclops\tOne eyed giant": {
+        "word": "Zyklop",
+        "hint": "Einäugiger Riese"
+      },
+      "Mythological Creatures\tSphinx\tLion body human head": {
+        "word": "Sphinx",
+        "hint": "Löwenkörper Menschenkopf"
+      },
+      "Mythological Creatures\tCerberus\tThree headed dog": {
+        "word": "Cerberus",
+        "hint": "Dreiköpfiger Hund"
+      },
+      "Mythological Creatures\tChimera\tLion goat snake fusion": {
+        "word": "Chimäre",
+        "hint": "Löwen-Ziegen-Schlangen-Fusion"
+      },
+      "Mythological Creatures\tHydra\tMulti-headed serpent": {
+        "word": "Hydra",
+        "hint": "Vielköpfige Schlange"
+      },
+      "Mythological Creatures\tVampire\tBloodsucker": {
+        "word": "Vampir",
+        "hint": "Blutsauger"
+      },
+      "Mythological Creatures\tWerewolf\tFull moon transformation": {
+        "word": "Werwolf",
+        "hint": "Vollmond-Transformation"
+      },
+      "Mythological Creatures\tTroll\tBridge guardian": {
+        "word": "Troll",
+        "hint": "Brückenwächter"
+      },
+      "Mythological Creatures\tGoblin\tLittle green mischief": {
+        "word": "Kobold",
+        "hint": "Kleiner grüner Unruhestifter"
+      },
+      "Mythological Creatures\tYeti\tAbominable snowman": {
+        "word": "Yeti",
+        "hint": "Abscheulicher Schneemensch"
+      },
+      "Hobbies\tReading\tBooks pages novels": {
+        "word": "Lesen",
+        "hint": "Bücher Seiten Romane"
+      },
+      "Hobbies\tWriting\tPen paper stories": {
+        "word": "Schreiben",
+        "hint": "Stift Papier Geschichten"
+      },
+      "Hobbies\tDrawing\tPencil art sketch": {
+        "word": "Zeichnen",
+        "hint": "Bleistift Kunst Skizze"
+      },
+      "Hobbies\tPainting\tBrush colors canvas": {
+        "word": "Malen",
+        "hint": "Pinsel Farben Leinwand"
+      },
+      "Hobbies\tPhotography\tTaking pictures camera": {
+        "word": "Fotografie",
+        "hint": "Bilder machen Kamera"
+      },
+      "Hobbies\tCooking\tMaking meals": {
+        "word": "Kochen",
+        "hint": "Mahlzeiten zubereiten"
+      },
+      "Hobbies\tBaking\tOven sweets dough": {
+        "word": "Backen",
+        "hint": "Ofen Süßigkeiten Teig"
+      },
+      "Hobbies\tGardening\tPlants soil flowers": {
+        "word": "Gartenarbeit",
+        "hint": "Pflanzen Erde Blumen"
+      },
+      "Hobbies\tFishing\tRod reel water": {
+        "word": "Angeln",
+        "hint": "Rute Rolle Wasser"
+      },
+      "Hobbies\tHiking\tWalking trails mountains": {
+        "word": "Wandern",
+        "hint": "Wege Berge laufen"
+      },
+      "Hobbies\tCamping\tTent outdoors fire": {
+        "word": "Camping",
+        "hint": "Zelt Natur Feuer"
+      },
+      "Hobbies\tKnitting\tYarn needles sweater": {
+        "word": "Stricken",
+        "hint": "Wolle Nadeln Pullover"
+      },
+      "Hobbies\tSewing\tThread fabric needle": {
+        "word": "Nähen",
+        "hint": "Faden Stoff Nadel"
+      },
+      "Hobbies\tWoodworking\tCarving constructing timber": {
+        "word": "Holzarbeiten",
+        "hint": "Schnitzen Bauen Holz"
+      },
+      "Hobbies\tPottery\tClay spinning wheel": {
+        "word": "Töpfern",
+        "hint": "Ton Drehscheibe"
+      },
+      "Hobbies\tGaming\tPlaying video consoles": {
+        "word": "Spielen",
+        "hint": "Videospiele Konsolen spielen"
+      },
+      "Hobbies\tDancing\tMoving body rhythm": {
+        "word": "Tanzen",
+        "hint": "Körper bewegen Rhythmus"
+      },
+      "Hobbies\tSinging\tVocal melodies": {
+        "word": "Singen",
+        "hint": "Vokale Melodien"
+      },
+      "Hobbies\tTraveling\tVisiting new places": {
+        "word": "Reisen",
+        "hint": "Neue Orte besuchen"
+      },
+      "Hobbies\tCollecting\tGathering specific items": {
+        "word": "Sammeln",
+        "hint": "Bestimmte Gegenstände sammeln"
+      },
+      "Science\tBiology\tLife study": {
+        "word": "Biologie",
+        "hint": "Lehre vom Leben"
+      },
+      "Science\tChemistry\tElements reactions": {
+        "word": "Chemie",
+        "hint": "Elemente Reaktionen"
+      },
+      "Science\tPhysics\tMatter forces energy": {
+        "word": "Physik",
+        "hint": "Materie Kräfte Energie"
+      },
+      "Science\tAstronomy\tSpace planets study": {
+        "word": "Astronomie",
+        "hint": "Weltraum Planetenforschung"
+      },
+      "Science\tGeology\tEarth rocks study": {
+        "word": "Geologie",
+        "hint": "Erde Gesteinsstudie"
+      },
+      "Science\tAtom\tSmallest particle core": {
+        "word": "Atom",
+        "hint": "Kleinstes Teilchen Kern"
+      },
+      "Science\tMolecule\tAtoms bonded": {
+        "word": "Molekül",
+        "hint": "Atome verbunden"
+      },
+      "Science\tCell\tBasic life unit": {
+        "word": "Zelle",
+        "hint": "Grundlegende Lebenseinheit"
+      },
+      "Science\tDNA\tGenetic ladder": {
+        "word": "DNA",
+        "hint": "Genetische Leiter"
+      },
+      "Science\tGravity\tFalling pulling force": {
+        "word": "Gravitation",
+        "hint": "Fallende Zugkraft"
+      },
+      "Science\tEvolution\tSpecies change over time": {
+        "word": "Evolution",
+        "hint": "Spezies ändern sich im Laufe der Zeit"
+      },
+      "Science\tMicroscope\tSeeing tiny things": {
+        "word": "Mikroskop",
+        "hint": "Winzige Dinge sehen"
+      },
+      "Science\tTelescope\tSeeing far things": {
+        "word": "Teleskop",
+        "hint": "Weite Dinge sehen"
+      },
+      "Science\tLaboratory\tScience workplace": {
+        "word": "Labor",
+        "hint": "Wissenschaftlicher Arbeitsplatz"
+      },
+      "Science\tExperiment\tTesting hypothesis": {
+        "word": "Experiment",
+        "hint": "Hypothese testen"
+      },
+      "Science\tTheory\tScientific explanation base": {
+        "word": "Theorie",
+        "hint": "Wissenschaftliche Erklärung Basis"
+      },
+      "Science\tFossil\tAncient rock remains": {
+        "word": "Fossil",
+        "hint": "Alte Gesteinsreste"
+      },
+      "Science\tVirus\tMicroscopic disease agent": {
+        "word": "Virus",
+        "hint": "Mikroskopischer Krankheitserreger"
+      },
+      "Science\tBacteria\tSingle cell organisms": {
+        "word": "Bakterien",
+        "hint": "Einzelzellige Organismen"
+      },
+      "Science\tElement\tPeriodic table item": {
+        "word": "Element",
+        "hint": "Periodensystem Element"
+      },
+      "Colors\tRed\tBlood apple": {
+        "word": "Rot",
+        "hint": "Blut Apfel"
+      },
+      "Colors\tBlue\tSky ocean": {
+        "word": "Blau",
+        "hint": "Himmel Ozean"
+      },
+      "Colors\tYellow\tSun banana": {
+        "word": "Gelb",
+        "hint": "Sonne Banane"
+      },
+      "Colors\tGreen\tGrass leaves": {
+        "word": "Grün",
+        "hint": "Gras Blätter"
+      },
+      "Colors\tOrange\tCitrus fruit": {
+        "word": "Orange",
+        "hint": "Zitrusfrucht"
+      },
+      "Colors\tPurple\tGrapes royalty": {
+        "word": "Lila",
+        "hint": "Trauben Königtum"
+      },
+      "Colors\tPink\tPig cotton candy": {
+        "word": "Rosa",
+        "hint": "Schwein Zuckerwatte"
+      },
+      "Colors\tBlack\tNight coal": {
+        "word": "Schwarz",
+        "hint": "Nacht Kohle"
+      },
+      "Colors\tWhite\tSnow milk": {
+        "word": "Weiß",
+        "hint": "Schnee Milch"
+      },
+      "Colors\tGray\tAsh clouds": {
+        "word": "Grau",
+        "hint": "Asche Wolken"
+      },
+      "Colors\tBrown\tDirt wood": {
+        "word": "Braun",
+        "hint": "Erde Holz"
+      },
+      "Colors\tGold\tShiny wealth": {
+        "word": "Gold",
+        "hint": "Glänzender Reichtum"
+      },
+      "Colors\tSilver\tSecond place metal": {
+        "word": "Silber",
+        "hint": "Zweiter Platz Metall"
+      },
+      "Colors\tBronze\tThird place metal": {
+        "word": "Bronze",
+        "hint": "Dritter Platz Metall"
+      },
+      "Colors\tCyan\tLight bright blue": {
+        "word": "Cyan",
+        "hint": "Helles leuchtendes Blau"
+      },
+      "Colors\tMagenta\tDeep purplish red": {
+        "word": "Magenta",
+        "hint": "Tiefes purpurrotes Rot"
+      },
+      "Colors\tIndigo\tDark violet blue": {
+        "word": "Indigo",
+        "hint": "Dunkles violett Blau"
+      },
+      "Colors\tTeal\tBlue green hue": {
+        "word": "Türkis",
+        "hint": "Blaugrüner Farbton"
+      },
+      "Colors\tMaroon\tDark brownish red": {
+        "word": "Kastanienbraun",
+        "hint": "Dunkles bräunliches Rot"
+      },
+      "Colors\tNavy\tDark military blue": {
+        "word": "Marineblau",
+        "hint": "Dunkles militärisches Blau"
+      },
+      "School Subjects\tMathematics\tNumbers equations shapes": {
+        "word": "Mathematik",
+        "hint": "Zahlen Gleichungen Formen"
+      },
+      "School Subjects\tScience\tExperiments biology physics": {
+        "word": "Naturwissenschaften",
+        "hint": "Experimente Biologie Physik"
+      },
+      "School Subjects\tEnglish\tLiterature grammar writing": {
+        "word": "Englisch",
+        "hint": "Literatur Grammatik Schreiben"
+      },
+      "School Subjects\tHistory\tPast events wars": {
+        "word": "Geschichte",
+        "hint": "Vergangene Ereignisse Kriege"
+      },
+      "School Subjects\tGeography\tMaps countries capitals": {
+        "word": "Geographie",
+        "hint": "Karten Länder Hauptstädte"
+      },
+      "School Subjects\tArt\tPainting drawing creative": {
+        "word": "Kunst",
+        "hint": "Malen Zeichnen Kreativ"
+      },
+      "School Subjects\tMusic\tPlaying instruments singing": {
+        "word": "Musik",
+        "hint": "Instrumente spielen Singen"
+      },
+      "School Subjects\tPhysical Education\tGym sports running": {
+        "word": "Sport",
+        "hint": "Turnhalle Sport Laufen"
+      },
+      "School Subjects\tComputer Science\tCoding programming tech": {
+        "word": "Informatik",
+        "hint": "Codieren Programmieren Technik"
+      },
+      "School Subjects\tForeign Language\tSpeaking idioms overseas": {
+        "word": "Fremdsprache",
+        "hint": "Sprechen Redewendungen Übersee"
+      },
+      "School Subjects\tChemistry\tElements lab periodic": {
+        "word": "Chemie",
+        "hint": "Elemente Labor Periodensystem"
+      },
+      "School Subjects\tBiology\tLife cells plants": {
+        "word": "Biologie",
+        "hint": "Leben Zellen Pflanzen"
+      },
+      "School Subjects\tPhysics\tForces gravity motion": {
+        "word": "Physik",
+        "hint": "Kräfte Schwerkraft Bewegung"
+      },
+      "School Subjects\tAlgebra\tLetters and numbers math": {
+        "word": "Algebra",
+        "hint": "Buchstaben und Zahlen Mathe"
+      },
+      "School Subjects\tGeometry\tShapes angles lines": {
+        "word": "Geometrie",
+        "hint": "Formen Winkel Linien"
+      },
+      "School Subjects\tCalculus\tAdvanced math derivatives": {
+        "word": "Analysis",
+        "hint": "Höhere Mathematik Ableitungen"
+      },
+      "School Subjects\tEconomics\tMoney markets trade": {
+        "word": "Wirtschaft",
+        "hint": "Geld Märkte Handel"
+      },
+      "School Subjects\tPsychology\tMind behavior study": {
+        "word": "Psychologie",
+        "hint": "Geist Verhalten Studium"
+      },
+      "School Subjects\tSociology\tSociety people culture": {
+        "word": "Soziologie",
+        "hint": "Gesellschaft Menschen Kultur"
+      },
+      "School Subjects\tDrama\tTheater acting plays": {
+        "word": "Theater",
+        "hint": "Bühne Schauspiel Stücke"
+      },
+      "Toys\tLego\tBuilding blocks plastic": {
+        "word": "Lego",
+        "hint": "Bausteine Plastik"
+      },
+      "Toys\tBarbie\tPopular fashion doll": {
+        "word": "Barbie",
+        "hint": "Beliebte Modepuppe"
+      },
+      "Toys\tTeddy Bear\tStuffed animal plush": {
+        "word": "Teddybär",
+        "hint": "Stofftier Plüsch"
+      },
+      "Toys\tAction Figure\tPosable hero toy": {
+        "word": "Actionfigur",
+        "hint": "Bewegliche Heldenfigur"
+      },
+      "Toys\tYo-Yo\tString spinning down up": {
+        "word": "Jo-Jo",
+        "hint": "Schnur dreht sich rauf runter"
+      },
+      "Toys\tKite\tFlying string wind": {
+        "word": "Drachen",
+        "hint": "Fliegend Schnur Wind"
+      },
+      "Toys\tFrisbee\tFlying disc throw": {
+        "word": "Frisbee",
+        "hint": "Fliegende Scheibe werfen"
+      },
+      "Toys\tDollhouse\tMiniature home toy": {
+        "word": "Puppenhaus",
+        "hint": "Miniaturhaus Spielzeug"
+      },
+      "Toys\tPuzzle\tFitting pieces together picture": {
+        "word": "Puzzle",
+        "hint": "Teile zusammenfügen Bild"
+      },
+      "Toys\tBoard Game\tTable top dice rules": {
+        "word": "Brettspiel",
+        "hint": "Tischwürfel Regeln"
+      },
+      "Toys\tRubik's Cube\tTwisting colorful square": {
+        "word": "Rubik's Würfel",
+        "hint": "Drehbarer bunter Würfel"
+      },
+      "Toys\tTrain Set\tTracks miniature engines": {
+        "word": "Eisenbahn",
+        "hint": "Schienen Miniatur-Lokomotiven"
+      },
+      "Toys\tRemote Control Car\tDriving via frequency": {
+        "word": "Ferngesteuertes Auto",
+        "hint": "Fahren über Frequenz"
+      },
+      "Toys\tPlay-Doh\tModeling clay colors": {
+        "word": "Play-Doh",
+        "hint": "Knetmasse Farben"
+      },
+      "Toys\tHula Hoop\tSpinning around waist": {
+        "word": "Hula-Hoop",
+        "hint": "Drehen um die Taille"
+      },
+      "Toys\tJump Rope\tSkipping string exercise": {
+        "word": "Springseil",
+        "hint": "Seilspringen Übung"
+      },
+      "Toys\tWater Gun\tShooting liquid summer squirter": {
+        "word": "Wasserpistole",
+        "hint": "Flüssigkeit schießen Sommer Spritzer"
+      },
+      "Toys\tSlingshot\tPull back launch rock": {
+        "word": "Steinschleuder",
+        "hint": "Zurückziehen Stein abschleudern"
+      },
+      "Toys\tTrampoline\tBouncy jumping surface": {
+        "word": "Trampolin",
+        "hint": "Federnde Sprungfläche"
+      },
+      "Toys\tRocking Horse\tSwing back forth animal seat": {
+        "word": "Schaukelpferd",
+        "hint": "Hin und her schaukeln Tiersitz"
+      },
+      "Emotions\tHappiness\tJoy smile": {
+        "word": "Glück",
+        "hint": "Freude lächeln"
+      },
+      "Emotions\tSadness\tTears crying": {
+        "word": "Traurigkeit",
+        "hint": "Tränen weinen"
+      },
+      "Emotions\tAnger\tMad furious rage": {
+        "word": "Wut",
+        "hint": "Wütend zornig rasen"
+      },
+      "Emotions\tFear\tScared afraid terror": {
+        "word": "Angst",
+        "hint": "Verängstigt Furcht Terror"
+      },
+      "Emotions\tSurprise\tShock unexpected": {
+        "word": "Überraschung",
+        "hint": "Schock unerwartet"
+      },
+      "Emotions\tDisgust\tGrossed out sick": {
+        "word": "Ekel",
+        "hint": "Angeekelt krank"
+      },
+      "Emotions\tLove\tAffection romance hearts": {
+        "word": "Liebe",
+        "hint": "Zuneigung Romantik Herzen"
+      },
+      "Emotions\tJealousy\tEnvy wanting theirs": {
+        "word": "Eifersucht",
+        "hint": "Neid das haben wollen"
+      },
+      "Emotions\tGuilt\tFeeling bad doing wrong": {
+        "word": "Schuld",
+        "hint": "Sich schlecht fühlen falsch machen"
+      },
+      "Emotions\tShame\tEmbarrassment humiliating": {
+        "word": "Scham",
+        "hint": "Verlegenheit demütigend"
+      },
+      "Emotions\tExcitement\tThrilled looking forward": {
+        "word": "Begeisterung",
+        "hint": "Begeistert sich freuen"
+      },
+      "Emotions\tBoredom\tNothing to do dull": {
+        "word": "Langeweile",
+        "hint": "Nichts zu tun langweilig"
+      },
+      "Emotions\tHope\tOptimism future bright": {
+        "word": "Hoffnung",
+        "hint": "Optimismus Zukunft hell"
+      },
+      "Emotions\tDespair\tTotal loss hope": {
+        "word": "Verzweiflung",
+        "hint": "Völliger Verlust Hoffnung"
+      },
+      "Emotions\tConfusion\tNot understanding puzzle": {
+        "word": "Verwirrung",
+        "hint": "Nicht verstehen Rätsel"
+      },
+      "Emotions\tPride\tSatisfied personal achievement": {
+        "word": "Stolz",
+        "hint": "Zufrieden persönliche Leistung"
+      },
+      "Emotions\tRelief\tStress gone relaxing": {
+        "word": "Erleichterung",
+        "hint": "Stress weg entspannend"
+      },
+      "Emotions\tNostalgia\tMissing past fondly": {
+        "word": "Nostalgie",
+        "hint": "Vergangenheit vermissen liebevoll"
+      },
+      "Emotions\tLoneliness\tFeeling isolated solo": {
+        "word": "Einsamkeit",
+        "hint": "Sich isoliert fühlen allein"
+      },
+      "Emotions\tCuriosity\tWanting to know more": {
+        "word": "Neugier",
+        "hint": "Mehr wissen wollen"
+      },
+      "Technology\tComputer\tDesktop PC screen CPU": {
+        "word": "Computer",
+        "hint": "Desktop-PC-Bildschirm CPU"
+      },
+      "Technology\tSmartphone\tMobile touchscreen device": {
+        "word": "Smartphone",
+        "hint": "Mobiles Touchscreen-Gerät"
+      },
+      "Technology\tTablet\tFlat screen portable computer": {
+        "word": "Tablet",
+        "hint": "Flachbildschirm tragbarer Computer"
+      },
+      "Technology\tLaptop\tFoldable portable PC": {
+        "word": "Laptop",
+        "hint": "Klappbarer tragbarer PC"
+      },
+      "Technology\tSmartwatch\tWrist wearable tech": {
+        "word": "Smartwatch",
+        "hint": "Am Handgelenk tragbare Technologie"
+      },
+      "Technology\tHeadphones\tEar listening audio": {
+        "word": "Kopfhörer",
+        "hint": "Ohr-Hör-Audio"
+      },
+      "Technology\tCamera\tPhoto video capturing lens": {
+        "word": "Kamera",
+        "hint": "Foto Video Aufnahmeobjektiv"
+      },
+      "Technology\tDrone\tUnmanned flying gadget": {
+        "word": "Drohne",
+        "hint": "Unbemanntes fliegendes Gerät"
+      },
+      "Technology\tVirtual Reality Headset\tGoggles 3D immersive": {
+        "word": "Virtual-Reality-Headset",
+        "hint": "Brille 3D immersiv"
+      },
+      "Technology\tGame Console\tTV hooked playing system": {
+        "word": "Spielkonsole",
+        "hint": "An Fernseher angeschlossenes Spielsystem"
+      },
+      "Technology\tRouter\tWiFi internet signal box": {
+        "word": "Router",
+        "hint": "WLAN Internet Signalbox"
+      },
+      "Technology\tSpeaker\tLoud audio output": {
+        "word": "Lautsprecher",
+        "hint": "Laute Audioausgabe"
+      },
+      "Technology\tMicrophone\tVoice sound input": {
+        "word": "Mikrofon",
+        "hint": "Stimme Toneingabe"
+      },
+      "Technology\tKeyboard\tTyping keys buttons": {
+        "word": "Tastatur",
+        "hint": "Schreiben Tasten Knöpfe"
+      },
+      "Technology\tMouse\tClicking pointing cursor": {
+        "word": "Maus",
+        "hint": "Klicken Zeigen Cursor"
+      },
+      "Technology\tPrinter\tPaper ink output": {
+        "word": "Drucker",
+        "hint": "Papier Tintenausgabe"
+      },
+      "Technology\tScanner\tDigitalizing paper document": {
+        "word": "Scanner",
+        "hint": "Digitalisierung Papierdokument"
+      },
+      "Technology\tMonitor\tDisplay screen unit": {
+        "word": "Monitor",
+        "hint": "Anzeigebildschirm Einheit"
+      },
+      "Technology\tHard Drive\tData storage disk": {
+        "word": "Festplatte",
+        "hint": "Datenspeicher Disk"
+      },
+      "Technology\tUSB Flash Drive\tThumb stick storage byte": {
+        "word": "USB-Speicherstick",
+        "hint": "Daumenstick Speicher Byte"
+      },
+      "Weapons\tSword\tLong metal blade knight": {
+        "word": "Schwert",
+        "hint": "Lange Metallklinge Ritter"
+      },
+      "Weapons\tBow and Arrow\tString pulling projectiles archery": {
+        "word": "Pfeil und Bogen",
+        "hint": "Sehne ziehen Projektile Bogenschießen"
+      },
+      "Weapons\tGun\tFirearm bullets shooting": {
+        "word": "Gewehr",
+        "hint": "Schusswaffe Kugeln schießen"
+      },
+      "Weapons\tKnife\tShort sharp blade cutting": {
+        "word": "Messer",
+        "hint": "Kurze scharfe Klinge schneiden"
+      },
+      "Weapons\tSpear\tLong pole pointy end": {
+        "word": "Speer",
+        "hint": "Langer Stock spitzes Ende"
+      },
+      "Weapons\tAxe\tChopping wood blade": {
+        "word": "Axt",
+        "hint": "Holz hacken Klinge"
+      },
+      "Weapons\tMace\tSpiked club medieval": {
+        "word": "Streitkolben",
+        "hint": "Stachelkeule Mittelalter"
+      },
+      "Weapons\tShield\tDefensive blocking gear": {
+        "word": "Schild",
+        "hint": "Verteidigende Blockierausrüstung"
+      },
+      "Weapons\tCrossbow\tHorizontal mechanical bow": {
+        "word": "Armbrust",
+        "hint": "Horizontaler mechanischer Bogen"
+      },
+      "Weapons\tWhip\tSnapping leather cord": {
+        "word": "Peitsche",
+        "hint": "Schnappende Lederschnur"
+      },
+      "Weapons\tCannon\tHeavy ball firing artillery": {
+        "word": "Kanone",
+        "hint": "Schwere Kugel feuernde Artillerie"
+      },
+      "Weapons\tGrenade\tExplosive thrown pin": {
+        "word": "Granate",
+        "hint": "Sprengstoff geworfen Stift"
+      },
+      "Weapons\tDagger\tSmall personal stabbing knife": {
+        "word": "Dolch",
+        "hint": "Kleines persönliches Stechmesser"
+      },
+      "Weapons\tBoomerang\tReturning thrown curve": {
+        "word": "Bumerang",
+        "hint": "Zurückkehrender geworfener Bogen"
+      },
+      "Weapons\tNunchucks\tTwo sticks chain martial arts": {
+        "word": "Nunchakus",
+        "hint": "Zwei Stöcke Kette Kampfsport"
+      },
+      "Weapons\tKatana\tJapanese samurai sword": {
+        "word": "Katana",
+        "hint": "Japanisches Samuraischwert"
+      },
+      "Weapons\tSniper Rifle\tLong range scope gun": {
+        "word": "Scharfschützengewehr",
+        "hint": "Große Reichweite Zielfernrohrgewehr"
+      },
+      "Weapons\tShotgun\tScatter close range gun": {
+        "word": "Schrotflinte",
+        "hint": "Streugewehr Nahkampf"
+      },
+      "Weapons\tMachine Gun\tRapid fire heavy weapon": {
+        "word": "Maschinengewehr",
+        "hint": "Schnellfeuer-Schwerwaffe"
+      },
+      "Weapons\tRocket Launcher\tExplosive projectile huge": {
+        "word": "Raketenwerfer",
+        "hint": "Explosives Projektil riesig"
+      },
+      "Holidays\tChristmas\tDecember trees presents Santa": {
+        "word": "Weihnachten",
+        "hint": "Dezember Bäume Geschenke Weihnachtsmann"
+      },
+      "Holidays\tHalloween\tOctober costumes candy spooky": {
+        "word": "Halloween",
+        "hint": "Oktober Kostüme Süßigkeiten gruselig"
+      },
+      "Holidays\tThanksgiving\tNovember turkey grateful": {
+        "word": "Erntedankfest",
+        "hint": "November Truthahn dankbar"
+      },
+      "Holidays\tEaster\tSpring bunnies eggs chocolate": {
+        "word": "Ostern",
+        "hint": "Frühling Hasen Eier Schokolade"
+      },
+      "Holidays\tValentine's Day\tFebruary love hearts romantic": {
+        "word": "Valentinstag",
+        "hint": "Februar Liebe Herzen romantisch"
+      },
+      "Holidays\tNew Year's Eve\tDecember 31st midnight fireworks": {
+        "word": "Silvester",
+        "hint": "31. Dezember Mitternacht Feuerwerk"
+      },
+      "Holidays\tIndependence Day\tJuly 4th freedom fireworks": {
+        "word": "Unabhängigkeitstag",
+        "hint": "4. Juli Freiheit Feuerwerk"
+      },
+      "Holidays\tSt. Patrick's Day\tMarch green luck Irish": {
+        "word": "St. Patrick's Day",
+        "hint": "März grün Glück irisch"
+      },
+      "Holidays\tMother's Day\tAppreciating mom Sunday": {
+        "word": "Muttertag",
+        "hint": "Mama wertschätzen Sonntag"
+      },
+      "Holidays\tFather's Day\tAppreciating dad Sunday": {
+        "word": "Vatertag",
+        "hint": "Papa wertschätzen Sonntag"
+      },
+      "Holidays\tEarth Day\tApril helping planet nature": {
+        "word": "Tag der Erde",
+        "hint": "April Planet Natur helfen"
+      },
+      "Holidays\tLabor Day\tSeptember workers end summer": {
+        "word": "Tag der Arbeit",
+        "hint": "September Arbeiter Sommerende"
+      },
+      "Holidays\tMemorial Day\tMay remembering fallen soldiers": {
+        "word": "Memorial Day",
+        "hint": "Mai gefallene Soldaten gedenken"
+      },
+      "Holidays\tVeterans Day\tNovember honoring military output": {
+        "word": "Veterans Day",
+        "hint": "November Militärleistung ehren"
+      },
+      "Holidays\tHanukkah\tJewish festival lights menorah": {
+        "word": "Chanukka",
+        "hint": "Jüdisches Lichterfest Menora"
+      },
+      "Holidays\tDiwali\tIndian festival lights": {
+        "word": "Diwali",
+        "hint": "Indisches Lichterfest"
+      },
+      "Holidays\tRamadan\tIslamic fasting month": {
+        "word": "Ramadan",
+        "hint": "Islamischer Fastenmonat"
+      },
+      "Holidays\tOktoberfest\tGerman beer festival": {
+        "word": "Oktoberfest",
+        "hint": "Deutsches Bierfest"
+      },
+      "Holidays\tCinco de Mayo\tMay 5th Mexican pride": {
+        "word": "Cinco de Mayo",
+        "hint": "5. Mai mexikanischer Stolz"
+      },
+      "Holidays\tChinese New Year\tLunar calendar dragon": {
+        "word": "Chinesisches Neujahr",
+        "hint": "Mondkalender Drache"
+      },
+      "Occupations\tPilot\tFlying": {
+        "word": "Pilot",
+        "hint": "Fliegen"
+      },
+      "Occupations\tArtist\tCreative": {
+        "word": "Künstler",
+        "hint": "Kreativ"
+      },
+      "Occupations\tEngineer\tDesign": {
+        "word": "Ingenieur",
+        "hint": "Design"
+      },
+      "Occupations\tFarmer\tAgriculture": {
+        "word": "Bauer",
+        "hint": "Landwirtschaft"
+      },
+      "Occupations\tScientist\tResearch": {
+        "word": "Wissenschaftler",
+        "hint": "Forschung"
+      },
+      "Occupations\tActor\tStage": {
+        "word": "Schauspieler",
+        "hint": "Bühne"
+      },
+      "Occupations\tMusician\tInstruments": {
+        "word": "Musiker",
+        "hint": "Instrumente"
+      },
+      "Occupations\tLawyer\tCourt": {
+        "word": "Anwalt",
+        "hint": "Gericht"
+      },
+      "Occupations\tJudge\tGavel": {
+        "word": "Richter",
+        "hint": "Hammer"
+      },
+      "Occupations\tPlumber\tPipes": {
+        "word": "Klempner",
+        "hint": "Rohre"
+      },
+      "Occupations\tElectrician\tWires": {
+        "word": "Elektriker",
+        "hint": "Kabel"
+      },
+      "Occupations\tCarpenter\tWood": {
+        "word": "Schreiner",
+        "hint": "Holz"
+      },
+      "Occupations\tMechanic\tFixes": {
+        "word": "Mechaniker",
+        "hint": "Reparaturen"
+      },
+      "Occupations\tProgrammer\tCode": {
+        "word": "Programmierer",
+        "hint": "Code"
+      },
+      "Occupations\tAstronaut\tSpace": {
+        "word": "Astronaut",
+        "hint": "Weltraum"
+      },
+      "Insects\tButterfly\tColorful flying wings cocoon": {
+        "word": "Schmetterling",
+        "hint": "Bunte fliegende Flügel Kokon"
+      },
+      "Insects\tBee\tYellow black buzzing honey": {
+        "word": "Biene",
+        "hint": "Gelb schwarz summend Honig"
+      },
+      "Insects\tAnt\tTiny marching strong colony": {
+        "word": "Ameise",
+        "hint": "Winzig marschierend starke Kolonie"
+      },
+      "Insects\tMosquito\tBiting annoying blood sucker": {
+        "word": "Mücke",
+        "hint": "Stechend lästig Blutsauger"
+      },
+      "Insects\tFly\tBuzzing house pest wing": {
+        "word": "Fliege",
+        "hint": "Summendes Haus Plage Flügel"
+      },
+      "Insects\tSpider\tEight legs webs (Wait technically arachnid)": {
+        "word": "Spinne",
+        "hint": "Acht Beine Netze (technisch eigentlich Spinnentier)"
+      },
+      "Insects\tBeetle\tHard shell crawling bug": {
+        "word": "Käfer",
+        "hint": "Harter Panzer kriechendes Insekt"
+      },
+      "Insects\tLadybug\tRed black dots spotted wings": {
+        "word": "Marienkäfer",
+        "hint": "Rot schwarze Punkte gefleckte Flügel"
+      },
+      "Insects\tGrasshopper\tJumping green long legs": {
+        "word": "Heuschrecke",
+        "hint": "Springend grün lange Beine"
+      },
+      "Insects\tCricket\tChirping night sound jumper": {
+        "word": "Grille",
+        "hint": "Zirpendes Nachtgeräusch Springer"
+      },
+      "Insects\tCockroach\tSurviving gross fast crawler": {
+        "word": "Kakerlake",
+        "hint": "Überlebensfähig eklig schnell Kriecher"
+      },
+      "Insects\tMoth\tDusty wings attracted light": {
+        "word": "Motte",
+        "hint": "Staubige Flügel angezogen Licht"
+      },
+      "Insects\tWasp\tAggressive stinging yellow striped": {
+        "word": "Wespe",
+        "hint": "Aggressiv stechend gelb gestreift"
+      },
+      "Insects\tHornet\tLarge aggressive stinging nest": {
+        "word": "Hornisse",
+        "hint": "Groß aggressiv stechend Nest"
+      },
+      "Insects\tDragonfly\tLong body fast flying four wings": {
+        "word": "Libelle",
+        "hint": "Langer Körper schnell fliegend vier Flügel"
+      },
+      "Insects\tCaterpillar\tCrawling wormy fuzzy butterfly baby": {
+        "word": "Raupe",
+        "hint": "Kriechend wurmartig haarig Schmetterlingsbaby"
+      },
+      "Insects\tCentipede\tMany long legs crawler fast": {
+        "word": "Hundertfüßer",
+        "hint": "Viele lange Beine Kriechtier schnell"
+      },
+      "Insects\tFlea\tJumping tiny pet pest": {
+        "word": "Floh",
+        "hint": "Springend winzig Haustier Schädling"
+      },
+      "Insects\tTick\tBlood sucking woods parasite": {
+        "word": "Zecke",
+        "hint": "Blutsaugend Wald Parasit"
+      },
+      "Insects\tBedbug\tMattress biting nuisance": {
+        "word": "Bettwanze",
+        "hint": "Matratze beißende Plage"
+      },
+      "Fairy Tales\tCinderella\tGlass slipper pumpkin coach": {
+        "word": "Aschenputtel",
+        "hint": "Glasschuh Kürbiskutsche"
+      },
+      "Fairy Tales\tSnow White\tSeven dwarfs poisoned apple": {
+        "word": "Schneewittchen",
+        "hint": "Sieben Zwerge vergifteter Apfel"
+      },
+      "Fairy Tales\tSleeping Beauty\tSpinning wheel hundred years nap": {
+        "word": "Dornröschen",
+        "hint": "Spinnrad hundertjähriger Schlaf"
+      },
+      "Fairy Tales\tLittle Red Riding Hood\tGrandma wolf basket": {
+        "word": "Rotkäppchen",
+        "hint": "Großmutter Wolf Korb"
+      },
+      "Fairy Tales\tBeauty and the Beast\tCursed prince magical rose": {
+        "word": "Die Schöne und das Biest",
+        "hint": "Verfluchter Prinz magische Rose"
+      },
+      "Fairy Tales\tPeter Pan\tNeverland Tinkerbell hook": {
+        "word": "Peter Pan",
+        "hint": "Nimmerland Tinkerbell Haken"
+      },
+      "Fairy Tales\tAlice in Wonderland\tRabbit hole mad hatter queen": {
+        "word": "Alice im Wunderland",
+        "hint": "Kaninchenbau verrückter Hutmacher Königin"
+      },
+      "Fairy Tales\tPinocchio\tWooden boy growing nose string": {
+        "word": "Pinocchio",
+        "hint": "Holzjunge wachsende Nase Schnur"
+      },
+      "Fairy Tales\tAladdin\tMagic lamp genie carpet": {
+        "word": "Aladdin",
+        "hint": "Wunderlampe Geist Teppich"
+      },
+      "Fairy Tales\tThe Little Mermaid\tAriel sea legs voice": {
+        "word": "Die kleine Meerjungfrau",
+        "hint": "Arielle Meer Beine Stimme"
+      },
+      "Fairy Tales\tHansel and Gretel\tBreadcrumbs gingerbread witch": {
+        "word": "Hänsel und Gretel",
+        "hint": "Brotkrumen Lebkuchenhexe"
+      },
+      "Fairy Tales\tRapunzel\tLong hair tower let down": {
+        "word": "Rapunzel",
+        "hint": "Langes Haar Turm herunterlassen"
+      },
+      "Fairy Tales\tRumpelstiltskin\tSpinning straw gold name guess": {
+        "word": "Rumpelstilzchen",
+        "hint": "Stroh zu Gold spinnen Name erraten"
+      },
+      "Fairy Tales\tGoldilocks\tThree bears porridge bed chair": {
+        "word": "Goldlöckchen",
+        "hint": "Drei Bären Brei Bett Stuhl"
+      },
+      "Fairy Tales\tThe Ugly Duckling\tSwan transformation outcast": {
+        "word": "Das hässliche Entlein",
+        "hint": "Schwanenverwandlung Ausgestoßener"
+      },
+      "Fairy Tales\tJack and the Beanstalk\tMagic beans giant sky stalk": {
+        "word": "Hans und die Bohnenranke",
+        "hint": "Magische Bohnen Riese Himmelsstiel"
+      },
+      "Fairy Tales\tPuss in Boots\tClever cat feline footwear": {
+        "word": "Der gestiefelte Kater",
+        "hint": "Kluger Katze Katzenfussbekleidung"
+      },
+      "Fairy Tales\tThe Princess and the Pea\tMattress stacking sensitive royal test": {
+        "word": "Die Prinzessin auf der Erbse",
+        "hint": "Matratzenstapel empfindlicher königlicher Test"
+      },
+      "Fairy Tales\tThe Gingerbread Man\tRun fast catch me dough": {
+        "word": "Der Lebkuchenmann",
+        "hint": "Lauf schnell fang mich Teig"
+      },
+      "Fairy Tales\tThe Pied Piper\tRats children flute magic tune": {
+        "word": "Der Rattenfänger von Hameln",
+        "hint": "Ratten Kinder Flötenzauber Melodie"
+      }
+    }
+  }
 }

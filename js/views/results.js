@@ -1,4 +1,5 @@
 import { store } from '../store.js';
+import { t } from '../i18n.js';
 
 export const ResultsView = {
     render: (state) => {
@@ -17,10 +18,10 @@ export const ResultsView = {
         <main class="pt-32 pb-40 px-6 max-w-5xl mx-auto flex flex-col gap-10 animate-fade-in">
             <section class="flex flex-col gap-2">
                 <h2 class="font-headline font-black text-6xl md:text-8xl tracking-tighter text-on-surface uppercase leading-none drop-shadow-[0_0_32px_rgba(208,149,255,0.15)]">
-                    Game Over
+                    ${t(state.language, 'gameOver')}
                 </h2>
                 <p class="font-body text-xl text-on-surface-variant font-medium max-w-lg mt-2 leading-relaxed">
-                    The truth is no longer hidden in the noise.
+                    ${t(state.language, 'resultsSubtitle')}
                 </p>
             </section>
 
@@ -33,7 +34,7 @@ export const ResultsView = {
                     <div class="flex justify-between items-start mb-8 relative z-20">
                         <h3 class="font-headline text-tertiary uppercase tracking-widest font-bold text-sm flex items-center gap-2">
                             <span class="material-symbols-outlined text-base">theater_comedy</span>
-                            The Impostors
+                            ${t(state.language, 'theImpostors')}
                         </h3>
                     </div>
                     <div class="flex flex-wrap gap-8 relative z-20">
@@ -49,7 +50,7 @@ export const ResultsView = {
                                 </div>
                                 <div>
                                     <p class="font-headline font-bold text-2xl text-on-surface">${imp.name}</p>
-                                    <p class="font-body text-tertiary text-sm font-medium">Deceiver</p>
+                                    <p class="font-body text-tertiary text-sm font-medium">${t(state.language, 'deceiver')}</p>
                                 </div>
                             </div>
                         `).join('')}
@@ -61,13 +62,13 @@ export const ResultsView = {
                     <div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                     <h3 class="font-headline text-on-surface-variant uppercase tracking-widest font-bold text-sm mb-6 flex items-center gap-2">
                         <span class="material-symbols-outlined text-base">vpn_key</span>
-                        Secret Word
+                        ${t(state.language, 'secretWord')}
                     </h3>
                     <div class="font-headline font-black text-3xl lg:text-4xl text-transparent bg-clip-text bg-gradient-to-br from-primary to-primary-container tracking-tighter">
                         ${state.word ? state.word.word : 'ERROR'}
                     </div>
                     <p class="mt-4 font-body text-sm text-on-surface-variant/70 leading-relaxed max-w-[200px]">
-                        This was the semantic anchor the impostors were trying to avoid.
+                        ${t(state.language, 'secretWordBlurb')}
                     </p>
                 </div>
 
@@ -75,7 +76,7 @@ export const ResultsView = {
                 <div class="col-span-1 md:col-span-6 bg-surface-container rounded-xl p-6 z-10">
                     <h3 class="font-headline text-primary uppercase tracking-widest font-bold text-sm mb-4 flex items-center gap-2">
                         <span class="material-symbols-outlined text-base">search</span>
-                        The Detectives (+1)
+                        ${t(state.language, 'detectives')}
                     </h3>
                     ${state.detectives && state.detectives.length > 0 ? `
                         <ul class="flex flex-wrap gap-2">
@@ -86,7 +87,7 @@ export const ResultsView = {
                             `).join('')}
                         </ul>
                     ` : `
-                        <p class="text-on-surface-variant text-sm oblique">The Impostors completely evaded detection.</p>
+                        <p class="text-on-surface-variant text-sm oblique">${t(state.language, 'noDetectives')}</p>
                     `}
                 </div>
 
@@ -94,7 +95,7 @@ export const ResultsView = {
                 <div class="col-span-1 md:col-span-6 bg-[#1a1a32] rounded-xl p-6 shadow-inner z-10 border border-outline-variant/10">
                     <h3 class="font-headline text-secondary uppercase tracking-widest font-bold text-sm mb-4 flex items-center gap-2">
                         <span class="material-symbols-outlined text-base">leaderboard</span>
-                        Lifetime Scores
+                        ${t(state.language, 'lifetimeScores')}
                     </h3>
                     <ul class="flex flex-col gap-2 max-h-48 overflow-y-auto pr-2">
                         ${sortedScores.length > 0 ? sortedScores.map(([name, score], i) => `
@@ -105,7 +106,7 @@ export const ResultsView = {
                                 </div>
                                 <span class="font-headline font-black text-secondary">${score}</span>
                             </li>
-                        `).join('') : '<p class="text-on-surface-variant text-sm">No scores recorded yet.</p>'}
+                        `).join('') : `<p class="text-on-surface-variant text-sm">${t(state.language, 'noScoresYet')}</p>`}
                     </ul>
                 </div>
 
@@ -115,7 +116,7 @@ export const ResultsView = {
         <div class="fixed bottom-8 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] max-w-md bg-surface-bright/50 backdrop-blur-2xl rounded-full p-2 flex gap-2 shadow-[0_0_64px_rgba(208,149,255,0.08)] z-50">
             <button id="replayBtn" class="flex-1 bg-gradient-to-br from-primary to-primary-container text-on-primary-container rounded-full py-4 px-6 text-center shadow-[0_0_24px_rgba(208,149,255,0.2)] font-headline font-bold text-sm uppercase tracking-widest transition-transform active:scale-95 flex items-center justify-center gap-2">
                 <span class="material-symbols-outlined text-lg">replay</span>
-                Next Round
+                ${t(state.language, 'nextRound')}
             </button>
         </div>
         `;

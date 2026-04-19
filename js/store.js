@@ -1,3 +1,20 @@
+/** Player roster entries are strings on the setup screen and { name, ... } during play. */
+export function normalizePlayerName(entry) {
+    if (typeof entry === 'string') {
+        const s = entry.trim();
+        return s || 'Player';
+    }
+    if (!entry || typeof entry !== 'object') return 'Player';
+    if (typeof entry.name === 'string') {
+        const s = entry.name.trim();
+        return s || 'Player';
+    }
+    if (entry.name && typeof entry.name === 'object') {
+        return normalizePlayerName(entry.name);
+    }
+    return 'Player';
+}
+
 export const store = {
     state: {
         screen: 'setup', // 'setup', 'transition', 'reveal', 'round', 'results'
@@ -66,9 +83,9 @@ export const store = {
         const shuffledIndices = this.state.players.map((_, i) => i).sort(() => Math.random() - 0.5);
         const impostorIndices = new Set(shuffledIndices.slice(0, this.state.impostorCount));
         
-        const playerObjects = this.state.players.map((name, index) => ({
+        const playerObjects = this.state.players.map((entry, index) => ({
             id: index,
-            name: name,
+            name: normalizePlayerName(entry),
             role: impostorIndices.has(index) ? 'IMPOSTOR' : 'INNOCENT',
             revealed: false,
         }));
@@ -149,7 +166,7 @@ export const store = {
 
     resetGame() {
         // Keeps player names, resets roles and game state
-        const names = this.state.players.map(p => typeof p === 'string' ? p : p.name);
+        const names = this.state.players.map((p) => normalizePlayerName(p));
         this.setState({
             players: names,
             word: null,
