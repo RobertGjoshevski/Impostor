@@ -1,17 +1,10 @@
 import { store } from '../store.js';
 import { t } from '../i18n.js';
 import {
-    canonicalToLocalizedKey,
-    countPlayableLocales,
-    getUnlockLocalePayload,
     isCanonicalFree,
-    isCanonicalUnlocked,
-    loadAdUnlockedCanonicals,
     localeKeyToCanonical,
     persistSelectionFromLocaleKeys,
-    recordAdUnlockCanonical,
 } from '../themeUnlock.js';
-import { showRewardedAd } from '../rewardedAd.js';
 
 export const ThemesView = {
     render: (state) => {
@@ -24,7 +17,6 @@ export const ThemesView = {
             <div class="space-y-2">
                 <h2 class="font-headline text-3xl font-bold text-on-surface tracking-tight">${t(state.language, 'activeDecks')}</h2>
                 <p class="font-body text-on-surface-variant text-sm">${t(state.language, 'themesIntro')}</p>
-                <p class="font-body text-on-surface-variant text-xs opacity-90">${t(state.language, 'themesIntroAds')}</p>
             </div>
 
             <section class="bg-surface-container-high rounded-xl p-5 shadow-[0_0_32px_rgba(208,149,255,0.04)] flex flex-col gap-4">
@@ -47,18 +39,15 @@ export const ThemesView = {
         if (state.availableThemes.length === 0) {
             return `<p class="text-xs text-on-surface-variant">${t(state.language, 'loadingThemes')}</p>`;
         }
-        const free = state.freeCanonicalThemes || [];
-        const adUnlocked = loadAdUnlockedCanonicals();
+        const starter = state.freeCanonicalThemes || [];
         return state.availableThemes
             .map((theme) => {
                 const canonical = localeKeyToCanonical(theme);
-                const unlocked = isCanonicalUnlocked(canonical, adUnlocked, free);
-                const isFreeDeck = isCanonicalFree(canonical, free);
+                const isFreeDeck = isCanonicalFree(canonical, starter);
                 const isChecked = state.selectedThemes.includes(theme);
 
-                if (unlocked) {
-                    return `
-                <li class="flex items-center justify-between bg-surface-container-low rounded-lg p-3 cursor-pointer group theme-toggle-row theme-unlocked-row" data-theme="${theme}">
+                return `
+                <li class="flex items-center justify-between bg-surface-container-low rounded-lg p-3 cursor-pointer group theme-toggle-row" data-theme="${theme}">
                     <div class="flex items-center gap-3 min-w-0">
                         <span class="material-symbols-outlined text-primary group-hover:text-tertiary transition-colors shrink-0">
                             ${isChecked ? 'check_box' : 'check_box_outline_blank'}
@@ -69,19 +58,6 @@ export const ThemesView = {
                         </div>
                     </div>
                 </li>`;
-                }
-
-                return `
-                <li class="flex items-center justify-between bg-surface-container-low rounded-lg p-3 theme-locked-row border border-outline-variant/20" data-canonical="${encodeURIComponent(canonical)}" data-theme="${encodeURIComponent(theme)}">
-                    <div class="flex items-center gap-3 min-w-0 flex-1">
-                        <span class="material-symbols-outlined text-on-surface-variant shrink-0">lock</span>
-                        <span class="font-body text-sm font-medium text-on-surface opacity-60 truncate">${theme}</span>
-                    </div>
-                    <button type="button" class="watch-ad-btn shrink-0 ml-2 flex items-center gap-1.5 rounded-full bg-secondary-container text-on-secondary-container px-3 py-2 text-xs font-headline font-bold uppercase tracking-wide active:scale-95 transition-transform">
-                        <span class="material-symbols-outlined text-[18px]">play_circle</span>
-                        ${t(state.language, 'watchVideoToUnlock')}
-                    </button>
-                </li>`;
             })
             .join('');
     },
@@ -91,9 +67,7 @@ export const ThemesView = {
     },
 
     bindListeners: (state) => {
-        const free = state.freeCanonicalThemes || [];
-
-        document.querySelectorAll('.theme-unlocked-row').forEach((row) => {
+        document.querySelectorAll('.theme-toggle-row').forEach((row) => {
             row.addEventListener('click', () => {
                 const themeVal = row.getAttribute('data-theme');
                 if (!themeVal) return;
@@ -110,50 +84,6 @@ export const ThemesView = {
                 }
                 store.setState({ selectedThemes: newSelected });
                 persistSelectionFromLocaleKeys(newSelected);
-            });
-        });
-
-        document.querySelectorAll('.watch-ad-btn').forEach((btn) => {
-            btn.addEventListener('click', async (e) => {
-                e.stopPropagation();
-                const row = btn.closest('.theme-locked-row');
-                const rawCanon = row?.getAttribute('data-canonical');
-                const canonical = rawCanon ? decodeURIComponent(rawCanon) : '';
-                if (!canonical) return;
-
-                const rewarded = await showRewardedAd(store.state.language);
-                if (!rewarded) return;
-
-                recordAdUnlockCanonical(canonical);
-                const payload = getUnlockLocalePayload();
-                const adUnlocked = loadAdUnlockedCanonicals();
-                if (!payload) return;
-
-                const rawTheme = row.getAttribute('data-theme');
-                const themeFromRow = rawTheme ? decodeURIComponent(rawTheme) : '';
-                const loc =
-                    canonicalToLocalizedKey(payload, canonical) || themeFromRow;
-                if (!loc) return;
-
-                const cur = store.state.selectedThemes;
-                const nextSel = cur.includes(loc) ? cur : [...cur, loc];
-                const play = countPlayableLocales(payload, free, adUnlocked);
-
-                store.setState({
-                    selectedThemes: nextSel,
-                    themePlayableCount: play,
-                });
-                persistSelectionFromLocaleKeys(nextSel);
-            });
-        });
-
-        document.querySelectorAll('.theme-locked-row').forEach((row) => {
-            row.addEventListener('click', (e) => {
-                const el = e.target;
-                if (!(el instanceof Element)) return;
-                if (el.closest('.watch-ad-btn')) return;
-                const innerBtn = row.querySelector('.watch-ad-btn');
-                innerBtn?.dispatchEvent(new Event('click', { bubbles: false }));
             });
         });
 

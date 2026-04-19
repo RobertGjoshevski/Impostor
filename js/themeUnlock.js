@@ -1,9 +1,8 @@
 /** Canonical theme ids = English category names from `data/en.json`. */
 
-const STORAGE_AD_UNLOCKED = 'impostor_ad_unlocked_canonical_themes';
 const STORAGE_SELECTED = 'impostor_selected_canonical_themes';
 
-const FREE_COUNT = 5;
+const DEFAULT_SELECTED_COUNT = 5;
 
 /** @type {Record<string, unknown> | null} */
 let localePayload = null;
@@ -57,10 +56,11 @@ export function canonicalToLocalizedKey(localeData, canonical) {
 }
 
 /**
+ * Top N categories (by word count in en.json) used as default selection for new users.
  * @param {Record<string, unknown>} enData
  * @returns {string[]}
  */
-export function computeFreeCanonicalThemes(enData) {
+export function computeDefaultStarterCanonicalThemes(enData) {
     const themes = listLocaleThemeKeys(enData);
     const ranked = themes.map((name, fileIndex) => {
         const bucket = enData[name];
@@ -68,7 +68,7 @@ export function computeFreeCanonicalThemes(enData) {
         return { name, n, fileIndex };
     });
     ranked.sort((a, b) => b.n - a.n || a.fileIndex - b.fileIndex);
-    return ranked.slice(0, FREE_COUNT).map((r) => r.name);
+    return ranked.slice(0, DEFAULT_SELECTED_COUNT).map((r) => r.name);
 }
 
 function readJsonStorage(key, fallback) {
@@ -80,14 +80,6 @@ function readJsonStorage(key, fallback) {
     } catch {
         return fallback;
     }
-}
-
-export function loadAdUnlockedCanonicals() {
-    return new Set(readJsonStorage(STORAGE_AD_UNLOCKED, []));
-}
-
-function saveAdUnlockedCanonicals(set) {
-    localStorage.setItem(STORAGE_AD_UNLOCKED, JSON.stringify([...set]));
 }
 
 export function loadPersistedSelectedCanonicals() {
@@ -115,49 +107,29 @@ export function localeKeyToCanonical(localeKey) {
 }
 
 /**
+ * Starter decks (top by word count) — shown with a "Free" badge in the themes UI.
  * @param {string} canonical
- * @param {Set<string>} adUnlocked
- * @param {string[]} freeCanonical
+ * @param {string[]} starterCanonical
  */
-export function isCanonicalUnlocked(canonical, adUnlocked, freeCanonical) {
-    const free = new Set(freeCanonical);
-    return free.has(canonical) || adUnlocked.has(canonical);
-}
-
-/**
- * @param {string} canonical
- * @param {string[]} freeCanonical
- */
-export function isCanonicalFree(canonical, freeCanonical) {
-    return new Set(freeCanonical).has(canonical);
-}
-
-/**
- * @param {string} canonical
- */
-export function recordAdUnlockCanonical(canonical) {
-    const s = loadAdUnlockedCanonicals();
-    s.add(canonical);
-    saveAdUnlockedCanonicals(s);
+export function isCanonicalFree(canonical, starterCanonical) {
+    return new Set(starterCanonical).has(canonical);
 }
 
 /**
  * @param {Record<string, unknown>} localeData
- * @param {Set<string>} adUnlocked
- * @param {string[]} freeCanonical
+ * @param {string[]} starterCanonical — default subset when nothing persisted
  */
-export function resolveThemeSelectionForLocale(localeData, adUnlocked, freeCanonical) {
+export function resolveThemeSelectionForLocale(localeData, starterCanonical) {
     const allThemeKeys = listLocaleThemeKeys(localeData);
-    const unlockedCanonical = new Set(freeCanonical);
-    adUnlocked.forEach((c) => unlockedCanonical.add(c));
+    const validCanonical = new Set(allThemeKeys.map((k) => localizedKeyToCanonical(localeData, k)));
 
     const persisted = loadPersistedSelectedCanonicals();
     let selectedCanonical = /** @type {string[]} */ (
-        Array.isArray(persisted) ? [...persisted] : [...freeCanonical]
+        Array.isArray(persisted) ? [...persisted] : [...starterCanonical]
     );
-    selectedCanonical = selectedCanonical.filter((c) => unlockedCanonical.has(c));
+    selectedCanonical = selectedCanonical.filter((c) => validCanonical.has(c));
     if (selectedCanonical.length === 0) {
-        selectedCanonical = [...freeCanonical];
+        selectedCanonical = [...starterCanonical];
     }
 
     const selectedLocaleKeys = [];
@@ -169,8 +141,8 @@ export function resolveThemeSelectionForLocale(localeData, adUnlocked, freeCanon
     }
 
     if (selectedLocaleKeys.length === 0) {
-        selectedCanonical = [...freeCanonical];
-        for (const c of freeCanonical) {
+        selectedCanonical = [...starterCanonical];
+        for (const c of starterCanonical) {
             const loc = canonicalToLocalizedKey(localeData, c);
             if (loc && allThemeKeys.includes(loc)) {
                 selectedLocaleKeys.push(loc);
@@ -178,29 +150,13 @@ export function resolveThemeSelectionForLocale(localeData, adUnlocked, freeCanon
         }
     }
 
-    const playableCount = countPlayableLocales(localeData, freeCanonical, adUnlocked);
-
     savePersistedSelectedCanonicals(selectedCanonical);
 
     return {
         allThemeKeys,
         selectedLocaleKeys,
-        playableCount,
-        freeCanonical,
+        freeCanonical: starterCanonical,
     };
-}
-
-/**
- * @param {Record<string, unknown>} localeData
- * @param {string[]} freeCanonical
- * @param {Set<string>} adUnlocked
- */
-export function countPlayableLocales(localeData, freeCanonical, adUnlocked) {
-    const allThemeKeys = listLocaleThemeKeys(localeData);
-    return allThemeKeys.filter((k) => {
-        const c = localizedKeyToCanonical(localeData, k);
-        return isCanonicalUnlocked(c, adUnlocked, freeCanonical);
-    }).length;
 }
 
 /** @returns {Record<string, unknown> | null} */

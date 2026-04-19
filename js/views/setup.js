@@ -48,7 +48,7 @@ export const SetupView = {
                 <div class="flex items-center justify-between bg-surface-container-low rounded-lg p-4 cursor-pointer hover:bg-surface-container-highest transition-colors active:scale-95" id="openThemesBtn">
                     <div class="flex flex-col">
                         <span class="font-body text-base font-semibold text-on-surface">${t(state.language, 'categories')}</span>
-                        <span id="themesCountSpan" class="font-body text-xs text-on-surface-variant">${t(state.language, 'themesSelected', { sel: state.selectedThemes.length, play: state.themePlayableCount ?? 0, total: state.availableThemes.length })}</span>
+                        <span id="themesCountSpan" class="font-body text-xs text-on-surface-variant">${t(state.language, 'themesSelected', { sel: state.selectedThemes.length, total: state.availableThemes.length })}</span>
                     </div>
                     <span class="material-symbols-outlined text-on-surface text-[20px]">chevron_right</span>
                 </div>
@@ -175,7 +175,7 @@ export const SetupView = {
 
     update: (state) => {
         document.getElementById('playerCountSpan').innerText = t(state.language, 'playersCount', { count: state.players.length });
-        document.getElementById('themesCountSpan').innerText = t(state.language, 'themesSelected', { sel: state.selectedThemes.length, play: state.themePlayableCount ?? 0, total: state.availableThemes.length });
+        document.getElementById('themesCountSpan').innerText = t(state.language, 'themesSelected', { sel: state.selectedThemes.length, total: state.availableThemes.length });
         document.getElementById('impostorCountSpan').innerText = state.impostorCount;
         
         document.getElementById('playerList').innerHTML = SetupView.renderPlayerList(state.players);

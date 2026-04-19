@@ -29,10 +29,8 @@ export const store = {
         language: 'en',
         availableThemes: [],
         selectedThemes: [],
-        /** English ids of the five free decks (from `data/en.json` word counts). */
+        /** English ids of the default starter decks (top word counts in `data/en.json`). */
         freeCanonicalThemes: [],
-        /** Decks the player may use (free + rewarded). */
-        themePlayableCount: 0,
     },
     
     listeners: [],
