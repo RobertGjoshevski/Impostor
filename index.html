@@ -72,9 +72,12 @@
             Turn on JavaScript to start a round, pick categories, and reveal who the impostors are.
         </p>
     </noscript>
-    <!-- App Container -->
-    <div id="app" class="w-full flex-1 flex flex-col">
-        <!-- Rendered views will appear here -->
+    <!-- Game shell: #app is swapped by the router; ad host stays outside #app (see docs/website-ads-admob-instructions.md). -->
+    <div id="game-shell" class="w-full flex-1 flex flex-col">
+        <div id="app" class="w-full flex-1 flex flex-col">
+            <!-- Rendered views will appear here -->
+        </div>
+        <div id="impostor-ad-host" class="hidden w-full max-w-3xl mx-auto px-6 flex justify-center py-2" aria-hidden="true"></div>
     </div>
 
     <!-- Application Logic -->

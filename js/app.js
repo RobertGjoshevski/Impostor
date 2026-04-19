@@ -17,6 +17,14 @@ const views = {
 };
 
 const appContainer = document.getElementById('app');
+
+function clearImpostorAdHost() {
+    const host = document.getElementById('impostor-ad-host');
+    if (!host) return;
+    host.innerHTML = '';
+    host.classList.add('hidden');
+}
+
 let currentScreen = null;
 let lastLanguage = store.state.language;
 
@@ -24,8 +32,13 @@ function render(state) {
     const view = views[state.screen];
     if (!view) return;
 
+    const previousScreen = currentScreen;
     const navigated = currentScreen !== state.screen;
     const languageChanged = lastLanguage !== state.language;
+
+    if (previousScreen === 'round' && state.screen !== 'round') {
+        clearImpostorAdHost();
+    }
 
     if (navigated) {
         currentScreen = state.screen;

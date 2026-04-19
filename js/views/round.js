@@ -1,6 +1,37 @@
 import { store } from '../store.js';
 import { t } from '../i18n.js';
 
+const VOTE_SCREEN_AD_CLIENT = 'ca-pub-2604520815931185';
+const VOTE_SCREEN_AD_SLOT = '8497570176';
+
+function mountVoteScreenAd() {
+    const host = document.getElementById('impostor-ad-host');
+    if (!host) return;
+
+    host.innerHTML = '';
+    host.classList.remove('hidden');
+
+    const ins = document.createElement('ins');
+    ins.className = 'adsbygoogle';
+    ins.style.display = 'block';
+    ins.setAttribute('data-ad-client', VOTE_SCREEN_AD_CLIENT);
+    ins.setAttribute('data-ad-slot', VOTE_SCREEN_AD_SLOT);
+    ins.setAttribute('data-ad-format', 'auto');
+    ins.setAttribute('data-full-width-responsive', 'true');
+    host.appendChild(ins);
+
+    const runPush = () => {
+        try {
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (_) {
+            /* ad blocker or script blocked */
+        }
+    };
+    requestAnimationFrame(() => {
+        requestAnimationFrame(runPush);
+    });
+}
+
 export const RoundView = {
     render: (state) => {
         return `
@@ -49,15 +80,6 @@ export const RoundView = {
                 </div>
             </section>
 
-            <div id="vote-page-ad" class="w-full flex justify-center py-2" aria-hidden="true">
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-2604520815931185"
-                    data-ad-slot="8497570176"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-            </div>
-
             <section class="mt-8 flex justify-center">
                 <button id="endRoundBtn" class="w-full md:w-auto bg-gradient-to-br from-[#ff6e84] to-[#d73357] text-[#490013] font-headline font-bold text-lg py-4 px-12 rounded-full shadow-[0_0_32px_rgba(255,110,132,0.15)] hover:opacity-90 active:scale-95 transition-all duration-200 flex items-center justify-center gap-3">
                     <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">done_all</span>
@@ -85,15 +107,7 @@ export const RoundView = {
             store.endGame();
         });
 
-        const adIns = document.querySelector('#vote-page-ad ins.adsbygoogle');
-        if (adIns && !adIns.dataset.impostorAdPushed) {
-            adIns.dataset.impostorAdPushed = '1';
-            try {
-                (window.adsbygoogle = window.adsbygoogle || []).push({});
-            } catch (_) {
-                /* ad blocker or script blocked */
-            }
-        }
+        mountVoteScreenAd();
     },
     update: (state) => {
         // We do not physically touch the DOM on vote changes to avoid select-flashing,
