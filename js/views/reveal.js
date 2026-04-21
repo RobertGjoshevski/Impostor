@@ -29,30 +29,32 @@ export const RevealView = {
                 </div>
             </header>
             
-            <section id="revealCard" class="w-full bg-surface-bright/40 backdrop-blur-2xl rounded-[32px] p-8 flex flex-col items-center text-center relative border border-outline-variant/20 shadow-[0_0_64px_rgba(255,107,155,0.08)] cursor-pointer select-none transition-all active:scale-95 group">
+            <section id="revealCard" class="reveal-card w-full bg-surface-bright/40 backdrop-blur-2xl rounded-[32px] p-8 flex flex-col items-center text-center relative border border-outline-variant/20 shadow-[0_0_64px_rgba(255,107,155,0.08)] cursor-pointer select-none transition-shadow duration-300 ease-out group">
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-1 bg-gradient-to-r from-transparent via-tertiary to-transparent rounded-b-full opacity-50"></div>
                 
-                <div id="hiddenState" class="flex flex-col items-center py-8">
-                    <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-4" style="font-variation-settings: 'FILL' 1;">visibility_off</span>
-                    <h3 class="font-headline text-2xl font-bold text-on-surface">${t(state.language, 'pressHold')}</h3>
-                    <p class="text-on-surface-variant text-sm mt-2">${t(state.language, 'revealSecretHint')}</p>
-                </div>
+                <div class="reveal-states w-full">
+                    <div id="hiddenState" class="reveal-layer reveal-layer--prompt flex flex-col items-center py-8">
+                        <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-4" style="font-variation-settings: 'FILL' 1;">visibility_off</span>
+                        <h3 class="font-headline text-2xl font-bold text-on-surface">${t(state.language, 'pressHold')}</h3>
+                        <p class="text-on-surface-variant text-sm mt-2">${t(state.language, 'revealSecretHint')}</p>
+                    </div>
 
-                <div id="revealedState" class="hidden flex-col items-center w-full">
-                    <p class="text-on-surface-variant font-bold tracking-[0.2em] text-xs uppercase mb-6 flex items-center gap-2">
-                        <span class="material-symbols-outlined text-[16px] text-${isImpostor ? 'tertiary' : 'secondary'}" style="font-variation-settings: 'FILL' 1;">
-                            ${isImpostor ? 'warning' : 'verified'}
-                        </span>
-                        ${t(state.language, 'youAreThe')}
-                    </p>
-                    <h1 class="font-headline text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br ${isImpostor ? 'from-tertiary to-tertiary-dim' : 'from-secondary to-secondary-dim'} tracking-tighter mb-8 drop-shadow-[0_0_20px_rgba(255,107,155,0.2)]">
-                        ${roleLabel}
-                    </h1>
-                    <div class="w-full bg-surface-container-highest/60 rounded-2xl p-5 border border-outline-variant/10 shadow-inner">
-                        <p class="text-xs text-on-surface-variant uppercase tracking-wider mb-2">${isImpostor ? t(state.language, 'categoryHint') : t(state.language, 'secretWord')}</p>
-                        <p class="font-headline text-xl font-bold text-inverse-surface tracking-tight">
-                            ${isImpostor ? state.word.hint : state.word.word}
+                    <div id="revealedState" class="reveal-layer reveal-layer--secret flex flex-col items-center w-full">
+                        <p class="text-on-surface-variant font-bold tracking-[0.2em] text-xs uppercase mb-6 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[16px] text-${isImpostor ? 'tertiary' : 'secondary'}" style="font-variation-settings: 'FILL' 1;">
+                                ${isImpostor ? 'warning' : 'verified'}
+                            </span>
+                            ${t(state.language, 'youAreThe')}
                         </p>
+                        <h1 class="font-headline text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br ${isImpostor ? 'from-tertiary to-tertiary-dim' : 'from-secondary to-secondary-dim'} tracking-tighter mb-8 drop-shadow-[0_0_20px_rgba(255,107,155,0.2)]">
+                            ${roleLabel}
+                        </h1>
+                        <div class="w-full bg-surface-container-highest/60 rounded-2xl p-5 border border-outline-variant/10 shadow-inner">
+                            <p class="text-xs text-on-surface-variant uppercase tracking-wider mb-2">${isImpostor ? t(state.language, 'categoryHint') : t(state.language, 'secretWord')}</p>
+                            <p class="font-headline text-xl font-bold text-inverse-surface tracking-tight">
+                                ${isImpostor ? state.word.hint : state.word.word}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -72,16 +74,12 @@ export const RevealView = {
     },
     mounted: (state) => {
         const card = document.getElementById('revealCard');
-        const hiddenState = document.getElementById('hiddenState');
-        const revealedState = document.getElementById('revealedState');
         const doneBtn = document.getElementById('doneBtn');
         let hasPeeked = false;
 
         const showReveal = (e) => {
             e.preventDefault();
-            hiddenState.classList.add('hidden');
-            revealedState.classList.remove('hidden');
-            revealedState.classList.add('flex');
+            card.classList.add('reveal-holding');
             hasPeeked = true;
         };
 
@@ -89,17 +87,14 @@ export const RevealView = {
             // Touches that end on the Done button bubble to window; preventDefault() on that
             // touchend cancels the synthetic click on many mobile browsers, so "Done" never fires.
             const path = typeof e.composedPath === 'function' ? e.composedPath() : [];
-            if (path.length ? path.includes(doneBtn) : doneBtn.contains(e.target)) {
-                return;
-            }
-            hiddenState.classList.remove('hidden');
-            revealedState.classList.add('hidden');
-            revealedState.classList.remove('flex');
-            
+            const endedOnDone = path.length ? path.includes(doneBtn) : doneBtn.contains(e.target);
+            card.classList.remove('reveal-holding');
             if (hasPeeked) {
-                // Enable Done button with its proper styling
                 doneBtn.disabled = false;
                 doneBtn.className = "w-full rounded-full bg-gradient-to-br from-tertiary to-tertiary-container text-on-tertiary-container font-headline font-bold text-lg py-5 shadow-[0_0_40px_rgba(255,107,155,0.15)] hover:shadow-[0_0_50px_rgba(255,107,155,0.25)] active:scale-[0.98] transition-all duration-200 flex justify-center items-center gap-3 border border-tertiary/20";
+            }
+            if (endedOnDone) {
+                return;
             }
         };
 

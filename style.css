@@ -30,6 +30,74 @@ body {
     animation: fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
+/* Reveal screen: fixed card height — both layers stack in one grid cell (max intrinsic height). */
+.reveal-card {
+    touch-action: manipulation;
+}
+
+.reveal-card .reveal-states {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.reveal-card .reveal-states > .reveal-layer {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    transition:
+        opacity 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.48s cubic-bezier(0.34, 1.15, 0.55, 1),
+        filter 0.38s ease;
+}
+
+/* Prompt: visible by default */
+.reveal-card:not(.reveal-holding) .reveal-layer--prompt {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+    z-index: 2;
+    pointer-events: auto;
+}
+
+.reveal-card.reveal-holding .reveal-layer--prompt {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0) scale(0.96);
+    filter: blur(8px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Secret: hidden until hold */
+.reveal-card:not(.reveal-holding) .reveal-layer--secret {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0) scale(0.94);
+    filter: blur(6px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.reveal-card.reveal-holding .reveal-layer--secret {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+    z-index: 2;
+    pointer-events: auto;
+}
+
+.reveal-card.reveal-holding {
+    box-shadow:
+        0 0 80px rgba(255, 107, 155, 0.14),
+        0 0 1px rgba(255, 107, 155, 0.35);
+    border-color: rgba(255, 107, 155, 0.22);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal-card .reveal-states > .reveal-layer {
+        transition-duration: 0.05s;
+        transition-timing-function: ease;
+    }
+}
+
 /* User selections */
 button {
     user-select: none;

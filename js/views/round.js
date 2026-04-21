@@ -66,7 +66,7 @@ export const RoundView = {
                                         <p class="font-bold text-sm text-on-surface">${p.name}</p>
                                     </div>
                                 </div>
-                                <select data-voter="${p.name}" class="vote-select bg-surface bg-opacity-50 text-on-surface text-sm rounded-lg px-2 py-2 outline-none focus:ring-1 focus:ring-primary border border-outline-variant/30 max-w-[120px] shadow-inner text-ellipsis cursor-pointer">
+                                <select data-voter="${p.name}" class="vote-select bg-surface bg-opacity-50 text-on-surface text-sm rounded-lg pl-3 pr-9 py-2 outline-none focus:ring-1 focus:ring-primary border border-outline-variant/30 max-w-[140px] shadow-inner text-ellipsis cursor-pointer">
                                     <option value="" disabled ${!state.votes[p.name] ? 'selected' : ''}>${t(state.language, 'voteEllipsis')}</option>
                                     ${state.players.filter(target => target.name !== p.name).map(target => `
                                         <option value="${target.name}" ${state.votes[p.name] === target.name ? 'selected' : ''}>
