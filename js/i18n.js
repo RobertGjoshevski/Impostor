@@ -9,7 +9,6 @@ const en = {
     gameSettings: 'Game Settings',
     categories: 'Categories',
     themesSelected: '{sel} selected · {total} categories',
-    themeFreeBadge: 'Free',
     impostors: 'Impostors',
     impostorsRecommended: 'Recommended: 1',
     startSession: 'START SESSION',
@@ -53,6 +52,8 @@ const en = {
     done: 'Done',
     loadingThemes: 'Loading themes...',
     minOneTheme: 'You must have at least one theme selected.',
+    themesSelectAll: 'Select all',
+    themesDeselectAll: 'Deselect all',
     privacyPolicy: 'Privacy policy',
 };
 
@@ -109,6 +110,8 @@ const de = {
     done: 'Fertig',
     loadingThemes: 'Themen werden geladen...',
     minOneTheme: 'Mindestens ein Thema muss gewählt sein.',
+    themesSelectAll: 'Alle auswählen',
+    themesDeselectAll: 'Alle abwählen',
     privacyPolicy: 'Datenschutzerklärung',
 };
 
@@ -165,6 +168,8 @@ const id = {
     done: 'Selesai',
     loadingThemes: 'Memuat tema...',
     minOneTheme: 'Pilih minimal satu tema.',
+    themesSelectAll: 'Pilih semua',
+    themesDeselectAll: 'Batalkan semua',
     privacyPolicy: 'Kebijakan privasi',
 };
 
@@ -221,6 +226,8 @@ const mk = {
     done: 'Готово',
     loadingThemes: 'Се вчитуваат теми...',
     minOneTheme: 'Мора да е избрана барем една тема.',
+    themesSelectAll: 'Избери сите',
+    themesDeselectAll: 'Откажи ги сите',
     privacyPolicy: 'Политика за приватност',
 };
 
@@ -277,6 +284,8 @@ const es = {
     done: 'Hecho',
     loadingThemes: 'Cargando temas...',
     minOneTheme: 'Debe haber al menos un tema seleccionado.',
+    themesSelectAll: 'Seleccionar todo',
+    themesDeselectAll: 'Deseleccionar todo',
     privacyPolicy: 'Política de privacidad',
 };
 
@@ -333,6 +342,8 @@ const it = {
     done: 'Fatto',
     loadingThemes: 'Caricamento temi...',
     minOneTheme: 'Devi avere almeno un tema selezionato.',
+    themesSelectAll: 'Seleziona tutto',
+    themesDeselectAll: 'Deseleziona tutto',
     privacyPolicy: 'Informativa sulla privacy',
 };
 

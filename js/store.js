@@ -29,8 +29,6 @@ export const store = {
         language: 'en',
         availableThemes: [],
         selectedThemes: [],
-        /** English ids of the default starter decks (top word counts in `data/en.json`). */
-        freeCanonicalThemes: [],
     },
     
     listeners: [],

@@ -22,8 +22,15 @@ body {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .animate-fade-in {
@@ -40,7 +47,7 @@ body {
     grid-template-columns: minmax(0, 1fr);
 }
 
-.reveal-card .reveal-states > .reveal-layer {
+.reveal-card .reveal-states>.reveal-layer {
     grid-column: 1;
     grid-row: 1;
     width: 100%;
@@ -92,10 +99,120 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .reveal-card .reveal-states > .reveal-layer {
+    .reveal-card .reveal-states>.reveal-layer {
         transition-duration: 0.05s;
         transition-timing-function: ease;
     }
+}
+
+/* Vote round: <select> trigger — hide native arrow, fixed width, left text, custom chevron (no overlap). */
+.vote-select {
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 10rem;
+    min-width: 10rem;
+    max-width: 14rem;
+    min-height: 2.75rem;
+    margin: 0;
+    padding: 0.5rem 2.625rem 0.5rem 0.75rem;
+    text-align: left;
+    text-align-last: left;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    border-radius: 0.75rem;
+    border: 2px solid rgba(120, 120, 160, 0.35);
+    background-color: rgba(30, 30, 52, 0.92);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.6rem center;
+    background-size: 1.125rem 1.125rem;
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.vote-select::-ms-expand {
+    display: none;
+}
+
+.vote-select.vote-select--voted {
+    border-color: rgba(52, 211, 153, 0.55);
+    background-color: rgba(6, 95, 70, 0.5);
+    color: #a7f3d0;
+    box-shadow: 0 0 0 1px rgba(52, 211, 153, 0.2), 0 0 24px rgba(16, 185, 129, 0.12);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236ee7b7' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+.vote-select.vote-select--voted:focus-visible {
+    outline: 2px solid rgba(52, 211, 153, 0.55);
+    outline-offset: 2px;
+}
+
+/* Finish tally: locked = flat muted (not bright coral); ready = accent gradient. */
+.end-round-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.25;
+    padding: 1rem 3rem;
+    border-radius: 9999px;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease,
+        transform 0.15s ease;
+}
+
+@media (min-width: 768px) {
+    .end-round-btn {
+        width: auto;
+    }
+}
+
+.end-round-btn--locked {
+    background: #2a2a3e;
+    color: #6b6b82;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.end-round-btn--locked .material-symbols-outlined {
+    opacity: 0.45;
+}
+
+.end-round-btn--ready {
+    background: linear-gradient(to bottom right, #ff6e84, #d73357);
+    color: #490013;
+    border: none;
+    box-shadow: 0 0 32px rgba(255, 110, 132, 0.15);
+    cursor: pointer;
+}
+
+.end-round-btn--ready:hover {
+    opacity: 0.92;
+}
+
+.end-round-btn--ready:active {
+    transform: scale(0.97);
+}
+
+/* Results: lifetime leaderboard rows — kill green ring (ring-secondary) from older cached HTML or clipped box-shadow */
+.lifetime-scoreboard li {
+    box-shadow: none !important;
 }
 
 /* User selections */

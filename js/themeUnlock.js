@@ -2,8 +2,6 @@
 
 const STORAGE_SELECTED = 'impostor_selected_canonical_themes';
 
-const DEFAULT_SELECTED_COUNT = 5;
-
 /** @type {Record<string, unknown> | null} */
 let localePayload = null;
 
@@ -56,11 +54,10 @@ export function canonicalToLocalizedKey(localeData, canonical) {
 }
 
 /**
- * Top N categories (by word count in en.json) used as default selection for new users.
  * @param {Record<string, unknown>} enData
- * @returns {string[]}
+ * @returns {{ name: string; n: number; fileIndex: number }[]}
  */
-export function computeDefaultStarterCanonicalThemes(enData) {
+function rankCanonicalThemesByWordCount(enData) {
     const themes = listLocaleThemeKeys(enData);
     const ranked = themes.map((name, fileIndex) => {
         const bucket = enData[name];
@@ -68,7 +65,16 @@ export function computeDefaultStarterCanonicalThemes(enData) {
         return { name, n, fileIndex };
     });
     ranked.sort((a, b) => b.n - a.n || a.fileIndex - b.fileIndex);
-    return ranked.slice(0, DEFAULT_SELECTED_COUNT).map((r) => r.name);
+    return ranked;
+}
+
+/**
+ * All categories (canonical ids from `en.json`), stable order by word count — default selection when nothing is persisted.
+ * @param {Record<string, unknown>} enData
+ * @returns {string[]}
+ */
+export function computeDefaultSelectedCanonicalThemes(enData) {
+    return rankCanonicalThemesByWordCount(enData).map((r) => r.name);
 }
 
 function readJsonStorage(key, fallback) {
@@ -107,29 +113,20 @@ export function localeKeyToCanonical(localeKey) {
 }
 
 /**
- * Starter decks (top by word count) — shown with a "Free" badge in the themes UI.
- * @param {string} canonical
- * @param {string[]} starterCanonical
- */
-export function isCanonicalFree(canonical, starterCanonical) {
-    return new Set(starterCanonical).has(canonical);
-}
-
-/**
  * @param {Record<string, unknown>} localeData
- * @param {string[]} starterCanonical — default subset when nothing persisted
+ * @param {string[]} defaultSelectedCanonical — all categories selected when nothing persisted
  */
-export function resolveThemeSelectionForLocale(localeData, starterCanonical) {
+export function resolveThemeSelectionForLocale(localeData, defaultSelectedCanonical) {
     const allThemeKeys = listLocaleThemeKeys(localeData);
     const validCanonical = new Set(allThemeKeys.map((k) => localizedKeyToCanonical(localeData, k)));
 
     const persisted = loadPersistedSelectedCanonicals();
     let selectedCanonical = /** @type {string[]} */ (
-        Array.isArray(persisted) ? [...persisted] : [...starterCanonical]
+        Array.isArray(persisted) ? [...persisted] : [...defaultSelectedCanonical]
     );
     selectedCanonical = selectedCanonical.filter((c) => validCanonical.has(c));
     if (selectedCanonical.length === 0) {
-        selectedCanonical = [...starterCanonical];
+        selectedCanonical = [...defaultSelectedCanonical];
     }
 
     const selectedLocaleKeys = [];
@@ -141,8 +138,8 @@ export function resolveThemeSelectionForLocale(localeData, starterCanonical) {
     }
 
     if (selectedLocaleKeys.length === 0) {
-        selectedCanonical = [...starterCanonical];
-        for (const c of starterCanonical) {
+        selectedCanonical = [...defaultSelectedCanonical];
+        for (const c of defaultSelectedCanonical) {
             const loc = canonicalToLocalizedKey(localeData, c);
             if (loc && allThemeKeys.includes(loc)) {
                 selectedLocaleKeys.push(loc);
@@ -155,7 +152,6 @@ export function resolveThemeSelectionForLocale(localeData, starterCanonical) {
     return {
         allThemeKeys,
         selectedLocaleKeys,
-        freeCanonical: starterCanonical,
     };
 }
 

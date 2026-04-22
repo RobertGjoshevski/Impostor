@@ -1,6 +1,6 @@
 import { store } from './store.js';
 import {
-    computeDefaultStarterCanonicalThemes,
+    computeDefaultSelectedCanonicalThemes,
     resolveThemeSelectionForLocale,
     setUnlockLocalePayload,
 } from './themeUnlock.js';
@@ -81,8 +81,8 @@ export async function loadLanguageData(langCode) {
                 ? expandLocaleFromEnglishBase(enData, /** @type {Record<string, unknown>} */ (raw))
                 : raw;
 
-        const starterCanonical = computeDefaultStarterCanonicalThemes(enData);
-        const resolved = resolveThemeSelectionForLocale(wordsDatabase, starterCanonical);
+        const defaultSelectedCanonical = computeDefaultSelectedCanonicalThemes(enData);
+        const resolved = resolveThemeSelectionForLocale(wordsDatabase, defaultSelectedCanonical);
 
         setUnlockLocalePayload(wordsDatabase);
 
@@ -90,7 +90,6 @@ export async function loadLanguageData(langCode) {
             language: langCode,
             availableThemes: resolved.allThemeKeys,
             selectedThemes: resolved.selectedLocaleKeys,
-            freeCanonicalThemes: resolved.freeCanonical,
         });
     } catch (e) {
         console.error('Failed to load dictionary data:', e);

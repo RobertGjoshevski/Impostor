@@ -4,10 +4,10 @@ import { t } from '../i18n.js';
 export const ResultsView = {
     render: (state) => {
         const impostors = state.players.filter(p => p.role === 'IMPOSTOR');
-        
+
         // Convert scores to sorted array
         const sortedScores = Object.entries(state.scores).sort((a, b) => b[1] - a[1]);
-        
+
         return `
         <header class="fixed w-full top-0 z-50 bg-[#0c0c1f]/80 backdrop-blur-xl shadow-[0_0_40px_rgba(208,149,255,0.08)] flex justify-between items-center px-6 py-4 transition-all">
             <h1 class="font-headline font-black tracking-widest text-[#d095ff] uppercase text-2xl mx-auto">
@@ -42,7 +42,7 @@ export const ResultsView = {
                             <div class="flex flex-col items-start gap-4">
                                 <div class="relative group">
                                     <div class="w-20 h-20 rounded-full bg-surface-variant flex items-center justify-center text-tertiary font-bold text-3xl uppercase border-4 border-surface-container-highest shadow-[0_0_32px_rgba(255,107,155,0.3)] ring-4 ring-tertiary">
-                                        ${imp.name.substring(0,2)}
+                                        ${imp.name.substring(0, 2)}
                                     </div>
                                     <div class="absolute -bottom-2 -right-2 bg-tertiary-container text-tertiary rounded-full w-8 h-8 flex items-center justify-center shadow-lg border-2 border-surface-container-highest">
                                         <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">warning</span>
@@ -97,14 +97,14 @@ export const ResultsView = {
                         <span class="material-symbols-outlined text-base">leaderboard</span>
                         ${t(state.language, 'lifetimeScores')}
                     </h3>
-                    <ul class="flex flex-col gap-2 max-h-48 overflow-y-auto pr-2">
+                    <ul class="lifetime-scoreboard flex flex-col gap-2 max-h-48 overflow-y-auto pr-2">
                         ${sortedScores.length > 0 ? sortedScores.map(([name, score], i) => `
-                            <li class="flex justify-between items-center bg-surface-container-low p-3 rounded-lg ${i===0?'ring-1 ring-secondary/50':''}">
+                            <li class="flex justify-between items-center bg-surface-container-low p-3 rounded-lg">
                                 <div class="flex items-center gap-3">
-                                    <span class="font-headline font-bold text-on-surface-variant text-xs w-4">${i+1}</span>
+                                    <span class="font-headline font-bold text-on-surface-variant text-xs w-4">${i + 1}</span>
                                     <span class="font-body font-bold text-on-surface">${name}</span>
                                 </div>
-                                <span class="font-headline font-black text-secondary">${score}</span>
+                                <span class="font-headline font-black text-on-surface tabular-nums">${score}</span>
                             </li>
                         `).join('') : `<p class="text-on-surface-variant text-sm">${t(state.language, 'noScoresYet')}</p>`}
                     </ul>
@@ -126,5 +126,5 @@ export const ResultsView = {
             store.resetGame();
         });
     },
-    update: (state) => {}
+    update: (state) => { }
 };

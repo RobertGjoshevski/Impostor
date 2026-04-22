@@ -32,8 +32,28 @@ function mountVoteScreenAd() {
     });
 }
 
+function allPlayersVoted(state) {
+    return state.players.length > 0 && state.players.every((p) => Boolean(state.votes[p.name]));
+}
+
+/** Keeps tally CTA + per-player vote trigger styling in sync without re-rendering (avoids select flicker). */
+function syncRoundVoteUi(state) {
+    const endBtn = document.getElementById('endRoundBtn');
+    if (endBtn) {
+        const ready = allPlayersVoted(state);
+        endBtn.disabled = !ready;
+        endBtn.classList.toggle('end-round-btn--ready', ready);
+        endBtn.classList.toggle('end-round-btn--locked', !ready);
+    }
+    document.querySelectorAll('select.vote-select').forEach((sel) => {
+        const voter = sel.getAttribute('data-voter');
+        sel.classList.toggle('vote-select--voted', Boolean(state.votes[voter]));
+    });
+}
+
 export const RoundView = {
     render: (state) => {
+        const tallyReady = allPlayersVoted(state);
         return `
         <header class="docked full-width top-0 z-50 bg-[#0c0c1f]/80 backdrop-blur-xl shadow-[0_0_40px_rgba(208,149,255,0.08)] flex justify-center items-center w-full px-6 py-4 fixed">
             <h1 class="font-headline font-bold tracking-tighter text-2xl font-black tracking-widest text-[#d095ff] uppercase">IMPOSTOR</h1>
@@ -66,7 +86,7 @@ export const RoundView = {
                                         <p class="font-bold text-sm text-on-surface">${p.name}</p>
                                     </div>
                                 </div>
-                                <select data-voter="${p.name}" class="vote-select bg-surface bg-opacity-50 text-on-surface text-sm rounded-lg pl-3 pr-9 py-2 outline-none focus:ring-1 focus:ring-primary border border-outline-variant/30 max-w-[140px] shadow-inner text-ellipsis cursor-pointer">
+                                <select data-voter="${p.name}" class="vote-select ${state.votes[p.name] ? 'vote-select--voted' : ''} flex-shrink-0 text-on-surface text-sm outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer">
                                     <option value="" disabled ${!state.votes[p.name] ? 'selected' : ''}>${t(state.language, 'voteEllipsis')}</option>
                                     ${state.players.filter(target => target.name !== p.name).map(target => `
                                         <option value="${target.name}" ${state.votes[p.name] === target.name ? 'selected' : ''}>
@@ -80,8 +100,8 @@ export const RoundView = {
                 </div>
             </section>
 
-            <section class="mt-8 flex justify-center">
-                <button id="endRoundBtn" class="w-full md:w-auto bg-gradient-to-br from-[#ff6e84] to-[#d73357] text-[#490013] font-headline font-bold text-lg py-4 px-12 rounded-full shadow-[0_0_32px_rgba(255,110,132,0.15)] hover:opacity-90 active:scale-95 transition-all duration-200 flex items-center justify-center gap-3">
+            <section class="mt-8 flex flex-col items-center gap-3">
+                <button id="endRoundBtn" type="button" class="end-round-btn font-headline ${tallyReady ? 'end-round-btn--ready' : 'end-round-btn--locked'}" ${tallyReady ? '' : 'disabled'}>
                     <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">done_all</span>
                     ${t(state.language, 'finishTally')}
                 </button>
@@ -99,19 +119,14 @@ export const RoundView = {
         });
 
         document.getElementById('endRoundBtn').addEventListener('click', () => {
-            // Confirm if not everyone voted? (Optional enhancement)
-            const votedCount = Object.keys(store.state.votes).length;
-            if (votedCount < store.state.players.length) {
-                if (!confirm(t(store.state.language, 'confirmEndRound'))) return;
-            }
+            const btn = document.getElementById('endRoundBtn');
+            if (!btn || btn.disabled) return;
             store.endGame();
         });
 
         mountVoteScreenAd();
     },
     update: (state) => {
-        // We do not physically touch the DOM on vote changes to avoid select-flashing,
-        // The elements' native state acts as the source of truth for UI here since we sync it.
-        // It's sufficient because "castVote" only updates votes.
+        syncRoundVoteUi(state);
     }
 };
