@@ -16,14 +16,12 @@ export const ThemesView = {
             </div>
 
             <section class="bg-surface-container-high rounded-xl p-5 shadow-[0_0_32px_rgba(208,149,255,0.04)] flex flex-col gap-4">
-                <div class="rounded-2xl p-1 flex gap-1 bg-[#0a0a18]/85 border border-white/[0.06] shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_4px_24px_rgba(0,0,0,0.25)]">
-                    <button type="button" id="themesSelectAllBtn" class="group flex-1 min-w-0 flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-2 rounded-xl py-3 px-2 sm:px-3 bg-gradient-to-br from-[#d095ff]/35 via-[#9b6dff]/12 to-transparent text-[#e8c8ff] font-headline text-[10px] sm:text-[11px] font-bold uppercase tracking-widest leading-tight border border-[#d095ff]/40 shadow-[0_0_28px_rgba(208,149,255,0.18)] hover:from-[#d095ff]/45 hover:border-[#d095ff]/55 hover:shadow-[0_0_36px_rgba(208,149,255,0.28)] active:scale-[0.98] transition-all duration-200">
-                        <span class="material-symbols-outlined text-[22px] sm:text-xl shrink-0 text-[#d095ff] group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">done_all</span>
-                        <span class="text-center max-w-[8.5rem] sm:max-w-none">${t(state.language, 'themesSelectAll')}</span>
+                <div class="flex gap-5 items-center">
+                    <button type="button" id="themesSelectAllBtn" aria-label="${t(state.language, 'themesSelectAll')}" class="group h-10 w-10 shrink-0 flex items-center justify-center rounded-lg bg-surface-container-low text-primary border-0 shadow-none hover:bg-surface-container-highest/50 active:scale-[0.98] transition-colors duration-200">
+                        <span class="material-symbols-outlined text-[20px] leading-none group-hover:scale-105 transition-transform" style="font-variation-settings: 'FILL' 1;">done_all</span>
                     </button>
-                    <button type="button" id="themesDeselectAllBtn" class="group flex-1 min-w-0 flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-2 rounded-xl py-3 px-2 sm:px-3 bg-surface-container-highest/25 text-on-surface-variant font-headline text-[10px] sm:text-[11px] font-bold uppercase tracking-widest leading-tight border border-transparent hover:bg-surface-container-highest/55 hover:text-on-surface hover:border-white/[0.08] active:scale-[0.98] transition-all duration-200">
-                        <span class="material-symbols-outlined text-[22px] sm:text-xl shrink-0 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all">layers_clear</span>
-                        <span class="text-center max-w-[8.5rem] sm:max-w-none">${t(state.language, 'themesDeselectAll')}</span>
+                    <button type="button" id="themesDeselectAllBtn" aria-label="${t(state.language, 'themesDeselectAll')}" class="group h-10 w-10 shrink-0 flex items-center justify-center rounded-lg bg-surface-container-low text-on-surface-variant border-0 shadow-none hover:bg-surface-container-highest/50 hover:text-on-surface active:scale-[0.98] transition-colors duration-200">
+                        <span class="material-symbols-outlined text-[20px] leading-none opacity-90 group-hover:opacity-100 transition-opacity">layers_clear</span>
                     </button>
                 </div>
                 <ul id="themeList" class="flex flex-col gap-3">
