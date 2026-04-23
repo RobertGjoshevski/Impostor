@@ -14,6 +14,7 @@ function mountVoteScreenAd() {
     const ins = document.createElement('ins');
     ins.className = 'adsbygoogle';
     ins.style.display = 'block';
+    ins.style.width = '100%';
     ins.setAttribute('data-ad-client', VOTE_SCREEN_AD_CLIENT);
     ins.setAttribute('data-ad-slot', VOTE_SCREEN_AD_SLOT);
     ins.setAttribute('data-ad-format', 'auto');
