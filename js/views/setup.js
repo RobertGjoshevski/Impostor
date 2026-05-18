@@ -69,6 +69,10 @@ export const SetupView = {
                         </button>
                     </div>
                 </div>
+
+                <button type="button" id="resetSavedBtn" class="w-full py-3 rounded-lg border border-error/40 text-error text-sm font-semibold hover:bg-error/10 active:scale-[0.99] transition-colors">
+                    ${t(state.language, 'resetSavedData')}
+                </button>
             </section>
 
             <!-- Start Game CTA -->
@@ -160,6 +164,12 @@ export const SetupView = {
 
         document.getElementById('openThemesBtn').addEventListener('click', () => {
             store.setState({ screen: 'themes' });
+        });
+
+        document.getElementById('resetSavedBtn').addEventListener('click', () => {
+            if (window.confirm(t(store.state.language, 'resetDataConfirm'))) {
+                store.clearSavedProfile();
+            }
         });
 
         const langSelect = document.getElementById('languageSelect');

@@ -55,6 +55,12 @@ const en = {
     themesSelectAll: 'Select all',
     themesDeselectAll: 'Deselect all',
     privacyPolicy: 'Privacy policy',
+    firstPlayerTitle: 'Who goes first?',
+    firstPlayerName: '{name} starts',
+    firstPlayerContinue: 'Start discussion',
+    resetSavedData: 'Reset saved players & scores',
+    resetDataConfirm:
+        'Clear all saved player names and scores on this device? This cannot be undone.',
 };
 
 const de = {
@@ -113,6 +119,12 @@ const de = {
     themesSelectAll: 'Alle auswählen',
     themesDeselectAll: 'Alle abwählen',
     privacyPolicy: 'Datenschutzerklärung',
+    firstPlayerTitle: 'Wer beginnt?',
+    firstPlayerName: '{name} beginnt',
+    firstPlayerContinue: 'Diskussion starten',
+    resetSavedData: 'Gespeicherte Spieler & Punkte löschen',
+    resetDataConfirm:
+        'Alle gespeicherten Spielernamen und Punkte auf diesem Gerät löschen? Dies kann nicht rückgängig gemacht werden.',
 };
 
 const id = {
@@ -171,6 +183,12 @@ const id = {
     themesSelectAll: 'Pilih semua',
     themesDeselectAll: 'Batalkan semua',
     privacyPolicy: 'Kebijakan privasi',
+    firstPlayerTitle: 'Siapa yang mulai?',
+    firstPlayerName: '{name} mulai',
+    firstPlayerContinue: 'Mulai diskusi',
+    resetSavedData: 'Reset pemain & skor tersimpan',
+    resetDataConfirm:
+        'Hapus semua nama pemain dan skor yang tersimpan di perangkat ini? Tindakan ini tidak dapat dibatalkan.',
 };
 
 const mk = {
@@ -229,6 +247,12 @@ const mk = {
     themesSelectAll: 'Избери сите',
     themesDeselectAll: 'Откажи ги сите',
     privacyPolicy: 'Политика за приватност',
+    firstPlayerTitle: 'Кој започнува?',
+    firstPlayerName: '{name} започнува',
+    firstPlayerContinue: 'Започни дискусија',
+    resetSavedData: 'Ресетирај зачувани играчи и поени',
+    resetDataConfirm:
+        'Да се избришат сите зачувани имиња и поени на овој уред? Ова не може да се врати назад.',
 };
 
 const es = {
@@ -287,6 +311,12 @@ const es = {
     themesSelectAll: 'Seleccionar todo',
     themesDeselectAll: 'Deseleccionar todo',
     privacyPolicy: 'Política de privacidad',
+    firstPlayerTitle: '¿Quién empieza?',
+    firstPlayerName: '{name} empieza',
+    firstPlayerContinue: 'Empezar la discusión',
+    resetSavedData: 'Restablecer jugadores y puntuaciones guardados',
+    resetDataConfirm:
+        '¿Borrar todos los nombres y puntuaciones guardados en este dispositivo? No se puede deshacer.',
 };
 
 const it = {
@@ -345,6 +375,12 @@ const it = {
     themesSelectAll: 'Seleziona tutto',
     themesDeselectAll: 'Deseleziona tutto',
     privacyPolicy: 'Informativa sulla privacy',
+    firstPlayerTitle: 'Chi inizia?',
+    firstPlayerName: '{name} inizia',
+    firstPlayerContinue: 'Inizia la discussione',
+    resetSavedData: 'Reimposta giocatori e punteggi salvati',
+    resetDataConfirm:
+        'Cancellare tutti i nomi dei giocatori e i punteggi salvati su questo dispositivo? Operazione irreversibile.',
 };
 
 const tables = { en, de, id, mk, es, it };

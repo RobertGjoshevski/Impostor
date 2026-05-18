@@ -1,3 +1,9 @@
+import {
+    clearPersistedProfile,
+    savePersistedPlayers,
+    savePersistedScores,
+} from './persist.js';
+
 /** Player roster entries are strings on the setup screen and { name, ... } during play. */
 export function normalizePlayerName(entry) {
     if (typeof entry === 'string') {
@@ -15,14 +21,30 @@ export function normalizePlayerName(entry) {
     return 'Player';
 }
 
+/**
+ * @param {number} playerCount
+ * @param {number} rawCount
+ */
+export function clampImpostorCount(playerCount, rawCount) {
+    let n = Math.floor(Number(rawCount));
+    if (!Number.isFinite(n)) n = 1;
+    const max = playerCount >= 2 ? playerCount - 1 : 1;
+    return Math.max(1, Math.min(n, max));
+}
+
+function rosterNamesForPersist(players) {
+    return players.map((p) => normalizePlayerName(p));
+}
+
 export const store = {
     state: {
-        screen: 'setup', // 'setup', 'transition', 'reveal', 'round', 'results'
-        players: ["Alpha", "Bravo", "Charlie"], // List of player objects: { id, name, role, revealed }
+        screen: 'setup', // 'setup', 'transition', 'reveal', 'firstPlayer', 'round', 'results'
+        players: ['Alpha', 'Bravo', 'Charlie'], // List of player objects: { id, name, role, revealed }
         impostorCount: 1,
         revealRolesOnDeath: true,
         word: null, // { word, hint }
         currentPlayerIndex: 0,
+        firstPlayerIndex: null,
         scores: {}, // Persistent across rounds
         votes: {}, // Current round votes
         detectives: [], // Innocents who guessed right
@@ -30,18 +52,18 @@ export const store = {
         availableThemes: [],
         selectedThemes: [],
     },
-    
+
     listeners: [],
 
     subscribe(listener) {
         this.listeners.push(listener);
         return () => {
-            this.listeners = this.listeners.filter(l => l !== listener);
+            this.listeners = this.listeners.filter((l) => l !== listener);
         };
     },
 
     notify() {
-        this.listeners.forEach(listener => listener(this.state));
+        this.listeners.forEach((listener) => listener(this.state));
     },
 
     setState(newState) {
@@ -53,23 +75,22 @@ export const store = {
     addPlayer(name) {
         if (!name.trim()) return;
         const newPlayers = [...this.state.players, name.trim()];
-        this.setState({ players: newPlayers });
+        const iCount = clampImpostorCount(newPlayers.length, this.state.impostorCount);
+        this.setState({ players: newPlayers, impostorCount: iCount });
+        savePersistedPlayers(rosterNamesForPersist(newPlayers));
     },
 
     removePlayer(index) {
         const newPlayers = this.state.players.filter((_, i) => i !== index);
-        // Adjust impostor count if needed
-        let iCount = this.state.impostorCount;
-        if (iCount >= newPlayers.length && newPlayers.length > 0) {
-            iCount = newPlayers.length - 1;
-        }
+        const iCount = clampImpostorCount(newPlayers.length, this.state.impostorCount);
         this.setState({ players: newPlayers, impostorCount: iCount });
+        savePersistedPlayers(rosterNamesForPersist(newPlayers));
     },
 
     setImpostorCount(count) {
-        if (count >= 1 && count < this.state.players.length) {
-            this.setState({ impostorCount: count });
-        }
+        const next = clampImpostorCount(this.state.players.length, count);
+        if (next === this.state.impostorCount) return;
+        this.setState({ impostorCount: next });
     },
 
     toggleRevealRoles() {
@@ -78,11 +99,13 @@ export const store = {
 
     startGame(wordObj) {
         if (this.state.players.length < 3) return; // Need at least 3 players
-        
+
+        const impostorN = clampImpostorCount(this.state.players.length, this.state.impostorCount);
+
         // Assign roles
         const shuffledIndices = this.state.players.map((_, i) => i).sort(() => Math.random() - 0.5);
-        const impostorIndices = new Set(shuffledIndices.slice(0, this.state.impostorCount));
-        
+        const impostorIndices = new Set(shuffledIndices.slice(0, impostorN));
+
         const playerObjects = this.state.players.map((entry, index) => ({
             id: index,
             name: normalizePlayerName(entry),
@@ -94,9 +117,11 @@ export const store = {
             players: playerObjects,
             word: wordObj,
             currentPlayerIndex: 0,
+            firstPlayerIndex: null,
             screen: 'transition',
             votes: {},
-            detectives: []
+            detectives: [],
+            impostorCount: impostorN,
         });
     },
 
@@ -104,19 +129,20 @@ export const store = {
         // Mark current as revealed
         const updatedPlayers = [...this.state.players];
         updatedPlayers[this.state.currentPlayerIndex].revealed = true;
-        
+
         const nextIndex = this.state.currentPlayerIndex + 1;
         if (nextIndex < this.state.players.length) {
             this.setState({
                 players: updatedPlayers,
                 currentPlayerIndex: nextIndex,
-                screen: 'transition'
+                screen: 'transition',
             });
         } else {
-            // All revealed, go to round
+            const fp = Math.floor(Math.random() * updatedPlayers.length);
             this.setState({
                 players: updatedPlayers,
-                screen: 'round'
+                firstPlayerIndex: fp,
+                screen: 'firstPlayer',
             });
         }
     },
@@ -127,13 +153,13 @@ export const store = {
     },
 
     endGame() {
-        const impostorNames = new Set(this.state.players.filter(p => p.role === 'IMPOSTOR').map(p => p.name));
+        const impostorNames = new Set(this.state.players.filter((p) => p.role === 'IMPOSTOR').map((p) => p.name));
         const newScores = { ...this.state.scores };
         const detectives = [];
 
         // 1. Innocents +1 if correct
         for (const [voter, suspect] of Object.entries(this.state.votes)) {
-            const voterPlayer = this.state.players.find(p => p.name === voter);
+            const voterPlayer = this.state.players.find((p) => p.name === voter);
             if (voterPlayer && voterPlayer.role === 'INNOCENT' && impostorNames.has(suspect)) {
                 newScores[voter] = (newScores[voter] || 0) + 1;
                 detectives.push(voter);
@@ -142,26 +168,28 @@ export const store = {
 
         // 2. Impostors +2 if surviving (not sole max votes)
         const voteCounts = {};
-        Object.values(this.state.votes).forEach(suspect => {
+        Object.values(this.state.votes).forEach((suspect) => {
             voteCounts[suspect] = (voteCounts[suspect] || 0) + 1;
         });
         const maxVotes = Math.max(0, ...Object.values(voteCounts));
 
-        this.state.players.filter(p => p.role === 'IMPOSTOR').forEach(imp => {
+        this.state.players.filter((p) => p.role === 'IMPOSTOR').forEach((imp) => {
             const votesReceived = voteCounts[imp.name] || 0;
-            const tiedForMost = Object.values(voteCounts).filter(v => v === maxVotes).length > 1;
-            const survived = votesReceived < maxVotes || (votesReceived === maxVotes && tiedForMost) || maxVotes === 0;
-            
+            const tiedForMost = Object.values(voteCounts).filter((v) => v === maxVotes).length > 1;
+            const survived =
+                votesReceived < maxVotes || (votesReceived === maxVotes && tiedForMost) || maxVotes === 0;
+
             if (survived) {
                 newScores[imp.name] = (newScores[imp.name] || 0) + 2;
             }
         });
 
-        this.setState({ 
+        this.setState({
             screen: 'results',
             scores: newScores,
-            detectives: detectives
+            detectives: detectives,
         });
+        savePersistedScores(newScores);
     },
 
     resetGame() {
@@ -171,9 +199,26 @@ export const store = {
             players: names,
             word: null,
             currentPlayerIndex: 0,
+            firstPlayerIndex: null,
             screen: 'setup',
             votes: {},
-            detectives: []
+            detectives: [],
         });
-    }
+        savePersistedPlayers(names);
+    },
+
+    clearSavedProfile() {
+        clearPersistedProfile();
+        this.setState({
+            players: ['Alpha', 'Bravo', 'Charlie'],
+            scores: {},
+            impostorCount: 1,
+            firstPlayerIndex: null,
+            word: null,
+            currentPlayerIndex: 0,
+            votes: {},
+            detectives: [],
+            screen: 'setup',
+        });
+    },
 };

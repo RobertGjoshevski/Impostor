@@ -1,16 +1,31 @@
-import { store } from './store.js';
+import { clampImpostorCount, store } from './store.js';
 import { SetupView } from './views/setup.js';
 import { TransitionView } from './views/transition.js';
 import { RevealView } from './views/reveal.js';
+import { FirstPlayerView } from './views/firstPlayer.js';
 import { RoundView } from './views/round.js';
 import { ResultsView } from './views/results.js';
 import { ThemesView } from './views/themes.js';
+import { loadPersistedProfile } from './persist.js';
 import { loadLanguageData } from './words.js';
+
+const persisted = loadPersistedProfile();
+if (persisted) {
+    if (persisted.players.length >= 1) {
+        store.state.players = persisted.players;
+    }
+    store.state.scores = persisted.scores;
+    store.state.impostorCount = clampImpostorCount(
+        store.state.players.length,
+        store.state.impostorCount,
+    );
+}
 
 const views = {
     'setup': SetupView,
     'transition': TransitionView,
     'reveal': RevealView,
+    'firstPlayer': FirstPlayerView,
     'round': RoundView,
     'results': ResultsView,
     'themes': ThemesView
