@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "build:css": "tailwindcss -i ./src/tailwind-input.css -o ./tailwind.bundle.css --minify"
+    "build": "npm run build:css",
+    "build:css": "BROWSERSLIST_IGNORE_OLD_DATA=true tailwindcss -i ./src/tailwind-input.css -o ./tailwind.bundle.css --minify"
   },
   "devDependencies": {
     "@tailwindcss/container-queries": "^0.1.1",
