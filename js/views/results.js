@@ -1,5 +1,6 @@
 import { store } from '../store.js';
 import { t } from '../i18n.js';
+import { hostNextRound, isHost } from '../net/onlineSession.js';
 
 export const ResultsView = {
     render: (state) => {
@@ -114,16 +115,26 @@ export const ResultsView = {
         </main>
 
         <div class="fixed bottom-8 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] max-w-md bg-surface-bright/50 backdrop-blur-2xl rounded-full p-2 flex gap-2 shadow-[0_0_64px_rgba(208,149,255,0.08)] z-50">
+            ${state.playMode === 'online' && !isHost(state) ? `
+            <p class="flex-1 text-center text-on-surface-variant text-sm py-4 px-4">${t(state.language, 'nextRoundWait')}</p>
+            ` : `
             <button id="replayBtn" class="flex-1 bg-gradient-to-br from-primary to-primary-container text-on-primary-container rounded-full py-4 px-6 text-center shadow-[0_0_24px_rgba(208,149,255,0.2)] font-headline font-bold text-sm uppercase tracking-widest transition-transform active:scale-95 flex items-center justify-center gap-2">
                 <span class="material-symbols-outlined text-lg">replay</span>
                 ${t(state.language, 'nextRound')}
             </button>
+            `}
         </div>
         `;
     },
     mounted: (state) => {
-        document.getElementById('replayBtn').addEventListener('click', () => {
-            store.resetGame();
+        const btn = document.getElementById('replayBtn');
+        if (!btn) return;
+        btn.addEventListener('click', () => {
+            if (state.playMode === 'online') {
+                hostNextRound();
+            } else {
+                store.resetGame();
+            }
         });
     },
     update: (state) => { }

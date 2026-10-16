@@ -117,7 +117,7 @@ export const ThemesView = {
 
         ThemesView.bindButtonOnce('saveThemesBtn', () => {
             persistSelectionFromLocaleKeys(store.state.selectedThemes);
-            store.setState({ screen: 'setup' });
+            store.setState({ screen: store.state.themesReturnScreen || 'setup' });
         });
     },
 

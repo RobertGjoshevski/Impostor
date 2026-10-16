@@ -1,12 +1,16 @@
 import { clampImpostorCount, store } from './store.js';
+import { HomeView } from './views/home.js';
 import { SetupView } from './views/setup.js';
+import { HostLobbyView } from './views/hostLobby.js';
+import { JoinRoomView } from './views/joinRoom.js';
 import { TransitionView } from './views/transition.js';
 import { RevealView } from './views/reveal.js';
 import { FirstPlayerView } from './views/firstPlayer.js';
 import { RoundView } from './views/round.js';
 import { ResultsView } from './views/results.js';
 import { ThemesView } from './views/themes.js';
-import { loadPersistedProfile } from './persist.js';
+import { loadHostState, loadPersistedProfile } from './persist.js';
+import { restoreHostSession } from './net/onlineSession.js';
 import { loadLanguageData } from './words.js';
 
 const persisted = loadPersistedProfile();
@@ -21,8 +25,16 @@ if (persisted) {
     );
 }
 
+const hostSaved = loadHostState();
+if (hostSaved) {
+    restoreHostSession(hostSaved);
+}
+
 const views = {
+    'home': HomeView,
     'setup': SetupView,
+    'hostLobby': HostLobbyView,
+    'joinRoom': JoinRoomView,
     'transition': TransitionView,
     'reveal': RevealView,
     'firstPlayer': FirstPlayerView,

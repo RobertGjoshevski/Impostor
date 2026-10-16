@@ -1,12 +1,49 @@
 import { store, normalizePlayerName } from '../store.js';
 import { t } from '../i18n.js';
+import { escapeHtml } from '../net/ids.js';
+import { clientPeekDone, hostPeekDone, isHost } from '../net/onlineSession.js';
+
+function getRevealInfo(state) {
+    if (state.playMode === 'online') {
+        const me = (state.players || []).find((p) => p && p.id === state.myClientId);
+        const priv = state.myPrivateState;
+        const displayName = me ? normalizePlayerName(me) : normalizePlayerName(state.myName);
+        if (!priv || !priv.role) {
+            return {
+                displayName,
+                waiting: true,
+                isImpostor: false,
+                roleLabel: '',
+                secretLabel: '',
+                secretText: '',
+            };
+        }
+        const isImpostor = priv.role === 'IMPOSTOR';
+        return {
+            displayName,
+            waiting: false,
+            isImpostor,
+            roleLabel: t(state.language, isImpostor ? 'roleImpostor' : 'roleInnocent'),
+            secretLabel: isImpostor ? t(state.language, 'categoryHint') : t(state.language, 'secretWord'),
+            secretText: isImpostor ? priv.hint || '—' : priv.secretWord || '—',
+        };
+    }
+    const player = state.players[state.currentPlayerIndex];
+    const displayName = normalizePlayerName(player);
+    const isImpostor = player && player.role === 'IMPOSTOR';
+    return {
+        displayName,
+        waiting: false,
+        isImpostor,
+        roleLabel: t(state.language, isImpostor ? 'roleImpostor' : 'roleInnocent'),
+        secretLabel: isImpostor ? t(state.language, 'categoryHint') : t(state.language, 'secretWord'),
+        secretText: isImpostor ? state.word?.hint : state.word?.word,
+    };
+}
 
 export const RevealView = {
     render: (state) => {
-        const player = state.players[state.currentPlayerIndex];
-        const displayName = normalizePlayerName(player);
-        const isImpostor = player.role === 'IMPOSTOR';
-        const roleLabel = t(state.language, isImpostor ? 'roleImpostor' : 'roleInnocent');
+        const { displayName, isImpostor, roleLabel, secretLabel, secretText, waiting } = getRevealInfo(state);
 
         return `
         <!-- Ambient Background Glows -->
@@ -24,7 +61,7 @@ export const RevealView = {
                     </div>
                 </div>
                 <div>
-                    <h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface">${displayName}</h2>
+                    <h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface">${escapeHtml(displayName)}</h2>
                     <p class="text-on-surface-variant text-sm tracking-widest uppercase mt-1">${t(state.language, 'identityCheck')}</p>
                 </div>
             </header>
@@ -50,9 +87,9 @@ export const RevealView = {
                             ${roleLabel}
                         </h1>
                         <div class="w-full bg-surface-container-highest/60 rounded-2xl p-5 border border-outline-variant/10 shadow-inner">
-                            <p class="text-xs text-on-surface-variant uppercase tracking-wider mb-2">${isImpostor ? t(state.language, 'categoryHint') : t(state.language, 'secretWord')}</p>
+                            <p class="text-xs text-on-surface-variant uppercase tracking-wider mb-2">${waiting ? t(state.language, 'connectingToHost') : secretLabel}</p>
                             <p class="font-headline text-xl font-bold text-inverse-surface tracking-tight">
-                                ${isImpostor ? state.word.hint : state.word.word}
+                                ${waiting ? '…' : escapeHtml(secretText)}
                             </p>
                         </div>
                     </div>
@@ -62,11 +99,11 @@ export const RevealView = {
             <div class="w-full flex flex-col items-center gap-4 mt-4">
                 <button id="doneBtn" class="w-full rounded-full bg-surface-variant text-on-surface-variant font-headline font-bold text-lg py-5 opacity-50 cursor-not-allowed transition-all duration-200 flex justify-center items-center gap-3" disabled>
                     <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">task_alt</span>
-                    ${t(state.language, 'donePeeking')}
+                    ${t(state.language, state.playMode === 'online' ? 'donePeekingOnline' : 'donePeeking')}
                 </button>
                 <p class="text-on-surface-variant text-sm text-center flex items-center gap-1.5 opacity-80">
                     <span class="material-symbols-outlined text-[16px]">sync</span>
-                    ${t(state.language, 'passDeviceBack')}
+                    ${t(state.language, state.playMode === 'online' ? 'hostPeekWait' : 'passDeviceBack')}
                 </p>
             </div>
         </main>
@@ -110,7 +147,12 @@ export const RevealView = {
                 // Remove window listeners
                 window.removeEventListener('mouseup', hideReveal);
                 window.removeEventListener('touchend', hideReveal);
-                store.nextPlayerReveal();
+                if (state.playMode === 'online') {
+                    if (isHost(state)) hostPeekDone();
+                    else clientPeekDone();
+                } else {
+                    store.nextPlayerReveal();
+                }
             }
         });
     }

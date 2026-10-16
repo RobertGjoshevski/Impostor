@@ -69,3 +69,69 @@ export function clearPersistedProfile() {
         /* ignore */
     }
 }
+
+const HOST_STATE_KEY = 'impostor_host_state';
+
+const HOST_FIELDS = [
+    'screen',
+    'playMode',
+    'onlineRole',
+    'roomCode',
+    'myClientId',
+    'myName',
+    'players',
+    'impostorCount',
+    'revealRolesOnDeath',
+    'word',
+    'currentPlayerIndex',
+    'firstPlayerIndex',
+    'scores',
+    'votes',
+    'detectives',
+    'language',
+    'selectedThemes',
+    'availableThemes',
+    'myPrivateState',
+    'seq',
+    'connectingPeers',
+];
+
+/**
+ * @param {Record<string, unknown>} state
+ */
+export function saveHostState(state) {
+    if (!state || state.playMode !== 'online' || state.onlineRole !== 'host') return;
+    try {
+        const snap = {};
+        for (const key of HOST_FIELDS) {
+            if (key in state) snap[key] = state[key];
+        }
+        sessionStorage.setItem(HOST_STATE_KEY, JSON.stringify(snap));
+    } catch {
+        /* quota or private mode */
+    }
+}
+
+/**
+ * @returns {Record<string, unknown> | null}
+ */
+export function loadHostState() {
+    try {
+        const raw = sessionStorage.getItem(HOST_STATE_KEY);
+        if (!raw) return null;
+        const parsed = JSON.parse(raw);
+        if (!parsed || parsed.playMode !== 'online' || parsed.onlineRole !== 'host') return null;
+        if (typeof parsed.roomCode !== 'string' || typeof parsed.myClientId !== 'string') return null;
+        return parsed;
+    } catch {
+        return null;
+    }
+}
+
+export function clearHostState() {
+    try {
+        sessionStorage.removeItem(HOST_STATE_KEY);
+    } catch {
+        /* ignore */
+    }
+}

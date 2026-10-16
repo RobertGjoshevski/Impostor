@@ -1,5 +1,6 @@
 import { store, normalizePlayerName } from '../store.js';
 import { t } from '../i18n.js';
+import { hostContinueToRound, isHost } from '../net/onlineSession.js';
 
 export const FirstPlayerView = {
     render: (state) => {
@@ -33,19 +34,29 @@ export const FirstPlayerView = {
                 </div>
 
                 <div class="mt-10">
+                    ${state.playMode === 'online' && !isHost(state) ? `
+                    <p class="text-on-surface-variant text-sm text-center">${t(state.language, 'waitingForHostContinue')}</p>
+                    ` : `
                     <button id="firstPlayerContinueBtn" class="w-full py-5 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary-container font-headline font-extrabold text-lg shadow-[0_0_32px_rgba(208,149,255,0.15)] hover:shadow-[0_0_48px_rgba(208,149,255,0.25)] transition-all active:scale-95 flex items-center justify-center gap-3 group">
                         <span class="material-symbols-outlined transition-transform duration-300 group-hover:scale-110" style="font-variation-settings: 'FILL' 1;">forum</span>
                         ${t(state.language, 'firstPlayerContinue')}
                     </button>
+                    `}
                 </div>
             </div>
         </main>
     `;
     },
 
-    mounted: () => {
-        document.getElementById('firstPlayerContinueBtn').addEventListener('click', () => {
-            store.setState({ screen: 'round' });
+    mounted: (state) => {
+        const btn = document.getElementById('firstPlayerContinueBtn');
+        if (!btn) return;
+        btn.addEventListener('click', () => {
+            if (state.playMode === 'online') {
+                hostContinueToRound();
+            } else {
+                store.setState({ screen: 'round' });
+            }
         });
     },
 
