@@ -2,6 +2,9 @@ import {
     clearPersistedProfile,
     savePersistedPlayers,
     savePersistedScores,
+    saveHostState,
+    clearHostState,
+    loadPersistedProfile,
 } from './persist.js';
 
 /** Player roster entries are strings on the setup screen and { name, ... } during play. */
@@ -38,7 +41,7 @@ function rosterNamesForPersist(players) {
 
 export const store = {
     state: {
-        screen: 'setup', // 'setup', 'transition', 'reveal', 'firstPlayer', 'round', 'results'
+        screen: 'home', // 'home', 'setup', 'hostLobby', 'joinRoom', 'transition', 'reveal', 'firstPlayer', 'round', 'results', 'themes'
         players: ['Alpha', 'Bravo', 'Charlie'], // List of player objects: { id, name, role, revealed }
         impostorCount: 1,
         revealRolesOnDeath: true,
@@ -51,6 +54,20 @@ export const store = {
         language: 'en',
         availableThemes: [],
         selectedThemes: [],
+        playMode: null, // 'local' | 'online' | null
+        onlineRole: null, // 'host' | 'client' | null
+        roomCode: null,
+        myClientId: null,
+        myName: null,
+        myPrivateState: null, // { role, secretWord?, hint? }
+        connectingPeers: [],
+        joinStatus: null, // 'connecting' | 'connected' | 'error'
+        joinError: null,
+        seq: 0,
+        hasVoted: {},
+        themesReturnScreen: 'setup',
+        hostDisconnected: false,
+        homePanel: 'choose',
     },
 
     listeners: [],
@@ -68,7 +85,44 @@ export const store = {
 
     setState(newState) {
         this.state = { ...this.state, ...newState };
+        if (this.state.playMode === 'online' && this.state.onlineRole === 'host') {
+            saveHostState(this.state);
+        }
         this.notify();
+    },
+
+    resetToHome() {
+        const persisted = loadPersistedProfile();
+        const players =
+            persisted && persisted.players.length >= 1
+                ? persisted.players
+                : ['Alpha', 'Bravo', 'Charlie'];
+        const scores = persisted && persisted.scores ? persisted.scores : this.state.scores;
+        clearHostState();
+        this.setState({
+            screen: 'home',
+            playMode: null,
+            onlineRole: null,
+            roomCode: null,
+            myClientId: null,
+            myName: null,
+            myPrivateState: null,
+            connectingPeers: [],
+            joinStatus: null,
+            joinError: null,
+            seq: 0,
+            hasVoted: {},
+            hostDisconnected: false,
+            players,
+            scores,
+            word: null,
+            votes: {},
+            detectives: [],
+            currentPlayerIndex: 0,
+            firstPlayerIndex: null,
+            themesReturnScreen: 'setup',
+            homePanel: 'choose',
+        });
     },
 
     // Action Helpers

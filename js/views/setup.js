@@ -5,6 +5,9 @@ import { t } from '../i18n.js';
 export const SetupView = {
     render: (state) => `
         <header class="bg-[#0c0c1f]/80 backdrop-blur-xl docked full-width top-0 z-50 shadow-[0_0_40px_rgba(208,149,255,0.08)] flex justify-between items-center w-full px-6 py-4 absolute">
+            <button type="button" id="setupHomeBtn" class="text-on-surface-variant hover:text-primary flex items-center">
+                <span class="material-symbols-outlined text-[22px]">arrow_back</span>
+            </button>
             <h1 class="font-headline font-bold tracking-tighter text-2xl font-black tracking-widest text-[#d095ff] uppercase">IMPOSTOR</h1>
             <select id="languageSelect" class="bg-surface-container border border-outline-variant/30 text-on-surface-variant text-xs rounded-md px-2 py-1 outline-none focus:ring-1 focus:ring-primary shadow-inner text-ellipsis cursor-pointer">
                 <option value="en" ${state.language==='en'?'selected':''}>English</option>
@@ -163,7 +166,7 @@ export const SetupView = {
         });
 
         document.getElementById('openThemesBtn').addEventListener('click', () => {
-            store.setState({ screen: 'themes' });
+            store.setState({ screen: 'themes', themesReturnScreen: 'setup' });
         });
 
         document.getElementById('resetSavedBtn').addEventListener('click', () => {
@@ -179,6 +182,10 @@ export const SetupView = {
                 loadLanguageData(lang);
             });
         }
+
+        document.getElementById('setupHomeBtn')?.addEventListener('click', () => {
+            store.setState({ screen: 'home', playMode: null, homePanel: 'choose' });
+        });
 
         SetupView.bindStartButton();
     },

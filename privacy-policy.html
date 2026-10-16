@@ -23,7 +23,7 @@
             <a href="index.html" class="text-primary text-sm font-medium hover:underline">← Back to the game</a>
         </p>
         <h1 class="font-headline text-3xl font-bold text-primary tracking-tight mb-2">Privacy policy</h1>
-        <p class="text-on-surface-variant text-sm mb-10">Last updated: April 19, 2026</p>
+        <p class="text-on-surface-variant text-sm mb-10">Last updated: October 16, 2026</p>
 
         <div class="space-y-8 text-sm leading-relaxed text-on-surface-variant">
             <section class="space-y-3">
@@ -69,6 +69,17 @@
                 <p>
                     Parts of the game may store information locally in your browser (for example, scores or settings)
                     so the experience works offline or across visits. That data stays on your device unless you clear it.
+                </p>
+            </section>
+
+            <section class="space-y-3">
+                <h2 class="font-headline text-lg font-semibold text-on-surface">Online rooms</h2>
+                <p>
+                    If you host or join an online room, we use <strong class="text-on-surface">Firebase Realtime Database</strong>
+                    only to exchange a short room code and the WebRTC handshake (connection offers and network candidates).
+                    After the peer connection opens, gameplay messages stay on the direct device-to-device link and we stop
+                    reading and writing that room in Firebase. The host device keeps the match state; other devices receive
+                    only the public view plus their own private role.
                 </p>
             </section>
 
