@@ -41,6 +41,7 @@ export const JoinRoomView = {
         const err = String(state.joinError || '');
         if (err.toLowerCase().includes('not found')) return t(state.language, 'roomNotFound');
         if (err === 'disconnected') return t(state.language, 'disconnectedFromHost');
+        if (err === 'connect-failed') return t(state.language, 'connectionFailed');
         if (err === 'Invalid room code') return t(state.language, 'roomNotFound');
         return t(state.language, 'connectionFailed');
     },

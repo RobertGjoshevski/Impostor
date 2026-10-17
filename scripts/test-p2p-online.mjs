@@ -53,6 +53,13 @@ async function main() {
         const items = document.querySelectorAll('#onlinePlayerList li');
         return items.length >= 3;
     });
+    const hostRoster = await host.locator('#onlinePlayerList').innerText();
+    if (!/HostAda/.test(hostRoster) || !/ClientBea/.test(hostRoster) || !/ClientCal/.test(hostRoster)) {
+        throw new Error(`Host roster missing names: ${hostRoster}`);
+    }
+    if (/\b[0-9a-f]{8}…/i.test(hostRoster)) {
+        throw new Error(`Host roster still showing raw ids: ${hostRoster}`);
+    }
 
     const start = host.locator('#startOnlineBtn');
     await start.waitFor();

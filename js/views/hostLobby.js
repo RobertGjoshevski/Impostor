@@ -63,7 +63,11 @@ export const HostLobbyView = {
     renderLobby: (state, host, canStart, connected) => {
         const me = state.myClientId;
         const players = state.players || [];
-        const connecting = (state.connectingPeers || []).filter((id) => !players.some((p) => p.id === id));
+        const connecting = (state.connectingPeers || [])
+            .map((entry) =>
+                typeof entry === 'string' ? { id: entry, name: '' } : { id: entry && entry.id, name: (entry && entry.name) || '' },
+            )
+            .filter((peer) => peer.id && !players.some((p) => p.id === peer.id));
         return `
             <div class="text-center space-y-2">
                 <p class="font-label text-on-surface-variant text-xs tracking-widest uppercase">${t(state.language, 'roomCode')}</p>
@@ -97,13 +101,18 @@ export const HostLobbyView = {
                         })
                         .join('')}
                     ${connecting
-                        .map(
-                            (id) => `
+                        .map((peer) => {
+                            const label = peer.name || t(state.language, 'joiningPlayer');
+                            const initial = (peer.name || '?').charAt(0);
+                            return `
                         <li class="flex items-center justify-between bg-surface-container-low rounded-lg p-3 opacity-80">
-                            <p class="font-body text-sm text-on-surface-variant">${escapeHtml(id.slice(0, 8))}…</p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-primary font-bold text-xs uppercase">${escapeHtml(initial)}</div>
+                                <p class="font-body text-sm text-on-surface">${escapeHtml(label)}</p>
+                            </div>
                             <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full ${badgeClass(false, true)}">${badgeLabel(state.language, false, true)}</span>
-                        </li>`,
-                        )
+                        </li>`;
+                        })
                         .join('')}
                 </ul>
             </section>

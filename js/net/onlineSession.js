@@ -35,6 +35,31 @@ function uniqueName(raw, players, exceptId) {
     return name;
 }
 
+function connectingId(entry) {
+    if (typeof entry === 'string') return entry;
+    return entry && entry.id ? String(entry.id) : '';
+}
+
+function upsertConnecting(list, clientId, info) {
+    const name = info && typeof info.name === 'string' ? info.name.trim() : '';
+    const next = (list || []).filter((p) => connectingId(p) !== clientId);
+    next.push({ id: clientId, name });
+    return next;
+}
+
+function dropConnecting(list, clientId) {
+    return (list || []).filter((p) => connectingId(p) !== clientId);
+}
+
+let joinWatchdog = null;
+
+function clearJoinWatchdog() {
+    if (joinWatchdog) {
+        clearTimeout(joinWatchdog);
+        joinWatchdog = null;
+    }
+}
+
 export function buildPublicState(state = store.state) {
     const isResults = state.screen === 'results';
     const hasVoted = { ...(state.hasVoted || {}) };
@@ -79,18 +104,20 @@ function hostCommit(partial) {
 
 function hostHandlers() {
     return {
-        onPeerConnecting(clientId) {
+        onPeerConnecting(clientId, info) {
             if (clientId === 'host') return;
-            const connectingPeers = [...new Set([...(store.state.connectingPeers || []), clientId])];
-            store.setState({ connectingPeers });
+            store.setState({ connectingPeers: upsertConnecting(store.state.connectingPeers, clientId, info) });
         },
         onChannelOpen(clientId) {
-            const connectingPeers = (store.state.connectingPeers || []).filter((id) => id !== clientId);
-            store.setState({ connectingPeers });
+            store.setState({ connectingPeers: dropConnecting(store.state.connectingPeers, clientId) });
+        },
+        onConnectFailed(clientId) {
+            if (!isHost()) return;
+            store.setState({ connectingPeers: dropConnecting(store.state.connectingPeers, clientId) });
         },
         onChannelClose(clientId) {
             if (!isHost()) return;
-            const connectingPeers = (store.state.connectingPeers || []).filter((id) => id !== clientId);
+            const connectingPeers = dropConnecting(store.state.connectingPeers, clientId);
             if (store.state.screen === 'hostLobby') {
                 hostCommit({
                     connectingPeers,
@@ -118,17 +145,29 @@ function hostHandlers() {
 function clientHandlers() {
     return {
         onChannelOpen() {
+            clearJoinWatchdog();
             store.setState({ joinStatus: 'connected', joinError: null, hostDisconnected: false });
             p2p.sendToHost({
                 action: ACTIONS.JOIN_LOBBY,
                 payload: { name: store.state.myName },
             });
         },
+        onConnectFailed() {
+            if (store.state.joinStatus === 'connected') return;
+            clearJoinWatchdog();
+            store.setState({ joinStatus: 'error', joinError: 'connect-failed' });
+        },
         onChannelClose() {
+            clearJoinWatchdog();
+            if (store.state.joinStatus !== 'connected') {
+                store.setState({ joinStatus: 'error', joinError: 'connect-failed' });
+                return;
+            }
             store.setState({ hostDisconnected: true, joinStatus: 'error', joinError: 'disconnected' });
         },
         onChannelError() {
-            store.setState({ hostDisconnected: true, joinStatus: 'error', joinError: 'disconnected' });
+            if (store.state.joinStatus !== 'connected') return;
+            this.onChannelClose();
         },
         onMessage(_from, msg) {
             if (!msg || typeof msg !== 'object') return;
@@ -199,7 +238,7 @@ function handleHostIntent(clientId, msg) {
         }
         hostCommit({
             players,
-            connectingPeers: (store.state.connectingPeers || []).filter((id) => id !== clientId),
+            connectingPeers: dropConnecting(store.state.connectingPeers, clientId),
         });
         return;
     }
@@ -283,6 +322,7 @@ export async function clientJoinRoom(code, name) {
     const clientId = newClientId();
     const display = normalizePlayerName(name);
     lastSeqApplied = 0;
+    clearJoinWatchdog();
     p2p.setHandlers(clientHandlers());
     store.setState({
         playMode: 'online',
@@ -302,9 +342,15 @@ export async function clientJoinRoom(code, name) {
         hasVoted: {},
         word: null,
     });
+    joinWatchdog = setTimeout(() => {
+        if (store.state.joinStatus === 'connecting') {
+            store.setState({ joinStatus: 'error', joinError: 'connect-failed' });
+        }
+    }, 20000);
     try {
-        await p2p.joinRoom(code, clientId);
+        await p2p.joinRoom(code, clientId, { name: display });
     } catch (err) {
+        clearJoinWatchdog();
         store.setState({
             joinStatus: 'error',
             joinError: err && err.message ? err.message : 'Join failed',
@@ -483,6 +529,7 @@ export function hostNextRound() {
 }
 
 export async function leaveSession() {
+    clearJoinWatchdog();
     try {
         await p2p.closeRoom();
     } catch {
