@@ -2,7 +2,10 @@ import { envelope, MSG } from './protocol.js';
 import { generateRoomCode } from './ids.js';
 import { getSignaling } from './signaling.js';
 
-const ICE_SERVERS = [{ urls: 'stun:stun1.l.google.com:19302' }];
+const ICE_SERVERS = [
+    { urls: 'stun:stun.l.google.com:19302' },
+    { urls: 'stun:stun1.l.google.com:19302' },
+];
 const CHANNEL_LABEL = 'impostor_game';
 const CHANNEL_INIT = { ordered: false };
 
@@ -284,7 +287,7 @@ export class P2PRoomManager {
         }
     }
 
-    /** Stop Firebase/local signaling but keep open data channels (match start). */
+    /** Stop handshake signaling but keep open data channels (match start). */
     async closeSignaling() {
         this.signalingStopped = true;
         const code = this.roomCode;

@@ -1,7 +1,6 @@
 import { store } from '../store.js';
 import { t } from '../i18n.js';
 import { escapeHtml } from '../net/ids.js';
-import { signalingKind } from '../net/signaling.js';
 import {
     clientSendReady,
     connectedPlayers,
@@ -73,7 +72,6 @@ export const HostLobbyView = {
                     <button type="button" id="copyCodeBtn" class="bg-surface-container-highest text-on-surface rounded-lg px-3 py-2 text-xs font-bold uppercase tracking-wider">${t(state.language, 'copyCode')}</button>
                 </div>
                 <p class="text-on-surface-variant text-xs">${host ? t(state.language, 'youAreHost') : t(state.language, 'waitingForHost')}</p>
-                ${signalingKind() === 'local' ? `<p class="text-primary/80 text-xs">${t(state.language, 'signalingLocalNote')}</p>` : ''}
             </div>
 
             <section class="bg-surface-container-high rounded-xl p-5 flex flex-col gap-3">
