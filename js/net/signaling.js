@@ -1,6 +1,17 @@
-import { getFirebase, shouldUseLocalSignaling } from '../firebase-config.js';
+import { getMqtt } from './mqtt.js';
 
 const LOCAL_CHANNEL = 'impostor-p2p-signal';
+const MQTT_PREFIX = 'impostor/rgsoft/v1';
+
+function mqttTopic(code, ...rest) {
+    return [MQTT_PREFIX, code, ...rest].join('/');
+}
+
+function parseMqttTopic(topic) {
+    const parts = String(topic || '').split('/');
+    if (parts.length < 4 || parts[0] !== 'impostor' || parts[1] !== 'rgsoft' || parts[2] !== 'v1') return null;
+    return { code: parts[3], rest: parts.slice(4) };
+}
 
 function createLocalSignaling() {
     const bc = new BroadcastChannel(LOCAL_CHANNEL);
@@ -49,15 +60,11 @@ function createLocalSignaling() {
             try {
                 fn(msg);
             } catch {
-                /* ignore listener errors */
+                /* ignore */
             }
         }
     };
 
-    /**
-     * @param {(msg: object) => void} filterFn
-     * @returns {() => void}
-     */
     function onMessage(filterFn) {
         const id = `l${seq++}`;
         listeners.set(id, filterFn);
@@ -80,7 +87,7 @@ function createLocalSignaling() {
                 const timeout = setTimeout(() => {
                     unsub();
                     resolve(false);
-                }, 1600);
+                }, 1200);
                 const unsub = onMessage((msg) => {
                     if (msg.t === 'room-exists-ok' && msg.id === id) {
                         clearTimeout(timeout);
@@ -177,144 +184,249 @@ function createLocalSignaling() {
     };
 }
 
-function createFirebaseSignaling() {
-    async function pathRefs(code, clientId) {
-        const { db, mod } = await getFirebase();
-        const roomRef = mod.ref(db, `rooms/${code}`);
-        const connRef = clientId ? mod.child(roomRef, `connections/${clientId}`) : null;
-        return { db, mod, roomRef, connRef };
+function createMqttSignaling() {
+    /** @type {Array<(topic: string, payload: string) => void>} */
+    const watchers = [];
+    let hooked = false;
+
+    async function ready() {
+        const mqtt = await getMqtt();
+        if (!hooked) {
+            hooked = true;
+            mqtt.onMessage((topic, payload) => {
+                for (const fn of watchers) {
+                    try {
+                        fn(topic, payload);
+                    } catch {
+                        /* ignore */
+                    }
+                }
+            });
+        }
+        return mqtt;
+    }
+
+    function onTopic(filterFn) {
+        watchers.push(filterFn);
+        return () => {
+            const i = watchers.indexOf(filterFn);
+            if (i >= 0) watchers.splice(i, 1);
+        };
+    }
+
+    function parseJson(payload) {
+        try {
+            return JSON.parse(payload);
+        } catch {
+            return null;
+        }
     }
 
     return {
-        kind: 'firebase',
+        kind: 'mqtt',
 
         async createRoom(code, meta) {
-            const { mod, roomRef } = await pathRefs(code);
-            const snap = await mod.get(roomRef);
-            if (snap.exists()) return false;
-            await mod.set(roomRef, {
-                hostId: meta.hostId,
-                createdAt: Date.now(),
-                status: 'lobby',
-            });
+            const mqtt = await ready();
+            mqtt.subscribe(mqttTopic(code, '#'));
+            mqtt.publish(mqttTopic(code, 'meta'), JSON.stringify({ ...meta, status: 'lobby' }), { retain: true });
             return true;
         },
 
         async roomExists(code) {
-            const { mod, roomRef } = await pathRefs(code);
-            const snap = await mod.get(roomRef);
-            return snap.exists();
+            const mqtt = await ready();
+            return new Promise((resolve) => {
+                const timeout = setTimeout(() => {
+                    unsub();
+                    resolve(false);
+                }, 4000);
+                const unsub = onTopic((topic, payload) => {
+                    const parsed = parseMqttTopic(topic);
+                    if (!parsed || parsed.code !== code) return;
+                    if (parsed.rest[0] === 'meta' && payload) {
+                        const meta = parseJson(payload);
+                        if (meta && meta.status !== 'closed') {
+                            clearTimeout(timeout);
+                            unsub();
+                            resolve(true);
+                        }
+                    }
+                });
+                mqtt.subscribe(mqttTopic(code, '#'));
+            });
         },
 
         async deleteRoom(code) {
-            const { mod, roomRef } = await pathRefs(code);
-            await mod.remove(roomRef);
+            try {
+                const mqtt = await ready();
+                mqtt.publish(mqttTopic(code, 'meta'), JSON.stringify({ status: 'closed' }), { retain: true });
+            } catch {
+                /* ignore */
+            }
         },
 
         watchConnections(code, cb) {
-            let unsub = () => {};
             /** @type {Set<string>} */
             const seen = new Set();
-            pathRefs(code).then(({ mod, roomRef }) => {
-                const conns = mod.child(roomRef, 'connections');
-                unsub = mod.onChildAdded(conns, (snap) => {
-                    const clientId = snap.key;
-                    if (!clientId || seen.has(clientId)) return;
-                    seen.add(clientId);
-                    cb(clientId);
-                });
-            });
-            return () => {
-                try {
-                    unsub();
-                } catch {
-                    /* ignore */
-                }
+            const deliver = (clientId) => {
+                if (!clientId || seen.has(clientId)) return;
+                seen.add(clientId);
+                cb(clientId);
             };
+            ready()
+                .then((mqtt) => mqtt.subscribe(mqttTopic(code, '#')))
+                .catch(() => {});
+            return onTopic((topic, payload) => {
+                const parsed = parseMqttTopic(topic);
+                if (!parsed || parsed.code !== code || !payload) return;
+                const [a, b] = parsed.rest;
+                if (a === 'hello' && b) deliver(b);
+                if (a === 'c' && parsed.rest[2] === 'offer') deliver(b);
+            });
         },
 
         async writeOffer(code, clientId, offer) {
-            const { mod, connRef } = await pathRefs(code, clientId);
-            await mod.set(mod.child(connRef, 'offer'), offer);
+            const mqtt = await ready();
+            mqtt.subscribe(mqttTopic(code, '#'));
+            mqtt.publish(mqttTopic(code, 'hello', clientId), JSON.stringify({ clientId }));
+            mqtt.publish(mqttTopic(code, 'c', clientId, 'offer'), JSON.stringify(offer));
         },
 
         watchOffer(code, clientId, cb) {
-            let unsub = () => {};
             let fired = false;
-            pathRefs(code, clientId).then(({ mod, connRef }) => {
-                unsub = mod.onValue(mod.child(connRef, 'offer'), (snap) => {
-                    const offer = snap.val();
-                    if (!offer || fired) return;
-                    fired = true;
-                    cb(offer);
-                });
-            });
-            return () => {
-                try {
-                    unsub();
-                } catch {
-                    /* ignore */
+            return onTopic((topic, payload) => {
+                if (fired) return;
+                const parsed = parseMqttTopic(topic);
+                if (!parsed || parsed.code !== code) return;
+                if (parsed.rest[0] === 'c' && parsed.rest[1] === clientId && parsed.rest[2] === 'offer') {
+                    const offer = parseJson(payload);
+                    if (offer) {
+                        fired = true;
+                        cb(offer);
+                    }
                 }
-            };
+            });
         },
 
         async writeAnswer(code, clientId, answer) {
-            const { mod, connRef } = await pathRefs(code, clientId);
-            await mod.set(mod.child(connRef, 'answer'), answer);
+            const mqtt = await ready();
+            mqtt.publish(mqttTopic(code, 'c', clientId, 'answer'), JSON.stringify(answer));
         },
 
         watchAnswer(code, clientId, cb) {
-            let unsub = () => {};
             let fired = false;
-            pathRefs(code, clientId).then(({ mod, connRef }) => {
-                unsub = mod.onValue(mod.child(connRef, 'answer'), (snap) => {
-                    const answer = snap.val();
-                    if (!answer || fired) return;
-                    fired = true;
-                    cb(answer);
-                });
-            });
-            return () => {
-                try {
-                    unsub();
-                } catch {
-                    /* ignore */
+            return onTopic((topic, payload) => {
+                if (fired) return;
+                const parsed = parseMqttTopic(topic);
+                if (!parsed || parsed.code !== code) return;
+                if (parsed.rest[0] === 'c' && parsed.rest[1] === clientId && parsed.rest[2] === 'answer') {
+                    const answer = parseJson(payload);
+                    if (answer) {
+                        fired = true;
+                        cb(answer);
+                    }
                 }
-            };
+            });
         },
 
         async writeIce(code, clientId, side, candidate) {
-            const { mod, connRef } = await pathRefs(code, clientId);
-            const key = side === 'offer' ? 'offerCandidates' : 'answerCandidates';
-            await mod.push(mod.child(connRef, key), candidate);
+            const mqtt = await ready();
+            const id = `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
+            mqtt.publish(mqttTopic(code, 'c', clientId, 'ice', side, id), JSON.stringify(candidate));
         },
 
         watchIce(code, clientId, side, cb) {
-            let unsub = () => {};
-            pathRefs(code, clientId).then(({ mod, connRef }) => {
-                const key = side === 'offer' ? 'offerCandidates' : 'answerCandidates';
-                unsub = mod.onChildAdded(mod.child(connRef, key), (snap) => {
-                    const candidate = snap.val();
+            return onTopic((topic, payload) => {
+                const parsed = parseMqttTopic(topic);
+                if (!parsed || parsed.code !== code) return;
+                if (
+                    parsed.rest[0] === 'c' &&
+                    parsed.rest[1] === clientId &&
+                    parsed.rest[2] === 'ice' &&
+                    parsed.rest[3] === side
+                ) {
+                    const candidate = parseJson(payload);
                     if (candidate) cb(candidate);
-                });
-            });
-            return () => {
-                try {
-                    unsub();
-                } catch {
-                    /* ignore */
                 }
+            });
+        },
+    };
+}
+
+function fanOut(local, remote) {
+    const both = async (method, args) => {
+        const tasks = [local[method](...args)];
+        tasks.push(
+            remote[method](...args).catch((err) => {
+                console.warn('cross-device signaling', err);
+                return method === 'roomExists' ? false : undefined;
+            }),
+        );
+        const results = await Promise.all(tasks);
+        if (method === 'roomExists' || method === 'createRoom') {
+            return results[0] || results[1];
+        }
+        return results[0];
+    };
+
+    return {
+        kind: 'p2p',
+        createRoom: (code, meta) => both('createRoom', [code, meta]),
+        roomExists(code) {
+            return new Promise((resolve) => {
+                let left = 2;
+                const done = (value) => {
+                    if (value) resolve(true);
+                    else if (--left <= 0) resolve(false);
+                };
+                local.roomExists(code).then(done).catch(() => done(false));
+                remote.roomExists(code).then(done).catch(() => done(false));
+            });
+        },
+        deleteRoom: (code) => both('deleteRoom', [code]),
+        watchConnections(code, cb) {
+            const a = local.watchConnections(code, cb);
+            const b = remote.watchConnections(code, cb);
+            return () => {
+                a();
+                b();
+            };
+        },
+        writeOffer: (code, clientId, offer) => both('writeOffer', [code, clientId, offer]),
+        watchOffer(code, clientId, cb) {
+            const a = local.watchOffer(code, clientId, cb);
+            const b = remote.watchOffer(code, clientId, cb);
+            return () => {
+                a();
+                b();
+            };
+        },
+        writeAnswer: (code, clientId, answer) => both('writeAnswer', [code, clientId, answer]),
+        watchAnswer(code, clientId, cb) {
+            const a = local.watchAnswer(code, clientId, cb);
+            const b = remote.watchAnswer(code, clientId, cb);
+            return () => {
+                a();
+                b();
+            };
+        },
+        writeIce: (code, clientId, side, candidate) => both('writeIce', [code, clientId, side, candidate]),
+        watchIce(code, clientId, side, cb) {
+            const a = local.watchIce(code, clientId, side, cb);
+            const b = remote.watchIce(code, clientId, side, cb);
+            return () => {
+                a();
+                b();
             };
         },
     };
 }
 
-/** @type {ReturnType<typeof createLocalSignaling> | ReturnType<typeof createFirebaseSignaling> | null} */
+/** @type {ReturnType<typeof fanOut> | null} */
 let instance = null;
 
 export function getSignaling() {
     if (!instance) {
-        instance = shouldUseLocalSignaling() ? createLocalSignaling() : createFirebaseSignaling();
+        instance = fanOut(createLocalSignaling(), createMqttSignaling());
     }
     return instance;
 }

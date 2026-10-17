@@ -75,11 +75,10 @@
             <section class="space-y-3">
                 <h2 class="font-headline text-lg font-semibold text-on-surface">Online rooms</h2>
                 <p>
-                    If you host or join an online room, we use <strong class="text-on-surface">Firebase Realtime Database</strong>
-                    only to exchange a short room code and the WebRTC handshake (connection offers and network candidates).
-                    After the peer connection opens, gameplay messages stay on the direct device-to-device link and we stop
-                    reading and writing that room in Firebase. The host device keeps the match state; other devices receive
-                    only the public view plus their own private role.
+                    Online rooms are peer-to-peer. We do not run a game server and we do not use Firebase.
+                    Devices briefly publish a connection handshake (so they can find each other from a 4-letter room code),
+                    then all gameplay messages travel directly between phones over WebRTC. The host device keeps the match
+                    state; other devices receive only the public view plus their own private role.
                 </p>
             </section>
 
