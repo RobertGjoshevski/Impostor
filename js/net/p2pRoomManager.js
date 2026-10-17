@@ -3,17 +3,32 @@ import { generateRoomCode } from './ids.js';
 import { getSignaling } from './signaling.js';
 
 const ICE_SERVERS = [
+    { urls: 'stun:stun.cloudflare.com:3478' },
     { urls: 'stun:stun.l.google.com:19302' },
     { urls: 'stun:stun1.l.google.com:19302' },
+    { urls: 'stun:stun2.l.google.com:19302' },
+    { urls: 'stun:stun3.l.google.com:19302' },
+    { urls: 'stun:stun4.l.google.com:19302' },
+    {
+        urls: [
+            'turn:openrelay.metered.ca:80',
+            'turn:openrelay.metered.ca:443',
+            'turn:openrelay.metered.ca:443?transport=tcp',
+        ],
+        username: 'openrelayproject',
+        credential: 'openrelayproject',
+    },
 ];
 const CHANNEL_LABEL = 'impostor_game';
-const CHANNEL_INIT = { ordered: false };
+const CHANNEL_INIT = { ordered: true };
+const ICE_GATHER_MS = 5000;
 
 /**
  * @typedef {object} P2PHandlers
- * @property {(clientId: string) => void} [onPeerConnecting]
+ * @property {(clientId: string, info?: { name?: string }) => void} [onPeerConnecting]
  * @property {(clientId: string) => void} [onChannelOpen]
  * @property {(clientId: string) => void} [onChannelClose]
+ * @property {(clientId: string) => void} [onConnectFailed]
  * @property {(clientId: string, err: Error) => void} [onChannelError]
  * @property {(clientId: string, msg: object) => void} [onMessage]
  */
@@ -28,6 +43,29 @@ function iceJson(candidate) {
     };
 }
 
+function waitForIceGathering(pc, timeoutMs = ICE_GATHER_MS) {
+    if (!pc || pc.iceGatheringState === 'complete') return Promise.resolve();
+    return new Promise((resolve) => {
+        const done = () => {
+            pc.removeEventListener('icegatheringstatechange', onChange);
+            clearTimeout(timer);
+            resolve();
+        };
+        const onChange = () => {
+            if (pc.iceGatheringState === 'complete') done();
+        };
+        const timer = setTimeout(done, timeoutMs);
+        pc.addEventListener('icegatheringstatechange', onChange);
+        if (pc.iceGatheringState === 'complete') done();
+    });
+}
+
+function localSdp(pc) {
+    const desc = pc.localDescription;
+    if (!desc) return null;
+    return { type: desc.type, sdp: desc.sdp };
+}
+
 export class P2PRoomManager {
     constructor() {
         /** @type {'host' | 'client' | null} */
@@ -36,7 +74,7 @@ export class P2PRoomManager {
         this.myId = null;
         /** @type {Map<string, RTCDataChannel>} */
         this.channels = new Map();
-        /** @type {Map<string, { pc: RTCPeerConnection, channel: RTCDataChannel | null, unsubs: Array<() => void>, pendingIce: RTCIceCandidateInit[], remoteSet: boolean }>} */
+        /** @type {Map<string, { pc: RTCPeerConnection, channel: RTCDataChannel | null, unsubs: Array<() => void>, pendingIce: RTCIceCandidateInit[], remoteSet: boolean, didOpen: boolean, notifiedDead: boolean }>} */
         this.peers = new Map();
         /** @type {Array<() => void>} */
         this.roomUnsubs = [];
@@ -84,8 +122,9 @@ export class P2PRoomManager {
     /**
      * @param {string} roomCode
      * @param {string} clientId
+     * @param {{ name?: string }} [extra]
      */
-    async joinRoom(roomCode, clientId) {
+    async joinRoom(roomCode, clientId, extra = {}) {
         this.resetLocal();
         this.role = 'client';
         this.myId = clientId;
@@ -103,15 +142,14 @@ export class P2PRoomManager {
             throw new Error('Room not found');
         }
 
+        // Announce the joiner name before ICE so the host can show it immediately.
+        await signaling.writeHello(this.roomCode, clientId, extra);
+
         const peer = this.makePeer(this.roomCode, clientId, 'host');
         const channel = peer.pc.createDataChannel(CHANNEL_LABEL, CHANNEL_INIT);
         this.bindChannel('host', channel, peer);
 
-        this.handlers.onPeerConnecting?.('host');
-
-        const offer = await peer.pc.createOffer();
-        await peer.pc.setLocalDescription(offer);
-        await signaling.writeOffer(this.roomCode, clientId, { type: offer.type, sdp: offer.sdp });
+        this.handlers.onPeerConnecting?.('host', extra);
 
         peer.unsubs.push(
             signaling.watchAnswer(this.roomCode, clientId, async (answer) => {
@@ -130,23 +168,36 @@ export class P2PRoomManager {
             if (!ev.candidate || this.signalingStopped) return;
             signaling.writeIce(this.roomCode, clientId, 'offer', iceJson(ev.candidate)).catch(() => {});
         };
+
+        const offer = await peer.pc.createOffer();
+        await peer.pc.setLocalDescription(offer);
+        await waitForIceGathering(peer.pc);
+        const desc = localSdp(peer.pc);
+        if (!desc || this.signalingStopped) return;
+        await signaling.writeOffer(this.roomCode, clientId, desc, extra);
     }
 
     attachHostListener() {
         const signaling = getSignaling();
-        const unsub = signaling.watchConnections(this.roomCode, (clientId) => {
+        const unsub = signaling.watchConnections(this.roomCode, (clientId, info) => {
             if (this.signalingStopped) return;
-            if (this.peers.has(clientId)) return;
-            this.acceptClient(clientId);
+            if (this.peers.has(clientId)) {
+                this.handlers.onPeerConnecting?.(clientId, info);
+                return;
+            }
+            this.acceptClient(clientId, info);
         });
         this.roomUnsubs.push(unsub);
     }
 
-    /** @param {string} clientId */
-    acceptClient(clientId) {
+    /**
+     * @param {string} clientId
+     * @param {{ name?: string }} [info]
+     */
+    acceptClient(clientId, info = {}) {
         const signaling = getSignaling();
         const peer = this.makePeer(this.roomCode, clientId, clientId);
-        this.handlers.onPeerConnecting?.(clientId);
+        this.handlers.onPeerConnecting?.(clientId, info);
 
         peer.pc.ondatachannel = (ev) => {
             if (ev.channel && ev.channel.label === CHANNEL_LABEL) {
@@ -166,9 +217,10 @@ export class P2PRoomManager {
                 await this.flushIce(peer);
                 const answer = await peer.pc.createAnswer();
                 await peer.pc.setLocalDescription(answer);
-                if (!this.signalingStopped) {
-                    await signaling.writeAnswer(this.roomCode, clientId, { type: answer.type, sdp: answer.sdp });
-                }
+                await waitForIceGathering(peer.pc);
+                const desc = localSdp(peer.pc);
+                if (!desc || this.signalingStopped) return;
+                await signaling.writeAnswer(this.roomCode, clientId, desc);
             }),
         );
         peer.unsubs.push(
@@ -184,13 +236,18 @@ export class P2PRoomManager {
      * @param {string} mapKey
      */
     makePeer(roomCode, peerKey, mapKey) {
-        const pc = new RTCPeerConnection({ iceServers: ICE_SERVERS });
+        const pc = new RTCPeerConnection({
+            iceServers: ICE_SERVERS,
+            iceCandidatePoolSize: 8,
+        });
         const peer = {
             pc,
             channel: null,
             unsubs: [],
             pendingIce: [],
             remoteSet: false,
+            didOpen: false,
+            notifiedDead: false,
             peerKey,
             roomCode,
         };
@@ -198,10 +255,25 @@ export class P2PRoomManager {
         pc.onconnectionstatechange = () => {
             const st = pc.connectionState;
             if (st === 'failed' || st === 'closed') {
-                this.handlers.onChannelClose?.(mapKey);
+                this.notifyDead(mapKey, peer);
             }
         };
         return peer;
+    }
+
+    /**
+     * @param {string} mapKey
+     * @param {ReturnType<P2PRoomManager['makePeer']>} peer
+     */
+    notifyDead(mapKey, peer) {
+        if (!peer || peer.notifiedDead) return;
+        if (this.peers.get(mapKey) !== peer) return;
+        peer.notifiedDead = true;
+        if (peer.didOpen) {
+            this.handlers.onChannelClose?.(mapKey);
+        } else {
+            this.handlers.onConnectFailed?.(mapKey);
+        }
     }
 
     /**
@@ -213,14 +285,16 @@ export class P2PRoomManager {
         peer.channel = channel;
         this.channels.set(mapKey, channel);
         channel.onopen = () => {
+            peer.didOpen = true;
             this.detachPeerSignaling(peer);
             this.handlers.onChannelOpen?.(mapKey);
         };
         channel.onclose = () => {
             this.channels.delete(mapKey);
-            this.handlers.onChannelClose?.(mapKey);
+            this.notifyDead(mapKey, peer);
         };
         channel.onerror = () => {
+            if (!peer.didOpen) return;
             this.handlers.onChannelError?.(mapKey, new Error('Data channel error'));
         };
         channel.onmessage = (ev) => {
@@ -344,6 +418,7 @@ export class P2PRoomManager {
             }
         }
         for (const peer of this.peers.values()) {
+            peer.notifiedDead = true;
             this.detachPeerSignaling(peer);
             try {
                 peer.pc.close();
@@ -376,6 +451,7 @@ export class P2PRoomManager {
             }
         }
         for (const peer of this.peers.values()) {
+            peer.notifiedDead = true;
             this.detachPeerSignaling(peer);
             try {
                 peer.pc.close();

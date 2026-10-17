@@ -33,5 +33,13 @@ console.log('room', code);
 
 await openJoin(client, 'ClientBea', code);
 await host.waitForFunction(() => document.querySelectorAll('#onlinePlayerList li').length >= 2);
+const roster = await host.locator('#onlinePlayerList').innerText();
+if (!/ClientBea/.test(roster)) throw new Error(`host roster missing name: ${roster}`);
+if (/\b[0-9a-f]{8}…/i.test(roster)) throw new Error(`host roster still showing raw ids: ${roster}`);
+const clientErr = await client.locator('p.text-error').count();
+if (clientErr) {
+    const errText = await client.locator('p.text-error').innerText();
+    throw new Error(`client join error: ${errText}`);
+}
 console.log('mqtt+webrtc ok');
 await browser.close();

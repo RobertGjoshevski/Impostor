@@ -25,6 +25,8 @@ function createLocalSignaling() {
     const lastAnswer = new Map();
     /** @type {Map<string, object[]>} */
     const iceByKey = new Map();
+    /** @type {Map<string, { name?: string }>} */
+    const lastHello = new Map();
     let seq = 0;
 
     function connKey(code, clientId) {
@@ -40,6 +42,9 @@ function createLocalSignaling() {
         if (!msg || typeof msg !== 'object') return;
         if (msg.t === 'room-exists-q' && ownedRooms.has(msg.code)) {
             bc.postMessage({ t: 'room-exists-ok', id: msg.id, code: msg.code });
+        }
+        if ((msg.t === 'offer' || msg.t === 'client-join') && msg.code && msg.clientId) {
+            lastHello.set(connKey(msg.code, msg.clientId), { name: msg.name || '' });
         }
         if (msg.t === 'offer' && msg.code && msg.clientId) {
             lastOffer.set(connKey(msg.code, msg.clientId), msg.offer);
@@ -107,25 +112,38 @@ function createLocalSignaling() {
         watchConnections(code, cb) {
             /** @type {Set<string>} */
             const seen = new Set();
-            const deliver = (clientId) => {
-                if (!clientId || seen.has(clientId)) return;
+            const deliver = (clientId, info) => {
+                if (!clientId) return;
+                const first = !seen.has(clientId);
                 seen.add(clientId);
-                cb(clientId);
+                if (first || (info && info.name)) cb(clientId, info || {});
             };
+            for (const [key, info] of lastHello) {
+                if (key.startsWith(`${code}:`)) deliver(key.slice(code.length + 1), info);
+            }
             for (const key of lastOffer.keys()) {
-                if (key.startsWith(`${code}:`)) deliver(key.slice(code.length + 1));
+                if (key.startsWith(`${code}:`)) {
+                    deliver(key.slice(code.length + 1), lastHello.get(key) || {});
+                }
             }
             return onMessage((msg) => {
                 if ((msg.t === 'offer' || msg.t === 'client-join') && msg.code === code) {
-                    deliver(msg.clientId);
+                    deliver(msg.clientId, { name: msg.name });
                 }
             });
         },
 
-        async writeOffer(code, clientId, offer) {
+        async writeHello(code, clientId, extra = {}) {
+            const hello = { name: extra.name || '' };
+            lastHello.set(connKey(code, clientId), hello);
+            bc.postMessage({ t: 'client-join', code, clientId, name: hello.name });
+        },
+
+        async writeOffer(code, clientId, offer, extra = {}) {
             lastOffer.set(connKey(code, clientId), offer);
-            bc.postMessage({ t: 'client-join', code, clientId });
-            bc.postMessage({ t: 'offer', code, clientId, offer });
+            lastHello.set(connKey(code, clientId), { name: extra.name || '' });
+            bc.postMessage({ t: 'client-join', code, clientId, name: extra.name || '' });
+            bc.postMessage({ t: 'offer', code, clientId, offer, name: extra.name || '' });
         },
 
         watchOffer(code, clientId, cb) {
@@ -187,7 +205,23 @@ function createLocalSignaling() {
 function createMqttSignaling() {
     /** @type {Array<(topic: string, payload: string) => void>} */
     const watchers = [];
+    /** @type {Map<string, object>} */
+    const lastOffer = new Map();
+    /** @type {Map<string, object>} */
+    const lastAnswer = new Map();
+    /** @type {Map<string, object[]>} */
+    const iceByKey = new Map();
+    /** @type {Map<string, { name?: string }>} */
+    const lastHello = new Map();
     let hooked = false;
+
+    function connKey(code, clientId) {
+        return `${code}:${clientId}`;
+    }
+
+    function iceKey(code, clientId, side) {
+        return `${code}:${clientId}:${side}`;
+    }
 
     async function ready() {
         const mqtt = await getMqtt();
@@ -267,41 +301,73 @@ function createMqttSignaling() {
         watchConnections(code, cb) {
             /** @type {Set<string>} */
             const seen = new Set();
-            const deliver = (clientId) => {
-                if (!clientId || seen.has(clientId)) return;
+            const deliver = (clientId, info) => {
+                if (!clientId) return;
+                const first = !seen.has(clientId);
                 seen.add(clientId);
-                cb(clientId);
+                const payload = info || lastHello.get(connKey(code, clientId)) || {};
+                if (first || payload.name) cb(clientId, payload);
             };
             ready()
                 .then((mqtt) => mqtt.subscribe(mqttTopic(code, '#')))
                 .catch(() => {});
+            for (const [key, info] of lastHello) {
+                if (key.startsWith(`${code}:`)) deliver(key.slice(code.length + 1), info);
+            }
+            for (const key of lastOffer.keys()) {
+                if (key.startsWith(`${code}:`)) deliver(key.slice(code.length + 1), lastHello.get(key) || {});
+            }
             return onTopic((topic, payload) => {
                 const parsed = parseMqttTopic(topic);
                 if (!parsed || parsed.code !== code || !payload) return;
                 const [a, b] = parsed.rest;
-                if (a === 'hello' && b) deliver(b);
-                if (a === 'c' && parsed.rest[2] === 'offer') deliver(b);
+                if (a === 'hello' && b) {
+                    const info = parseJson(payload) || {};
+                    lastHello.set(connKey(code, b), info);
+                    deliver(b, info);
+                }
+                if (a === 'c' && parsed.rest[2] === 'offer') {
+                    const offer = parseJson(payload);
+                    if (offer) lastOffer.set(connKey(code, b), offer);
+                    deliver(b, lastHello.get(connKey(code, b)));
+                }
             });
         },
 
-        async writeOffer(code, clientId, offer) {
+        async writeHello(code, clientId, extra = {}) {
             const mqtt = await ready();
             mqtt.subscribe(mqttTopic(code, '#'));
-            mqtt.publish(mqttTopic(code, 'hello', clientId), JSON.stringify({ clientId }));
-            mqtt.publish(mqttTopic(code, 'c', clientId, 'offer'), JSON.stringify(offer));
+            const hello = { clientId, name: extra.name || '' };
+            lastHello.set(connKey(code, clientId), hello);
+            mqtt.publish(mqttTopic(code, 'hello', clientId), JSON.stringify(hello), { retain: true });
+        },
+
+        async writeOffer(code, clientId, offer, extra = {}) {
+            const mqtt = await ready();
+            mqtt.subscribe(mqttTopic(code, '#'));
+            lastOffer.set(connKey(code, clientId), offer);
+            const hello = { clientId, name: extra.name || '' };
+            lastHello.set(connKey(code, clientId), hello);
+            mqtt.publish(mqttTopic(code, 'hello', clientId), JSON.stringify(hello), { retain: true });
+            mqtt.publish(mqttTopic(code, 'c', clientId, 'offer'), JSON.stringify(offer), { retain: true });
         },
 
         watchOffer(code, clientId, cb) {
             let fired = false;
+            const deliver = (offer) => {
+                if (fired || !offer) return;
+                fired = true;
+                cb(offer);
+            };
+            deliver(lastOffer.get(connKey(code, clientId)));
             return onTopic((topic, payload) => {
-                if (fired) return;
                 const parsed = parseMqttTopic(topic);
                 if (!parsed || parsed.code !== code) return;
                 if (parsed.rest[0] === 'c' && parsed.rest[1] === clientId && parsed.rest[2] === 'offer') {
                     const offer = parseJson(payload);
                     if (offer) {
-                        fired = true;
-                        cb(offer);
+                        lastOffer.set(connKey(code, clientId), offer);
+                        deliver(offer);
                     }
                 }
             });
@@ -309,20 +375,26 @@ function createMqttSignaling() {
 
         async writeAnswer(code, clientId, answer) {
             const mqtt = await ready();
-            mqtt.publish(mqttTopic(code, 'c', clientId, 'answer'), JSON.stringify(answer));
+            lastAnswer.set(connKey(code, clientId), answer);
+            mqtt.publish(mqttTopic(code, 'c', clientId, 'answer'), JSON.stringify(answer), { retain: true });
         },
 
         watchAnswer(code, clientId, cb) {
             let fired = false;
+            const deliver = (answer) => {
+                if (fired || !answer) return;
+                fired = true;
+                cb(answer);
+            };
+            deliver(lastAnswer.get(connKey(code, clientId)));
             return onTopic((topic, payload) => {
-                if (fired) return;
                 const parsed = parseMqttTopic(topic);
                 if (!parsed || parsed.code !== code) return;
                 if (parsed.rest[0] === 'c' && parsed.rest[1] === clientId && parsed.rest[2] === 'answer') {
                     const answer = parseJson(payload);
                     if (answer) {
-                        fired = true;
-                        cb(answer);
+                        lastAnswer.set(connKey(code, clientId), answer);
+                        deliver(answer);
                     }
                 }
             });
@@ -330,11 +402,18 @@ function createMqttSignaling() {
 
         async writeIce(code, clientId, side, candidate) {
             const mqtt = await ready();
+            const k = iceKey(code, clientId, side);
+            const list = iceByKey.get(k) || [];
+            list.push(candidate);
+            iceByKey.set(k, list);
             const id = `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
             mqtt.publish(mqttTopic(code, 'c', clientId, 'ice', side, id), JSON.stringify(candidate));
         },
 
         watchIce(code, clientId, side, cb) {
+            const k = iceKey(code, clientId, side);
+            const existing = iceByKey.get(k) || [];
+            for (const candidate of existing) cb(candidate);
             return onTopic((topic, payload) => {
                 const parsed = parseMqttTopic(topic);
                 if (!parsed || parsed.code !== code) return;
@@ -345,7 +424,12 @@ function createMqttSignaling() {
                     parsed.rest[3] === side
                 ) {
                     const candidate = parseJson(payload);
-                    if (candidate) cb(candidate);
+                    if (candidate) {
+                        const list = iceByKey.get(k) || [];
+                        list.push(candidate);
+                        iceByKey.set(k, list);
+                        cb(candidate);
+                    }
                 }
             });
         },
@@ -391,7 +475,8 @@ function fanOut(local, remote) {
                 b();
             };
         },
-        writeOffer: (code, clientId, offer) => both('writeOffer', [code, clientId, offer]),
+        writeHello: (code, clientId, extra) => both('writeHello', [code, clientId, extra]),
+        writeOffer: (code, clientId, offer, extra) => both('writeOffer', [code, clientId, offer, extra]),
         watchOffer(code, clientId, cb) {
             const a = local.watchOffer(code, clientId, cb);
             const b = remote.watchOffer(code, clientId, cb);
